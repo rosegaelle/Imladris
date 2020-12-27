@@ -1,9 +1,12 @@
 # Favourite Memes
 
-| Title      | Notes | Tags | Preview     |
-| :---        |    :---   |    :---   |          :----: |
-| [Alternate Currency](https://xkcd.com/512)      | -       | XKCD, XKCD712       | ![#XKCD712](https://imgs.xkcd.com/comics/alternate_currency.png)  |
-
+| Category      | Title | Notes | Tags | Preview     |
+| :---        |    :---   |    :---   |    :---   |          :----: |
+| -      | [Alternate Currency](https://xkcd.com/512)      | -       | XKCD, XKCD712       | ![#XKCD712](https://imgs.xkcd.com/comics/alternate_currency.png)  |
+| -      | [It's compiling](https://xkcd.com/303)      | -       | XKCD, XKCD303       | ![#XKCD303](https://imgs.xkcd.com/comics/compiling.png)  |
+| -      | [Bobby Tables](https://xkcd.com/327)      | -       | XKCD, XKCD327       | ![#XKCD327](https://imgs.xkcd.com/comics/exploits_of_a_mom.png)  |
+| Excessive      | I Can See Everything Now       | -       | cameras, overkill       | ![I Can See Everything Now](https://media.makeameme.org/created/i-can-see-lt10sc.jpg)  |
+| -      | -       | -       | -       | -  |
 
 <!--- ---: -->
 
@@ -27,12 +30,6 @@ Magyar Grammar - Hungarian - declination - szent - good enough for the first les
 
 Ballmer Peak
 	https://xkcd.com/323
-
-It's compiling
-	https://xkcd.com/303
-
-Bobby Tables
-	https://xkcd.com/327
 
 You Rock! You Rule!
 	https://orig00.deviantart.net/978e/f/2010/344/7/4/you_rock__you_rule_by_brandonman326-d34kwtn.jpg
@@ -152,9 +149,6 @@ UX Fail
 		https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFIggiKgiseRQ8oBg4O8yvchXLDwxmZ4156l7eHEcm3NDwVDVV6w
 	Thermostat
 		https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1SyL1Uz7x4YNGoFhDfdC-Pz2TfQQucIpg_djEH1AMernxBU-6bw
-
-	Cameras: I can see everything now
-		https://media.makeameme.org/created/i-can-see-lt10sc.jpg
 
 Grumpy Cat:
 	ESC key

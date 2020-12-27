@@ -1,3 +1,7 @@
+![GitHub followers](https://img.shields.io/github/followers/rosegaelle?style=social) &nbsp;
+![Twitter Followers](https://img.shields.io/twitter/follow/rosegaelle?style=social)  &nbsp;
+![https://linkedin.com/in/rosegaelle](https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin&labelColor=blue)
+
 # Imladris
 Repository for miscellaneous scripts and fun content used at home, a.k.a. "Rivendell".
 
@@ -15,4 +19,3 @@ Sample Usage:<br/>
 * Seriously, why???<br/>
 * Okay, fine! Does <i>this</i> satisfy your curiosity?! [#XKCD712](https://xkcd.com/512)<br/><br/>
 ![#XKCD712](https://imgs.xkcd.com/comics/alternate_currency.png)
-
