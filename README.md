@@ -13,5 +13,6 @@ Sample Usage:<br/>
 * Why?<br/>
 * Because I am a proud Millennial. ;-)<br/>
 * Seriously, why???<br/>
-* Okay, fine! Does <i>this</i> satisfy your curiosity?! [#KXCD712](https://xkcd.com/512)<br/><br/>
+* Okay, fine! Does <i>this</i> satisfy your curiosity?! [#XKCD712](https://xkcd.com/512)<br/><br/>
 ![#XKCD712](https://imgs.xkcd.com/comics/alternate_currency.png)
+

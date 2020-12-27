@@ -1,5 +1,14 @@
-Alternate Currency
-	https://xkcd.com/512
+# Favourite Memes
+
+| Title      | Notes | Tags | Preview     |
+| :---        |    :---   |    :---   |          :----: |
+| [Alternate Currency](https://xkcd.com/512)      | -       | XKCD, XKCD712       | ![#XKCD712](https://imgs.xkcd.com/comics/alternate_currency.png)  |
+
+
+<!--- ---: -->
+
+
+	
 
 House of a True Meme Lord - Paintings
 	https://9gag.com/gag/aoPGb2g
