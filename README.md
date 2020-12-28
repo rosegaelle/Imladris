@@ -14,8 +14,8 @@ Sample Usage:<br/>
 
 ## Memes
 ### [favourite_memes](Memes/favourite_memes.md)
-* Why?<br/>
-* Because I am a proud Millennial. ;-)<br/>
-* Seriously, why???<br/>
-* Okay, fine! Does <i>this</i> satisfy your curiosity?! [#XKCD712](https://xkcd.com/512)<br/><br/>
+- Why?<br/>
+- Because I am a proud Millennial. ;-)<br/>
+- Seriously, why???<br/>
+- Okay, fine! Does <i>this</i> satisfy your curiosity?! [#XKCD712](https://xkcd.com/512)<br/><br/>
 ![](https://imgs.xkcd.com/comics/alternate_currency.png)
