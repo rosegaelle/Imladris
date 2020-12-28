@@ -2,80 +2,47 @@
 
 | Category      | Title | Notes | Tags | Preview     |
 | :---        |    :---   |    :---   |    :---   |          :----: |
-| -      | [Alternate Currency](https://xkcd.com/512)      | -       | XKCD, XKCD712       | ![](https://imgs.xkcd.com/comics/alternate_currency.png)  |
-| -      | [It's compiling](https://xkcd.com/303)      | -       | XKCD, XKCD303       | ![](https://imgs.xkcd.com/comics/compiling.png)  |
-| -      | [Bobby Tables](https://xkcd.com/327)      | -       | XKCD, XKCD327       | ![](https://imgs.xkcd.com/comics/exploits_of_a_mom.png)  |
+| -      | [Alternate Currency](https://xkcd.com/512)      | -       | xkcd, XKCD712       | ![](https://imgs.xkcd.com/comics/alternate_currency.png)  |
+| -      | [Compiling](https://xkcd.com/303)      | -       | xkcd, XKCD303       | ![](https://imgs.xkcd.com/comics/compiling.png)  |
+| -      | [Exploits of a Mom](https://xkcd.com/327)      | -       | xkcd, XKCD327, Bobby Tables       | ![](https://imgs.xkcd.com/comics/exploits_of_a_mom.png)  |
+| -      | [Ballmer Peak](https://xkcd.com/323)       | -       | xkcd, XKCD323       | ![](https://imgs.xkcd.com/comics/ballmer_peak.png)  |
+| Challenge      | [Challenge Considered](http://i1.kym-cdn.com/photos/images/facebook/000/266/158/d8b.png)       | -       | -       | ![](http://i1.kym-cdn.com/photos/images/facebook/000/266/158/d8b.png)  |
+| Challenge      | [Challenge Accepted](https://vignette3.wikia.nocookie.net/meme/images/f/f3/YChallenge-Accepted-Meme.jpg/revision/latest?cb=20150720165458)       | -       | -       | ![](https://vignette3.wikia.nocookie.net/meme/images/f/f3/YChallenge-Accepted-Meme.jpg/revision/latest?cb=20150720165458)  |
+| Challenge      | [Mission Accomplished](https://am22.akamaized.net/tms/cnt/uploads/2018/04/72c63ad859e81e38eba93da64dc6d634188febc48d1127d8e2aacab62caa2bd7.jpg)       | -       | business cat       | ![](https://am22.akamaized.net/tms/cnt/uploads/2018/04/72c63ad859e81e38eba93da64dc6d634188febc48d1127d8e2aacab62caa2bd7.jpg)  |
+| Cookies      | [Come to the Dark Side, We have Cookies](http://fc08.deviantart.net/fs31/f/2008/221/5/0/Come_to_the_DarkSide_by_sali666.jpg)       | -       | Star Wars, Darth Vader       | ![](http://fc08.deviantart.net/fs31/f/2008/221/5/0/Come_to_the_DarkSide_by_sali666.jpg)  |
+| Cookies      | [Never lose a cookie bet](https://imgflip.com/i/1b4ukn)       | -       | Cookie Monster, Sesame Street       | ![](https://imgflip.com/i/1b4ukn)  |
+| Doctor Who      | [Professor River Song: Spoilers!](https://i.ytimg.com/vi/BXJFZIJ1iFQ/maxresdefault.jpg)       | -       | -       | ![](https://i.ytimg.com/vi/BXJFZIJ1iFQ/maxresdefault.jpg)  |
+| Emotions      | [Mischievous Grin](https://cdn.shopify.com/s/files/1/0275/3093/products/Cheshire_Cat_12X18_Print_Web_1024x1024.jpg)       | -       | Cheshire Cat, Alice in Wonderland       | ![](https://cdn.shopify.com/s/files/1/0275/3093/products/Cheshire_Cat_12X18_Print_Web_1024x1024.jpg)  |
+| Emotions      | [Grinch smirk](http://www.savethecat.com/wp-content/uploads/2015/12/grinch5b.jpg)       | -       | -       | ![](http://www.savethecat.com/wp-content/uploads/2015/12/grinch5b.jpg)  |
+| Emotions      | [Minion: Whaaaat?!](https://media.giphy.com/media/7Am7Ydb6CcjKg/giphy.gif)       | -       | Despicable Me, surprise       | ![](https://media.giphy.com/media/7Am7Ydb6CcjKg/giphy.gif)  |
+| Emotions      | [Minion: Mic Drop](https://m.popkey.co/9b1aa7/3RLvb_s-200x150.gif)       | -       | -       | ![](https://m.popkey.co/9b1aa7/3RLvb_s-200x150.gif)  |
+| Emotions      | [Stress? What stress?](https://s-media-cache-ak0.pinimg.com/236x/44/e4/a4/44e4a4dc89ef86561fe56714c6910cd9.jpg)       | -       | ruff lyfe       | ![](https://s-media-cache-ak0.pinimg.com/236x/44/e4/a4/44e4a4dc89ef86561fe56714c6910cd9.jpg)  |
+| Emotions      | [Mondayz](http://www.dumpaday.com/wp-content/uploads/2012/12/monday-polar-bear-funny-pictures.jpg)       | -       | polar bear       | ![](http://www.dumpaday.com/wp-content/uploads/2012/12/monday-polar-bear-funny-pictures.jpg)  |
+| Error Codes      | [HTTP Cats](http.cat)       | -       | http, error code, cats       | ![HTTP Cats](http.cat)  |
 | Excessive      | [I Can See Everything Now](https://media.makeameme.org/created/i-can-see-lt10sc.jpg)       | -       | cameras, overkill       | ![](https://media.makeameme.org/created/i-can-see-lt10sc.jpg)  |
-| -      | [Just let that sink in](https://pics.me.me/Instagram-c9ffd5.png)       | -       | pun       | ![](https://pics.me.me/Instagram-c9ffd5.png)  |
-| Poor Designs      | [Descriptive JRE Class Name](https://www.pushing-pixels.org/2007/11/07/and-the-longest-jre-class-name-is.html)       | [Previous URL](http://javadoc.bugaco.com/com/sun/java/swing/plaf/nimbus/InternalFrameInternalFrameTitlePaneInternalFrameTitlePaneMaximizeButtonPainter.html)       | -       | ![]()  |
+| Logo      | [Heads Up!](http://media.ellentv.com/2016/04/18/headsup3-274x204.jpg)       | -       | game, icon       | ![](http://media.ellentv.com/2016/04/18/headsup3-274x204.jpg)  |
+| Meme      | [House of a True Meme Lord](https://9gag.com/gag/aoPGb2g)       | -       | meme paintings       | ![House of a True Meme Lord](https://9gag.com/gag/aoPGb2g)  |
+| Polyglot      | [Declination - Szent](https://pics.onsizzle.com/Facebook-krisz-ff6f90.png)       | -       | Magyar Grammar, Hungarian, good enough for the first lesson       | ![](https://pics.onsizzle.com/Facebook-krisz-ff6f90.png)  |
+| Poor Designs      | [Descriptive JRE Class Name](https://www.pushing-pixels.org/2007/11/07/and-the-longest-jre-class-name-is.html)       | [Previous URL](http://javadoc.bugaco.com/com/sun/java/swing/plaf/nimbus/InternalFrameInternalFrameTitlePaneInternalFrameTitlePaneMaximizeButtonPainter.html)       | -       | ![](https://preview.redd.it/1sv6o7ik2n601.png?auto=webp&s=bedae62f01451c64ff7aa0e2fbf48820e5165b79)  |
 | Poor Designs      | [Balcony Construction](https://s-media-cache-ak0.pinimg.com/236x/6f/97/06/6f970658a2048028cf3ebf0babe4c101.jpg)       | -       | poor construction, condemned balcony access       | ![](https://s-media-cache-ak0.pinimg.com/236x/6f/97/06/6f970658a2048028cf3ebf0babe4c101.jpg)  |
 | Poor Designs      | [House Counstrution](http://buildingdesignexpert.com/wp-content/uploads/2015/01/Weetwood-House-2-Feb13-1024x768.jpg)       | -       | poor construction, building, house, bricks       | ![](http://buildingdesignexpert.com/wp-content/uploads/2015/01/Weetwood-House-2-Feb13-1024x768.jpg)  |
 | Poor Designs      | [Bridge Construction](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHJlztbrfeje-cAqhM04-JlUAA1678yWMFDPLveesw61evna6rQQ)       | -       | poor construction planning, bridge       | ![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHJlztbrfeje-cAqhM04-JlUAA1678yWMFDPLveesw61evna6rQQ)  |
+| Puns      | [Count me in!](https://memegenerator.net/img/instances/400x/57199999/count-me-in.jpg)       | -       | Count Von Count, Sesame Street       | ![](https://memegenerator.net/img/instances/400x/57199999/count-me-in.jpg)  |
+| Puns      | [Hello from the Otter side!](https://media.makeameme.org/created/hello-from-h0l9z1.jpg)       | -       | adorable, cute       | ![](https://media.makeameme.org/created/hello-from-h0l9z1.jpg)  |
+| Puns      | [Just let that sink in](https://pics.me.me/Instagram-c9ffd5.png)       | -       | metaphor       | ![](https://pics.me.me/Instagram-c9ffd5.png)  |
+| Puns      | [You Rock! You Rule!](https://orig00.deviantart.net/978e/f/2010/344/7/4/you_rock__you_rule_by_brandonman326-d34kwtn.jpg)       | -       | metaphor       | ![](https://orig00.deviantart.net/978e/f/2010/344/7/4/you_rock__you_rule_by_brandonman326-d34kwtn.jpg)  |
+| Puns      | [Whale, whale, whale, what do we have here?](https://pics.me.me/whale-whale-whale-what-do-we-have-here-6154025.png)       | -       | -       | ![](https://pics.me.me/whale-whale-whale-what-do-we-have-here-6154025.png)  |
+| ~~Sarcasm~~      | ~~Dr. Evil: ["Lots of Records"](https://cdn.meme.am/instances/500x/76371116/dr-evil-air-quotes-lots-of-records.jpg)~~       | -       | ~~Austin Powers, air quotes~~       | ![]()  |
+| -      | [You shall not pass](https://s-media-cache-ak0.pinimg.com/736x/db/f9/0f/dbf90f6053203bed7547f6b65585263d.jpg)       | -       | grading, exam, paper, Gandalf, LOTR       | ![](https://s-media-cache-ak0.pinimg.com/736x/db/f9/0f/dbf90f6053203bed7547f6b65585263d.jpg)  |
 | -      | []()       | -       | -       | ![]()  |
 
+
 <!--- ---: -->
-
-	
-
-House of a True Meme Lord - Paintings
-	https://9gag.com/gag/aoPGb2g
-	
-HTTP Cats
-	http.cat
 
 	
 Inspirational quotes that describe me:
 	https://rak-quotes.s3.amazonaws.com/images/328/large_Happiness_is_the_new_rich.png
 	https://pics.me.me/our-deepest-fear-is-not-that-we-are-inadequate-our-13379881.png
-
-
-Magyar Grammar - Hungarian - declination - szent - good enough for the first lesson
-	https://pics.onsizzle.com/Facebook-krisz-ff6f90.png
-
-Ballmer Peak
-	https://xkcd.com/323
-
-You Rock! You Rule!
-	https://orig00.deviantart.net/978e/f/2010/344/7/4/you_rock__you_rule_by_brandonman326-d34kwtn.jpg
-	
-"Lots of Records" (air quotes; Dr. Evil)
-	https://cdn.meme.am/instances/500x/76371116/dr-evil-air-quotes-lots-of-records.jpg 
-
-Hello from the Otter side!
-	https://media.makeameme.org/created/hello-from-h0l9z1.jpg
-
-Despicable Me Minion: Whaaaat?!
-	https://media.giphy.com/media/7Am7Ydb6CcjKg/giphy.gif
-
-Challenge Considered
-	http://i1.kym-cdn.com/photos/images/facebook/000/266/158/d8b.png
-	
-Challenge Accepted
-	https://vignette3.wikia.nocookie.net/meme/images/f/f3/YChallenge-Accepted-Meme.jpg/revision/latest?cb=20150720165458
-
-Mission Accomplished
-	https://am22.akamaized.net/tms/cnt/uploads/2018/04/72c63ad859e81e38eba93da64dc6d634188febc48d1127d8e2aacab62caa2bd7.jpg
-	
-Darth Vader - Come to the Dark Side, We have Cookies
-	http://fc08.deviantart.net/fs31/f/2008/221/5/0/Come_to_the_DarkSide_by_sali666.jpg
-
-Cookie monster: Never loose a cookie bet
-	https://imgflip.com/i/1b4ukn
-
-Stress? What stress?
-	https://s-media-cache-ak0.pinimg.com/236x/44/e4/a4/44e4a4dc89ef86561fe56714c6910cd9.jpg
-
-Mondayz
-	http://www.dumpaday.com/wp-content/uploads/2012/12/monday-polar-bear-funny-pictures.jpg
-
-Heads Up!
-	http://media.ellentv.com/2016/04/18/headsup3-274x204.jpg
-
-You shall not pass
-	https://s-media-cache-ak0.pinimg.com/736x/db/f9/0f/dbf90f6053203bed7547f6b65585263d.jpg
-
-Minion: Mic Drop
-	https://m.popkey.co/9b1aa7/3RLvb_s-200x150.gif
 
 I am Bach
 	https://img.memecdn.com/guess-whos-back_o_164428.jpg
@@ -86,20 +53,8 @@ Somebody explain it to him
 Pooh is not eating honey; he is eating recursion
 	https://thumbs.gfycat.com/ResponsibleRespectfulEquestrian-poster.jpg
 
-Whale, whale, whale, what do we have here?
-	https://pics.me.me/whale-whale-whale-what-do-we-have-here-6154025.png
-
-Count me in
-	https://memegenerator.net/img/instances/400x/57199999/count-me-in.jpg
-
 You can count me in (feat. "Count von Count")
 	https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLVQCy3XAsHtkkVxAQCGV4pGI9iqJmZYY8_XN6wAqDXaFZo3p7
-
-Cheshire Cat / mischievous grin
-	https://cdn.shopify.com/s/files/1/0275/3093/products/Cheshire_Cat_12X18_Print_Web_1024x1024.jpg
-
-Grinch smirk
-	http://www.savethecat.com/wp-content/uploads/2015/12/grinch5b.jpg
 
 Pi Day
 	http://weknowmemes.com/2014/03/11-most-irrationally-funny-pi-day-memes-gifs-and-comics/
@@ -207,8 +162,7 @@ Happy - Victory Dance - Gangnam Style - Psy
 Sugar Rush
 	https://metrouk2.files.wordpress.com/2016/09/sugar-rush.png
 
-Doctor Who - Professor River Song: Spoilers!
-	https://i.ytimg.com/vi/BXJFZIJ1iFQ/maxresdefault.jpg
+
 
 Matrix; It is done
 	https://i.makeagif.com/media/7-05-2018/NsA7BB.gif
