@@ -14,28 +14,82 @@
 | Doctor Who      | [Professor River Song: Spoilers!](https://i.ytimg.com/vi/BXJFZIJ1iFQ/maxresdefault.jpg)       | -       | -       | ![](https://i.ytimg.com/vi/BXJFZIJ1iFQ/maxresdefault.jpg)  |
 | Emotions      | [Mischievous Grin](https://cdn.shopify.com/s/files/1/0275/3093/products/Cheshire_Cat_12X18_Print_Web_1024x1024.jpg)       | -       | Cheshire Cat, Alice in Wonderland       | ![](https://cdn.shopify.com/s/files/1/0275/3093/products/Cheshire_Cat_12X18_Print_Web_1024x1024.jpg)  |
 | Emotions      | [Grinch smirk](http://www.savethecat.com/wp-content/uploads/2015/12/grinch5b.jpg)       | -       | -       | ![](http://www.savethecat.com/wp-content/uploads/2015/12/grinch5b.jpg)  |
-| Emotions      | [Minion: Whaaaat?!](https://media.giphy.com/media/7Am7Ydb6CcjKg/giphy.gif)       | -       | Despicable Me, surprise       | ![](https://media.giphy.com/media/7Am7Ydb6CcjKg/giphy.gif)  |
+| Emotions      | [Minion: Whaaaat?!](https://media.giphy.com/media/7Am7Ydb6CcjKg/giphy.gif)       | -       | GIF, Despicable Me, surprise       | ![](https://media.giphy.com/media/7Am7Ydb6CcjKg/giphy.gif)  |
 | Emotions      | [Minion: Mic Drop](https://m.popkey.co/9b1aa7/3RLvb_s-200x150.gif)       | -       | -       | ![](https://m.popkey.co/9b1aa7/3RLvb_s-200x150.gif)  |
 | Emotions      | [Stress? What stress?](https://s-media-cache-ak0.pinimg.com/236x/44/e4/a4/44e4a4dc89ef86561fe56714c6910cd9.jpg)       | -       | ruff lyfe       | ![](https://s-media-cache-ak0.pinimg.com/236x/44/e4/a4/44e4a4dc89ef86561fe56714c6910cd9.jpg)  |
-| Emotions      | [Mondayz](http://www.dumpaday.com/wp-content/uploads/2012/12/monday-polar-bear-funny-pictures.jpg)       | -       | polar bear       | ![](http://www.dumpaday.com/wp-content/uploads/2012/12/monday-polar-bear-funny-pictures.jpg)  |
+| Emotions      | [Mondayz](http://www.dumpaday.com/wp-content/uploads/2012/12/monday-polar-bear-funny-pictures.jpg)       | -       | demotivator, demotivational, polar bear       | ![](http://www.dumpaday.com/wp-content/uploads/2012/12/monday-polar-bear-funny-pictures.jpg)  |
 | Error Codes      | [HTTP Cats](http.cat)       | -       | http, error code, cats       | ![HTTP Cats](http.cat)  |
 | Excessive      | [I Can See Everything Now](https://media.makeameme.org/created/i-can-see-lt10sc.jpg)       | -       | cameras, overkill       | ![](https://media.makeameme.org/created/i-can-see-lt10sc.jpg)  |
 | Logo      | [Heads Up!](http://media.ellentv.com/2016/04/18/headsup3-274x204.jpg)       | -       | game, icon       | ![](http://media.ellentv.com/2016/04/18/headsup3-274x204.jpg)  |
 | Meme      | [House of a True Meme Lord](https://9gag.com/gag/aoPGb2g)       | -       | meme paintings       | ![House of a True Meme Lord](https://9gag.com/gag/aoPGb2g)  |
 | Polyglot      | [Declination - Szent](https://pics.onsizzle.com/Facebook-krisz-ff6f90.png)       | -       | Magyar Grammar, Hungarian, good enough for the first lesson       | ![](https://pics.onsizzle.com/Facebook-krisz-ff6f90.png)  |
-| Poor Designs      | [Descriptive JRE Class Name](https://www.pushing-pixels.org/2007/11/07/and-the-longest-jre-class-name-is.html)       | [Previous URL](http://javadoc.bugaco.com/com/sun/java/swing/plaf/nimbus/InternalFrameInternalFrameTitlePaneInternalFrameTitlePaneMaximizeButtonPainter.html)       | -       | ![](https://preview.redd.it/1sv6o7ik2n601.png?auto=webp&s=bedae62f01451c64ff7aa0e2fbf48820e5165b79)  |
-| Poor Designs      | [Balcony Construction](https://s-media-cache-ak0.pinimg.com/236x/6f/97/06/6f970658a2048028cf3ebf0babe4c101.jpg)       | -       | poor construction, condemned balcony access       | ![](https://s-media-cache-ak0.pinimg.com/236x/6f/97/06/6f970658a2048028cf3ebf0babe4c101.jpg)  |
-| Poor Designs      | [House Counstrution](http://buildingdesignexpert.com/wp-content/uploads/2015/01/Weetwood-House-2-Feb13-1024x768.jpg)       | -       | poor construction, building, house, bricks       | ![](http://buildingdesignexpert.com/wp-content/uploads/2015/01/Weetwood-House-2-Feb13-1024x768.jpg)  |
-| Poor Designs      | [Bridge Construction](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHJlztbrfeje-cAqhM04-JlUAA1678yWMFDPLveesw61evna6rQQ)       | -       | poor construction planning, bridge       | ![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHJlztbrfeje-cAqhM04-JlUAA1678yWMFDPLveesw61evna6rQQ)  |
 | Puns      | [Count me in!](https://memegenerator.net/img/instances/400x/57199999/count-me-in.jpg)       | -       | Count Von Count, Sesame Street       | ![](https://memegenerator.net/img/instances/400x/57199999/count-me-in.jpg)  |
 | Puns      | [Hello from the Otter side!](https://media.makeameme.org/created/hello-from-h0l9z1.jpg)       | -       | adorable, cute       | ![](https://media.makeameme.org/created/hello-from-h0l9z1.jpg)  |
 | Puns      | [Just let that sink in](https://pics.me.me/Instagram-c9ffd5.png)       | -       | metaphor       | ![](https://pics.me.me/Instagram-c9ffd5.png)  |
 | Puns      | [You Rock! You Rule!](https://orig00.deviantart.net/978e/f/2010/344/7/4/you_rock__you_rule_by_brandonman326-d34kwtn.jpg)       | -       | metaphor       | ![](https://orig00.deviantart.net/978e/f/2010/344/7/4/you_rock__you_rule_by_brandonman326-d34kwtn.jpg)  |
 | Puns      | [Whale, whale, whale, what do we have here?](https://pics.me.me/whale-whale-whale-what-do-we-have-here-6154025.png)       | -       | -       | ![](https://pics.me.me/whale-whale-whale-what-do-we-have-here-6154025.png)  |
 | ~~Sarcasm~~      | ~~Dr. Evil: ["Lots of Records"](https://cdn.meme.am/instances/500x/76371116/dr-evil-air-quotes-lots-of-records.jpg)~~       | -       | ~~Austin Powers, air quotes~~       | ![]()  |
+| UX Fail      | [Coffee Pot for Masochists](https://media.stylus.com/global/processedimages/2012/july/rh_0712_coffeepot/rh_0712_coffeepot_001_--__w_760_.jpg)       | -       | impossible objects, artwork       | ![](https://media.stylus.com/global/processedimages/2012/july/rh_0712_coffeepot/rh_0712_coffeepot_001_--__w_760_.jpg)  |
+| UX Fail      | [Elevator Buttons](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFIggiKgiseRQ8oBg4O8yvchXLDwxmZ4156l7eHEcm3NDwVDVV6w)       | -       | -       | ![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFIggiKgiseRQ8oBg4O8yvchXLDwxmZ4156l7eHEcm3NDwVDVV6w)  |
+| UX Fail      | [Thermostat](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1SyL1Uz7x4YNGoFhDfdC-Pz2TfQQucIpg_djEH1AMernxBU-6bw)       | -       | -       | ![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1SyL1Uz7x4YNGoFhDfdC-Pz2TfQQucIpg_djEH1AMernxBU-6bw)  |
+| UX Fail      | [Descriptive JRE Class Name](https://www.pushing-pixels.org/2007/11/07/and-the-longest-jre-class-name-is.html)       | poor designs, [Previous URL](http://javadoc.bugaco.com/com/sun/java/swing/plaf/nimbus/InternalFrameInternalFrameTitlePaneInternalFrameTitlePaneMaximizeButtonPainter.html)       | -       | ![](https://preview.redd.it/1sv6o7ik2n601.png?auto=webp&s=bedae62f01451c64ff7aa0e2fbf48820e5165b79)  |
+| UX Fail      | [Balcony Construction](https://s-media-cache-ak0.pinimg.com/236x/6f/97/06/6f970658a2048028cf3ebf0babe4c101.jpg)       | -       | poor designs, poor construction, condemned balcony access       | ![](https://s-media-cache-ak0.pinimg.com/236x/6f/97/06/6f970658a2048028cf3ebf0babe4c101.jpg)  |
+| UX Fail      | [House Counstrution](http://buildingdesignexpert.com/wp-content/uploads/2015/01/Weetwood-House-2-Feb13-1024x768.jpg)       | -       | poor designs, poor construction, building, house, bricks       | ![](http://buildingdesignexpert.com/wp-content/uploads/2015/01/Weetwood-House-2-Feb13-1024x768.jpg)  |
+| UX Fail      | [Bridge Construction](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHJlztbrfeje-cAqhM04-JlUAA1678yWMFDPLveesw61evna6rQQ)       | -       | poor designs, poor construction planning, bridge       | ![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHJlztbrfeje-cAqhM04-JlUAA1678yWMFDPLveesw61evna6rQQ)  |
 | -      | [You shall not pass](https://s-media-cache-ak0.pinimg.com/736x/db/f9/0f/dbf90f6053203bed7547f6b65585263d.jpg)       | -       | grading, exam, paper, Gandalf, LOTR       | ![](https://s-media-cache-ak0.pinimg.com/736x/db/f9/0f/dbf90f6053203bed7547f6b65585263d.jpg)  |
 | -      | []()       | -       | -       | ![]()  |
+| -      | []()       | -       | -       | ![]()  |
+| -      | []()       | -       | -       | ![]()  |
+| -      | []()       | -       | -       | ![]()  |
+| -      | []()       | -       | -       | ![]()  |
+| -      | []()       | -       | -       | ![]()  |
+| -      | []()       | -       | -       | ![]()  |
+| -      | []()       | -       | -       | ![]()  |
+| -      | []()       | -       | -       | ![]()  |
+| -      | []()       | -       | -       | ![]()  |
+| -      | []()       | -       | -       | ![]()  |
+| -      | []()       | -       | -       | ![]()  |
+| -      | []()       | -       | -       | ![]()  |
+| -      | []()       | -       | -       | ![]()  |
+| -      | []()       | -       | -       | ![]()  |
+| -      | []()       | -       | -       | ![]()  |
+| -      | []()       | -       | -       | ![]()  |
+| -      | []()       | -       | -       | ![]()  |
+| -      | []()       | -       | -       | ![]()  |
+| -      | []()       | -       | -       | ![]()  |
+| -      | []()       | -       | -       | ![]()  |
+| -      | []()       | -       | -       | ![]()  |
+| -      | []()       | -       | -       | ![]()  |
+| -      | []()       | -       | -       | ![]()  |
+| -      | []()       | -       | -       | ![]()  |
+| -      | []()       | -       | -       | ![]()  |
+| -      | []()       | -       | -       | ![]()  |
+| -      | []()       | -       | -       | ![]()  |
+| -      | []()       | -       | -       | ![]()  |
+| -      | []()       | -       | -       | ![]()  |
+| -      | [OMG](https://media.giphy.com/media/tdN4TpyM3dzYA/giphy.gif)       | -       | GIF, Tolls 2, cheesy       | ![](https://media.giphy.com/media/tdN4TpyM3dzYA/giphy.gif)  |
+| Fine Arts      | [The Scream](http://images.mentalfloss.com/sites/default/files/styles/mf_image_3x2/public/ahh.png?itok=vdBcWO6g&resize=1100x740)       | -       | -       | ![](http://images.mentalfloss.com/sites/default/files/styles/mf_image_3x2/public/ahh.png?itok=vdBcWO6g&resize=1100x740)  |
+| -      | [~~Sugar Rush](https://metrouk2.files.wordpress.com/2016/09/sugar-rush.png)~~       | -       | -       | ![](https://metrouk2.files.wordpress.com/2016/09/sugar-rush.png)  |
+| -      | [Victory Dance](https://i.imgflip.com/g3lqz.jpg)       | -       | Gangnam Style, Psy, happy, happiness, joy       | ![](https://i.imgflip.com/g3lqz.jpg)  |
+| Sarcasm      | [Maximum Capacity: 10 Persons](http://1.bp.blogspot.com/-VrxmvPQIVOg/UbJaNNDr4iI/AAAAAAAAV3k/vIdkc_oP8jc/s1600/maximum+capacity+three+americans+dr+heckle+funny+wtf+signs.jpg)       | -       | bridge; Spanish, mistranslation       | ![](http://1.bp.blogspot.com/-VrxmvPQIVOg/UbJaNNDr4iI/AAAAAAAAV3k/vIdkc_oP8jc/s1600/maximum+capacity+three+americans+dr+heckle+funny+wtf+signs.jpg)  |
+| -      | [Phenomenal Cosmic Power!!](https://memegenerator.net/img/instances/76308608.jpg)       | -       | Aladdin, Jafar, dark genie, Mwah! Ah! Ah!       | ![](https://memegenerator.net/img/instances/76308608.jpg)  |
+| -      | [I understood that Reference](https://i.kym-cdn.com/photos/images/newsfeed/000/903/458/f7b.gif)       | -       | GIF, The Avengers, Captain America       | ![](https://i.kym-cdn.com/photos/images/newsfeed/000/903/458/f7b.gif)  |
+| -      | [Nooooooooooooooo](http://www.nooooooooooooooo.com)       | -       | Star Wars, Darth Vader, button       | ![](http://www.nooooooooooooooo.com/vader.jpg)  |
+| Cool      | [Jedi Shoulder Flame](https://media3.giphy.com/media/2jv2kK9eLalOB6CYsh/giphy.gif)       | -       | GIF, Star Wars, Luke Skywalker, Last Jedi, Mark Hamill       | ![](https://media3.giphy.com/media/2jv2kK9eLalOB6CYsh/giphy.gif)  |
+| Cool      | [Jedi Unhooding](https://media.giphy.com/media/3owzVYjZSzuFivWpHi/giphy.gif)       | -       | GIF, Star Wars, Luke Skywalker, Last Jedi, Mark Hamill       | ![](https://media.giphy.com/media/3owzVYjZSzuFivWpHi/giphy.gif)  |
+| Memes      | ["May the force be ever in your favor Mr. Potter" -- Gandalf](http://knowyourmeme.com/photos/508058-troll-quotes)       | -       | troll quotes       | ![](http://knowyourmeme.com/photos/508058-troll-quotes)  |
+| -      | [Elmo on Fire](https://media2.giphy.com/media/bh5UZVQjB9ouQ/giphy.gif)       | -       | GIF, flames, burn, Sesame Street      | ![](https://media2.giphy.com/media/bh5UZVQjB9ouQ/giphy.gif)  |
+| Emotions      | [This is fine](https://cdn.vox-cdn.com/thumbor/s7qMSKpeavBerH1LCyFPIkNrW4k=/0x0:900x500/1400x1050/filters:focal(378x178:522x322):format(jpeg)/cdn.vox-cdn.com/uploads/chorus_image/image/49493993/this-is-fine.0.jpg)       | -       | dog tea fire, denial, hedonic, comfort, discomfort       | ![](https://cdn.vox-cdn.com/thumbor/s7qMSKpeavBerH1LCyFPIkNrW4k=/0x0:900x500/1400x1050/filters:focal(378x178:522x322):format(jpeg)/cdn.vox-cdn.com/uploads/chorus_image/image/49493993/this-is-fine.0.jpg)  |
+| Social Media      | [Seven Deadly Sins](https://memeguy.com/photos/images/seven-deadly-sins-as-social-media-316803.png)       | -       | -       | ![](https://memeguy.com/photos/images/seven-deadly-sins-as-social-media-316803.png)  |
+| Machines      | [Imagine recognition ("Thinking... cat")](https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iPIznkjTzWrM/v0/-999x-999.gif)       | -       | Machine Learning, Artificial Intelligence, image recognition       | ![](https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iPIznkjTzWrM/v0/-999x-999.gif)  |
+??? | T-Shirts      | [Yoda Best]()       | -       | -       | ![]()  |
+| T-Shirts      | [It is not illegal until you get caught](https://me.me/i/ft-ft-its-not-illegal-unless-you-get-caught-6-10610780)       | -       | irony       | ![](https://me.me/i/ft-ft-its-not-illegal-unless-you-get-caught-6-10610780)  |
+| -      | [It is done](https://i.makeagif.com/media/7-05-2018/NsA7BB.gif)       | -       | GIF, The Matrix, completion       | ![](https://i.makeagif.com/media/7-05-2018/NsA7BB.gif)  |
 
+	
+
+
+	
 
 <!--- ---: -->
 
@@ -98,13 +152,6 @@ I am root!
 Tumbleweed; It's so quiet in here
 	https://ellebeaublogger.files.wordpress.com/2017/05/6948113fa09783dcb7f3c00ff7f5a6b6_texas-tumbleweed-meme-tumbleweed-meme_595-301.jpeg
 
-
-UX Fail
-	Elevator buttons
-		https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFIggiKgiseRQ8oBg4O8yvchXLDwxmZ4156l7eHEcm3NDwVDVV6w
-	Thermostat
-		https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1SyL1Uz7x4YNGoFhDfdC-Pz2TfQQucIpg_djEH1AMernxBU-6bw
-
 Grumpy Cat:
 	ESC key
 		http://s2.quickmeme.com/img/10/106973b54e5a84f09a04a0aa2113052af4b7af31b7f43ce1905a04183303e5fd.jpg
@@ -141,59 +188,7 @@ I don't always test my code.... but when I do, I do it in production
 TGIF
 	https://s-media-cache-ak0.pinimg.com/564x/13/65/1d/13651d0508f5ee20dc7efd5746ee5924.jpg
 
-OMG (Tolls 2)
-	https://media.giphy.com/media/tdN4TpyM3dzYA/giphy.gif
-
-The Scream
-	http://images.mentalfloss.com/sites/default/files/styles/mf_image_3x2/public/ahh.png?itok=vdBcWO6g&resize=1100x740
-
-Darth Vader: Nooooooooooooooo
-	http://www.nooooooooooooooo.com
-
-"May the force be ever in your favor Mr. Potter" -- Gandalf
-	http://knowyourmeme.com/photos/508058-troll-quotes
-
-"Maximum Capacity: 10 Persons" (bridge; Spanish)
-	http://1.bp.blogspot.com/-VrxmvPQIVOg/UbJaNNDr4iI/AAAAAAAAV3k/vIdkc_oP8jc/s1600/maximum+capacity+three+americans+dr+heckle+funny+wtf+signs.jpg
-
-Happy - Victory Dance - Gangnam Style - Psy
-	https://i.imgflip.com/g3lqz.jpg
-
-Sugar Rush
-	https://metrouk2.files.wordpress.com/2016/09/sugar-rush.png
 
 
 
-Matrix; It is done
-	https://i.makeagif.com/media/7-05-2018/NsA7BB.gif
-
-Aladdin - Jafar - Phenomenal Cosmic Power!!
-	https://memegenerator.net/img/instances/76308608.jpg
 	
-The Avengers - Captain America: I understood that reference
-	https://i.kym-cdn.com/photos/images/newsfeed/000/903/458/f7b.gif
-
-Star Wars - Luke Skywalker - Last Jedi
-	Unhooding
-	https://media.giphy.com/media/3owzVYjZSzuFivWpHi/giphy.gif
-	
-	Shoulder flame
-	https://media3.giphy.com/media/2jv2kK9eLalOB6CYsh/giphy.gif
-
-Elmo Fire - Hell - Burn
-	https://media2.giphy.com/media/bh5UZVQjB9ouQ/giphy.gif
-
-This is fine - Dog tea fire - Denial - Comfort
-	https://cdn.vox-cdn.com/thumbor/s7qMSKpeavBerH1LCyFPIkNrW4k=/0x0:900x500/1400x1050/filters:focal(378x178:522x322):format(jpeg)/cdn.vox-cdn.com/uploads/chorus_image/image/49493993/this-is-fine.0.jpg
-
-Seven Deadly Sins - Social Media
-	https://memeguy.com/photos/images/seven-deadly-sins-as-social-media-316803.png
-	
-	
-<Ironic T-shirts>
-It is not illegal until you get caught
-	https://me.me/i/ft-ft-its-not-illegal-unless-you-get-caught-6-10610780
-
-
-Machine Learning: Imagine recognition ("Thinking... cat")
-	https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iPIznkjTzWrM/v0/-999x-999.gif
