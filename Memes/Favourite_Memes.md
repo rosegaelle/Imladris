@@ -2,14 +2,18 @@
 
 | Category      | Title | Notes | Tags | Preview     |
 | :---        |    :---   |    :---   |    :---   |          :----: |
-| -      | [Alternate Currency](https://xkcd.com/512)      | -       | XKCD, XKCD712       | ![#XKCD712](https://imgs.xkcd.com/comics/alternate_currency.png)  |
-| -      | [It's compiling](https://xkcd.com/303)      | -       | XKCD, XKCD303       | ![#XKCD303](https://imgs.xkcd.com/comics/compiling.png)  |
-| -      | [Bobby Tables](https://xkcd.com/327)      | -       | XKCD, XKCD327       | ![#XKCD327](https://imgs.xkcd.com/comics/exploits_of_a_mom.png)  |
-| Excessive      | I Can See Everything Now       | -       | cameras, overkill       | ![I Can See Everything Now](https://media.makeameme.org/created/i-can-see-lt10sc.jpg)  |
-| -      | -       | -       | -       | -  |
+| -      | [Alternate Currency](https://xkcd.com/512)      | -       | XKCD, XKCD712       | ![](https://imgs.xkcd.com/comics/alternate_currency.png)  |
+| -      | [It's compiling](https://xkcd.com/303)      | -       | XKCD, XKCD303       | ![](https://imgs.xkcd.com/comics/compiling.png)  |
+| -      | [Bobby Tables](https://xkcd.com/327)      | -       | XKCD, XKCD327       | ![](https://imgs.xkcd.com/comics/exploits_of_a_mom.png)  |
+| Excessive      | [I Can See Everything Now](https://media.makeameme.org/created/i-can-see-lt10sc.jpg)       | -       | cameras, overkill       | ![](https://media.makeameme.org/created/i-can-see-lt10sc.jpg)  |
+| -      | [Just let that sink in](https://pics.me.me/Instagram-c9ffd5.png)       | -       | pun       | ![](https://pics.me.me/Instagram-c9ffd5.png)  |
+| Poor Designs      | [Descriptive JRE Class Name](https://www.pushing-pixels.org/2007/11/07/and-the-longest-jre-class-name-is.html)       | [Previous URL](http://javadoc.bugaco.com/com/sun/java/swing/plaf/nimbus/InternalFrameInternalFrameTitlePaneInternalFrameTitlePaneMaximizeButtonPainter.html)       | -       | ![]()  |
+| Poor Designs      | [Balcony Construction](https://s-media-cache-ak0.pinimg.com/236x/6f/97/06/6f970658a2048028cf3ebf0babe4c101.jpg)       | -       | poor construction, condemned balcony access       | ![](https://s-media-cache-ak0.pinimg.com/236x/6f/97/06/6f970658a2048028cf3ebf0babe4c101.jpg)  |
+| Poor Designs      | [House Counstrution](http://buildingdesignexpert.com/wp-content/uploads/2015/01/Weetwood-House-2-Feb13-1024x768.jpg)       | -       | poor construction, building, house, bricks       | ![](http://buildingdesignexpert.com/wp-content/uploads/2015/01/Weetwood-House-2-Feb13-1024x768.jpg)  |
+| Poor Designs      | [Bridge Construction](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHJlztbrfeje-cAqhM04-JlUAA1678yWMFDPLveesw61evna6rQQ)       | -       | poor construction planning, bridge       | ![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHJlztbrfeje-cAqhM04-JlUAA1678yWMFDPLveesw61evna6rQQ)  |
+| -      | []()       | -       | -       | ![]()  |
 
 <!--- ---: -->
-
 
 	
 
@@ -66,10 +70,6 @@ Mondayz
 
 Heads Up!
 	http://media.ellentv.com/2016/04/18/headsup3-274x204.jpg
-
-Just let that sink in
-	https://pics.me.me/Instagram-c9ffd5.png
-	<deprecated>http://memes.com/img/203518</deprecated>
 
 You shall not pass
 	https://s-media-cache-ak0.pinimg.com/736x/db/f9/0f/dbf90f6053203bed7547f6b65585263d.jpg
@@ -241,20 +241,5 @@ It is not illegal until you get caught
 	https://me.me/i/ft-ft-its-not-illegal-unless-you-get-caught-6-10610780
 
 
-
 Machine Learning: Imagine recognition ("Thinking... cat")
 	https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iPIznkjTzWrM/v0/-999x-999.gif
-
-
-<Poor Designs/Constructions>
-	Descriptive class name
-		http://javadoc.bugaco.com/com/sun/java/swing/plaf/nimbus/InternalFrameInternalFrameTitlePaneInternalFrameTitlePaneMaximizeButtonPainter.html
-
-	Balcony Design (condemned balcony access?)
-		https://s-media-cache-ak0.pinimg.com/236x/6f/97/06/6f970658a2048028cf3ebf0babe4c101.jpg
-
-	Building/house Design
-		http://buildingdesignexpert.com/wp-content/uploads/2015/01/Weetwood-House-2-Feb13-1024x768.jpg
-
-	Bridge Design
-		https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHJlztbrfeje-cAqhM04-JlUAA1678yWMFDPLveesw61evna6rQQ
