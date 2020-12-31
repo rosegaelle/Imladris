@@ -21,7 +21,7 @@
 | Error Codes      | [HTTP Cats](http.cat)       | -       | http, error code, cats       | ![HTTP Cats](http.cat)  |
 | Excessive      | [I Can See Everything Now](https://media.makeameme.org/created/i-can-see-lt10sc.jpg)       | -       | cameras, overkill       | ![](https://media.makeameme.org/created/i-can-see-lt10sc.jpg)  |
 | Logo      | [Heads Up!](http://media.ellentv.com/2016/04/18/headsup3-274x204.jpg)       | -       | game, icon       | ![](http://media.ellentv.com/2016/04/18/headsup3-274x204.jpg)  |
-| Meme      | [House of a True Meme Lord](https://9gag.com/gag/aoPGb2g)       | -       | meme paintings       | ![House of a True Meme Lord](https://9gag.com/gag/aoPGb2g)  |
+| Meme      | [House of a True Meme Lord](https://9gag.com/gag/aoPGb2g)       | -       | meme paintings       | ![House of a True Meme Lord](https://img-9gag-fun.9cache.com/photo/aoPGb2g_460svvp9.webm)  |
 | Polyglot      | [Declination - Szent](https://pics.onsizzle.com/Facebook-krisz-ff6f90.png)       | -       | Magyar Grammar, Hungarian, good enough for the first lesson       | ![](https://pics.onsizzle.com/Facebook-krisz-ff6f90.png)  |
 | Puns      | [Count me in!](https://memegenerator.net/img/instances/400x/57199999/count-me-in.jpg)       | -       | Count Von Count, Sesame Street       | ![](https://memegenerator.net/img/instances/400x/57199999/count-me-in.jpg)  |
 | Puns      | [Hello from the Otter side!](https://media.makeameme.org/created/hello-from-h0l9z1.jpg)       | -       | adorable, cute       | ![](https://media.makeameme.org/created/hello-from-h0l9z1.jpg)  |
@@ -65,8 +65,8 @@
 | -      | []()       | -       | -       | ![]()  |
 | -      | []()       | -       | -       | ![]()  |
 | -      | []()       | -       | -       | ![]()  |
-| -      | []()       | -       | -       | ![]()  |
-| -      | []()       | -       | -       | ![]()  |
+| -      | [I don't always test my code.... but when I do, I do it in production](https://cdn.meme.am/instances/500x/9689481.jpg)       | -       | -       | ![](https://cdn.meme.am/instances/500x/9689481.jpg)  |
+| -      | [TGIF](https://s-media-cache-ak0.pinimg.com/564x/13/65/1d/13651d0508f5ee20dc7efd5746ee5924.jpg)       | -       | -       | ![](https://s-media-cache-ak0.pinimg.com/564x/13/65/1d/13651d0508f5ee20dc7efd5746ee5924.jpg)  |
 | -      | [OMG](https://media.giphy.com/media/tdN4TpyM3dzYA/giphy.gif)       | -       | GIF, Tolls 2, cheesy       | ![](https://media.giphy.com/media/tdN4TpyM3dzYA/giphy.gif)  |
 | Fine Arts      | [The Scream](http://images.mentalfloss.com/sites/default/files/styles/mf_image_3x2/public/ahh.png?itok=vdBcWO6g&resize=1100x740)       | -       | -       | ![](http://images.mentalfloss.com/sites/default/files/styles/mf_image_3x2/public/ahh.png?itok=vdBcWO6g&resize=1100x740)  |
 | -      | [~~Sugar Rush](https://metrouk2.files.wordpress.com/2016/09/sugar-rush.png)~~       | -       | -       | ![](https://metrouk2.files.wordpress.com/2016/09/sugar-rush.png)  |
@@ -82,16 +82,14 @@
 | Emotions      | [This is fine](https://cdn.vox-cdn.com/thumbor/s7qMSKpeavBerH1LCyFPIkNrW4k=/0x0:900x500/1400x1050/filters:focal(378x178:522x322):format(jpeg)/cdn.vox-cdn.com/uploads/chorus_image/image/49493993/this-is-fine.0.jpg)       | -       | dog tea fire, denial, hedonic, comfort, discomfort       | ![](https://cdn.vox-cdn.com/thumbor/s7qMSKpeavBerH1LCyFPIkNrW4k=/0x0:900x500/1400x1050/filters:focal(378x178:522x322):format(jpeg)/cdn.vox-cdn.com/uploads/chorus_image/image/49493993/this-is-fine.0.jpg)  |
 | Social Media      | [Seven Deadly Sins](https://memeguy.com/photos/images/seven-deadly-sins-as-social-media-316803.png)       | -       | -       | ![](https://memeguy.com/photos/images/seven-deadly-sins-as-social-media-316803.png)  |
 | Machines      | [Imagine recognition ("Thinking... cat")](https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iPIznkjTzWrM/v0/-999x-999.gif)       | -       | Machine Learning, Artificial Intelligence, image recognition       | ![](https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iPIznkjTzWrM/v0/-999x-999.gif)  |
-??? | T-Shirts      | [Yoda Best]()       | -       | -       | ![]()  |
+| T-Shirts      | [Yoda Best](https://shirtoid.com/wp-content/uploads/2015/04/yoda-best.jpg)       | -       | -       | ![](https://shirtoid.com/wp-content/uploads/2015/04/yoda-best.jpg)  |
 | T-Shirts      | [It is not illegal until you get caught](https://me.me/i/ft-ft-its-not-illegal-unless-you-get-caught-6-10610780)       | -       | irony       | ![](https://me.me/i/ft-ft-its-not-illegal-unless-you-get-caught-6-10610780)  |
 | -      | [It is done](https://i.makeagif.com/media/7-05-2018/NsA7BB.gif)       | -       | GIF, The Matrix, completion       | ![](https://i.makeagif.com/media/7-05-2018/NsA7BB.gif)  |
 
 	
 
-
-	
-
 <!--- ---: -->
+
 
 	
 Inspirational quotes that describe me:
@@ -115,9 +113,6 @@ Pi Day
 
 Yoda: "Try Not. To do or not to do, there is no try."
 	http://s2.quickmeme.com/img/9e/9e3ad596cac4e1d706c17fc8a3f30a7be64153e93257a3efff1c3fe30848f61c.jpg
-
-Yoda Best!
-	https://shirtoid.com/wp-content/uploads/2015/04/yoda-best.jpg
 
 Yoda - Sense humour, a people need (we could all use such essential life skill #senseofhumor)
 	https://media.makeameme.org/created/sense-humour-a.png
@@ -181,14 +176,3 @@ Dogs - Because everyone loves a pizza party
 DevOps Reactions: Friday Deployment & Leaving Afterwards
 	http://devopsreactions.tumblr.com/post/87284390953/friday-deployments-and-leaving-afterwards
 	http://66.media.tumblr.com/7f94de2ed3b590dbf59d501041699d94/tumblr_inline_n67m5fYC3X1raprkq.gif
-
-I don't always test my code.... but when I do, I do it in production
-	https://cdn.meme.am/instances/500x/9689481.jpg
-
-TGIF
-	https://s-media-cache-ak0.pinimg.com/564x/13/65/1d/13651d0508f5ee20dc7efd5746ee5924.jpg
-
-
-
-
-	
