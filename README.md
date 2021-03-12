@@ -12,6 +12,16 @@ If no folder is specified, the current directory will be used as default.<br/><b
 Sample Usage:<br/>
 `cleanup_by_file_ext.sh -d "~/Downloads" -e "TMP"`
 
+
+## Games
+### [Puzzle 1](games/puzzle1.py)
+<!-- @ToDo: Add description. --> 
+
+### [Puzzle 2](games/puzzle2.py)
+Also see [FreeGames](http://www.grantjenks.com/docs/freegames/)
+<!-- @ToDo: Add description. --> 
+
+
 ## Memes
 ### [favourite_memes](memes/favourite_memes.md)
 - Why?<br/>
