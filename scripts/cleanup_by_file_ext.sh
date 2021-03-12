@@ -17,8 +17,8 @@ else
 	case "${flag}" in
 		d) eval WORKING_DIRECTORY="$OPTARG";;
 		e) eval FILE_EXT="$OPTARG";;
-		:) echo "Missing argument for option -$OPTARG"; exit 1;;
-		\?) echo "Unknown option -$OPTARG"; exit 1;;
+		:) echo "Missing argument for option -$OPTARG"; print_usage;;
+		\?) echo "Unknown option -$OPTARG"; print_usage;;
 		*) print_usage;;
 	esac
 	done
