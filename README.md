@@ -24,10 +24,9 @@ Also see [FreeGames](http://www.grantjenks.com/docs/freegames/)
 
 ## Illustrations
 ### [favourite_memes](illustrations/favourite_memes.md)
+### [favourite_comics](illustrations/favourite_comics.md)
 - Why?<br/>
 - Because I am a proud Millennial. ;-)<br/>
 - Seriously, why???<br/>
 - Okay, fine! Does <i>this</i> satisfy your curiosity?! [#XKCD712](https://xkcd.com/512)<br/><br/>
 ![](https://imgs.xkcd.com/comics/alternate_currency.png)
-
-### [favourite_comics](illustrations/favourite_comics.md)
