@@ -2,7 +2,7 @@
 
 #############################################################
 # Author: @rosegaelle                                       #
-# July 2024.                                                #
+# Last Modified Date: July 2024                             #
 #############################################################
 
 
@@ -112,14 +112,12 @@ else
 
     # 1. Ensure the necessary resources files exist before starting.
     file_dictionary_full=$(mktemp)
-    curl -o $file_dictionary_full "https://github.com/rosegaelle/Imladris/blob/main/wordle/dictionary_full.txt"
+    curl -o $file_dictionary_full "https://raw.githubusercontent.com/rosegaelle/Imladris/main/wordle/dictionary_full.txt"
     validate_file_dependency $file_dictionary_full
 
     file_previous_solutions=$(mktemp)
-    curl -o $file_previous_solutions "https://github.com/rosegaelle/Imladris/blob/main/wordle/workbook.txt"
+    curl -o $file_previous_solutions "https://raw.githubusercontent.com/rosegaelle/Imladris/main/wordle/workbook.txt"
     validate_file_dependency $file_previous_solutions
-
-
 
     # 2. Decode the full dictionary.
     file_tmp_1=$(mktemp)
