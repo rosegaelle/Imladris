@@ -23,23 +23,27 @@ help() {
     echo
 }
 
+sanitize_input() {
+    user_input=${1:-''}
+    echo $user_input | tr -cd '[:alpha:]'| tr '[:upper:]' '[:lower:]'
+}
+
 ### ToDo: Input validation.
 while getopts ":a:b:c:d:e:f:i:x:" flag
 do
     case "${flag}" in
-        a) LETTER_AT_1=${OPTARG};;
-        b) LETTER_AT_2=${OPTARG};;
-        c) LETTER_AT_3=${OPTARG};;
-        d) LETTER_AT_4=${OPTARG};;
-        e) LETTER_AT_5=${OPTARG};;
+        a) LETTER_AT_1=$(sanitize_input ${OPTARG});;
+        b) LETTER_AT_2=$(sanitize_input ${OPTARG});;
+        c) LETTER_AT_3=$(sanitize_input ${OPTARG});;
+        d) LETTER_AT_4=$(sanitize_input ${OPTARG});;
+        e) LETTER_AT_5=$(sanitize_input ${OPTARG});;
         f) FILEPATH_WORKBOOK=${OPTARG};;
-        i) LETTERS_INCLUDED=${OPTARG};;
-        x) LETTERS_EXCLUDED=${OPTARG};;
+        i) LETTERS_INCLUDED=$(sanitize_input ${OPTARG});;
+        x) LETTERS_EXCLUDED=$(sanitize_input ${OPTARG});;
         *) help
         exit 1;;
     esac
 done
-
 
 
 WORD_LENGTH=5
@@ -74,7 +78,7 @@ filter_by_character_index() {
             exit 1
         fi
 
-        character_value=$(echo "$character_value" | tr '[:upper:]' '[:lower:]')
+        character_value="${character_value:0:1}"
         awk -v s="$character_value" "index(\$0, s) == $character_index" $filename_input > $filename_output
     fi
 
@@ -106,12 +110,13 @@ if [ ! -z "$FILEPATH_WORKBOOK" ] && [ ! $(validate_file_dependency $FILEPATH_WOR
 
 else
 
-    ### ToDo: Curl from repo if missing locally.
-    # 1. Check whether the necessary resources files exist before starting.
-    file_dictionary_full='./dictionary_full.txt'
-    validate_file_dependency $file_dictionary
+    # 1. Ensure the necessary resources files exist before starting.
+    file_dictionary_full=$(mktemp)
+    curl -o $file_dictionary_full "https://github.com/rosegaelle/Imladris/blob/main/wordle/dictionary_full.txt"
+    validate_file_dependency $file_dictionary_full
 
-    file_previous_solutions='./workbook.txt'
+    file_previous_solutions=$(mktemp)
+    curl -o $file_previous_solutions "https://github.com/rosegaelle/Imladris/blob/main/wordle/workbook.txt"
     validate_file_dependency $file_previous_solutions
 
 
@@ -122,6 +127,7 @@ else
     do
         echo "$line" | base64 -d >> $file_tmp_1
     done < $file_dictionary_full
+    cleanup $file_dictionary_full
 
 
 
@@ -131,6 +137,7 @@ else
     do
         echo "$line" | base64 -d >> $file_tmp_2
     done < $file_previous_solutions
+    cleanup $file_previous_solutions
 
 
 
@@ -189,8 +196,8 @@ wc -l < "$file_dictionary_optimized"
 if [[ $(wc -l < "$file_dictionary_optimized") -lt 20 ]]; then
     cat $file_dictionary_optimized
 fi
-# cleanup $file_dictionary_optimized # ?
 
+# cleanup $file_dictionary_optimized # ?
 
 
 echo "This is done."
