@@ -23,8 +23,11 @@ Also see [FreeGames](http://www.grantjenks.com/docs/freegames/)
 <!-- @ToDo: Add description. --> 
 
 
+
 ### Illustrations
 #### [favourite_memes](illustrations/favourite_memes.md)
+#### [favourite_comics](illustrations/favourite_comics.md)
+
 - Why?<br/>
 - Because I am a proud Millennial. ;-)<br/>
 - Seriously, why???<br/>
