@@ -39,7 +39,7 @@ Also see [FreeGames](http://www.grantjenks.com/docs/freegames/)
 
 ### Games
 #### Wordle
-* Workbook last updated on: **2024/07/21**.
+* Workbook last updated on: **2024/07/22**.
 ```sh
 # encode
 'echo "$keyword" | base64'

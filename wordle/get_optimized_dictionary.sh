@@ -5,8 +5,6 @@
 # Last Modified Date: July 2024                             #
 #############################################################
 
-
-
 help() {
     echo "Hello, Wordle!"
     echo
