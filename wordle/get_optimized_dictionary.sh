@@ -196,4 +196,4 @@ fi
 # cleanup $file_dictionary_optimized # ?
 
 
-echo "This is done."
+echo "It is done."
