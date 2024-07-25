@@ -8,7 +8,7 @@
 help() {
     echo "Hello, Wordle!"
     echo
-    echo "Syntax: get_optimized_dictionary [-a|b|c|d|e|f|i|m|n|o|p|q|x]"
+    echo "Syntax: hint_helper [-a|b|c|d|e|f|i|m|n|o|p|q|x]"
     echo "options:"
     echo "a     First letter of the word."
     echo "b     Character at the second position."
@@ -71,17 +71,13 @@ validate_file_dependency() {
 }
 
 filter_by_character_index() {
-    filename_input=${1:-''}
-    filename_output=${2:-''}
-    character_index=${3:-0}
-    character_value=${4:-''}
-    is_included=${5:-true}
+    character_index=${1:-0}
+    character_value=${2:-''}
+    is_included=${3:-true}
 
-    validate_file_dependency "$filename_input"
+    file_tmp=$(mktemp)
 
-    if [ -z "$character_value" ]; then
-        cp $filename_input $filename_output
-    else
+    if [ ! -z "$character_value" ]; then
         if (( "$character_index" < 1 || "$character_index" > "$WORD_LENGTH" )); then
             echo "Error message goes here."
             exit 1
@@ -89,16 +85,15 @@ filter_by_character_index() {
 
         if $is_included; then
             character_value="${character_value:0:1}"
-            awk -v s="$character_value" "index(\$0, s) == $character_index" $filename_input > $filename_output
+            awk -v s="$character_value" "index(\$0, s) == $character_index" $file_dictionary_optimized > $file_tmp
         else
             for (( i=0; i<${#character_value}; i++ )); do
-                awk -v s="${character_value:$i:1}" "index(\$0, s) != $character_index" $filename_input > $filename_output
-                cp $filename_output $filename_input
+                awk -v s="${character_value:$i:1}" "index(\$0, s) != $character_index" $file_dictionary_optimized > $file_tmp
+                cp $file_tmp $file_dictionary_optimized
             done
+            mv $file_tmp $file_dictionary_optimized
         fi
     fi
-
-    cleanup "$filename_input"
 }
 
 insert_unique() {
@@ -178,57 +173,40 @@ fi
 cleanup "$file_tmp_3"
 
 ## Letters to include.
-file_tmp_5=$(mktemp)
 if [ -z "$LETTERS_INCLUDED" ]; then
-    cp $file_tmp_4 $file_tmp_5
+    cp $file_tmp_4 $file_dictionary_optimized
 else
     for (( i=0; i<${#LETTERS_INCLUDED}; i++ )); do
-        grep -i "${LETTERS_INCLUDED:$i:1}" $file_tmp_4 > $file_tmp_5
-        cp $file_tmp_5 $file_tmp_4
+        grep -i "${LETTERS_INCLUDED:$i:1}" $file_tmp_4 > $file_dictionary_optimized
+        cp $file_dictionary_optimized $file_tmp_4
     done
 fi
 cleanup "$file_tmp_4"
 
 ## Letters at specific positions.
-file_tmp_6=$(mktemp)
-filter_by_character_index $file_tmp_5 $file_tmp_6 1 "$LETTER_AT_1" true
+filter_by_character_index 1 "$LETTER_AT_1"
+filter_by_character_index 2 "$LETTER_AT_2"
+filter_by_character_index 3 "$LETTER_AT_3"
+filter_by_character_index 4 "$LETTER_AT_4"
+filter_by_character_index 5 "$LETTER_AT_5"
 
-file_tmp_7=$(mktemp)
-filter_by_character_index $file_tmp_6 $file_tmp_7 2 "$LETTER_AT_2" true
+## Letters NOT at specific positions.
+filter_by_character_index 1 "$LETTERS_NOT_AT_1" false
+filter_by_character_index 2 "$LETTERS_NOT_AT_2" false
+filter_by_character_index 3 "$LETTERS_NOT_AT_3" false
+filter_by_character_index 4 "$LETTERS_NOT_AT_4" false
+filter_by_character_index 5 "$LETTERS_NOT_AT_5" false
 
-file_tmp_8=$(mktemp)
-filter_by_character_index $file_tmp_7 $file_tmp_8 3 "$LETTER_AT_3" true
-
-file_tmp_9=$(mktemp)
-filter_by_character_index $file_tmp_8 $file_tmp_9 4 "$LETTER_AT_4" true
-
-file_tmp_10=$(mktemp)
-filter_by_character_index $file_tmp_9 $file_tmp_10 5 "$LETTER_AT_5" true
-
-file_tmp_11=$(mktemp)
-filter_by_character_index $file_tmp_10 $file_tmp_11 1 "$LETTERS_NOT_AT_1" false
-
-file_tmp_12=$(mktemp)
-filter_by_character_index $file_tmp_11 $file_tmp_12 2 "$LETTERS_NOT_AT_2" false
-
-file_tmp_13=$(mktemp)
-filter_by_character_index $file_tmp_12 $file_tmp_13 3 "$LETTERS_NOT_AT_3" false
-
-file_tmp_14=$(mktemp)
-filter_by_character_index $file_tmp_13 $file_tmp_14 4 "$LETTERS_NOT_AT_4" false
-
-filter_by_character_index $file_tmp_14 $file_dictionary_optimized 5 "$LETTERS_NOT_AT_5" false
-
-
+## Parsing possible solutions and suggesting potential next guess(es).
 wc -l $file_dictionary_optimized
 
-if [[ $(wc -l < "$file_dictionary_optimized") -lt 20 ]]; then
+unique_letters=$(grep -o . $file_dictionary_optimized | sort -u | tr -d '\n')
+for (( i=0; i<${#unique_letters}; i++ )); do
+    grep -o $file_dictionary_optimized -e "${unique_letters:$i:1}" | sort | uniq -c
+done
+
+if [[ $(wc -l < "$file_dictionary_optimized") -le 10 ]]; then
     cat $file_dictionary_optimized
-else
-    unique_letters=$(grep -o . $file_dictionary_optimized | sort -u | tr -d '\n')
-    for (( i=0; i<${#unique_letters}; i++ )); do
-        grep -o $file_dictionary_optimized -e "${unique_letters:$i:1}" | sort | uniq -c
-    done
 fi
 
 # cleanup "$file_dictionary_optimized" #???
