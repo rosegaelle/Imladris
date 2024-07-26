@@ -9,10 +9,4 @@ source $(dirname $0)/utils.sh
 
 
 
-get_anagrams() {
-    letters=${1:-''}
-
-    #ToDo
-    # Remove placeholder and add logic
-    printf "\nAnagrammer called with: '$letters'.\n"
-}
+# ToDo
