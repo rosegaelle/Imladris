@@ -5,6 +5,12 @@
 # Last Modified Date: July 2024                             #
 #############################################################
 
+source $(dirname $0)/utils.sh
+source $(dirname $0)/dictionary.sh
+source $(dirname $0)/anagrammer.sh
+
+
+
 help() {
     echo "Hello, Wordle!"
     echo
@@ -54,21 +60,6 @@ do
 done
 
 
-WORD_LENGTH=5
-
-file_dictionary_optimized=$(mktemp)
-
-
-validate_file_dependency() {
-    filename=${1:-""}
-
-    if [ ! -f $filename ]; then
-        echo "File '$filename' does not exist."
-        exit 1
-    else
-        return 0
-    fi
-}
 
 filter_by_character_index() {
     character_index=${1:-0}
@@ -76,6 +67,7 @@ filter_by_character_index() {
     is_included=${3:-true}
 
     file_tmp=$(mktemp)
+    cp $FILEPATH_HINT_LIST $file_tmp
 
     if [ ! -z "$character_value" ]; then
         if (( "$character_index" < 1 || "$character_index" > "$WORD_LENGTH" )); then
@@ -85,15 +77,16 @@ filter_by_character_index() {
 
         if $is_included; then
             character_value="${character_value:0:1}"
-            awk -v s="$character_value" "index(\$0, s) == $character_index" $file_dictionary_optimized > $file_tmp
+            awk -v s="$character_value" "index(\$0, s) == $character_index" $FILEPATH_HINT_LIST > $file_tmp
         else
             for (( i=0; i<${#character_value}; i++ )); do
-                awk -v s="${character_value:$i:1}" "index(\$0, s) != $character_index" $file_dictionary_optimized > $file_tmp
-                cp $file_tmp $file_dictionary_optimized
+                awk -v s="${character_value:$i:1}" "index(\$0, s) != $character_index" $FILEPATH_HINT_LIST > $file_tmp
+                cp $file_tmp $FILEPATH_HINT_LIST
             done
-            mv $file_tmp $file_dictionary_optimized
         fi
     fi
+
+    mv $file_tmp $FILEPATH_HINT_LIST
 }
 
 insert_unique() {
@@ -107,81 +100,40 @@ insert_unique() {
         fi
 }
 
-cleanup() {
-    filename=${1:-""}
-    [ -e $filename ] && rm "$filename"
-}
+
+# Checking or creating the enhanced dictionary file.
+prepare_dictionary $FILEPATH_WORKBOOK
+
+# Making a working copy in the event the original file needs to be reused in subsequent runs.
+file_tmp_1=$(mktemp)
+cp $FILEPATH_ENHANCED_DICTIONARY $file_tmp_1
 
 
+# Processing hints, if any.
 
-file_tmp_3=$(mktemp)
-if [ ! -z "$FILEPATH_WORKBOOK" ] && [ ! $(validate_file_dependency $FILEPATH_WORKBOOK) ]; then
-    cp $FILEPATH_WORKBOOK $file_tmp_3
-    wc -l $file_tmp_3
-
-else
-
-    # 1. Ensure the necessary resources files exist before starting.
-    file_dictionary_full=$(mktemp)
-    curl -o $file_dictionary_full "https://raw.githubusercontent.com/rosegaelle/Imladris/main/wordle/dictionary_full.txt"
-    validate_file_dependency "$file_dictionary_full"
-
-    file_previous_solutions=$(mktemp)
-    curl -o $file_previous_solutions "https://raw.githubusercontent.com/rosegaelle/Imladris/main/wordle/workbook.txt"
-    validate_file_dependency "$file_previous_solutions"
-
-    # 2. Decode the full dictionary.
-    file_tmp_1=$(mktemp)
-    while read -r line
-    do
-        echo $line | base64 -d >> $file_tmp_1
-    done < $file_dictionary_full
-    cleanup "$file_dictionary_full"
-
-
-
-    # 3. Decode the workbook, which was encoded to prevent accidental spoilers.
-    file_tmp_2=$(mktemp)
-    while read -r line
-    do
-        echo $line | base64 -d >> $file_tmp_2
-    done < $file_previous_solutions
-    cleanup "$file_previous_solutions"
-
-
-
-    # 4. Remove all previous solutions from the working dictionary.
-    cat $file_tmp_2 $file_tmp_1 | sort | uniq -u > $file_tmp_3
-
-    cleanup "$file_tmp_1"
-    cleanup "$file_tmp_2"
-fi
-
-
-
-# 5. Process hints, if any.
 ## Letters to exclude.
-file_tmp_4=$(mktemp)
+file_tmp_2=$(mktemp)
 if [ -z "$LETTERS_EXCLUDED" ]; then
-    cp $file_tmp_3 $file_tmp_4
+    cp $file_tmp_1 $file_tmp_2
 else
     for (( i=0; i<${#LETTERS_EXCLUDED}; i++ )); do
-        grep -iv "${LETTERS_EXCLUDED:$i:1}" $file_tmp_3 > $file_tmp_4
-        cp $file_tmp_4 $file_tmp_3
+        grep -iv "${LETTERS_EXCLUDED:$i:1}" $file_tmp_1 > $file_tmp_2
+        cp $file_tmp_2 $file_tmp_1
     done
 fi
-cleanup "$file_tmp_3"
+cleanup "$file_tmp_1"
 
 ## Letters to include.
+LETTERS_INCLUDED=$LETTERS_INCLUDED$LETTER_AT_1$LETTER_AT_2$LETTER_AT_3$LETTER_AT_4$LETTER_AT_5 | grep -o . | sort -u | tr -d "\n"
 if [ -z "$LETTERS_INCLUDED" ]; then
-    cp $file_tmp_4 $file_dictionary_optimized
+    cp $file_tmp_2 $FILEPATH_HINT_LIST
 else
     for (( i=0; i<${#LETTERS_INCLUDED}; i++ )); do
-        grep -i "${LETTERS_INCLUDED:$i:1}" $file_tmp_4 > $file_dictionary_optimized
-        cp $file_dictionary_optimized $file_tmp_4
+        grep -i "${LETTERS_INCLUDED:$i:1}" $file_tmp_2 > $FILEPATH_HINT_LIST
+        cp $FILEPATH_HINT_LIST $file_tmp_2
     done
 fi
-cleanup "$file_tmp_4"
+cleanup "$file_tmp_2"
 
 ## Letters at specific positions.
 filter_by_character_index 1 "$LETTER_AT_1"
@@ -198,18 +150,23 @@ filter_by_character_index 4 "$LETTERS_NOT_AT_4" false
 filter_by_character_index 5 "$LETTERS_NOT_AT_5" false
 
 ## Parsing possible solutions and suggesting potential next guess(es).
-wc -l $file_dictionary_optimized
-
-unique_letters=$(grep -o . $file_dictionary_optimized | sort -u | tr -d '\n')
+unique_letters=$(grep -o . $FILEPATH_HINT_LIST | sort -u | tr -d '\n')
+file_tmp_3=$(mktemp)
 for (( i=0; i<${#unique_letters}; i++ )); do
-    grep -o $file_dictionary_optimized -e "${unique_letters:$i:1}" | sort | uniq -c
+    grep -o $FILEPATH_HINT_LIST -e "${unique_letters:$i:1}" | sort | uniq -c >> $file_tmp_3
 done
+cat $file_tmp_3
 
-if [[ $(wc -l < "$file_dictionary_optimized") -le 10 ]]; then
-    cat $file_dictionary_optimized
+unique_letters_by_occurences=$(cat $file_tmp_3 | sort -rk4 | uniq -c | awk '{ print $3}' | tr -d '\n')
+cleanup "$file_tmp_3"
+
+get_anagrams $unique_letters_by_occurences
+
+# Display the top 5 possibilities
+if [[ $(wc -l < "$FILEPATH_HINT_LIST") -le 5 ]]; then
+    cat $FILEPATH_HINT_LIST
 fi
 
-# cleanup "$file_dictionary_optimized" #???
+wc -l $FILEPATH_HINT_LIST
 
-
-echo "It is done."
+printf "\nIt is done.\n"
