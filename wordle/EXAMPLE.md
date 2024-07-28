@@ -3,24 +3,25 @@
 ## Prep
 ```sh
 FILEPATH_SCRIPT="~/$WORKSPACE/hint_helper.sh"
+wc -l $FILEPATH_SCRIPT
 ```
 
 * This is an optional step, if you intend to use the `-f` flag.
 ```sh
 FILEPATH_WORKBOOK="~/$WORKSPACE/$FILEPATH_WORDLE_ENHANCED_WORKBOOK"
-wc -l $dico
+wc -l $FILEPATH_WORKBOOK
 ```
 
 <b><u>Important Notes</u>:</b><br>
 * The full dictionary has **13,112** possible results.
-* The most recent enhanced dictionary reduces this to **11,982** possibilities.
+* The most recent enhanced dictionary would reduces this to fewer possibilities.
 
 
 
 ## Main Command
 * Executed in each step below:
 ```sh
-date && $FILEPATH_SCRIPT -f $FILEPATH_WORKBOOK -x "$GUESS_X" -i "$GUESS_I" -a "$GUESS_A" -b "$GUESS_B" -c "$GUESS_C" -d "$GUESS_D" -e "$GUESS_E" -m "$GUESS_M" -n "$GUESS_N" -o "$GUESS_O" -p "$GUESS_P" -q "$GUESS_Q"
+date && $FILEPATH_SCRIPT -x "$GUESS_X" -i "$GUESS_I" -a "$GUESS_A" -b "$GUESS_B" -c "$GUESS_C" -d "$GUESS_D" -e "$GUESS_E" -m "$GUESS_M" -n "$GUESS_N" -o "$GUESS_O" -p "$GUESS_P" -q "$GUESS_Q" -f $FILEPATH_WORKBOOK
 ```
 
 
@@ -41,11 +42,11 @@ GUESS_Q=''
 ```
 
 <b><u>Results</u>:</b><br>
-* Number of possible solutions: **11,982**.
-* Letters by occurence count: `c2Vhb3JpbHRudWR5cG1jaGJna2Z3dnpqeHEK`.
+* Number of possible solutions: **13,112**, if the full dictionary.
+* Letters by occurence count: `ZXNhb3JpbHRudWR5Y3BtaGdia2Z3dnp4anEK`.
 * Anagram candidates, based on `c2Vhb3IK`: `YWVyb3MK` || `YXJvc2UK` || `c29hcmUK`.
-  -  **1,232** ending in `RQo=` vs.  **3,363** ending in `Uwo=` in the enhanced dictionary.
-* Statistically, the best first guess is `YWVyb3MK`.
+  -  **1,160** ending in `RQo=` vs.  **3,370** ending in `Uwo=` in the full dictionary.
+* Statistically, the best first guess is therefore `YWVyb3MK`.
 
 
 

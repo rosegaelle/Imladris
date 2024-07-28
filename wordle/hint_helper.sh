@@ -114,7 +114,8 @@ fi
 cleanup "$file_tmp_1"
 
 ## Letters to include.
-LETTERS_INCLUDED=$LETTERS_INCLUDED$LETTER_AT_1$LETTER_AT_2$LETTER_AT_3$LETTER_AT_4$LETTER_AT_5 | grep -o . | sort -u | tr -d "\n"
+LETTERS_INCLUDED=$(echo $LETTERS_INCLUDED$LETTER_AT_1$LETTER_AT_2$LETTER_AT_3$LETTER_AT_4$LETTER_AT_5 | grep -o . | sort -u | tr -d "\n")
+
 if [ -z "$LETTERS_INCLUDED" ]; then
     cp $file_tmp_2 $FILEPATH_HINT_LIST
 else

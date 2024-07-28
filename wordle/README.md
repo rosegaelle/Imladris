@@ -18,10 +18,9 @@ curl -o hint_helper.sh "https://raw.githubusercontent.com/rosegaelle/Imladris/ma
 chmod +x hint_helper.sh
 hint_helper.sh --help
 
-hint_helper.sh [OPTIONAL] -a|b|c|d|e 'CHARACTER_AT_POSITION_1|2|3|4|5' -f 'LOCAL_WORKBOOK_FILEPATH' -i 'LETTERS_TO_INCLUDE' -x 'LETTERS_TO_EXCLUDE
-
-# e.g.
-# date && ./hint_helper.sh -f ~/$WORKSPACE/wordle_enhanced_workbook.tmp" -x '' -i '' -a '' -b '' -c '' -d '' -e '' -m '' -n '' -o '' -p '' -q ''
+hint_helper.sh [OPTIONAL] -a|b|c|d|e 'CHARACTER_AT_POSITION_1|2|3|4|5' -i 'LETTERS_TO_INCLUDE'
+                          -f 'LOCAL_WORKBOOK_FILEPATH'
+                          -m|n|o|p|q 'CHARACTERS_NOT_AT_POSITION_1|2|3|4|5' -x 'LETTERS_TO_EXCLUDE'
 ```
 
 * [Example usage](EXAMPLE.md).
