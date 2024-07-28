@@ -89,16 +89,6 @@ filter_by_character_index() {
     mv $file_tmp $FILEPATH_HINT_LIST
 }
 
-insert_unique() {
-    word=${1:-""}
-    filename=${2:-""}
-
-    validate_file_dependency "$filename"
-
-    if ! grep -q "$word" "$filename"; then
-            echo $word >> $filename
-        fi
-}
 
 
 # Checking or creating the enhanced dictionary file.
@@ -124,7 +114,8 @@ fi
 cleanup "$file_tmp_1"
 
 ## Letters to include.
-LETTERS_INCLUDED=$LETTERS_INCLUDED$LETTER_AT_1$LETTER_AT_2$LETTER_AT_3$LETTER_AT_4$LETTER_AT_5 | grep -o . | sort -u | tr -d "\n"
+LETTERS_INCLUDED=$(echo $LETTERS_INCLUDED$LETTER_AT_1$LETTER_AT_2$LETTER_AT_3$LETTER_AT_4$LETTER_AT_5 | grep -o . | sort -u | tr -d "\n")
+
 if [ -z "$LETTERS_INCLUDED" ]; then
     cp $file_tmp_2 $FILEPATH_HINT_LIST
 else
@@ -155,12 +146,12 @@ file_tmp_3=$(mktemp)
 for (( i=0; i<${#unique_letters}; i++ )); do
     grep -o $FILEPATH_HINT_LIST -e "${unique_letters:$i:1}" | sort | uniq -c >> $file_tmp_3
 done
-cat $file_tmp_3
+#? cat $file_tmp_3
 
 unique_letters_by_occurences=$(cat $file_tmp_3 | sort -rk4 | uniq -c | awk '{ print $3}' | tr -d '\n')
 cleanup "$file_tmp_3"
 
-get_anagrams $unique_letters_by_occurences
+find_anagrams "$FILEPATH_WORKBOOK" "$unique_letters_by_occurences" "$LETTERS_INCLUDED" 
 
 # Display the top 5 possibilities
 if [[ $(wc -l < "$FILEPATH_HINT_LIST") -le 5 ]]; then

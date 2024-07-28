@@ -1,7 +1,32 @@
-```sh
-dico=./wordle_enhanced_workbook.txt
-wc -l $dico
+# Wordle Hint: Sample Usage
 
+## Prep
+```sh
+FILEPATH_SCRIPT="~/$WORKSPACE/hint_helper.sh"
+wc -l $FILEPATH_SCRIPT
+```
+
+* This is an optional step, if you intend to use the `-f` flag.
+```sh
+FILEPATH_WORKBOOK="~/$WORKSPACE/$FILEPATH_WORDLE_ENHANCED_WORKBOOK"
+wc -l $FILEPATH_WORKBOOK
+```
+
+<b><u>Important Notes</u>:</b><br>
+* The full dictionary has **13,112** possible results.
+* The most recent enhanced dictionary would reduces this to fewer possibilities.
+
+
+
+## Main Command
+* Executed in each step below:
+```sh
+date && $FILEPATH_SCRIPT -x "$GUESS_X" -i "$GUESS_I" -a "$GUESS_A" -b "$GUESS_B" -c "$GUESS_C" -d "$GUESS_D" -e "$GUESS_E" -m "$GUESS_M" -n "$GUESS_N" -o "$GUESS_O" -p "$GUESS_P" -q "$GUESS_Q" -f $FILEPATH_WORKBOOK
+```
+
+
+## Guess \#0
+```sh
 GUESS_X=''
 GUESS_I=''
 GUESS_A=''
@@ -14,176 +39,71 @@ GUESS_N=''
 GUESS_O=''
 GUESS_P=''
 GUESS_Q=''
-
-date && ./hint_helper.sh -f $dico -x "$GUESS_X" -i "$GUESS_I" -a "$GUESS_A" -b "$GUESS_B" -c "$GUESS_C" -d "$GUESS_D" -e "$GUESS_E" -m "$GUESS_M" -n "$GUESS_N" -o "$GUESS_O" -p "$GUESS_P" -q "$GUESS_Q"
 ```
 
-=> 13112
+<b><u>Results</u>:</b><br>
+* Number of possible solutions: **13,112**, if the full dictionary.
+* Letters by occurence count: `ZXNhb3JpbHRudWR5Y3BtaGdia2Z3dnp4anEK`.
+* Anagram candidates, based on `c2Vhb3IK`: `YWVyb3MK` || `YXJvc2UK` || `c29hcmUK`.
+  -  **1,160** ending in `RQo=` vs.  **3,370** ending in `Uwo=` in the full dictionary.
+* Statistically, the best first guess is therefore `YWVyb3MK`.
 
-6054 a
-1647 b
-2045 c
-2483 d
-6735 e
-1139 f
-1660 g
-1794 h
-3798 i
- 294 j
-1514 k
-3396 l
-1999 m
-2990 n
-4493 o
-2034 p
- 114 q
-4196 r
-6710 s
-3342 t
-2548 u
- 703 v
-1050 w
- 294 x
-2093 y
- 435 z
 
-1. AROSE
 
-🟨🟨⬛⬛⬛
+## Guess \#1
+```sh
+YWVyb3MK
+```
+
+⬛🟨⬛⬛⬛<br><br>
 
 ```sh
-GUESS_X='OSE'
-GUESS_I='AR'
-GUESS_M='A'
-GUESS_N='R'
-
-date && ./hint_helper.sh -f $dico -x "$GUESS_X" -i "$GUESS_I" -a "$GUESS_A" -b "$GUESS_B" -c "$GUESS_C" -d "$GUESS_D" -e "$GUESS_E" -m "$GUESS_M" -n "$GUESS_N" -o "$GUESS_O" -p "$GUESS_P" -q "$GUESS_Q"
+GUESS_X='QVJPUwo='
+GUESS_I='RQo='
+GUESS_N='RQo='
 ```
 
-=>  309
-
- 375 a
-  42 b
-  51 c
-  52 d
-  24 f
-  30 g
-  41 h
- 116 i
-  12 j
-  29 k
-  63 l
-  55 m
-  49 n
-  31 p
-   5 q
- 329 r
-  54 t
-  65 u
-  18 v
-  10 w
-   3 x
-  80 y
-  11 z
-
-
- 375 a
- 329 r
-.
- 116 i
-  80 y
-  65 u
-  63 l
-  55 m
-  54 t
-  52 d
-  51 c
-.
-  49 n
-  42 b
-  41 h
-.
-  31 p
-  30 g
-  29 k
-  24 f
-.
-  18 v
-  12 j
-  11 z
-  10 w
-.
-   5 q
-   3 x
-
-I, Y, U, L, M, T => MILTY, MULTI
+<b><u>Results</u>:</b><br>
+* Number of possible solutions: **508**.
+* Letters by occurence count: `aWRsdW50eWdtY2hia3Bmd3Z4empxCg==`.
+* Anagram candidate(s), based on `aWRsdW4K`: `dW5saWQK`.
+* Unsurprisingly, the second guess will be `dW5saWQK`.
 
 
 
-2. MILTY
+## Guess \#2
+```sh
+dW5saWQK
+```
 
-⬛🟩⬛⬛⬛
+⬛🟨⬛⬛⬛<br>
+🟨⬛⬛🟨⬛<br><br>
 
 ```sh
-GUESS_X='OSEMLTY'
-GUESS_I='ARI'
-GUESS_B=‘I’
-GUESS_M='A'
-GUESS_N='R'
-
-date && ./hint_helper.sh -f $dico -x "$GUESS_X" -i "$GUESS_I" -a "$GUESS_A" -b "$GUESS_B" -c "$GUESS_C" -d "$GUESS_D" -e "$GUESS_E" -m "$GUESS_M" -n "$GUESS_N" -o "$GUESS_O" -p "$GUESS_P" -q "$GUESS_Q"
+GUESS_X='QVJPU05MRAo='
+GUESS_I='RVVJCg=='
+GUESS_M='VQo='
+GUESS_P='SQo='
 ```
 
-=> 10
+<b><u>Results</u>:</b><br>
+* Number of possible solutions: **4**.
+  - `ZmlxdWUK` || `Z2lndWUK` || `aW1idWUK` || `anVpY2UK`.
+    - Verbs are rare.
+    - Solutions tend to follow the [KISS Principle](https://www.techopedia.com/definition/20262/keep-it-simple-stupid-principle-kiss-principle).
+* Consequently, the best third guess is `anVpY2UK`.
+  - Should this not work, the next guess will be decided based on the system feedback.
+  - Our final possible score is therefore _3 out of 6_ at best, or _4 out of 6_ in the worst case scenario. **Not bad!** 🙃
 
-cigar
-circa
-dinar
-hijra
-jirga
-picra
-pirai
-vicar
-virga
-wirra
 
-  10 a
-   5 c
-   1 d
-   3 g
-   1 h
-  11 i
-   2 j
-   1 n
-   2 p
-  11 r
-   2 v
-   1 w
+## Guess \#3
+```sh
+anVpY2UK
+```
 
-  11 i
-  11 r
-  10 a
-.
-   5 c
-   3 g
-.
-   2 j
-   2 p
-   2 v
-.
-   1 d
-   1 h
-   1 n
-   1 w
+⬛🟨⬛⬛⬛<br>
+🟨⬛⬛🟨⬛<br>
+🟩🟩🟩🟩🟩<br><br>
 
-C, G, J, P, V + I, R, A
 
-CARPI -
-CIGAR +
-VICAR +
-VIRGA +
-
-C => CIGAR || VICAR
-
-3. CIGAR
-🟩🟩🟩🟩🟩
+😎
