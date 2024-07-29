@@ -8,65 +8,46 @@
 source $(dirname $0)/utils.sh
 
 
-
-check_full_anagrams() {
-    anagram_dictionary=${1:-''}
-    word_to_fully_match=${2:-''}
-
-    echo "check_full_anagrams called with: '$word_to_fully_match'" #-
-
-    validate_file_dependency "$anagram_dictionary"
-
-    file_tmp=$(mktemp)
-    while read -r candidate
-    do
-        is_anagram=$(cmp <(grep -o . <<< $word_to_fully_match | sort) <(grep -o . <<< $candidate | sort))
-        if [[ "0" == "$is_anagram" ]] || [[ "" == "$is_anagram" ]]; then
-            echo $candidate >> $file_tmp
-        fi
-    done < "$anagram_dictionary"
-
-    if [[ $(wc -l < "$file_tmp") -gt 0 ]]; then
-        cat $file_tmp
-        wc -l $file_tmp
-    else
-        printf "\n'$word_to_fully_match' does not have a result anagram.\n"
-    fi
-
-    cleanup "$file_tmp"
-}
-
-
-check_partial_anagrams() {
-    anagram_dictionary=${1:-''}
-    word_to_partially_match=${2:-''}
-
-    validate_file_dependency "$anagram_dictionary"
-
-    #ToDo
-    echo "check_partial_anagrams called with: '$word_to_partially_match'" #-
-    check_full_anagrams "$anagram_dictionary" "${word_to_partially_match:0:$WORD_LENGTH}" #-
-}
-
-
 find_anagrams() {
     anagram_dictionary=${1:-''}
-    letters_all=${2:-''}
-    letters_confirmed=${3:-''}
+    letters_to_match=${2:-''}
+    must_fully_match=${3:-true}
+
+    # Reset the output file.
+    empty_or_create_file "$FILEPATH_ANAGRAMS"
 
     validate_file_dependency "$anagram_dictionary"
 
-    letters_count=$(echo -n "$letters_all" | wc -c)
+    if [ -z "$letters_to_match" ]; then
+        printf "\nLetters to match specified.\n"
+        exit 1
+    fi
 
-    if [ $((WORD_LENGTH==letters_count)) -eq 1 ]; then
-        check_full_anagrams "$FILEPATH_HINT_LIST" "$letters_all"
-    else
-        letters_partial=$letters_all
+    if (( $(get_number_of_characters "$letters_to_match") > 0 )); then
 
-        for (( i=0; i<${#letters_confirmed}; i++ )); do
-            letters_partial=$(echo "$letters_partial" | sed "s/"${letters_confirmed:$i:1}"//")
-        done
+        unique_letters_to_match_count=$(get_number_of_characters "$(get_unique_characters "$letters_to_match")")
 
-        check_partial_anagrams "$anagram_dictionary" "$letters_partial"
+        while read -r candidate
+        do
+            common_letters=$(comm -12 <(fold -w1 <<< $letters_to_match | sort -u) <(fold -w1 <<< $candidate | sort -u) | tr -d '\n')
+            unique_letters_matched_count=$(get_number_of_characters "$(get_unique_characters "$common_letters")")
+
+            if [ true == $must_fully_match ]; then
+                is_match=$((($unique_letters_to_match_count == $unique_letters_matched_count)))
+            else
+                is_match=$((($unique_letters_matched_count > 0)))
+            fi
+
+            if [ 1 == $is_match ]; then
+                echo "$candidate" >> $FILEPATH_ANAGRAMS
+            fi
+        done < "$anagram_dictionary"
+
+        if [[ true == $(is_file_not_empty "$FILEPATH_ANAGRAMS") ]] && (( $(wc -l < "$FILEPATH_ANAGRAMS") < 25 )) ; then
+            cat $FILEPATH_ANAGRAMS
+            wc -l $FILEPATH_ANAGRAMS
+        else
+            printf "\n'$letters_to_match' does not have a resulting anagram.\n"
+        fi
     fi
 }

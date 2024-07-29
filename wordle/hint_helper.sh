@@ -10,7 +10,6 @@ source $(dirname $0)/dictionary.sh
 source $(dirname $0)/anagrammer.sh
 
 
-
 help() {
     echo "Hello, Wordle!"
     echo
@@ -31,12 +30,6 @@ help() {
     echo "x     Letters to exclude."
     echo
 }
-
-sanitize_input() {
-    user_input=${1:-''}
-    echo $user_input | tr -cd '[:alpha:]'| tr '[:upper:]' '[:lower:]'
-}
-
 
 while getopts ":a:b:c:d:e:f:i:m:n:o:p:q:x:" flag
 do
@@ -91,8 +84,11 @@ filter_by_character_index() {
 
 
 
+# Reset the output file.
+empty_or_create_file "$FILEPATH_HINT_LIST"
+
 # Checking or creating the enhanced dictionary file.
-prepare_dictionary $FILEPATH_WORKBOOK
+prepare_dictionary "$FILEPATH_WORKBOOK"
 
 # Making a working copy in the event the original file needs to be reused in subsequent runs.
 file_tmp_1=$(mktemp)
@@ -111,7 +107,7 @@ else
         cp $file_tmp_2 $file_tmp_1
     done
 fi
-cleanup "$file_tmp_1"
+cleanup_file "$file_tmp_1"
 
 ## Letters to include.
 LETTERS_INCLUDED=$(echo $LETTERS_INCLUDED$LETTER_AT_1$LETTER_AT_2$LETTER_AT_3$LETTER_AT_4$LETTER_AT_5 | grep -o . | sort -u | tr -d "\n")
@@ -124,7 +120,7 @@ else
         cp $FILEPATH_HINT_LIST $file_tmp_2
     done
 fi
-cleanup "$file_tmp_2"
+cleanup_file "$file_tmp_2"
 
 ## Letters at specific positions.
 filter_by_character_index 1 "$LETTER_AT_1"
@@ -140,24 +136,58 @@ filter_by_character_index 3 "$LETTERS_NOT_AT_3" false
 filter_by_character_index 4 "$LETTERS_NOT_AT_4" false
 filter_by_character_index 5 "$LETTERS_NOT_AT_5" false
 
-## Parsing possible solutions and suggesting potential next guess(es).
+
+# Parsing possible solutions and suggesting potential next guess(es).
 unique_letters=$(grep -o . $FILEPATH_HINT_LIST | sort -u | tr -d '\n')
 file_tmp_3=$(mktemp)
 for (( i=0; i<${#unique_letters}; i++ )); do
     grep -o $FILEPATH_HINT_LIST -e "${unique_letters:$i:1}" | sort | uniq -c >> $file_tmp_3
 done
-#? cat $file_tmp_3
 
-unique_letters_by_occurences=$(cat $file_tmp_3 | sort -rk4 | uniq -c | awk '{ print $3}' | tr -d '\n')
-cleanup "$file_tmp_3"
+unique_letters_by_occurence=$(cat $file_tmp_3 | sort -rk4 | uniq -c | awk '{ print $3}' | tr -d '\n')
+printf "\nUnique letters by occurence: '$unique_letters_by_occurence'.\n"
+cleanup_file "$file_tmp_3"
 
-find_anagrams "$FILEPATH_WORKBOOK" "$unique_letters_by_occurences" "$LETTERS_INCLUDED" 
 
-# Display the top 5 possibilities
-if [[ $(wc -l < "$FILEPATH_HINT_LIST") -le 5 ]]; then
+### ToDo: Refactor this section.
+unique_letters_by_occurence_unconfirmed=$(diff <(fold -w1 <<< $unique_letters_by_occurence | sort -u) <(fold -w1 <<< $LETTERS_INCLUDED | sort -u) | grep '^<' | cut -c 3- | tr -d '\n')
+for (( i=0; i<$((${#unique_letters_by_occurence_unconfirmed} - $WORD_LENGTH)); i++ )); do
+
+    find_anagrams "$FILEPATH_WORKBOOK" "${unique_letters_by_occurence_unconfirmed:0:$((WORD_LENGTH + i))}"
+
+    if [[ true == $(is_file_not_empty "$FILEPATH_ANAGRAMS") ]] ; then
+        printf "\nAnagram(s) found:\n"
+        cat $FILEPATH_ANAGRAMS
+        break
+    fi
+done
+
+if [[ true != $(is_file_not_empty "$FILEPATH_ANAGRAMS") ]] ; then
+    unique_letters_by_occurence=$(diff <(fold -w1 <<< $unique_letters_by_occurence | sort -u) <(fold -w1 <<< $LETTERS_INCLUDED | sort -u) | grep '^<' | cut -c 3- | tr -d '\n')
+    for (( i=0; i<$((${#unique_letters_by_occurence} - $WORD_LENGTH)); i++ )); do
+
+        find_anagrams "$FILEPATH_WORKBOOK" "${unique_letters_by_occurence:0:$((WORD_LENGTH + i))}"
+
+        if [[ true == $(is_file_not_empty "$FILEPATH_ANAGRAMS") ]] ; then
+            printf "\nAnagram(s) found:\n"
+            cat $FILEPATH_ANAGRAMS
+            break
+        fi
+    done
+fi
+###
+
+
+if [[ true != $(is_file_not_empty "$FILEPATH_ANAGRAMS") ]] ; then
+    printf "\nNo anagram found.\n"
+fi
+
+# Displaying the top 10 possibilities.
+if (( $(wc -l < "$FILEPATH_HINT_LIST") < 10 )); then
     cat $FILEPATH_HINT_LIST
 fi
 
 wc -l $FILEPATH_HINT_LIST
+
 
 printf "\nIt is done.\n"
