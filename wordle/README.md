@@ -1,14 +1,4 @@
 # Wordle
-* Workbook last updated on: **2024/07/23**.
-
-* Resources:
-```sh
-# encode
-echo "$keyword" | tr '[:upper:]' '[:lower:]' | base64
-
-# decode
-echo "$keyword" | -d base64
-```
 
 * To execute:
 ```sh
