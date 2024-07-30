@@ -150,7 +150,12 @@ cleanup_file "$file_tmp_3"
 
 
 ### ToDo: Refactor this section.
-unique_letters_by_occurence_unconfirmed=$(diff <(fold -w1 <<< $unique_letters_by_occurence | sort -u) <(fold -w1 <<< $LETTERS_INCLUDED | sort -u) | grep '^<' | cut -c 3- | tr -d '\n')
+unique_letters_by_occurence_unconfirmed=$unique_letters_by_occurence
+for (( i=0; i<${#LETTERS_INCLUDED}; i++ )); do
+    unique_letters_by_occurence_unconfirmed=$(echo "$unique_letters_by_occurence_unconfirmed" | sed "s/"${LETTERS_INCLUDED:$i:1}"//")
+done
+
+printf "\nFinding anagrams for: '$unique_letters_by_occurence_unconfirmed'.\n"
 for (( i=0; i<$((${#unique_letters_by_occurence_unconfirmed} - $WORD_LENGTH)); i++ )); do
 
     find_anagrams "$FILEPATH_WORKBOOK" "${unique_letters_by_occurence_unconfirmed:0:$((WORD_LENGTH + i))}"
@@ -162,8 +167,8 @@ for (( i=0; i<$((${#unique_letters_by_occurence_unconfirmed} - $WORD_LENGTH)); i
     fi
 done
 
+printf "\nFinding anagrams for: '$unique_letters_by_occurence'.\n"
 if [[ true != $(is_file_not_empty "$FILEPATH_ANAGRAMS") ]] ; then
-    unique_letters_by_occurence=$(diff <(fold -w1 <<< $unique_letters_by_occurence | sort -u) <(fold -w1 <<< $LETTERS_INCLUDED | sort -u) | grep '^<' | cut -c 3- | tr -d '\n')
     for (( i=0; i<$((${#unique_letters_by_occurence} - $WORD_LENGTH)); i++ )); do
 
         find_anagrams "$FILEPATH_WORKBOOK" "${unique_letters_by_occurence:0:$((WORD_LENGTH + i))}"
@@ -183,7 +188,8 @@ if [[ true != $(is_file_not_empty "$FILEPATH_ANAGRAMS") ]] ; then
 fi
 
 # Displaying the top 10 possibilities.
-if (( $(wc -l < "$FILEPATH_HINT_LIST") < 10 )); then
+printf "\nTop possibilities:\n"
+if (( $(wc -l < "$FILEPATH_HINT_LIST") < 20 )); then
     cat $FILEPATH_HINT_LIST
 fi
 

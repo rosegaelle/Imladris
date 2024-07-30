@@ -26,6 +26,7 @@ find_anagrams() {
     if (( $(get_number_of_characters "$letters_to_match") > 0 )); then
 
         unique_letters_to_match_count=$(get_number_of_characters "$(get_unique_characters "$letters_to_match")")
+        (( unique_letters_to_match_count = unique_letters_to_match_count<=WORD_LENGTH ? unique_letters_to_match_count : WORD_LENGTH ))
 
         while read -r candidate
         do
