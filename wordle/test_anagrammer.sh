@@ -10,17 +10,17 @@ source $(dirname $0)/utils.sh
 source $(dirname $0)/anagrammer.sh
 
 
-FILEPATH_WORKBOOK='/Users/rosegaelle/Downloads/tmp/wordle_enhanced_workbook.txt' #-
-TEST_ANAGRAMS_1=''
+FILEPATH_WORKBOOK="$WORKSPACE/wordle_enhanced_workbook.txt" #-
+FILEPATH_WORKBOOK="wordle_enhanced_workbook.txt" #-
+declare -a TEST_ANAGRAMS_1 TEST_ANAGRAMS_2 TEST_ANAGRAMS_3 TEST_ANAGRAMS_4 TEST_ANAGRAMS_5
 
 
 print_test_results() {
     expected=${1:-true}
     actual=${2:-false}
 
-    printf "\nTest $([ $expected == $actual ] && echo "passed" || echo "failed")."
+    print_message "\nTest $([ $expected == $actual ] && echo "passed" || echo "failed").\n"
 }
-
 
 get_anagram() {
     letters_to_match=${1:-''}
@@ -32,146 +32,137 @@ get_anagram() {
 }
 
 is_anagram() {
-    candidate=${1:-''}
+    list=${1:-''}
+    word_to_check=${2:-''}
 
-    results=false
+    result=false
 
-    if [[ true == $(is_file_not_empty "$FILEPATH_ANAGRAMS") ]]; then
-        if grep -q $candidate "$FILEPATH_ANAGRAMS"; then
-            results=true
-        fi
+    if [[ ${list[@]} =~ $word_to_check ]]; then #ToDo: fix!!!
+        result=true
     fi
 
-    echo "$results"
+    echo "$result"
 }
 
 
+setup_test() {
+    letters_to_match=${1:-''}
+    must_fully_match=${2:-false}
+    expected_setup_count=${3:-0}
+ 
+    letters_to_match=$(decode "$letters_to_match")
+    print_message "\n'$letters_to_match' should have $expected_setup_count $([ true == $must_fully_match ] && echo "full" || echo "partial") anagrams."
+    get_anagram $letters_to_match $must_fully_match #ToDo: fix!!!
+    print_test_results $expected_setup_count $(get_file_line_count "$FILEPATH_ANAGRAMS")
+    IFS=$'\n' read -d '' -r -a results < $FILEPATH_ANAGRAMS
+    print_test_results $expected_setup_count "${#results[@]}"
+
+    echo "${results[@]}"
+}
+
 setup() {
-    TEST_ANAGRAMS_1=$(get_anagram '???' true)
-    # Then, convert to and use array.
+    read -a TEST_ANAGRAMS_1 <<< $(setup_test 'YnJpZWYK' true 3)
+
+    read -a TEST_ANAGRAMS_2 <<< $(setup_test 'cmFwaWQK' true 0)
+
+    read -a TEST_ANAGRAMS_3 <<< $(setup_test 'YmNkZmdoaWprbAo=' true 0)
+
+    read -a TEST_ANAGRAMS_4 <<< $(setup_test 'YmNkZmdoaWprbAo=' false 0)
+
+    read -a TEST_ANAGRAMS_5 <<< $(setup_test 'YWlzbGUK' false 0)
 }
 
 
 ## FULL Match Check
 
 test_is_full_anagram_1() {
-    printf "\n\n[test_is_full_anagram_1]"
-    letters_to_match=$(decode 'YnJpZWYK')
-
-    anagrams=$(get_anagram "$letters_to_match" true)
-
+    print_message "\n\n[test_is_full_anagram_1]\n"
     word_to_check=$(decode 'RklCRVIK')
 
-    printf "\n'$word_to_check' should be a full anagram of '$letters_to_match'."
-    print_test_results true $(is_anagram $word_to_check)
+    echo -e "\n'$word_to_check' should be a full anagram in:\n[${TEST_ANAGRAMS_1[@]}]"
+    print_test_results true $(is_anagram "${TEST_ANAGRAMS_1[@]}" "$word_to_check")
 }
 
 test_is_full_anagram_2() {
-    printf "\n[test_is_full_anagram_2]"
-    letters_to_match=$(decode 'cmFwaWQK')
-
-    anagrams=$(get_anagram "$letters_to_match" true)
+    print_message "\n\n[test_is_full_anagram_2]"
 
     word_to_check=$(decode 'UEFSREkK')
 
-    printf "\n'$word_to_check' should be a full anagram of '$letters_to_match'."
-    print_test_results true $(is_anagram $word_to_check)
+    echo -e "\n'$word_to_check' should be a full anagram in:\n[${TEST_ANAGRAMS_2[@]}]"
+    print_test_results true $(is_anagram "${TEST_ANAGRAMS_2[@]}" "$word_to_check")
 }
 
 
 test_is_not_full_anagram_1() {
-    printf "\n\n[test_is_not_full_anagram_1]"
-    letters_to_match=$(decode 'YmNkZmdoaWprbAo=')
-
-    anagrams=$(get_anagram "$letters_to_match" true)
+    print_message "\n\n[test_is_not_full_anagram_1]"
 
     word_to_check=$(decode 'Q0hJTEQK')
 
-    printf "\n'$word_to_check' should not be a full anagram of '$letters_to_match'."
-    print_test_results false $(is_anagram $word_to_check)
+    echo -e "\n'$word_to_check' should not be a full anagram in:\n[${TEST_ANAGRAMS_3[@]}]"
+    print_test_results false $(is_anagram "${TEST_ANAGRAMS_3[@]}" "$word_to_check")
 }
 
 test_is_not_full_anagram_2() {
-    printf "\n\n[test_is_not_full_anagram_2]"
-    letters_to_match=$(decode 'YmNkZmdoaWprbAo=')
-
-    anagrams=$(get_anagram "$letters_to_match" true)
+    print_message "\n\n[test_is_not_full_anagram_2]"
 
     word_to_check=$(decode 'RklMQ0gK')
 
-    printf "\n'$word_to_check' should not be a full anagram of '$letters_to_match'."
-    print_test_results false $(is_anagram $word_to_check)
+    echo -e "\n'$word_to_check' should not be a full anagram in:\n[${TEST_ANAGRAMS_3[@]}]"
+    print_test_results false $(is_anagram "${TEST_ANAGRAMS_3[@]}" "$word_to_check")
 }
 
 test_is_not_full_anagram_3() {
-    printf "\n\n[test_is_not_full_anagram_3]"
-    letters_to_match=$(decode 'YmNkZmdoaWprbAo=')
-
-    anagrams=$(get_anagram "$letters_to_match" true)
+    print_message "\n\n[test_is_not_full_anagram_3]"
 
     word_to_check=$(decode 'RkxJQ0sK')
 
-    printf "\n'$word_to_check' should not be a full anagram of '$letters_to_match'."
-    print_test_results false $(is_anagram $word_to_check)
+    echo -e "\n'$word_to_check' should not be a full anagram in:\n[${TEST_ANAGRAMS_3[@]}]"
+    print_test_results false $(is_anagram "${TEST_ANAGRAMS_3[@]}" "$word_to_check")
 }
 
 
 ## PARTIAL Match Check
 
 test_is_partial_anagram_1() {
-    printf "\n\n[test_is_partial_anagram_1]"
-    letters_to_match=$(decode 'YmNkZmdoaWprbAo=')
-
-    anagrams=$(get_anagram "$letters_to_match" false)
+    print_message "\n\n[test_is_partial_anagram_1]"
 
     word_to_check=$(decode 'Q0hJTEQK')
 
-    printf "\n'$word_to_check' should be a partial anagram of '$letters_to_match'."
-    print_test_results true $(is_anagram $word_to_check)
+    echo -e "\n'$word_to_check' should be a partial anagram in:\n[${TEST_ANAGRAMS_4[@]}]"
+    print_test_results true $(is_anagram "${TEST_ANAGRAMS_4[@]}" "$word_to_check")
 }
 
 test_is_partial_anagram_2() {
-    printf "\n\n[test_is_partial_anagram_2]"
-    letters_to_match=$(decode 'YmNkZmdoaWprbAo=')
-
-    anagrams=$(get_anagram "$letters_to_match" false)
+    print_message "\n\n[test_is_partial_anagram_2]"
 
     word_to_check=$(decode 'RklMQ0gK')
 
-    printf "\n'$word_to_check' should be a partial anagram of '$letters_to_match'."
-    print_test_results true $(is_anagram $word_to_check)
+    echo -e "\n'$word_to_check' should be a partial anagram in:\n[${TEST_ANAGRAMS_4[@]}]"
+    print_test_results true $(is_anagram "${TEST_ANAGRAMS_4[@]}" "$word_to_check")
 }
 
 test_is_partial_anagram_3() {
-    printf "\n\n[test_is_partial_anagram_3]"
-    letters_to_match=$(decode 'YmNkZmdoaWprbAo=')
-
-    anagrams=$(get_anagram "$letters_to_match" false)
+    print_message "\n\n[test_is_partial_anagram_3]"
 
     word_to_check=$(decode 'RkxJQ0sK')
 
-    printf "\n'$word_to_check' should not be a partial anagram of '$letters_to_match'."
-    print_test_results true $(is_anagram $word_to_check)
+    echo -e "\n'$word_to_check' should be a partial anagram in:\n[${TEST_ANAGRAMS_4[@]}]"
+    print_test_results true $(is_anagram "${TEST_ANAGRAMS_4[@]}" "$word_to_check")
 }
 
 
 test_is_not_partial_anagram_1() {
-    printf "\n\n[test_is_not_partial_anagram_1]"
-    letters_to_match=$(decode 'YWlzbGUK')
-
-    anagrams=$(get_anagram "$letters_to_match" false)
+    print_message "\n\n[test_is_not_partial_anagram_1]"
 
     word_to_check=$(decode 'Q09VUlQK')
 
-    printf "\n'$word_to_check' should not be a partial anagram of '$letters_to_match'."
-    print_test_results false $(is_anagram $word_to_check)
+    echo -e "\n'$word_to_check' should not be a partial anagram in:\n[${TEST_ANAGRAMS_5[@]}]"
+    print_test_results false $(is_anagram "${TEST_ANAGRAMS_5[@]}" "$word_to_check")
 }
 
 
 # Executing each test case:
-
-# ToDo:
-#+ setup
+setup
 
 test_is_full_anagram_1
 test_is_full_anagram_2
@@ -186,4 +177,4 @@ test_is_partial_anagram_3
 
 test_is_not_partial_anagram_1
 
-printf "\nAnagrammer Tests Completed.\n"
+print_message "\nAnagrammer Tests Completed.\n"

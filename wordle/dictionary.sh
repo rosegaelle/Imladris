@@ -51,5 +51,5 @@ prepare_dictionary() {
         cleanup_file "$file_tmp_2"
     fi
 
-    wc -l $FILEPATH_ENHANCED_DICTIONARY
+    show_file_line_count "$FILEPATH_ENHANCED_DICTIONARY"
 }

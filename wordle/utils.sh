@@ -16,6 +16,13 @@ export FILEPATH_HINT_LIST='results.tmp'
 export FILEPATH_ANAGRAMS='anagrams.tmp'
 
 
+print_message() {
+    message=${1:-''}
+
+    printf "$message" > /dev/stderr
+}
+
+
 sanitize_input() {
     user_input=${1:-''}
     echo $user_input | tr -cd '[:alpha:]'| tr '[:upper:]' '[:lower:]'
@@ -62,6 +69,24 @@ is_file_not_empty() {
     else
         echo false
     fi
+}
+
+
+get_file_line_count() {
+    filename=${1:-''}
+
+    validate_file_dependency "$filename"
+
+    echo $(wc -l < "$filename")
+}
+
+
+show_file_line_count() {
+    filename=${1:-''}
+
+    validate_file_dependency "$filename"
+
+    echo $(wc -l "$filename")
 }
 
 
