@@ -189,11 +189,11 @@ fi
 
 # Displaying the top 10 possibilities.
 printf "\nTop possibilities:\n"
-if (( $(wc -l < "$FILEPATH_HINT_LIST") < 20 )); then
+if (( $(get_file_line_count "$FILEPATH_HINT_LIST") < 20 )); then
     cat $FILEPATH_HINT_LIST
 fi
 
-wc -l $FILEPATH_HINT_LIST
+show_file_line_count "$FILEPATH_HINT_LIST"
 
 
 printf "\nIt is done.\n"

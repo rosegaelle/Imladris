@@ -44,9 +44,9 @@ find_anagrams() {
             fi
         done < "$anagram_dictionary"
 
-        if [[ true == $(is_file_not_empty "$FILEPATH_ANAGRAMS") ]] && (( $(wc -l < "$FILEPATH_ANAGRAMS") < 25 )) ; then
+        if [[ true == $(is_file_not_empty "$FILEPATH_ANAGRAMS") ]] && (( $(get_file_line_count "$FILEPATH_ANAGRAMS") < 25 )) ; then
             cat $FILEPATH_ANAGRAMS
-            wc -l $FILEPATH_ANAGRAMS
+            show_file_line_count "$FILEPATH_ANAGRAMS"
         else
             printf "\n'$letters_to_match' does not have a resulting anagram.\n"
         fi
