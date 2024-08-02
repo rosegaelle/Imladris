@@ -16,6 +16,7 @@ export FILEPATH_HINT_LIST='results.tmp'
 export FILEPATH_ANAGRAMS='anagrams.tmp'
 
 
+
 print_message() {
     message=${1:-''}
 
@@ -100,6 +101,7 @@ get_unique_characters() {
         echo "$unique_characters"
     fi
 }
+
 
 get_number_of_characters() {
     word=${1:-''}
