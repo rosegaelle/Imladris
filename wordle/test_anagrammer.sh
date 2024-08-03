@@ -2,7 +2,7 @@
 
 #############################################################
 # Author: @rosegaelle                                       #
-# Last Modified Date: July 2024                             #
+# Last Modified Date: August 2024.                          #
 #############################################################
 
 
@@ -11,7 +11,6 @@ source $(dirname $0)/anagrammer.sh
 
 
 FILEPATH_WORKBOOK="$WORKSPACE/wordle_enhanced_workbook.txt" #-
-FILEPATH_WORKBOOK="wordle_enhanced_workbook.txt" #-
 declare -a TEST_ANAGRAMS_1 TEST_ANAGRAMS_2 TEST_ANAGRAMS_3 TEST_ANAGRAMS_4 TEST_ANAGRAMS_5
 
 
@@ -19,7 +18,7 @@ print_test_results() {
     expected=${1:-true}
     actual=${2:-false}
 
-    print_message "\nTest $([ $expected == $actual ] && echo "passed" || echo "failed").\n"
+    print_message "Test $([ $expected == $actual ] && echo "passed" || echo "failed")."
 }
 
 get_anagram() {
@@ -51,7 +50,7 @@ setup_test() {
     expected_setup_count=${3:-0}
  
     letters_to_match=$(decode "$letters_to_match")
-    print_message "\n'$letters_to_match' should have $expected_setup_count $([ true == $must_fully_match ] && echo "full" || echo "partial") anagrams."
+    print_message "'$letters_to_match' should have $expected_setup_count $([ true == $must_fully_match ] && echo "full" || echo "partial") anagrams."
     get_anagram $letters_to_match $must_fully_match #ToDo: fix!!!
     print_test_results $expected_setup_count $(get_file_line_count "$FILEPATH_ANAGRAMS")
     IFS=$'\n' read -d '' -r -a results < $FILEPATH_ANAGRAMS
@@ -76,7 +75,7 @@ setup() {
 ## FULL Match Check
 
 test_is_full_anagram_1() {
-    print_message "\n\n[test_is_full_anagram_1]\n"
+    print_message "[test_is_full_anagram_1]"
     word_to_check=$(decode 'RklCRVIK')
 
     echo -e "\n'$word_to_check' should be a full anagram in:\n[${TEST_ANAGRAMS_1[@]}]"
@@ -84,7 +83,7 @@ test_is_full_anagram_1() {
 }
 
 test_is_full_anagram_2() {
-    print_message "\n\n[test_is_full_anagram_2]"
+    print_message "[test_is_full_anagram_2]"
 
     word_to_check=$(decode 'UEFSREkK')
 
@@ -94,7 +93,7 @@ test_is_full_anagram_2() {
 
 
 test_is_not_full_anagram_1() {
-    print_message "\n\n[test_is_not_full_anagram_1]"
+    print_message "[test_is_not_full_anagram_1]"
 
     word_to_check=$(decode 'Q0hJTEQK')
 
@@ -103,20 +102,20 @@ test_is_not_full_anagram_1() {
 }
 
 test_is_not_full_anagram_2() {
-    print_message "\n\n[test_is_not_full_anagram_2]"
+    print_message "[test_is_not_full_anagram_2]"
 
     word_to_check=$(decode 'RklMQ0gK')
 
-    echo -e "\n'$word_to_check' should not be a full anagram in:\n[${TEST_ANAGRAMS_3[@]}]"
+    echo -e "'$word_to_check' should not be a full anagram in:\n[${TEST_ANAGRAMS_3[@]}]"
     print_test_results false $(is_anagram "${TEST_ANAGRAMS_3[@]}" "$word_to_check")
 }
 
 test_is_not_full_anagram_3() {
-    print_message "\n\n[test_is_not_full_anagram_3]"
+    print_message "[test_is_not_full_anagram_3]"
 
     word_to_check=$(decode 'RkxJQ0sK')
 
-    echo -e "\n'$word_to_check' should not be a full anagram in:\n[${TEST_ANAGRAMS_3[@]}]"
+    echo -e "'$word_to_check' should not be a full anagram in:\n[${TEST_ANAGRAMS_3[@]}]"
     print_test_results false $(is_anagram "${TEST_ANAGRAMS_3[@]}" "$word_to_check")
 }
 
@@ -124,16 +123,16 @@ test_is_not_full_anagram_3() {
 ## PARTIAL Match Check
 
 test_is_partial_anagram_1() {
-    print_message "\n\n[test_is_partial_anagram_1]"
+    print_message "[test_is_partial_anagram_1]"
 
     word_to_check=$(decode 'Q0hJTEQK')
 
-    echo -e "\n'$word_to_check' should be a partial anagram in:\n[${TEST_ANAGRAMS_4[@]}]"
+    echo -e "'$word_to_check' should be a partial anagram in:\n[${TEST_ANAGRAMS_4[@]}]"
     print_test_results true $(is_anagram "${TEST_ANAGRAMS_4[@]}" "$word_to_check")
 }
 
 test_is_partial_anagram_2() {
-    print_message "\n\n[test_is_partial_anagram_2]"
+    print_message "[test_is_partial_anagram_2]"
 
     word_to_check=$(decode 'RklMQ0gK')
 
@@ -142,7 +141,7 @@ test_is_partial_anagram_2() {
 }
 
 test_is_partial_anagram_3() {
-    print_message "\n\n[test_is_partial_anagram_3]"
+    print_message "[test_is_partial_anagram_3]"
 
     word_to_check=$(decode 'RkxJQ0sK')
 
@@ -152,7 +151,7 @@ test_is_partial_anagram_3() {
 
 
 test_is_not_partial_anagram_1() {
-    print_message "\n\n[test_is_not_partial_anagram_1]"
+    print_message "[test_is_not_partial_anagram_1]"
 
     word_to_check=$(decode 'Q09VUlQK')
 
@@ -177,4 +176,4 @@ test_is_partial_anagram_3
 
 test_is_not_partial_anagram_1
 
-print_message "\nAnagrammer Tests Completed.\n"
+print_message "Anagrammer Tests Completed."
