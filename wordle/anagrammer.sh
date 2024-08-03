@@ -2,7 +2,7 @@
 
 #############################################################
 # Author: @rosegaelle                                       #
-# Last Modified Date: July 2024                             #
+# Last Modified Date: August 2024.                          #
 #############################################################
 
 source $(dirname $0)/utils.sh
@@ -19,7 +19,7 @@ find_anagrams() {
     validate_file_dependency "$anagram_dictionary"
 
     if [ -z "$letters_to_match" ]; then
-        printf "\nLetters to match specified.\n"
+        print_message "Letters to match specified."
         exit 1
     fi
 
@@ -48,7 +48,7 @@ find_anagrams() {
             cat $FILEPATH_ANAGRAMS
             show_file_line_count "$FILEPATH_ANAGRAMS"
         else
-            printf "\n'$letters_to_match' does not have a resulting anagram.\n"
+            print_message "'$letters_to_match' does not have a resulting anagram."
         fi
     fi
 }

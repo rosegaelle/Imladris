@@ -2,7 +2,7 @@
 
 #############################################################
 # Author: @rosegaelle                                       #
-# Last Modified Date: July 2024                             #
+# Last Modified Date: August 2024.                          #
 #############################################################
 
 source $(dirname $0)/utils.sh

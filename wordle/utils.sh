@@ -2,7 +2,7 @@
 
 #############################################################
 # Author: @rosegaelle                                       #
-# Last Modified Date: July 2024                             #
+# Last Modified Date: August 2024.                          #
 #############################################################
 
 
@@ -16,19 +16,35 @@ export FILEPATH_HINT_LIST='results.tmp'
 export FILEPATH_ANAGRAMS='anagrams.tmp'
 
 
-
 print_message() {
     message=${1:-''}
-
-    printf "$message" > /dev/stderr
+    printf "\n$message\n" > /dev/stderr
 }
 
+toLowerCase() {
+    user_input=${1:-''}
+    echo $user_input | tr '[:upper:]' '[:lower:]'
+}
+
+toUpperCase() {
+    user_input=${1:-''}
+    echo $user_input | tr '[:lower:]' '[:upper:]'
+}
 
 sanitize_input() {
     user_input=${1:-''}
-    echo $user_input | tr -cd '[:alpha:]'| tr '[:upper:]' '[:lower:]'
+    echo $(toLowerCase "$user_input") | tr -cd '[:alpha:]'
 }
 
+encode () {
+    word=${1:-''}
+    [ ! -z "$word" ] && $(toLowerCase $word) | base64
+}
+
+decode() {
+    word=${1:-''}
+    [ ! -z "$word" ] && toLowerCase $(echo "$word" | base64 -d)
+}
 
 validate_file_dependency() {
     filename=${1:-''}
@@ -41,7 +57,6 @@ validate_file_dependency() {
     fi
 }
 
-
 empty_or_create_file() {
     filename=${1:-''}
 
@@ -52,13 +67,10 @@ empty_or_create_file() {
     fi
 }
 
-
 cleanup_file() {
     filename=${1:-''}
-
     [ -e "$filename" ] && $(rm "$filename")
 }
-
 
 is_file_not_empty() {
     filename=${1:-''}
@@ -72,21 +84,15 @@ is_file_not_empty() {
     fi
 }
 
-
 get_file_line_count() {
     filename=${1:-''}
-
     validate_file_dependency "$filename"
-
     echo $(wc -l < "$filename")
 }
 
-
 show_file_line_count() {
     filename=${1:-''}
-
     validate_file_dependency "$filename"
-
     echo $(wc -l "$filename")
 }
 
@@ -112,18 +118,4 @@ get_number_of_characters() {
         num_char=$(echo -n "$word" | wc -c | tr -d ' ')
         echo "$num_char"
     fi
-}
-
-
-encode () {
-    word=${1:-''}
-
-    [ ! -z "$word" ] && echo "$word" | tr '[:upper:]' '[:lower:]' | base64
-}
-
-
-decode() {
-    word=${1:-''}
-
-    [ ! -z "$word" ] && echo "$word" | base64 -d | tr '[:upper:]' '[:lower:]'
 }

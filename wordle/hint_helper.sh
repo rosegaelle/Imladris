@@ -2,7 +2,7 @@
 
 #############################################################
 # Author: @rosegaelle                                       #
-# Last Modified Date: July 2024                             #
+# Last Modified Date: August 2024.                          #
 #############################################################
 
 source $(dirname $0)/utils.sh
@@ -145,7 +145,7 @@ for (( i=0; i<${#unique_letters}; i++ )); do
 done
 
 unique_letters_by_occurence=$(cat $file_tmp_3 | sort -rk4 | uniq -c | awk '{ print $3}' | tr -d '\n')
-printf "\nUnique letters by occurence: '$unique_letters_by_occurence'.\n"
+print_message "Unique letters by occurence: '$unique_letters_by_occurence'."
 cleanup_file "$file_tmp_3"
 
 
@@ -155,26 +155,26 @@ for (( i=0; i<${#LETTERS_INCLUDED}; i++ )); do
     unique_letters_by_occurence_unconfirmed=$(echo "$unique_letters_by_occurence_unconfirmed" | sed "s/"${LETTERS_INCLUDED:$i:1}"//")
 done
 
-printf "\nFinding anagrams for: '$unique_letters_by_occurence_unconfirmed'.\n"
+print_message "Finding anagrams for: '$unique_letters_by_occurence_unconfirmed'."
 for (( i=0; i<$((${#unique_letters_by_occurence_unconfirmed} - $WORD_LENGTH)); i++ )); do
 
     find_anagrams "$FILEPATH_WORKBOOK" "${unique_letters_by_occurence_unconfirmed:0:$((WORD_LENGTH + i))}"
 
     if [[ true == $(is_file_not_empty "$FILEPATH_ANAGRAMS") ]] ; then
-        printf "\nAnagram(s) found:\n"
+        print_message "Anagram(s) found:"
         cat $FILEPATH_ANAGRAMS
         break
     fi
 done
 
-printf "\nFinding anagrams for: '$unique_letters_by_occurence'.\n"
+print_message "Finding anagrams for: '$unique_letters_by_occurence'."
 if [[ true != $(is_file_not_empty "$FILEPATH_ANAGRAMS") ]] ; then
     for (( i=0; i<$((${#unique_letters_by_occurence} - $WORD_LENGTH)); i++ )); do
 
         find_anagrams "$FILEPATH_WORKBOOK" "${unique_letters_by_occurence:0:$((WORD_LENGTH + i))}"
 
         if [[ true == $(is_file_not_empty "$FILEPATH_ANAGRAMS") ]] ; then
-            printf "\nAnagram(s) found:\n"
+            print_message "Anagram(s) found:"
             cat $FILEPATH_ANAGRAMS
             break
         fi
@@ -184,16 +184,20 @@ fi
 
 
 if [[ true != $(is_file_not_empty "$FILEPATH_ANAGRAMS") ]] ; then
-    printf "\nNo anagram found.\n"
+    print_message "No anagram found."
 fi
 
-# Displaying the top 10 possibilities.
-printf "\nTop possibilities:\n"
+# Displaying the top 20 possibilities.
 if (( $(get_file_line_count "$FILEPATH_HINT_LIST") < 20 )); then
-    cat $FILEPATH_HINT_LIST
+    print_message "Eureka!"
+    toUpperCase $(cat $FILEPATH_HINT_LIST)
+else
+    if (( $(get_file_line_count "$FILEPATH_HINT_LIST") < 20 )); then
+        print_message "Top 20 possibilities:"
+        cat $FILEPATH_HINT_LIST
+    else
+        show_file_line_count "$FILEPATH_HINT_LIST"
+    fi
 fi
 
-show_file_line_count "$FILEPATH_HINT_LIST"
-
-
-printf "\nIt is done.\n"
+print_message "It is done."
