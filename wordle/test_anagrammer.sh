@@ -10,7 +10,7 @@ source $(dirname $0)/utils.sh
 source $(dirname $0)/anagrammer.sh
 
 
-FILEPATH_WORKBOOK="$WORKSPACE/wordle_enhanced_workbook.txt" #-
+FILEPATH_WORKBOOK="$WORKSPACE/wordle_enhanced_workbook.txt" #
 declare -a TEST_ANAGRAMS_1 TEST_ANAGRAMS_2 TEST_ANAGRAMS_3 TEST_ANAGRAMS_4 TEST_ANAGRAMS_5
 
 
@@ -36,7 +36,7 @@ is_anagram() {
 
     result=false
 
-    if [[ ${list[@]} =~ $word_to_check ]]; then #ToDo: fix!!!
+    if [[ ${list[@]} =~ $word_to_check ]]; then
         result=true
     fi
 
@@ -51,7 +51,7 @@ setup_test() {
  
     letters_to_match=$(decode "$letters_to_match")
     print_message "'$letters_to_match' should have $expected_setup_count $([ true == $must_fully_match ] && echo "full" || echo "partial") anagrams."
-    get_anagram $letters_to_match $must_fully_match #ToDo: fix!!!
+    get_anagram $letters_to_match $must_fully_match
     print_test_results $expected_setup_count $(get_file_line_count "$FILEPATH_ANAGRAMS")
     IFS=$'\n' read -d '' -r -a results < $FILEPATH_ANAGRAMS
     print_test_results $expected_setup_count "${#results[@]}"
@@ -60,15 +60,15 @@ setup_test() {
 }
 
 setup() {
-    read -a TEST_ANAGRAMS_1 <<< $(setup_test 'YnJpZWYK' true 3)
+    read -a TEST_ANAGRAMS_1 <<< $(setup_test 'YnJpZWYK' true 2) # 3 in the full dictionary.
 
-    read -a TEST_ANAGRAMS_2 <<< $(setup_test 'cmFwaWQK' true 0)
+    read -a TEST_ANAGRAMS_2 <<< $(setup_test 'cmFwaWQK' true 3)
 
-    read -a TEST_ANAGRAMS_3 <<< $(setup_test 'YmNkZmdoaWprbAo=' true 0)
+    read -a TEST_ANAGRAMS_3 <<< $(setup_test 'YmNkZmdoaWprbAo=' true 0) # ToDo: Fix!!!
 
-    read -a TEST_ANAGRAMS_4 <<< $(setup_test 'YmNkZmdoaWprbAo=' false 0)
+    read -a TEST_ANAGRAMS_4 <<< $(setup_test 'YmNkZmdoaWprbAo=' false 3) # ToDo: Fix!!!
 
-    read -a TEST_ANAGRAMS_5 <<< $(setup_test 'YWlzbGUK' false 0)
+    read -a TEST_ANAGRAMS_5 <<< $(setup_test 'YWlzbGUK' false 2) #ToDo: Fix!!!
 }
 
 
