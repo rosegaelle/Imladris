@@ -61,7 +61,7 @@ empty_or_create_file() {
     filename=${1:-''}
 
     if [ -e "$filename" ]; then
-        > "$filename"
+        true > "$filename"
     else
         touch "$filename"
     fi
@@ -118,4 +118,12 @@ get_number_of_characters() {
         num_char=$(echo -n "$word" | wc -c | tr -d ' ')
         echo "$num_char"
     fi
+}
+
+
+sort_by_rank() {
+    filename_full_list=${1:-''}
+    rank_order=${2:-''}
+
+    #ToDo
 }
