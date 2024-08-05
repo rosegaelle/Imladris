@@ -44,9 +44,11 @@ find_anagrams() {
             fi
         done < "$anagram_dictionary"
 
-        if [[ true == $(is_file_not_empty "$FILEPATH_ANAGRAMS") ]] && (( $(get_file_line_count "$FILEPATH_ANAGRAMS") < 25 )) ; then
+        if [[ true == $(is_file_not_empty "$FILEPATH_ANAGRAMS") ]] ; then
+            sort_by_rank "$FILEPATH_ANAGRAMS" "$unique_letters_to_match_count"
+
+            print_message "$(get_file_line_count "$FILEPATH_ANAGRAMS") anagram(s) found:"
             cat $FILEPATH_ANAGRAMS
-            show_file_line_count "$FILEPATH_ANAGRAMS"
         else
             print_message "'$letters_to_match' does not have a resulting anagram."
         fi

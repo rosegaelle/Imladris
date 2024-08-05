@@ -82,6 +82,14 @@ filter_by_character_index() {
     mv $file_tmp $FILEPATH_HINT_LIST
 }
 
+search_anagrams() {
+    letters_to_match=${1:-''}
+
+    counter=$((${#letters_to_match} - $WORD_LENGTH))
+    for (( i=0, j=$(get_file_line_count "$FILEPATH_ANAGRAMS") ; i<=$counter && 0==$j ; i++, j=$(get_file_line_count "$FILEPATH_ANAGRAMS"))); do
+        find_anagrams "$FILEPATH_WORKBOOK" "${letters_to_match:0:$((WORD_LENGTH + i))}"
+    done
+}
 
 
 # Reset the output file.
@@ -148,52 +156,25 @@ unique_letters_by_occurence=$(cat $file_tmp_3 | sort -rk4 | uniq -c | awk '{ pri
 print_message "Unique letters by occurence: '$unique_letters_by_occurence'."
 cleanup_file "$file_tmp_3"
 
-
-### ToDo: Refactor this section.
 unique_letters_by_occurence_unconfirmed=$unique_letters_by_occurence
 for (( i=0; i<${#LETTERS_INCLUDED}; i++ )); do
     unique_letters_by_occurence_unconfirmed=$(echo "$unique_letters_by_occurence_unconfirmed" | sed "s/"${LETTERS_INCLUDED:$i:1}"//")
 done
 
-print_message "Finding anagrams for: '$unique_letters_by_occurence_unconfirmed'."
-for (( i=0; i<$((${#unique_letters_by_occurence_unconfirmed} - $WORD_LENGTH)); i++ )); do
-
-    find_anagrams "$FILEPATH_WORKBOOK" "${unique_letters_by_occurence_unconfirmed:0:$((WORD_LENGTH + i))}"
-
-    if [[ true == $(is_file_not_empty "$FILEPATH_ANAGRAMS") ]] ; then
-        print_message "Anagram(s) found:"
-        cat $FILEPATH_ANAGRAMS
-        break
-    fi
-done
-
-print_message "Finding anagrams for: '$unique_letters_by_occurence'."
-if [[ true != $(is_file_not_empty "$FILEPATH_ANAGRAMS") ]] ; then
-    for (( i=0; i<$((${#unique_letters_by_occurence} - $WORD_LENGTH)); i++ )); do
-
-        find_anagrams "$FILEPATH_WORKBOOK" "${unique_letters_by_occurence:0:$((WORD_LENGTH + i))}"
-
-        if [[ true == $(is_file_not_empty "$FILEPATH_ANAGRAMS") ]] ; then
-            print_message "Anagram(s) found:"
-            cat $FILEPATH_ANAGRAMS
-            break
-        fi
-    done
-fi
-###
+empty_or_create_file "$FILEPATH_ANAGRAMS"
+search_anagrams "$unique_letters_by_occurence_unconfirmed"
+search_anagrams "$unique_letters_by_occurence"
 
 
-if [[ true != $(is_file_not_empty "$FILEPATH_ANAGRAMS") ]] ; then
-    print_message "No anagram found."
-fi
-
-# Displaying the top 20 possibilities.
-if (( $(get_file_line_count "$FILEPATH_HINT_LIST") < 20 )); then
+# Displaying the top 20 - or less - possibilities.
+if (( 1 == $(get_file_line_count "$FILEPATH_HINT_LIST") )); then
     print_message "Eureka!"
     toUpperCase $(cat $FILEPATH_HINT_LIST)
 else
-    if (( $(get_file_line_count "$FILEPATH_HINT_LIST") < 20 )); then
-        print_message "Top 20 possibilities:"
+    if (( 20 >= $(get_file_line_count "$FILEPATH_HINT_LIST") )); then
+        sort_by_rank "$FILEPATH_HINT_LIST" "$unique_letters_by_occurence"
+
+        print_message "Ranked top $(get_file_line_count "$FILEPATH_HINT_LIST") possibilities:"
         cat $FILEPATH_HINT_LIST
     else
         show_file_line_count "$FILEPATH_HINT_LIST"
