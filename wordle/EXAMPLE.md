@@ -45,8 +45,8 @@ GUESS_Q=''
 
 <b><u>Results</u>:</b><br>
 * Number of possible solutions: **13,112**, if the full dictionary.
-* Letters by occurence count: `ZXNhb3JpbHRudWR5Y3BtaGdia2Z3dnp4anEK`.
-* Anagram candidates, based on `c2Vhb3IK`: `YWVyb3MK` || `YXJvc2UK` || `c29hcmUK`.
+* Letters by occurence count: `RVNBT1JJTFROVURZQ1BNSEdCS0ZXVlpYSlEK`.
+* Anagram candidates, based on `U0VBT1IK`: `QUVST1MK` || `QVJPU0UK` || `U09BUkUK`.
   -  **1,160** ending in `RQo=` vs.  **3,370** ending in `Uwo=` in the full dictionary.
 * Statistically, the best first guess is therefore `YWVyb3MK`.
 
@@ -54,7 +54,7 @@ GUESS_Q=''
 
 ## Guess \#1
 ```sh
-YWVyb3MK
+QUVST1MK
 ```
 
 ⬛🟨⬛⬛⬛<br><br>
@@ -67,15 +67,15 @@ GUESS_N='RQo='
 
 <b><u>Results</u>:</b><br>
 * Number of possible solutions: **508**.
-* Letters by occurence count: `aWRsdW50eWdtY2hia3Bmd3Z4empxCg==`.
-* Anagram candidate(s), based on `aWRsdW4K`: `dW5saWQK`.
-* Unsurprisingly, the second guess will be `dW5saWQK`.
+* Letters by occurence count: `SURMVU5UWUdNQ0hCS1BGV1ZYWkpRCg==`.
+* Anagram candidate(s), based on `SURMVU4K`: `VU5MSUQK`.
+* Unsurprisingly, the second guess will be `VU5MSUQK`.
 
 
 
 ## Guess \#2
 ```sh
-dW5saWQK
+VU5MSUQK
 ```
 
 ⬛🟨⬛⬛⬛<br>
@@ -90,22 +90,23 @@ GUESS_P='SQo='
 
 <b><u>Results</u>:</b><br>
 * Number of possible solutions: **4**.
-  - `ZmlxdWUK` || `Z2lndWUK` || `aW1idWUK` || `anVpY2UK`.
+  - `RklRVUUK` || `R0lHVUUK` || `SU1CVUUK` || `SlVJQ0UK`.
     - Verbs are rare.
     - Solutions tend to follow the [KISS Principle](https://www.techopedia.com/definition/20262/keep-it-simple-stupid-principle-kiss-principle).
-* Consequently, the best third guess is `anVpY2UK`.
+* Consequently, the best third guess is `SlVJQ0UK`.
   - Should this not work, the next guess will be decided based on the system feedback.
   - Our final possible score is therefore _3 out of 6_ at best, or _4 out of 6_ in the worst case scenario. **Not bad!** 🙃
 
 
 ## Guess \#3
 ```sh
-anVpY2UK
+SlVJQ0UK
 ```
 
 ⬛🟨⬛⬛⬛<br>
 🟨⬛⬛🟨⬛<br>
 🟩🟩🟩🟩🟩<br><br>
+
 
 
 😎
