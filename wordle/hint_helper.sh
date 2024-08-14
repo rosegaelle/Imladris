@@ -53,16 +53,18 @@ do
 done
 
 
+HINT_THRESHOLD=20
+
 
 filter_by_character_index() {
-    character_index=${1:-0}
-    character_value=${2:-''}
-    is_included=${3:-true}
+    local character_index=${1:-0}
+    local character_value=${2:-''}
+    local is_included=${3:-true}
 
     file_tmp=$(mktemp)
     cp $FILEPATH_HINT_LIST $file_tmp
 
-    if [ ! -z "$character_value" ]; then
+if [ ! -z "$character_value" ]; then
         if (( "$character_index" < 1 || "$character_index" > "$WORD_LENGTH" )); then
             echo "Error message goes here."
             exit 1
@@ -73,7 +75,7 @@ filter_by_character_index() {
             awk -v s="$character_value" "index(\$0, s) == $character_index" $FILEPATH_HINT_LIST > $file_tmp
         else
             for (( i=0; i<${#character_value}; i++ )); do
-                awk -v s="${character_value:$i:1}" "index(\$0, s) != $character_index" $FILEPATH_HINT_LIST > $file_tmp
+                awk -v s="${character_value:$i:1}" "index(\$0, s) != $character_index" $FILEPATH_HINT_LIST > $file_tmp #ToDo: Fix!!!
                 cp $file_tmp $FILEPATH_HINT_LIST
             done
         fi
@@ -83,11 +85,10 @@ filter_by_character_index() {
 }
 
 search_anagrams() {
-    letters_to_match=${1:-''}
+    local letters_to_match=${1:-''}
 
-    counter=$((${#letters_to_match} - $WORD_LENGTH))
-    for (( i=0, j=$(get_file_line_count "$FILEPATH_ANAGRAMS") ; i<=$counter && 0==$j ; i++, j=$(get_file_line_count "$FILEPATH_ANAGRAMS"))); do
-        find_anagrams "$FILEPATH_WORKBOOK" "${letters_to_match:0:$((WORD_LENGTH + i))}"
+    for (( i=$WORD_LENGTH, j=$(get_file_line_count "$FILEPATH_ANAGRAMS") ; i<((1 + ${#letters_to_match})) && 0==$j ; i++, j=$(get_file_line_count "$FILEPATH_ANAGRAMS"))); do
+        find_anagrams "$FILEPATH_WORKBOOK" "${letters_to_match:0:i}" false
     done
 }
 
@@ -145,25 +146,27 @@ filter_by_character_index 4 "$LETTERS_NOT_AT_4" false
 filter_by_character_index 5 "$LETTERS_NOT_AT_5" false
 
 
-# Parsing possible solutions and suggesting potential next guess(es).
-unique_letters=$(grep -o . $FILEPATH_HINT_LIST | sort -u | tr -d '\n')
-file_tmp_3=$(mktemp)
-for (( i=0; i<${#unique_letters}; i++ )); do
-    grep -o $FILEPATH_HINT_LIST -e "${unique_letters:$i:1}" | sort | uniq -c >> $file_tmp_3
-done
+if (( $HINT_THRESHOLD < $(get_file_line_count "$FILEPATH_HINT_LIST") )); then
+    # Parsing possible solutions and suggesting potential next guess(es).
+    unique_letters=$(grep -o . $FILEPATH_HINT_LIST | sort -u | tr -d '\n')
+    file_tmp_3=$(mktemp)
+    for (( i=0; i<${#unique_letters}; i++ )); do
+        grep -o $FILEPATH_HINT_LIST -e "${unique_letters:$i:1}" | sort | uniq -c >> $file_tmp_3
+    done
 
-unique_letters_by_occurence=$(cat $file_tmp_3 | sort -rk4 | uniq -c | awk '{ print $3}' | tr -d '\n')
-print_message "Unique letters by occurence: '$unique_letters_by_occurence'."
-cleanup_file "$file_tmp_3"
+    unique_letters_by_occurence=$(cat $file_tmp_3 | sort -rk4 | uniq -c | awk '{ print $3}' | tr -d '\n')
+    print_message "Unique letters by occurence: '$unique_letters_by_occurence'."
+    cleanup_file "$file_tmp_3"
 
-unique_letters_by_occurence_unconfirmed=$unique_letters_by_occurence
-for (( i=0; i<${#LETTERS_INCLUDED}; i++ )); do
-    unique_letters_by_occurence_unconfirmed=$(echo "$unique_letters_by_occurence_unconfirmed" | sed "s/"${LETTERS_INCLUDED:$i:1}"//")
-done
+    unique_letters_by_occurence_unconfirmed=$unique_letters_by_occurence
+    for (( i=0; i<${#LETTERS_INCLUDED}; i++ )); do
+        unique_letters_by_occurence_unconfirmed=$(echo "$unique_letters_by_occurence_unconfirmed" | sed "s/"${LETTERS_INCLUDED:$i:1}"//")
+    done
 
-empty_or_create_file "$FILEPATH_ANAGRAMS"
-search_anagrams "$unique_letters_by_occurence_unconfirmed"
-search_anagrams "$unique_letters_by_occurence"
+    empty_or_create_file "$FILEPATH_ANAGRAMS"
+    search_anagrams "$unique_letters_by_occurence_unconfirmed"
+    search_anagrams "$unique_letters_by_occurence"
+fi
 
 
 # Displaying the top 20 - or less - possibilities.
@@ -171,7 +174,7 @@ if (( 1 == $(get_file_line_count "$FILEPATH_HINT_LIST") )); then
     print_message "Eureka!"
     toUpperCase $(cat $FILEPATH_HINT_LIST)
 else
-    if (( 20 >= $(get_file_line_count "$FILEPATH_HINT_LIST") )); then
+    if (( $HINT_THRESHOLD >= $(get_file_line_count "$FILEPATH_HINT_LIST") )); then
         sort_by_rank "$FILEPATH_HINT_LIST" "$unique_letters_by_occurence"
 
         print_message "Ranked top $(get_file_line_count "$FILEPATH_HINT_LIST") possibilities:"
