@@ -9,9 +9,9 @@ source $(dirname $0)/utils.sh
 
 
 find_anagrams() {
-    anagram_dictionary=${1:-''}
-    letters_to_match=${2:-''}
-    must_fully_match=${3:-true}
+    local anagram_dictionary=${1:-''}
+    local letters_to_match=${2:-''}
+    local must_fully_match=${3:-true}
 
     # Reset the output file.
     empty_or_create_file "$FILEPATH_ANAGRAMS"

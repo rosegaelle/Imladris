@@ -17,37 +17,37 @@ export FILEPATH_ANAGRAMS='anagrams.tmp'
 
 
 print_message() {
-    message=${1:-''}
+    local message=${1:-''}
     printf "\n$message\n" > /dev/stderr
 }
 
 toLowerCase() {
-    user_input=${1:-''}
+    local user_input=${1:-''}
     echo $user_input | tr '[:upper:]' '[:lower:]'
 }
 
 toUpperCase() {
-    user_input=${1:-''}
+    local user_input=${1:-''}
     echo $user_input | tr '[:lower:]' '[:upper:]'
 }
 
 sanitize_input() {
-    user_input=${1:-''}
+    local user_input=${1:-''}
     echo $(toLowerCase "$user_input") | tr -cd '[:alpha:]'
 }
 
 encode () {
-    word=${1:-''}
+    local word=${1:-''}
     [ ! -z "$word" ] && $(toLowerCase $word) | base64
 }
 
 decode() {
-    word=${1:-''}
+    local word=${1:-''}
     [ ! -z "$word" ] && toLowerCase $(echo "$word" | base64 -d)
 }
 
 validate_file_dependency() {
-    filename=${1:-''}
+    local filename=${1:-''}
 
     if [ ! -f $filename ]; then
         echo "File '$filename' does not exist."
@@ -58,7 +58,7 @@ validate_file_dependency() {
 }
 
 empty_or_create_file() {
-    filename=${1:-''}
+    local filename=${1:-''}
 
     if [ -e "$filename" ]; then
         true > "$filename"
@@ -68,12 +68,12 @@ empty_or_create_file() {
 }
 
 cleanup_file() {
-    filename=${1:-''}
+    local filename=${1:-''}
     [ -e "$filename" ] && $(rm "$filename")
 }
 
 is_file_not_empty() {
-    filename=${1:-''}
+    local filename=${1:-''}
 
     validate_file_dependency "$filename"
 
@@ -85,20 +85,22 @@ is_file_not_empty() {
 }
 
 get_file_line_count() {
-    filename=${1:-''}
+    local filename=${1:-''}
+
     validate_file_dependency "$filename"
     echo $(wc -l < "$filename")
 }
 
 show_file_line_count() {
-    filename=${1:-''}
+    local filename=${1:-''}
+
     validate_file_dependency "$filename"
     echo $(wc -l "$filename")
 }
 
 
 get_unique_characters() {
-    word=${1:-''}
+    local word=${1:-''}
 
     if [ -z "$word" ]; then
         echo ''
@@ -110,7 +112,7 @@ get_unique_characters() {
 
 
 get_number_of_characters() {
-    word=${1:-''}
+    local word=${1:-''}
 
     if [ -z "$word" ]; then
         echo 0
@@ -122,8 +124,8 @@ get_number_of_characters() {
 
 
 sort_by_rank() {
-    filename_full_list=${1:-''}
-    rank_order=${2:-''}
+    local filename_full_list=${1:-''}
+    local rank_order=${2:-''}
 
     #ToDo
 }
