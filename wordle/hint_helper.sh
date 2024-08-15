@@ -13,7 +13,7 @@ source $(dirname $0)/anagrammer.sh
 help() {
     echo "Hello, Wordle!"
     echo
-    echo "Syntax: hint_helper [-a|b|c|d|e|f|i|m|n|o|p|q|x]"
+    echo "Syntax: hint_helper [-a|b|c|d|e|f|i|m|n|o|p|q|s|x]"
     echo "options:"
     echo "a     First letter of the word."
     echo "b     Character at the second position."
@@ -27,11 +27,12 @@ help() {
     echo "o     Letters that cannot be at the third position."
     echo "p     Letters that cannot be at the fourth position."
     echo "q     Letters that cannot be at the end of the word."
+    echo "s     Whether the anagrammer should be skipped or not."
     echo "x     Letters to exclude."
     echo
 }
 
-while getopts ":a:b:c:d:e:f:i:m:n:o:p:q:x:" flag
+while getopts ":a:b:c:d:e:f:i:m:n:o:p:q:x:s:" flag
 do
     case "${flag}" in
         a) LETTER_AT_1=$(sanitize_input ${OPTARG});;
@@ -46,6 +47,7 @@ do
         o) LETTERS_NOT_AT_3=$(sanitize_input ${OPTARG});;
         p) LETTERS_NOT_AT_4=$(sanitize_input ${OPTARG});;
         q) LETTERS_NOT_AT_5=$(sanitize_input ${OPTARG});;
+        s) SKIP_ANAGRAMMER=${OPTARG};;
         x) LETTERS_EXCLUDED=$(sanitize_input ${OPTARG});;
         *) help
         exit 1;;
@@ -53,7 +55,8 @@ do
 done
 
 
-HINT_THRESHOLD=20
+SKIP_ANAGRAMMER=${SKIP_ANAGRAMMER:-false}
+HINT_THRESHOLD=10
 
 
 filter_by_character_index() {
@@ -92,6 +95,8 @@ search_anagrams() {
     done
 }
 
+
+date
 
 # Reset the output file.
 empty_or_create_file "$FILEPATH_HINT_LIST"
@@ -146,7 +151,7 @@ filter_by_character_index 4 "$LETTERS_NOT_AT_4" false
 filter_by_character_index 5 "$LETTERS_NOT_AT_5" false
 
 
-if (( $HINT_THRESHOLD < $(get_file_line_count "$FILEPATH_HINT_LIST") )); then
+if [ true == $SKIP_ANAGRAMMER ] && (( $HINT_THRESHOLD < $(get_file_line_count "$FILEPATH_HINT_LIST") )); then
     # Parsing possible solutions and suggesting potential next guess(es).
     unique_letters=$(grep -o . $FILEPATH_HINT_LIST | sort -u | tr -d '\n')
     file_tmp_3=$(mktemp)
@@ -169,7 +174,7 @@ if (( $HINT_THRESHOLD < $(get_file_line_count "$FILEPATH_HINT_LIST") )); then
 fi
 
 
-# Displaying the top 20 - or less - possibilities.
+# Displaying the top possibilities.
 if (( 1 == $(get_file_line_count "$FILEPATH_HINT_LIST") )); then
     print_message "Eureka!"
     toUpperCase $(cat $FILEPATH_HINT_LIST)
@@ -185,3 +190,5 @@ else
 fi
 
 print_message "It is done."
+
+date

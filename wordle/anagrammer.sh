@@ -36,7 +36,7 @@ find_anagrams() {
             if [ true == $must_fully_match ]; then
                 is_match=$((($unique_letters_to_match_count == $unique_letters_matched_count)))
             else
-                is_match=$((($unique_letters_matched_count > 0)))
+                is_match=$((($unique_letters_matched_count >= $WORD_LENGTH)))
             fi
 
             if [ 1 == $is_match ]; then
@@ -47,7 +47,7 @@ find_anagrams() {
         if [[ true == $(is_file_not_empty "$FILEPATH_ANAGRAMS") ]] ; then
             sort_by_rank "$FILEPATH_ANAGRAMS" "$unique_letters_to_match_count"
 
-            print_message "$(get_file_line_count "$FILEPATH_ANAGRAMS") anagram(s) found:"
+            print_message "$(get_file_line_count "$FILEPATH_ANAGRAMS") anagram(s) found for '$letters_to_match':"
             cat $FILEPATH_ANAGRAMS
         else
             print_message "'$letters_to_match' does not have a resulting anagram."
