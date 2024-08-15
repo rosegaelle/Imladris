@@ -55,7 +55,7 @@ do
 done
 
 
-SKIP_ANAGRAMMER=${SKIP_ANAGRAMMER:-false}
+SKIP_ANAGRAMMER=${SKIP_ANAGRAMMER:-true}
 HINT_THRESHOLD=10
 
 
@@ -151,7 +151,7 @@ filter_by_character_index 4 "$LETTERS_NOT_AT_4" false
 filter_by_character_index 5 "$LETTERS_NOT_AT_5" false
 
 
-if [ true == $SKIP_ANAGRAMMER ] && (( $HINT_THRESHOLD < $(get_file_line_count "$FILEPATH_HINT_LIST") )); then
+if [ true != $SKIP_ANAGRAMMER ] && (( $HINT_THRESHOLD < $(get_file_line_count "$FILEPATH_HINT_LIST") )); then
     # Parsing possible solutions and suggesting potential next guess(es).
     unique_letters=$(grep -o . $FILEPATH_HINT_LIST | sort -u | tr -d '\n')
     file_tmp_3=$(mktemp)
