@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/local/bin/bash
 
 #############################################################
 # Author: @rosegaelle                                       #
@@ -97,6 +97,12 @@ search_anagrams() {
 
 
 date
+
+
+sort_by_rank #-
+exit 0
+
+
 
 # Reset the output file.
 empty_or_create_file "$FILEPATH_HINT_LIST"
