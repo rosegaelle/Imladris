@@ -183,6 +183,8 @@ else
         sort_by_rank "$FILEPATH_HINT_LIST" "$unique_letters_by_occurence"
 
         print_message "Ranked top $(get_file_line_count "$FILEPATH_HINT_LIST") possibilities:"
+    
+        sort_by_rank "$FILEPATH_HINT_LIST" "$unique_letters_by_occurence"
         cat $FILEPATH_HINT_LIST
     else
         show_file_line_count "$FILEPATH_HINT_LIST"
