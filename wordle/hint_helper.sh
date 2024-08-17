@@ -96,12 +96,8 @@ search_anagrams() {
 }
 
 
-date
-
-
-sort_by_rank #-
-exit 0
-
+basetime=$(date +%s000)
+date -r $(($basetime / 1000))
 
 
 # Reset the output file.
@@ -197,6 +193,6 @@ else
     fi
 fi
 
-print_message "It is done."
+print_message "Runtime: $(echo "scale=3;($(date +%s000) - ${basetime})" | bc) seconds."
 
-date
+print_message "It is done."

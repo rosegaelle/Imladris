@@ -98,7 +98,6 @@ show_file_line_count() {
     echo $(wc -l "$filename")
 }
 
-
 get_unique_characters() {
     local word=${1:-''}
 
@@ -109,7 +108,6 @@ get_unique_characters() {
         echo "$unique_characters"
     fi
 }
-
 
 get_number_of_characters() {
     local word=${1:-''}
@@ -122,10 +120,26 @@ get_number_of_characters() {
     fi
 }
 
-
 sort_by_rank() {
     local filename_full_list=${1:-''}
     local rank_order=${2:-''}
 
-    #ToDo
+    validate_file_dependency "$filename_full_list"
+
+    declare -A scores
+    while read -r word
+    do
+        score=10
+
+        for (( i=0; i<${#rank_order} ; i++ )); do
+            if echo "$word" | grep -q "${rank_order:$i:1}"; then
+                score=$(( score + 10 * $((${#rank_order} - i )) ))
+            fi
+        done
+
+        scores+=([$word]=$score)
+    done < "$filename_full_list"
+
+    rankings="$(typeset -p scores)"
+    echo "${rankings##*(}" | sed -e 's/)//g' | sed -e 's/\[/;\n/g' | sed -e 's/\]=/: /g' | sed -e 's/"//g' | awk -F= '!/ 0;?/ {print $0}' | sort -t: -k 2 -r | cut -d" " -f1 | xargs | sed -e 's/;//g' | sed -e 's/:/\n/g' | tr -d ' ' | awk 'NF' > $filename_full_list
 }
