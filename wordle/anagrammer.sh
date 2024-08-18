@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/local/bin/bash
 
 #############################################################
 # Author: @rosegaelle                                       #
@@ -45,7 +45,7 @@ find_anagrams() {
         done < "$anagram_dictionary"
 
         if [[ true == $(is_file_not_empty "$FILEPATH_ANAGRAMS") ]] ; then
-            sort_by_rank "$FILEPATH_ANAGRAMS" "$unique_letters_to_match_count"
+            sort_by_rank "$FILEPATH_ANAGRAMS" "$letters_to_match"
 
             print_message "$(get_file_line_count "$FILEPATH_ANAGRAMS") anagram(s) found for '$letters_to_match':"
             cat $FILEPATH_ANAGRAMS

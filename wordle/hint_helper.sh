@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/local/bin/bash
 
 #############################################################
 # Author: @rosegaelle                                       #
@@ -96,7 +96,9 @@ search_anagrams() {
 }
 
 
-date
+basetime=$(date +%s000)
+date -r $(($basetime / 1000))
+
 
 # Reset the output file.
 empty_or_create_file "$FILEPATH_HINT_LIST"
@@ -191,6 +193,6 @@ else
     fi
 fi
 
-print_message "It is done."
+print_message "Runtime: $(echo "scale=3;($(date +%s000) - ${basetime})" | bc) seconds."
 
-date
+print_message "It is done."
