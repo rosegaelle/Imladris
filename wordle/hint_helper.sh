@@ -193,6 +193,6 @@ else
     fi
 fi
 
-print_message "Runtime: $(echo "scale=3;($(date +%s000) - ${basetime})" | bc) seconds."
+print_message "Runtime: $(get_runtime "$basetime") milliseconds."
 
 print_message "It is done."
