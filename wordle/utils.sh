@@ -143,3 +143,8 @@ sort_by_rank() {
     rankings="$(typeset -p scores)"
     echo "${rankings##*(}" | sed -e 's/)//g' | sed -e 's/\[/;\n/g' | sed -e 's/\]=/: /g' | sed -e 's/"//g' | awk -F= '!/ 0;?/ {print $0}' | sort -t: -k 2 -r | cut -d" " -f1 | xargs | sed -e 's/;//g' | sed -e 's/:/\n/g' | tr -d ' ' | awk 'NF' > $filename_full_list
 }
+
+get_runtime() {
+    local basetime=${1:-''}
+    echo "scale=3;($(date +%s000) - ${basetime})" | bc
+}
