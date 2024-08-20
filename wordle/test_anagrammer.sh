@@ -11,7 +11,6 @@ source $(dirname $0)/anagrammer.sh
 
 
 FILEPATH_WORKBOOK="$WORKSPACE_DIR/wordle_enhanced_workbook.txt"
-FILEPATH_WORKBOOK="./wordle_enhanced_workbook.txt"
 declare -a TEST_ANAGRAMS_1 TEST_ANAGRAMS_2 TEST_ANAGRAMS_3 TEST_ANAGRAMS_4 TEST_ANAGRAMS_5
 
 
