@@ -177,20 +177,20 @@ fi
 
 
 # Displaying the top possibilities.
-if (( 1 == $(get_file_line_count "$FILEPATH_HINT_LIST") )); then
-    print_message "Eureka!"
-    toUpperCase $(cat $FILEPATH_HINT_LIST)
-else
-    if (( $HINT_THRESHOLD >= $(get_file_line_count "$FILEPATH_HINT_LIST") )); then
+if [[ true == $(is_file_not_empty "$FILEPATH_HINT_LIST") ]] && (( $HINT_THRESHOLD >= $(get_file_line_count "$FILEPATH_HINT_LIST") )); then
+    if (( 1 == $(get_file_line_count "$FILEPATH_HINT_LIST") )); then
+        print_message "Eureka!"
+        toUpperCase $(cat $FILEPATH_HINT_LIST)
+    else
         sort_by_rank "$FILEPATH_HINT_LIST" "$unique_letters_by_occurence"
 
         print_message "Ranked top $(get_file_line_count "$FILEPATH_HINT_LIST") possibilities:"
     
         sort_by_rank "$FILEPATH_HINT_LIST" "$unique_letters_by_occurence"
         cat $FILEPATH_HINT_LIST
-    else
-        show_file_line_count "$FILEPATH_HINT_LIST"
     fi
+else
+        show_file_line_count "$FILEPATH_HINT_LIST"
 fi
 
 print_message "Runtime: $(get_runtime "$basetime") milliseconds."
