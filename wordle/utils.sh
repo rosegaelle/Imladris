@@ -148,3 +148,25 @@ get_runtime() {
     local basetime=${1:-''}
     echo "scale=3;($(date +%s000) - ${basetime})" | bc
 }
+
+# bash -c "source $WORKSPACE_DIR/utils.sh; convert_feedback '?????'"
+# Where '?'' in {B, G, Y}
+convert_feedback() {
+    local user_input=${1:-''}
+
+    user_input=$(toUpperCase "$user_input")
+
+    local hint_black='⬛' # 'U+2B1B'
+    local hint_green='🟩' # 'U+1F7E9'
+    local hint_yellow='🟨' # 'U+1F7E8'
+
+
+    if [[ $WORD_LENGTH -ne $(get_number_of_characters "$user_input") ]]
+    then
+        print_message "'$user_input' must be at least $WORD_LENGTH characters long!."
+    else
+        print_message "$user_input"
+        regex="^([BGY]){0,$WORD_LENGTH}$"
+        [[ $user_input =~ $regex ]] && echo $user_input | sed "s/[B]/$hint_black/g" | sed "s/[G]/$hint_green/g" | sed "s/[Y]/$hint_yellow/g"
+    fi
+}

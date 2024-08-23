@@ -59,6 +59,8 @@ GUESS_Q=''
 ## Guess \#1
 ```sh
 U09BUkUK
+
+bash -c "source WORKSPACE_DIR/utils.sh; convert_feedback 'BBBBG'"
 ```
 
 ⬛⬛⬛⬛🟩<br><br>
@@ -81,6 +83,8 @@ GUESS_E='RQo='
 ## Guess \#2
 ```sh
 R1VJTFQK
+
+bash -c "source WORKSPACE_DIR/utils.sh; convert_feedback 'BGGBB'"
 ```
 
 ⬛⬛⬛⬛🟩<br>
@@ -98,6 +102,7 @@ GUESS_E='RQo='
 * Number of possible solutions: **2**.
   - `SlVJQ0UK` || `UVVJTkUK`
     - Verbs are rare.
+      - In fact, as a rule of thumb: `noun > adjective > verb > adverb > proper noun`.
     - Solutions tend to follow the [KISS Principle](https://www.techopedia.com/definition/20262/keep-it-simple-stupid-principle-kiss-principle).
 * Unsurprisingly, the best third guess is `SlVJQ0UK`.
   - Our final possible score is therefore _3 out of 6_ at best, or _4 out of 6_ in the worst case scenario. **Not bad!** 🙃
@@ -106,6 +111,8 @@ GUESS_E='RQo='
 ## Guess \#3
 ```sh
 SlVJQ0UK
+
+bash -c "source WORKSPACE_DIR/utils.sh; convert_feedback 'GGGGG'"
 ```
 
 ⬛⬛⬛⬛🟩<br>
