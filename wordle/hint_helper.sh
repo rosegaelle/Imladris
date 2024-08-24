@@ -77,8 +77,8 @@ if [ ! -z "$character_value" ]; then
             character_value="${character_value:0:1}"
             awk -v s="$character_value" "index(\$0, s) == $character_index" $FILEPATH_HINT_LIST > $file_tmp
         else
-            for (( i=0; i<${#character_value}; i++ )); do
-                awk -v s="${character_value:$i:1}" "index(\$0, s) != $character_index" $FILEPATH_HINT_LIST > $file_tmp #ToDo: Fix!!!
+            for (( i=0; i<$(get_word_length "$character_value"); i++ )); do
+                awk -v s=$(get_character_at "$character_value" "$i") "index(\$0, s) != $character_index" $FILEPATH_HINT_LIST > $file_tmp #ToDo: Fix!!!
                 cp $file_tmp $FILEPATH_HINT_LIST
             done
         fi
@@ -119,7 +119,7 @@ if [ -z "$LETTERS_EXCLUDED" ]; then
     cp $file_tmp_1 $file_tmp_2
 else
     for (( i=0; i<${#LETTERS_EXCLUDED}; i++ )); do
-        grep -iv "${LETTERS_EXCLUDED:$i:1}" $file_tmp_1 > $file_tmp_2
+        grep -iv $(get_character_at "$LETTERS_EXCLUDED" "$i") $file_tmp_1 > $file_tmp_2
         cp $file_tmp_2 $file_tmp_1
     done
 fi
@@ -132,7 +132,7 @@ if [ -z "$LETTERS_INCLUDED" ]; then
     cp $file_tmp_2 $FILEPATH_HINT_LIST
 else
     for (( i=0; i<${#LETTERS_INCLUDED}; i++ )); do
-        grep -i "${LETTERS_INCLUDED:$i:1}" $file_tmp_2 > $FILEPATH_HINT_LIST
+        grep -i $(get_character_at "$LETTERS_INCLUDED" "$i") $file_tmp_2 > $FILEPATH_HINT_LIST
         cp $FILEPATH_HINT_LIST $file_tmp_2
     done
 fi
@@ -158,7 +158,7 @@ if [ true != $SKIP_ANAGRAMMER ] && (( $HINT_THRESHOLD < $(get_file_line_count "$
     unique_letters=$(grep -o . $FILEPATH_HINT_LIST | sort -u | tr -d '\n')
     file_tmp_3=$(mktemp)
     for (( i=0; i<${#unique_letters}; i++ )); do
-        grep -o $FILEPATH_HINT_LIST -e "${unique_letters:$i:1}" | sort | uniq -c >> $file_tmp_3
+        grep -o $FILEPATH_HINT_LIST -e $(get_character_at "$unique_letters" "$i") | sort | uniq -c >> $file_tmp_3
     done
 
     unique_letters_by_occurence=$(cat $file_tmp_3 | sort -rk4 | uniq -c | awk '{ print $3}' | tr -d '\n')
@@ -167,7 +167,7 @@ if [ true != $SKIP_ANAGRAMMER ] && (( $HINT_THRESHOLD < $(get_file_line_count "$
 
     unique_letters_by_occurence_unconfirmed=$unique_letters_by_occurence
     for (( i=0; i<${#LETTERS_INCLUDED}; i++ )); do
-        unique_letters_by_occurence_unconfirmed=$(echo "$unique_letters_by_occurence_unconfirmed" | sed "s/"${LETTERS_INCLUDED:$i:1}"//")
+        unique_letters_by_occurence_unconfirmed=$(echo "$unique_letters_by_occurence_unconfirmed" | sed "s/$(get_character_at "$LETTERS_INCLUDED" "$i")//")
     done
 
     empty_or_create_file "$FILEPATH_ANAGRAMS"
