@@ -193,6 +193,7 @@ else
         show_file_line_count "$FILEPATH_HINT_LIST"
 fi
 
+
 print_message "Runtime: $(get_runtime "$basetime") milliseconds."
 
 print_message "It is done."
