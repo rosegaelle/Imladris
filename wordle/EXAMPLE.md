@@ -60,7 +60,7 @@ GUESS_Q=''
 ```sh
 U09BUkUK
 
-bash -c "source WORKSPACE_DIR/utils.sh; convert_feedback 'BBBBG'"
+/usr/local/bin/bash -c "source WORKSPACE_DIR/utils.sh; convert_feedback 'BBBBG'"
 ```
 
 ⬛⬛⬛⬛🟩<br><br>
@@ -84,7 +84,7 @@ GUESS_E='RQo='
 ```sh
 R1VJTFQK
 
-bash -c "source WORKSPACE_DIR/utils.sh; convert_feedback 'BGGBB'"
+/usr/local/bin/bash -c "source WORKSPACE_DIR/utils.sh; convert_feedback 'BGGBB'"
 ```
 
 ⬛⬛⬛⬛🟩<br>
@@ -112,7 +112,7 @@ GUESS_E='RQo='
 ```sh
 SlVJQ0UK
 
-bash -c "source WORKSPACE_DIR/utils.sh; convert_feedback 'GGGGG'"
+/usr/local/bin/bash -c "source WORKSPACE_DIR/utils.sh; convert_feedback 'GGGGG'"
 ```
 
 ⬛⬛⬛⬛🟩<br>
