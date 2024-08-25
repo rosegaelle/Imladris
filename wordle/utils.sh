@@ -40,10 +40,14 @@ sanitize_input() {
     echo $(toLowerCase "$user_input") | tr -cd '[:alpha:]'
 }
 
-
-encode () {
+encode() {
     local word=${1:-''}
-    [ ! -z "$word" ] && $(toLowerCase $word) | base64
+    [ ! -z "$word" ] && echo $(toLowerCase $word) | base64
+}
+
+encode_upperCase() {
+    local word=${1:-''}
+    [ ! -z "$word" ] && echo $(toUpperCase $word) | base64
 }
 
 
@@ -229,7 +233,7 @@ diff() {
     solution=$(toUpperCase $(sanitize_input "$solution"))
     guess=$(toUpperCase $(sanitize_input "$guess"))
 
-    print_message "$solution\n$guess"
+    print_message "$solution\t$(encode "$solution")\t$(encode_upperCase "$solution")\n$guess\t$(encode "$guess")\t$(encode_upperCase "$guess")"
 
     if [ -z "$solution" ] || [ -z "$guess" ] ; then
         print_message "Invalid input for the word diff: '$solution' vs. '$guess'!"

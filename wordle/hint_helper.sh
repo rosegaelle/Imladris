@@ -113,6 +113,10 @@ cp $FILEPATH_ENHANCED_DICTIONARY $file_tmp_1
 
 # Processing hints, if any.
 
+# Safety check, in case of manual user input errors.
+LETTERS_INCLUDED=$(echo $LETTERS_INCLUDED$LETTER_AT_1$LETTER_AT_2$LETTER_AT_3$LETTER_AT_4$LETTER_AT_5$LETTERS_NOT_AT_1$LETTERS_NOT_AT_2$LETTERS_NOT_AT_3$LETTERS_NOT_AT_4$LETTERS_NOT_AT_5 | grep -o . | sort -u | tr -d "\n")
+LETTERS_EXCLUDED=$(echo "$LETTERS_EXCLUDED" | sed "s/[$LETTERS_INCLUDED]//g")
+
 ## Letters to exclude.
 file_tmp_2=$(mktemp)
 if [ -z "$LETTERS_EXCLUDED" ]; then
@@ -126,8 +130,6 @@ fi
 cleanup_file "$file_tmp_1"
 
 ## Letters to include.
-LETTERS_INCLUDED=$(echo $LETTERS_INCLUDED$LETTER_AT_1$LETTER_AT_2$LETTER_AT_3$LETTER_AT_4$LETTER_AT_5 | grep -o . | sort -u | tr -d "\n")
-
 if [ -z "$LETTERS_INCLUDED" ]; then
     cp $file_tmp_2 $FILEPATH_HINT_LIST
 else
