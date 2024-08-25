@@ -229,6 +229,12 @@ convert_feedback() {
 diff() {
     local solution=${1:-''}
     local guess=${2:-''}
+    local is_input_encoded=${3:-false}
+
+    if [[ true == "$is_input_encoded" ]]; then
+        solution=$(decode "$solution")
+        guess=$(decode "$guess")
+    fi
 
     solution=$(toUpperCase $(sanitize_input "$solution"))
     guess=$(toUpperCase $(sanitize_input "$guess"))
@@ -277,8 +283,9 @@ diff() {
 diff_with_feedback() {
     local solution=${1:-''}
     local guess=${2:-''}
+    local is_input_encoded=${3:-false}
 
-    local result=$(diff "$solution" "$guess")
+    local result=$(diff "$solution" "$guess" "$is_input_encoded")
 
     convert_feedback "$result"
 }
