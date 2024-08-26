@@ -56,7 +56,7 @@ done
 
 
 SKIP_ANAGRAMMER=${SKIP_ANAGRAMMER:-true}
-HINT_THRESHOLD=10
+HINT_THRESHOLD=15
 
 
 filter_by_character_index() {
