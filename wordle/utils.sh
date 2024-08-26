@@ -229,11 +229,15 @@ convert_feedback() {
 diff() {
     local solution=${1:-''}
     local guess=${2:-''}
+    local is_input_encoded=${3:-false}
+
+    if [[ true == "$is_input_encoded" ]]; then
+        solution=$(decode "$solution")
+        guess=$(decode "$guess")
+    fi
 
     solution=$(toUpperCase $(sanitize_input "$solution"))
     guess=$(toUpperCase $(sanitize_input "$guess"))
-
-    print_message "$solution\t$(encode "$solution")\t$(encode_upperCase "$solution")\n$guess\t$(encode "$guess")\t$(encode_upperCase "$guess")"
 
     if [ -z "$solution" ] || [ -z "$guess" ] ; then
         print_message "Invalid input for the word diff: '$solution' vs. '$guess'!"
@@ -245,9 +249,15 @@ diff() {
         fi
     fi
 
+    print_message "$solution\t$(encode "$solution")\t$(encode_upperCase "$solution")\n$guess\t$(encode "$guess")\t$(encode_upperCase "$guess")"
+
     #??? local letters_in_diff=$(diff <(fold -w1 <<< "$solution") <(fold -w1 <<< "$guess") | awk '/[<>]/{printf $2}')
     local letters_in_diff=$(get_unique_characters $(echo $guess | sed "s/[$solution]//g"))
-    local result=$(echo $guess | sed "s/[$letters_in_diff]/0/g")
+
+    local result=$guess
+    if [ ! -z "$letters_in_diff" ] ; then
+        result=$(echo $guess | sed "s/[$letters_in_diff]/0/g")
+    fi
 
     for (( i=0; i<$WORD_LENGTH; i++ )); do
         [[ $(get_character_at "$solution" "$i") == $(get_character_at "$guess" "$i") ]] && result="${result:0:$i}5${result:((i + 1))}"
@@ -263,7 +273,7 @@ diff() {
             done
 
             result=$(echo $result | sed "s/$letter_in_common/0/g")
-        done < <(fold -w1 <<< $(grep -o . <<< "$letters_in_common") | sort -u)
+        done < <(fold -w1 <<< $(grep -o . <<< "$letters_in_common"))
     fi
 
     echo $result | sed "s/[0]/B/g" | sed "s/[1]/Y/g" | sed "s/[5]/G/g"
@@ -273,8 +283,9 @@ diff() {
 diff_with_feedback() {
     local solution=${1:-''}
     local guess=${2:-''}
+    local is_input_encoded=${3:-false}
 
-    local result=$(diff "$solution" "$guess")
+    local result=$(diff "$solution" "$guess" "$is_input_encoded")
 
     convert_feedback "$result"
 }
