@@ -2,7 +2,6 @@
 
 #############################################################
 # Author: @rosegaelle                                       #
-# Last Modified Date: August 2024.                          #
 #############################################################
 
 source $(dirname $0)/utils.sh
@@ -115,7 +114,9 @@ cp $FILEPATH_ENHANCED_DICTIONARY $file_tmp_1
 
 # Safety check, in case of manual user input errors.
 LETTERS_INCLUDED=$(echo $LETTERS_INCLUDED$LETTER_AT_1$LETTER_AT_2$LETTER_AT_3$LETTER_AT_4$LETTER_AT_5$LETTERS_NOT_AT_1$LETTERS_NOT_AT_2$LETTERS_NOT_AT_3$LETTERS_NOT_AT_4$LETTERS_NOT_AT_5 | grep -o . | sort -u | tr -d "\n")
-LETTERS_EXCLUDED=$(echo "$LETTERS_EXCLUDED" | sed "s/[$LETTERS_INCLUDED]//g")
+if [ ! -z "$LETTERS_INCLUDED" ] ; then
+    LETTERS_EXCLUDED=$(echo "$LETTERS_EXCLUDED" | sed "s/[$LETTERS_INCLUDED]//g")
+fi
 
 ## Letters to exclude.
 file_tmp_2=$(mktemp)
@@ -182,6 +183,7 @@ fi
 if [[ true == $(is_file_not_empty "$FILEPATH_HINT_LIST") ]] && (( $HINT_THRESHOLD >= $(get_file_line_count "$FILEPATH_HINT_LIST") )); then
     if (( 1 == $(get_file_line_count "$FILEPATH_HINT_LIST") )); then
         print_message "Eureka!"
+        alert "Eureka !"
         toUpperCase $(cat $FILEPATH_HINT_LIST)
     else
         sort_by_rank "$FILEPATH_HINT_LIST" "$unique_letters_by_occurence"
@@ -199,3 +201,4 @@ fi
 print_message "Runtime: $(get_runtime "$basetime") milliseconds."
 
 print_message "It is done."
+alert "C'est fini !"

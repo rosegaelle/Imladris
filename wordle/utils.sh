@@ -2,7 +2,6 @@
 
 #############################################################
 # Author: @rosegaelle                                       #
-# Last Modified Date: August 2024.                          #
 #############################################################
 
 
@@ -288,4 +287,18 @@ diff_with_feedback() {
     local result=$(diff "$solution" "$guess" "$is_input_encoded")
 
     convert_feedback "$result"
+}
+
+
+alert() {
+    local message=${1:-''}
+
+    local quasimodo="echo -e '\a\a\a\a\a'"
+    eval $quasimodo
+
+    if [ ! -z "$message" ] ; then
+        say -v Thomas "$message"
+    fi
+
+    eval $quasimodo
 }
