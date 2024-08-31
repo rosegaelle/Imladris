@@ -225,6 +225,7 @@ convert_feedback() {
     fi
 }
 
+
 diff() {
     local solution=${1:-''}
     local guess=${2:-''}
@@ -258,12 +259,18 @@ diff() {
         result=$(echo $guess | sed "s/[$letters_in_diff]/0/g")
     fi
 
+    local correct_guesses=''
     for (( i=0; i<$WORD_LENGTH; i++ )); do
-        [[ $(get_character_at "$solution" "$i") == $(get_character_at "$guess" "$i") ]] && result="${result:0:$i}5${result:((i + 1))}"
+        char=$(get_character_at "$solution" "$i")
+        [[ $char == $(get_character_at "$guess" "$i") ]] && correct_guesses=$correct_guesses$char && result="${result:0:$i}5${result:((i + 1))}"
     done
 
     #??? local letters_in_common=$(comm -12 <(fold -w1 <<< $solution | sort -u) <(fold -w1 <<< $result | sort -u) | tr -d '\n')
     local letters_in_common=$(echo $result | sed "s/[$(echo $result | sed "s/[$solution]//g")]//g")
+
+    if [ ! -z "$correct_guesses" ] ; then
+        letters_in_common=$(echo $letters_in_common| sed "s/[$correct_guesses]//g")
+    fi
 
     if [ ! -z "$letters_in_common" ] ; then
         while read -r letter_in_common; do
@@ -274,6 +281,8 @@ diff() {
             result=$(echo $result | sed "s/$letter_in_common/0/g")
         done < <(fold -w1 <<< $(grep -o . <<< "$letters_in_common"))
     fi
+
+    result=$(echo $result | sed "s/[^015]/0/g")
 
     echo $result | sed "s/[0]/B/g" | sed "s/[1]/Y/g" | sed "s/[5]/G/g"
 }
