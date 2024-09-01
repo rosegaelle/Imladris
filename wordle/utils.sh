@@ -205,22 +205,23 @@ get_runtime() {
 }
 
 
-# Output [BGY]{0,5}
+# Output [BYG]{0,5}
 convert_feedback() {
     local user_input=${1:-''}
 
     user_input=$(toUpperCase "$user_input")
 
     local hint_black='⬛'  # 'U+02B1B'
-    local hint_green='🟩'  # 'U+1F7E9'
     local hint_yellow='🟨' # 'U+1F7E8'
+    local hint_green='🟩'  # 'U+1F7E9'
 
 
     if [[ $WORD_LENGTH -ne $(get_number_of_characters "$user_input") ]]; then
         print_message "'$user_input' must be exactly $WORD_LENGTH characters long!"
+        exit 0
     else
         print_message "$user_input"
-        local regex="^([BGY]){0,$WORD_LENGTH}$"
+        local regex="^([BYG]){0,$WORD_LENGTH}$"
         [[ $user_input =~ $regex ]] && echo $user_input | sed "s/[B]/$hint_black/g" | sed "s/[G]/$hint_green/g" | sed "s/[Y]/$hint_yellow/g"
     fi
 }
@@ -296,6 +297,121 @@ diff_with_feedback() {
     local result=$(diff "$solution" "$guess" "$is_input_encoded")
 
     convert_feedback "$result"
+}
+
+
+transcribe() {
+    local guess=${1:-''}
+    local feedback_received=${2:-''}
+    local reset=${2:-false}
+
+
+    if [ -z "$guess" ] || [ -z "$feedback_received" ] ; then
+        print_message "Invalid input: '$guess' vs. '$feedback_received'!"
+        exit 0
+    fi
+
+    if [[ $WORD_LENGTH -ne $(get_number_of_characters "$guess") ]] || [[ $WORD_LENGTH -ne $(get_number_of_characters "$feedback_received") ]]; then
+        print_message "Input must be exactly $WORD_LENGTH characters long!"
+        exit 0
+    fi
+
+    feedback_received=$(echo $feedback_received | sed "s/[^BYG]/B/g")
+
+    local hint_yellow='Y'
+    local hint_green='G'
+
+    if [[ true == "$reset" ]]; then
+        LETTERS_INCLUDED=''
+        LETTER_AT_1=''
+        LETTER_AT_2=''
+        LETTER_AT_3=''
+        LETTER_AT_4=''
+        LETTER_AT_5=''
+        LETTERS_NOT_AT_1=''
+        LETTERS_NOT_AT_2=''
+        LETTERS_NOT_AT_3=''
+        LETTERS_NOT_AT_4=''
+        LETTERS_NOT_AT_5=''
+        LETTERS_EXCLUDED=''
+    fi
+
+    for (( i=0; i<$WORD_LENGTH; i++ )); do
+        feedback=$(get_character_at "$feedback_received" "$i")
+        character=$(get_character_at "$guess" "$i")
+
+        case "$i" in
+            0)
+                case "$feedback" in
+                    "$hint_green")
+                        LETTER_AT_1="$LETTER_AT_1$character"
+                        ;;
+                    "$hint_yellow")
+                        LETTERS_NOT_AT_1="$LETTERS_NOT_AT_1$character"
+                        ;;
+                    *)
+                        LETTERS_EXCLUDED="$LETTERS_EXCLUDED$character"
+                esac
+                ;;
+            1)
+                case "$feedback" in
+                    "$hint_green")
+                        LETTER_AT_2="$LETTER_AT_2$character"
+                        ;;
+                    "$hint_yellow")
+                        LETTERS_NOT_AT_2="$LETTERS_NOT_AT_2$character"
+                        ;;
+                    *)
+                        LETTERS_EXCLUDED="$LETTERS_EXCLUDED$character"
+                esac
+                ;;
+            2)
+                case "$feedback" in
+                    "$hint_green")
+                        LETTER_AT_3="$LETTER_AT_3$character"
+                        ;;
+                    "$hint_yellow")
+                        LETTERS_NOT_AT_3="$LETTERS_NOT_AT_3$character"
+                        ;;
+                    *)
+                        LETTERS_EXCLUDED="$LETTERS_EXCLUDED$character"
+                esac
+                ;;
+            3)
+                case "$feedback" in
+                    "$hint_green")
+                        LETTER_AT_4="$LETTER_AT_4$character"
+                        ;;
+                    "$hint_yellow")
+                        LETTERS_NOT_AT_4="$LETTERS_NOT_AT_4$character"
+                        ;;
+                    *)
+                        LETTERS_EXCLUDED="$LETTERS_EXCLUDED$character"
+                esac
+                ;;
+            4)
+                case "$feedback" in
+                    "$hint_green")
+                        LETTER_AT_5="$LETTER_AT_5$character"
+                        ;;
+                    "$hint_yellow")
+                        LETTERS_NOT_AT_5="$LETTERS_NOT_AT_5$character"
+                        ;;
+                    *)
+                        LETTERS_EXCLUDED="$LETTERS_EXCLUDED$character"
+                esac
+                ;;
+            *)
+                ;;
+        esac
+    done
+
+    LETTERS_INCLUDED=$(echo $LETTERS_INCLUDED$LETTER_AT_1$LETTER_AT_2$LETTER_AT_3$LETTER_AT_4$LETTER_AT_5$LETTERS_NOT_AT_1$LETTERS_NOT_AT_2$LETTERS_NOT_AT_3$LETTERS_NOT_AT_4$LETTERS_NOT_AT_5 | grep -o . | sort -u | tr -d "\n")
+    if [ ! -z "$LETTERS_INCLUDED" ] ; then
+        LETTERS_EXCLUDED=$(echo "$LETTERS_EXCLUDED" | sed "s/[$LETTERS_INCLUDED]//g")
+    fi
+
+    print_message "GUESS_X='$LETTERS_EXCLUDED'\nGUESS_I='$LETTERS_INCLUDED'\nGUESS_A='$LETTER_AT_1'\nGUESS_B='$LETTER_AT_2'\nGUESS_C='$LETTER_AT_3'\nGUESS_D='$LETTER_AT_4'\nGUESS_E='$LETTER_AT_5'\nGUESS_M='$LETTERS_NOT_AT_1'\nGUESS_N='$LETTERS_NOT_AT_2'\nGUESS_O='$LETTERS_NOT_AT_3'\nGUESS_P='$LETTERS_NOT_AT_4'\nGUESS_Q='$LETTERS_NOT_AT_5'"
 }
 
 
