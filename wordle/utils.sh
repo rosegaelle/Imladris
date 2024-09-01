@@ -217,7 +217,7 @@ convert_feedback() {
 
 
     if [[ $WORD_LENGTH -ne $(get_number_of_characters "$user_input") ]]; then
-        print_message "'$user_input' must be at least $WORD_LENGTH characters long!."
+        print_message "'$user_input' must be exactly $WORD_LENGTH characters long!"
     else
         print_message "$user_input"
         local regex="^([BGY]){0,$WORD_LENGTH}$"
