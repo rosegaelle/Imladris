@@ -314,6 +314,9 @@ transcribe() {
     local feedback_received=${2:-''}
     local reset=${3:-false}
 
+    guess=$(toUpperCase "$guess")
+    feedback_received=$(toUpperCase "$feedback_received")
+
     if [ -z "$guess" ] || [ -z "$feedback_received" ] ; then
         print_message "Invalid input: '$guess' vs. '$feedback_received'!"
         exit 0
