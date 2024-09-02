@@ -39,10 +39,12 @@ sanitize_input() {
     echo $(toLowerCase "$user_input") | tr -cd '[:alpha:]'
 }
 
+
 encode() {
     local word=${1:-''}
     [ ! -z "$word" ] && echo $(toLowerCase $word) | base64
 }
+
 
 encode_upperCase() {
     local word=${1:-''}
@@ -111,6 +113,13 @@ show_file_line_count() {
 
     validate_file_dependency "$filename"
     echo $(wc -l "$filename")
+}
+
+
+remove_duplicate_characters() {
+    local word=${1:-''}
+    ### [ ! -z "$word" ] && echo "$word" | sed -f <(printf 's/%s//2g\n' {A..Z})
+    [ ! -z "$word" ] && sort <(fold -w1 <<< "$word") | uniq | tr -d '\n'
 }
 
 
@@ -267,7 +276,7 @@ diff() {
     done
 
     #??? local letters_in_common=$(comm -12 <(fold -w1 <<< $solution | sort -u) <(fold -w1 <<< $result | sort -u) | tr -d '\n')
-    local letters_in_common=$(echo $result | sed "s/[$(echo $result | sed "s/[$solution]//g")]//g")
+    local letters_in_common=$(echo $solution | sed "s/[$(echo $solution | sed "s/[$result]//g")]//g")
 
     if [ ! -z "$correct_guesses" ] ; then
         letters_in_common=$(echo $letters_in_common| sed "s/[$correct_guesses]//g")
@@ -275,7 +284,7 @@ diff() {
 
     if [ ! -z "$letters_in_common" ] ; then
         while read -r letter_in_common; do
-            for (( j=0; j<=$(get_character_occurence_count "$result" "$letter_in_common"); j++ )); do
+            for (( j=0; j<$(get_character_occurence_count "$solution" "$letter_in_common"); j++ )); do
                 result=$(echo $result | sed "s/$letter_in_common/1/")
             done
 
@@ -303,8 +312,7 @@ diff_with_feedback() {
 transcribe() {
     local guess=${1:-''}
     local feedback_received=${2:-''}
-    local reset=${2:-false}
-
+    local reset=${3:-false}
 
     if [ -z "$guess" ] || [ -z "$feedback_received" ] ; then
         print_message "Invalid input: '$guess' vs. '$feedback_received'!"
@@ -321,13 +329,26 @@ transcribe() {
     local hint_yellow='Y'
     local hint_green='G'
 
+    local LETTER_AT_1="$GUESS_A"
+    local LETTER_AT_2="$GUESS_B"
+    local LETTER_AT_3="$GUESS_C"
+    local LETTER_AT_4="$GUESS_D"
+    local LETTER_AT_5="$GUESS_E"
+    local LETTERS_INCLUDED="$GUESS_I"
+    local LETTERS_NOT_AT_1="$GUESS_M"
+    local LETTERS_NOT_AT_2="$GUESS_N"
+    local LETTERS_NOT_AT_3="$GUESS_O"
+    local LETTERS_NOT_AT_4="$GUESS_P"
+    local LETTERS_NOT_AT_5="$GUESS_Q"
+    local LETTERS_EXCLUDED="$GUESS_X"
+
     if [[ true == "$reset" ]]; then
-        LETTERS_INCLUDED=''
         LETTER_AT_1=''
         LETTER_AT_2=''
         LETTER_AT_3=''
         LETTER_AT_4=''
         LETTER_AT_5=''
+        LETTERS_INCLUDED=''
         LETTERS_NOT_AT_1=''
         LETTERS_NOT_AT_2=''
         LETTERS_NOT_AT_3=''
@@ -410,6 +431,19 @@ transcribe() {
     if [ ! -z "$LETTERS_INCLUDED" ] ; then
         LETTERS_EXCLUDED=$(echo "$LETTERS_EXCLUDED" | sed "s/[$LETTERS_INCLUDED]//g")
     fi
+
+    LETTER_AT_1=$(remove_duplicate_characters "$LETTER_AT_1")
+    LETTER_AT_2=$(remove_duplicate_characters "$LETTER_AT_2")
+    LETTER_AT_3=$(remove_duplicate_characters "$LETTER_AT_3")
+    LETTER_AT_4=$(remove_duplicate_characters "$LETTER_AT_4")
+    LETTER_AT_5=$(remove_duplicate_characters "$LETTER_AT_5")
+    LETTERS_INCLUDED=$(remove_duplicate_characters "$LETTERS_INCLUDED")
+    LETTERS_NOT_AT_1=$(remove_duplicate_characters "$LETTERS_NOT_AT_1")
+    LETTERS_NOT_AT_2=$(remove_duplicate_characters "$LETTERS_NOT_AT_2")
+    LETTERS_NOT_AT_3=$(remove_duplicate_characters "$LETTERS_NOT_AT_3")
+    LETTERS_NOT_AT_4=$(remove_duplicate_characters "$LETTERS_NOT_AT_4")
+    LETTERS_NOT_AT_5=$(remove_duplicate_characters "$LETTERS_NOT_AT_5")
+    LETTERS_EXCLUDED=$(remove_duplicate_characters "$LETTERS_EXCLUDED")
 
     print_message "GUESS_X='$LETTERS_EXCLUDED'\nGUESS_I='$LETTERS_INCLUDED'\nGUESS_A='$LETTER_AT_1'\nGUESS_B='$LETTER_AT_2'\nGUESS_C='$LETTER_AT_3'\nGUESS_D='$LETTER_AT_4'\nGUESS_E='$LETTER_AT_5'\nGUESS_M='$LETTERS_NOT_AT_1'\nGUESS_N='$LETTERS_NOT_AT_2'\nGUESS_O='$LETTERS_NOT_AT_3'\nGUESS_P='$LETTERS_NOT_AT_4'\nGUESS_Q='$LETTERS_NOT_AT_5'"
 }
