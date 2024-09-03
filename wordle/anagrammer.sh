@@ -29,13 +29,15 @@ find_anagrams() {
 
         while read -r candidate
         do
-            common_letters=$(comm -12 <(fold -w1 <<< $letters_to_match | sort -u) <(fold -w1 <<< $candidate | sort -u) | tr -d '\n')
+            common_letters=$(comm -12 <(fold -w1 <<< $letters_to_match | sort -u | uniq) <(fold -w1 <<< $candidate | sort -u | uniq) | tr -d '\n')
             unique_letters_matched_count=$(get_number_of_characters "$(get_unique_characters "$common_letters")")
 
             if [ true == $must_fully_match ]; then
                 is_match=$((($unique_letters_to_match_count == $unique_letters_matched_count)))
             else
-                is_match=$((($unique_letters_matched_count >= $WORD_LENGTH)))
+                # is_match=$((($unique_letters_matched_count >= $WORD_LENGTH))) #-
+                is_match=$((($unique_letters_matched_count >= $(get_number_of_characters $(remove_duplicate_characters "$candidate")))))
+                
             fi
 
             if [ 1 == $is_match ]; then
