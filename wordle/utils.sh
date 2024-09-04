@@ -279,7 +279,7 @@ diff() {
     local letters_in_common=$(echo $solution | sed "s/[$(echo $solution | sed "s/[$result]//g")]//g")
 
     if [ ! -z "$correct_guesses" ] ; then
-        letters_in_common=$(echo $letters_in_common| sed "s/[$correct_guesses]//g")
+        letters_in_common=$(echo $letters_in_common| sed "s/[$correct_guesses]//1")
     fi
 
     if [ ! -z "$letters_in_common" ] ; then
