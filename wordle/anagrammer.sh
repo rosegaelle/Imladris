@@ -11,6 +11,7 @@ find_anagrams() {
     local anagram_dictionary=${1:-''}
     local letters_to_match=${2:-''}
     local must_fully_match=${3:-true}
+    local skip_duplicate_characters=${4:-false}
 
     # Reset the output file.
     empty_or_create_file "$FILEPATH_ANAGRAMS"
@@ -35,9 +36,11 @@ find_anagrams() {
             if [ true == $must_fully_match ]; then
                 is_match=$((($unique_letters_to_match_count == $unique_letters_matched_count)))
             else
-                # is_match=$((($unique_letters_matched_count >= $WORD_LENGTH))) #-
-                is_match=$((($unique_letters_matched_count >= $(get_number_of_characters $(remove_duplicate_characters "$candidate")))))
-                
+                if [ true == $skip_duplicate_characters ]; then
+                    is_match=$((($unique_letters_matched_count >= $WORD_LENGTH)))
+                else
+                    is_match=$((($unique_letters_matched_count >= $(get_number_of_characters $(remove_duplicate_characters "$candidate")))))
+                fi
             fi
 
             if [ 1 == $is_match ]; then
