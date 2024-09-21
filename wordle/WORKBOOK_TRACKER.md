@@ -17,10 +17,29 @@
 
 ## Battle of the Bots 🆚
 
+### Summary
+
+| Player | \# of Wins / 127 | Percentage |
+| ------ | ---------------- | ---------- |
+| 🏆🙋🏾‍♀️ | 6 | 4.72% |
+| 🎭 | 12 | 9.45% |
+| 🤖 | 35 | 27.56% |
+||
+| 🙋🏾‍♀️🎭 | 13 | 10.24% |
+| 🙋🏾‍♀️🤖 | 6 | 4.72% |
+| 🎭🤖 | 20 | 15.75% |
+||
+| 🪢 | 35 | 27.56% |
+||
+
+
+
+### Details
+
 | Day | 🙋🏾‍♀️ [MIrrorIMage](https://github.com/rosegaelle) |   | 🎭 [Imladris](https://github.com/rosegaelle/Imladris/tree/main/wordle) |   | 🤖 [NYT WordleBot](https://www.nytimes.com/interactive/2022/upshot/wordle-bot.html) |   | ⭐ |
 | --- | ----------- | - | -------- | - | ------------- | - | -- |
-| **0** | ``<br>``<br>`` | 🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | `U09BUkUK`<br>`?`<br>`?`<br>`?` | 🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`?`<br>`?`<br>`?` | 🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | 🏆❓ |
-| **1** | ``<br>``<br>`` | 🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | `U09BUkUK`<br>`?`<br>`?`<br>`?` | 🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`?`<br>`?`<br>`?` | 🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | 🏆❓ |
+| **0** | `?`<br>`?`<br>`?`<br>`?` | 🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | `U09BUkUK`<br>`?`<br>`?`<br>`?` | 🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`?`<br>`?`<br>`?` | 🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | 🏆❓ |
+| **1** | `?`<br>`?`<br>`?`<br>`?` | 🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | `U09BUkUK`<br>`?`<br>`?`<br>`?` | 🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`?`<br>`?`<br>`?` | 🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | 🏆❓ |
 | … |
 | **1062** | `QUlTTEUK`<br>`Q09VUlQK`<br>`U1RBTEwK` | 🟨⬛🟨🟩⬛<br>⬛⬛⬛⬛🟨<br>🟩🟩🟩🟩🟩 | `U09BUkUK`<br>`TFlNUEgK`<br>`VFdJTksK`<br>`U1RBTEwK` | 🟩⬛🟩⬛⬛<br>🟨⬛⬛⬛⬛<br>🟨⬛⬛⬛⬛<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`U1BJTFQK`<br>`U1RBTEwK` | ⬛⬛🟩⬛⬛<br>🟩⬛⬛🟩🟨<br>🟩🟩🟩🟩🟩 | 🙋🏾‍♀️🤖 |
 | **1063** | `QUlTTEUK`<br>`Q09VUlQK`<br>`VFVUT1IK` | ⬛⬛⬛⬛⬛<br>⬛🟨🟨🟨🟨<br>🟩🟩🟩🟩🟩 | `U09BUkUK`<br>`VFVOSUMK`<br>`VFVSQk8K`<br>`VFVUT1IK` | ⬛🟨⬛🟨⬛<br>🟩🟩⬛⬛⬛<br>🟩🟩🟨⬛🟨<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`U0hPVVQK`<br>`VFVNT1IK`<br>`VFVUT1IK` | ⬛🟨⬛⬛⬛<br>⬛⬛🟨🟨🟨<br>🟩🟩⬛🟩🟩<br>🟩🟩🟩🟩🟩 | 🏆🙋🏾‍♀️ |
@@ -65,7 +84,7 @@
 | **1102** | `QUlTTEUK`<br>`Q09VUlQK`<br>`U09QUkEK`<br>`U0FWT1IK` | 🟨⬛🟨⬛⬛<br>⬛🟨⬛🟨⬛<br>🟩🟨⬛🟨🟨<br>🟩🟩🟩🟩🟩 | `U09BUkUK`<br>`U0FWT1IK` | 🟩🟨🟨🟨⬛<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`VFlST1MK`<br>`U0FWT1IK` | ⬛🟨🟨⬛⬛<br>⬛⬛🟨🟩🟨<br>🟩🟩🟩🟩🟩 | 🎭 |
 | **1103** | `QUlTTEUK`<br>`Q09VUlQK`<br>`TllNUEgK`<br>`VkFORUQK`<br>`S05FQUQK` | 🟨⬛⬛⬛🟨<br>⬛⬛⬛⬛⬛<br>🟨⬛⬛⬛⬛<br>⬛🟨🟨🟨🟩<br>🟩🟩🟩🟩🟩 | `U09BUkUK`<br>`Q0hZTkQK`<br>`TkFNRUQK`<br>`S05FQUQK` | ⬛⬛🟨⬛🟨<br>⬛⬛⬛🟨🟩<br>🟨🟨⬛🟨🟩<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`U0xFRVAK`<br>`S05FQUQK` | ⬛⬛🟨🟨🟨<br>⬛⬛🟩⬛⬛<br>🟩🟩🟩🟩🟩 | 🤖 |
 | **1104** | `QUlTTEUK`<br>`Q09VUlQK`<br>`Sk9LRVIK`<br>`T1JERVIK` | ⬛⬛⬛⬛🟨<br>⬛🟨⬛🟨⬛<br>⬛🟨⬛🟩🟩<br>🟩🟩🟩🟩🟩 | `U09BUkUK`<br>`VE9QRVIK`<br>`RFJPTEUK`<br>`T1JERVIK` | ⬛🟨⬛🟨🟨<br>⬛🟨⬛🟩🟩<br>🟨🟩🟨⬛🟨<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`REVGRVIK`<br>`T1JERVIK` | ⬛🟩⬛⬛🟨<br>🟨⬛⬛🟩🟩<br>🟩🟩🟩🟩🟩 | 🤖 |
-| **1105** | `QUlTTEUK`<br>`Q09VUlQK`<br>`UFJPTkUK`<br>`RFJPVkUK` | ⬛⬛⬛⬛🟩<br>⬛🟨⬛🟨⬛<br>⬛🟩🟩⬛🟩<br>🟩🟩🟩🟩🟩 | `U09BUkUK`<br>`Uk9OREUK`<br>`RFJPVkUK` | ⬛🟨⬛🟨🟩<br>🟨🟨⬛🟨🟩<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`UElWT1QK`<br>`RFJPVkUK` | ⬛🟩⬛⬛🟩<br>⬛⬛🟨🟨⬛<br>🟩🟩🟩🟩🟩 | 🎭🤖|
+| **1105** | `QUlTTEUK`<br>`Q09VUlQK`<br>`UFJPTkUK`<br>`RFJPVkUK` | ⬛⬛⬛⬛🟩<br>⬛🟨⬛🟨⬛<br>⬛🟩🟩⬛🟩<br>🟩🟩🟩🟩🟩 | `U09BUkUK`<br>`Uk9OREUK`<br>`RFJPVkUK` | ⬛🟨⬛🟨🟩<br>🟨🟨⬛🟨🟩<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`UElWT1QK`<br>`RFJPVkUK` | ⬛🟩⬛⬛🟩<br>⬛⬛🟨🟨⬛<br>🟩🟩🟩🟩🟩 | 🎭🤖 |
 | **1106** | `QUlTTEUK`<br>`Q09VUlQK`<br>`TllNUEgK`<br>`RUFHUkUK`<br>`QkVBUkQK`<br>`WkVCUkEK` | 🟨⬛⬛⬛🟨<br>⬛⬛⬛🟩⬛<br>⬛⬛⬛⬛⬛<br>🟨🟨⬛🟩⬛<br>🟨🟩🟨🟩⬛<br>🟩🟩🟩🟩🟩 | `U09BUkUK`<br>`VFJFQVAK`<br>`WkVCUkEK` | ⬛⬛🟨🟩🟨<br>⬛🟨🟨🟨⬛<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`VEFMRVMK`<br>`UkVIQUIK`<br>`WkVCUkEK` | ⬛🟨🟨⬛🟨<br>⬛🟨⬛🟨⬛<br>🟨🟩⬛🟨🟨<br>🟩🟩🟩🟩🟩 | 🎭 |
 | **1107** | `QUlTTEUK`<br>`Q09VUlQK`<br>`TllNUEgK`<br>`RlVaWlkK`<br>`QlVER0UK`<br>`QlVERFkK` | ⬛⬛⬛⬛⬛<br>⬛⬛🟨⬛⬛<br>⬛🟨⬛⬛⬛<br>⬛🟩⬛⬛🟩<br>🟩🟩🟩⬛⬛<br>🟩🟩🟩🟩🟩 | `U09BUkUK`<br>`VU5JVFkK`<br>`RFVQTFkK`<br>`RlVER1kK`<br>`Q1JVTUIK`<br>`QlVERFkK` | ⬛⬛⬛⬛⬛<br>🟨⬛⬛⬛🟩<br>🟨🟩⬛⬛🟩<br>⬛🟩🟩⬛🟩<br>⬛⬛🟨⬛🟨<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`U0xPVEgK`<br>`RFVNUFkK`<br>`RlVER1kK`<br>`QlVERFkK` | ⬛⬛⬛⬛⬛<br>⬛⬛⬛⬛⬛<br>🟨🟩⬛⬛🟩<br> ⬛🟩🟩⬛🟩<br>🟩🟩🟩🟩🟩 | 🤖 |
 | **1108** | `QUlTTEUK`<br>`Q09VUlQK`<br>`TllNUEgK`<br>`QUdBWkUK`<br>`QURBR0UK` | 🟩⬛⬛⬛🟩<br>⬛⬛⬛⬛⬛<br>⬛⬛⬛⬛⬛<br>🟩🟨🟩⬛🟩<br>🟩🟩🟩🟩🟩 | `U09BUkUK`<br>`RFVOQ0gK`<br>`R0xBREUK`<br>`QURBR0UK` | ⬛⬛🟩⬛🟩<br>🟨⬛⬛⬛⬛<br>🟨⬛🟩🟨🟩<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`U0xPVEgK`<br>`QUdBVkUK`<br>`QURBR0UK` | ⬛⬛🟩⬛🟩<br>⬛⬛⬛⬛⬛<br>🟩🟨🟩⬛🟩<br>🟩🟩🟩🟩🟩 | 🎭🤖 |
@@ -78,7 +97,7 @@
 | **1115** | `QUlTTEUK`<br>`U1BBREUK`<br>`U0hBUEUK` | 🟨⬛🟨⬛🟩<br>🟩🟨🟩⬛🟩<br>🟩🟩🟩🟩🟩 | `U09BUkUK`<br>`U1BFQUwK`<br>`U0hBUEUK` | 🟩⬛🟩⬛🟩<br>🟩🟨🟨🟨⬛<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`U0xPVEgK`<br>`Vk9ES0EK`<br>`U0hBUEUK` | ⬛⬛🟩⬛🟩<br>🟩⬛⬛⬛🟨<br>⬛⬛⬛⬛🟨<br>🟩🟩🟩🟩🟩 | 🙋🏾‍♀️🎭 |
 | **1116** | `QUlTTEUK`<br>`Q09VUlQK`<br>`QkxBUkUK` | 🟨⬛⬛🟨🟩<br>⬛⬛⬛🟩⬛<br>🟩🟩🟩🟩🟩 | `U09BUkUK`<br>`R1VMUEgK`<br>`QkxBUkUK` | ⬛⬛🟩🟩🟩<br>⬛⬛🟨⬛⬛<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`QUxPRlQK`<br>`R0xBUkUK`<br>`QkxBUkUK` | ⬛🟨🟩⬛🟩<br>🟨🟩⬛⬛⬛<br>⬛🟩🟩🟩🟩<br>🟩🟩🟩🟩🟩 | 🙋🏾‍♀️🎭 |
 | **1117** | `QUlTTEUK`<br>`Q09VUlQK`<br>`TllNUEgK`<br>`R0FVTlQK` | 🟨⬛⬛⬛⬛<br>⬛⬛🟩⬛🟩<br>🟨⬛⬛⬛⬛<br>🟩🟩🟩🟩🟩 | `U09BUkUK`<br>`TElOVFkK`<br>`SEFVTlQK`<br>`R0FVTlQK` | ⬛⬛🟨⬛⬛<br>⬛⬛🟨🟨⬛<br>⬛🟩🟩🟩🟩<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`VElOR1MK`<br>`R0FVTlQK` | ⬛⬛🟨🟩⬛<br>🟨⬛🟨🟨⬛<br>🟩🟩🟩🟩🟩 | 🤖 |
-| **1118** | `QUlTTEUK`<br>`Q09VUlQK`<br>`Q0FNRU8K` | 🟨⬛⬛⬛🟨<br>🟩🟨⬛⬛⬛<br>🟩🟩🟩🟩🟩 | `U09BUkUK`<br>`??`<br>`Q0FNRU8K` | ⬛🟨🟨⬛🟨<br> 🟨🟩⬛🟩⬛<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`!salty`<br>`Q0FNRU8K` | 🟩⬛🟨⬛🟨<br>⬛🟩⬛⬛⬛<br>🟩🟩🟩🟩🟩 | 🪢 |
+| **1118** | `QUlTTEUK`<br>`Q09VUlQK`<br>`Q0FNRU8K` | 🟨⬛⬛⬛🟨<br>🟩🟨⬛⬛⬛<br>🟩🟩🟩🟩🟩 | `U09BUkUK`<br>`UEFFRE8K`<br>`Q0FNRU8K` | ⬛🟨🟨⬛🟨<br> ⬛🟩🟨⬛🟩<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`U0FMVFkK`<br>`Q0FNRU8K` | 🟩⬛🟨⬛🟨<br>⬛🟩⬛⬛⬛<br>🟩🟩🟩🟩🟩 | 🪢 |
 | **1119** | `QUlTTEUK`<br>`Q09VUlQK`<br>`TllNUEgK`<br>`QklGRlkK`<br>`SklGRlkK` | ⬛🟩⬛⬛⬛<br>⬛⬛⬛⬛⬛<br>⬛🟨⬛⬛⬛<br>⬛🟩🟩🟩🟩<br>🟩🟩🟩🟩🟩 | `U09BUkUK`<br>`VU5JVFkK`<br>`R0lMUFkK`<br>`WllNSUMK`<br>`RElWVlkK`<br>`SklGRlkK` | ⬛⬛⬛⬛⬛<br>⬛⬛🟨⬛🟩<br>⬛🟩⬛⬛🟩<br>⬛🟨⬛🟨⬛<br>⬛🟩⬛⬛🟩<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`U0xPVEgK`<br>`RFVNUFkK`<br>`RklaWlkK`<br>`SklGRlkK` | ⬛⬛⬛⬛⬛<br>⬛⬛⬛⬛⬛<br>⬛⬛⬛⬛🟩<br>🟨🟩⬛⬛🟩<br>🟩🟩🟩🟩🟩 | 🙋🏾‍♀️🤖 |
 | **1120** | `QUlTTEUK`<br>`Q09VUlQK`<br>`RkFDRVQK`<br>`RVhBQ1QK`<br>`RU5BQ1QK` | 🟨⬛⬛⬛🟨<br>🟨⬛⬛⬛🟩<br>⬛🟨🟨🟨🟩<br>🟩⬛🟩🟩🟩<br>🟩🟩🟩🟩🟩 | `U09BUkUK`<br>`TFlNUEgK`<br>`QlVORFQK`<br>`RU5BQ1QK` | ⬛⬛🟩⬛🟨<br>⬛⬛⬛⬛⬛<br>⬛⬛🟨⬛🟩<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`RU5BQ1QK` | 🟨⬛🟩🟨🟨<br>🟩🟩🟩🟩🟩 | 🤖 |
 | **1121** | `QUlTTEUK`<br>`Q09VUlQK`<br>`TllNUEgK`<br>`VklERU8K` | ⬛🟩⬛⬛🟨<br>⬛🟨⬛⬛⬛<br>⬛⬛⬛⬛⬛<br>🟩🟩🟩🟩🟩 | `U09BUkUK`<br>`QkxJTkQK`<br>`VklERU8K` | ⬛🟨⬛⬛🟨<br>⬛⬛🟨⬛🟨<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`U1BMSVQK`<br>`RURJRlkK`<br>`VklERU8K` | ⬛⬛⬛⬛🟨<br>⬛⬛⬛🟨⬛<br>🟨🟨🟨⬛⬛<br>🟩🟩🟩🟩🟩 | 🎭 |
