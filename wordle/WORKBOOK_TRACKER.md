@@ -19,17 +19,17 @@
 
 ### Summary
 
-| Player | \# of Wins / 135 | Percentage |
+| Player | \# of Wins / 139 | Percentage |
 | ------ | ---------------- | ---------- |
-| 🏆🙋🏾‍♀️ | 6 | 4.44% |
-| 🎭 | 15 | 11.11% |
-| 🤖 | 35 | 25.93% |
+| 🏆🙋🏾‍♀️ | 6 | 4.32% |
+| 🎭 | 18 | 12.95% |
+| 🤖 | 35 | 25.18% |
 ||
-| 🙋🏾‍♀️🎭 | 15 | 11.11% |
-| 🙋🏾‍♀️🤖 | 6 | 4.44% |
-| 🎭🤖 | 20 | 14.81% |
+| 🙋🏾‍♀️🎭 | 15 | 10.79% |
+| 🙋🏾‍♀️🤖 | 6 | 4.32% |
+| 🎭🤖 | 20 | 14.39% |
 ||
-| 🪢 | 38 | 28.15% |
+| 🪢 | 39 | 28.06% |
 ||
 
 
@@ -46,6 +46,10 @@
 | **254** | `QUlTTEUK`<br>`Q09VUlQK`<br>`SEFORFkK`<br>`Q0hPS0UK` | ⬛⬛⬛⬛🟩<br>🟩🟨⬛⬛⬛<br>🟨⬛⬛⬛⬛<br>🟩🟩🟩🟩🟩 | `U09BUkUK`<br>`TElOQ0gK`<br>`Q0hPS0UK` | ⬛🟨⬛⬛🟩<br>⬛⬛⬛🟨🟨<br>🟩🟩🟩🟩🟩 | | | 🎭 |
 | **255** | `QUlTTEUK`<br>`Q09VUlQK`<br>`UkVNQVAK`<br>`UlVQRUUK` | ⬛⬛⬛⬛🟩<br>⬛⬛🟨🟨⬛<br>🟩🟨⬛⬛🟨<br>🟩🟩🟩🟩🟩 | `U09BUkUK`<br>`RElDVFUK`<br>`R1JVRkUK`<br>`UlVQRUUK` | ⬛⬛⬛🟨🟩<br>⬛⬛⬛⬛🟨<br>⬛🟨🟨⬛🟩<br>🟩🟩🟩🟩🟩 | | | 🪢 |
 | **256** | `QUlTTEUK`<br>`Q09VUlQK`<br>`SEFORFkK`<br>`TkFTVFkK` | 🟨⬛🟩⬛⬛<br>⬛⬛⬛⬛🟨<br>⬛🟩🟨⬛🟩<br>🟩🟩🟩🟩🟩 | `U09BUkUK`<br>`TElOVU0K`<br>`WUFXTlMK`<br>`TkFTVFkK` | 🟨⬛🟨⬛⬛<br>⬛⬛🟨⬛⬛<br>🟨🟩⬛🟨🟨<br>🟩🟩🟩🟩🟩 | | | 🪢 |
+| **257** | `QUlTTEUK`<br>`Q09VUlQK`<br>`RFlJTkcK`<br>`TU9VUk4K` | ⬛⬛⬛⬛⬛<br>⬛🟩🟩🟩⬛<br>⬛⬛⬛🟨⬛<br>🟩🟩🟩🟩🟩 | `U09BUkUK`<br>`QlVORFkK`<br>`TU9VUk4K` | ⬛🟩⬛🟩⬛<br>⬛🟨🟨⬛⬛<br>🟩🟩🟩🟩🟩 | | | 🎭 |
+| **258** | `QUlTTEUK`<br>`Q09VUlQK`<br>`SEFORFkK`<br>`QUhFQUQK` | 🟩⬛⬛⬛🟨<br>⬛⬛⬛⬛⬛<br>🟨🟨⬛🟨⬛<br>🟩🟩🟩🟩🟩 | `U09BUkUK`<br>`Q0hZTkQK`<br>`QUhFQUQK` | ⬛⬛🟨⬛🟨<br>⬛🟩⬛⬛🟩<br>🟩🟩🟩🟩🟩 | | | 🎭 |
+| **259** | `QUlTTEUK`<br>`Q09VUlQK`<br>`R1lCRUQK`<br>`QlJJQkUK`<br>`QlJJTkUK` | ⬛🟨⬛⬛🟩<br>⬛⬛⬛🟨⬛<br>⬛⬛🟨🟨⬛<br>🟩🟩🟩⬛🟩<br>🟩🟩🟩🟩🟩 | `U09BUkUK`<br>`RElDVFUK`<br>`UkhJTkUK`<br>`QlJJTkUK` | ⬛⬛⬛🟨🟩<br>⬛🟨⬛⬛⬛<br>🟨⬛🟩🟩🟩<br>🟩🟩🟩🟩🟩 | | | 🎭 |
+| **260** | `QUlTTEUK`<br>`Q09VUlQK`<br>`Q0xPVEgK` | ⬛⬛⬛🟨⬛<br>🟩🟨⬛⬛🟨<br>🟩🟩🟩🟩🟩 | `U09BUkUK`<br>`Q0xJTlQK`<br>`Q0xPVEgK` | ⬛🟨⬛⬛⬛<br>🟩🟩⬛⬛🟨<br>🟩🟩🟩🟩🟩 | | | 🪢 |
 | … |
 | **1062** | `QUlTTEUK`<br>`Q09VUlQK`<br>`U1RBTEwK` | 🟨⬛🟨🟩⬛<br>⬛⬛⬛⬛🟨<br>🟩🟩🟩🟩🟩 | `U09BUkUK`<br>`TFlNUEgK`<br>`VFdJTksK`<br>`U1RBTEwK` | 🟩⬛🟩⬛⬛<br>🟨⬛⬛⬛⬛<br>🟨⬛⬛⬛⬛<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`U1BJTFQK`<br>`U1RBTEwK` | ⬛⬛🟩⬛⬛<br>🟩⬛⬛🟩🟨<br>🟩🟩🟩🟩🟩 | 🙋🏾‍♀️🤖 |
 | **1063** | `QUlTTEUK`<br>`Q09VUlQK`<br>`VFVUT1IK` | ⬛⬛⬛⬛⬛<br>⬛🟨🟨🟨🟨<br>🟩🟩🟩🟩🟩 | `U09BUkUK`<br>`VFVOSUMK`<br>`VFVSQk8K`<br>`VFVUT1IK` | ⬛🟨⬛🟨⬛<br>🟩🟩⬛⬛⬛<br>🟩🟩🟨⬛🟨<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`U0hPVVQK`<br>`VFVNT1IK`<br>`VFVUT1IK` | ⬛🟨⬛⬛⬛<br>⬛⬛🟨🟨🟨<br>🟩🟩⬛🟩🟩<br>🟩🟩🟩🟩🟩 | 🏆🙋🏾‍♀️ |
@@ -177,4 +181,3 @@
 | **1189** | -> | | `U09BUkUK`<br>`U01PS0UK` | 🟩🟨⬛⬛🟩<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`VE9JTFMK`<br>`U1BPS0UK`<br>`U01PS0UK` | ⬛⬛⬛⬛🟩<br>⬛🟨⬛⬛🟨<br>🟩⬛🟩🟩🟩<br>🟩🟩🟩🟩🟩 | 🙋🏾‍♀️🎭 |
 | **1190** | -> | | `U09BUkUK`<br>`UExJTksK`<br>`U0VWRU4K` | 🟩⬛⬛⬛🟨<br>⬛⬛⬛🟨⬛<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`VE9XRUwK`<br>`SElWRUQK`<br>`U0VWRU4K` | ⬛⬛⬛🟨🟨<br>⬛⬛⬛🟩⬛<br>⬛⬛🟩🟩⬛<br>🟩🟩🟩🟩🟩 | 🙋🏾‍♀️🎭 |
 | **1191** | -> | | `U09BUkUK`<br>`TFlNUEgK`<br>`VEVBQ0gK` | ⬛⬛🟩⬛🟨<br>⬛⬛⬛⬛🟩<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`TEVBUFQK`<br>`VEVBQ0gK` | 🟨⬛🟩⬛🟨<br>⬛🟩🟩⬛🟨<br>🟩🟩🟩🟩🟩 | 🪢 |
-||
