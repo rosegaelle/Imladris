@@ -19,17 +19,17 @@
 
 ### Summary
 
-| Player | \# of Wins / 146 | Percentage |
+| Player | \# of Wins / 152 | Percentage |
 | ------ | ---------------- | ---------- |
-| 🏆🙋🏾‍♀️ | 7 | 4.79% |
-| 🎭 | 20 | 13.70% |
-| 🤖 | 35 | 23.97% |
+| 🏆🙋🏾‍♀️ | 8 | 5.26% |
+| 🎭 | 20 | 13.16% |
+| 🤖 | 35 | 23.03% |
 ||
-| 🙋🏾‍♀️🎭 | 16 | 10.96% |
-| 🙋🏾‍♀️🤖 | 6 | 4.11% |
-| 🎭🤖 | 20 | 13.70% |
+| 🙋🏾‍♀️🎭 | 16 | 10.53% |
+| 🙋🏾‍♀️🤖 | 6 | 3.95% |
+| 🎭🤖 | 20 | 13.16% |
 ||
-| 🪢 | 42 | 28.77% |
+| 🪢 | 47 | 30.92% |
 ||
 
 
@@ -55,6 +55,11 @@
 | **263** | `QUlTTEUK`<br>`Q09VUlQK`<br>`SEFORFkK`<br>`TU9OVEgK` | ⬛⬛⬛⬛⬛<br>⬛🟩⬛⬛🟨<br>🟨⬛🟩⬛⬛<br>🟩🟩🟩🟩🟩 | `U09BUkUK`<br>`TElOVFkK`<br>`TU9OVEgK` | ⬛🟩⬛⬛⬛<br>⬛⬛🟩🟩⬛<br>🟩🟩🟩🟩🟩 | | | 🎭 |
 | **264** | `QUlTTEUK`<br>`UElWT1QK`<br>`TEFQU0UK` | 🟨⬛🟨🟨🟩<br>🟨⬛⬛⬛⬛<br>🟩🟩🟩🟩🟩 | `U09BUkUK`<br>`VEVQQVMK`<br>`TEFQU0UK` | 🟨⬛🟨⬛🟩<br>⬛🟨🟩🟨🟨<br>🟩🟩🟩🟩🟩 | | | 🪢 |
 | **265** | `QUlTTEUK`<br>`Q09VUlQK`<br>`V0hPTVAK`<br>`V0FUQ0gK` | 🟨⬛⬛⬛⬛<br>🟨⬛⬛⬛🟨<br>🟩🟨⬛⬛⬛<br>🟩🟩🟩🟩🟩 | `U09BUkUK`<br>`TElOVFkK`<br>`Q0hVTVAK`<br>`V0FUQ0gK` | ⬛⬛🟨⬛⬛<br>⬛⬛⬛🟨⬛<br>🟨🟨⬛⬛⬛<br>🟩🟩🟩🟩🟩 | | | 🪢 |
+| **266** | `QUlTTEUK`<br>`Q09VUlQK`<br>`VE9EQVkK` | 🟨⬛⬛⬛⬛<br>⬛🟩⬛⬛🟨<br>🟩🟩🟩🟩🟩 | `U09BUkUK`<br>`TFlOQ0gK`<br>`VE9EQVkK` | ⬛🟩🟨⬛⬛<br>⬛🟨⬛⬛⬛<br>🟩🟩🟩🟩🟩 | | | 🪢 |
+| **267** | `QUlTTEUK`<br>`Q09VUlQK`<br>`Rk9DVVMK` | ⬛⬛🟨⬛⬛<br>🟨🟩🟨⬛⬛<br>🟩🟩🟩🟩🟩 | `U09BUkUK`<br>`TVVMQ1QK`<br>`Rk9DVVMK` | 🟨🟩⬛⬛⬛<br>⬛🟨⬛🟨⬛<br>🟩🟩🟩🟩🟩 | | | 🪢 |
+| **268** | `QUlTTEUK`<br>`Q09VUlQK`<br>`U01FTFQK` | ⬛⬛🟨🟩🟨<br>⬛⬛⬛⬛🟩<br>🟩🟩🟩🟩🟩 | `U09BUkUK`<br>`VElMRVMK`<br>`U1dFTFQK`<br>`U01FTFQK` | 🟩⬛⬛⬛🟨<br>🟨⬛🟨🟨🟨<br>🟩⬛🟩🟩🟩<br>🟩🟩🟩🟩🟩 | | | 🏆🙋🏾‍♀️ |
+| **269** | `QUlTTEUK`<br>`VEhPUlAK`<br>`VEVBU0UK` | 🟨⬛🟨⬛🟩<br>🟩⬛⬛⬛⬛<br>🟩🟩🟩🟩🟩 | `U09BUkUK`<br>`WVNBTUUK`<br>`VEVBU0UK` | 🟨⬛🟩⬛🟩<br>⬛🟨🟩⬛🟩<br>🟩🟩🟩🟩🟩 | | | 🪢 |
+| **270** | `QUlTTEUK`<br>`Q09VUlQK`<br>`Q0FURVIK` | 🟨⬛⬛⬛🟨<br>🟩⬛⬛🟨🟨<br>🟩🟩🟩🟩🟩 | `U09BUkUK`<br>`VFJFQUQK`<br>`Q0FURVIK` | ⬛⬛🟨🟨🟨<br>🟨🟨🟨🟨⬛<br>🟩🟩🟩🟩🟩 | | | 🪢 |
 | … |
 | **1062** | `QUlTTEUK`<br>`Q09VUlQK`<br>`U1RBTEwK` | 🟨⬛🟨🟩⬛<br>⬛⬛⬛⬛🟨<br>🟩🟩🟩🟩🟩 | `U09BUkUK`<br>`TFlNUEgK`<br>`VFdJTksK`<br>`U1RBTEwK` | 🟩⬛🟩⬛⬛<br>🟨⬛⬛⬛⬛<br>🟨⬛⬛⬛⬛<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`U1BJTFQK`<br>`U1RBTEwK` | ⬛⬛🟩⬛⬛<br>🟩⬛⬛🟩🟨<br>🟩🟩🟩🟩🟩 | 🙋🏾‍♀️🤖 |
 | **1063** | `QUlTTEUK`<br>`Q09VUlQK`<br>`VFVUT1IK` | ⬛⬛⬛⬛⬛<br>⬛🟨🟨🟨🟨<br>🟩🟩🟩🟩🟩 | `U09BUkUK`<br>`VFVOSUMK`<br>`VFVSQk8K`<br>`VFVUT1IK` | ⬛🟨⬛🟨⬛<br>🟩🟩⬛⬛⬛<br>🟩🟩🟨⬛🟨<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`U0hPVVQK`<br>`VFVNT1IK`<br>`VFVUT1IK` | ⬛🟨⬛⬛⬛<br>⬛⬛🟨🟨🟨<br>🟩🟩⬛🟩🟩<br>🟩🟩🟩🟩🟩 | 🏆🙋🏾‍♀️ |
@@ -121,7 +126,7 @@
 | **1124** | `QUlTTEUK`<br>`Q09VUlQK`<br>`UVVJVEUK` | ⬛🟨⬛⬛🟩<br>⬛⬛🟨⬛🟨<br>🟩🟩🟩🟩🟩 | `U09BUkUK`<br>`R1VJTFQK`<br>`UVVJVEUK` | ⬛⬛⬛⬛🟩<br>⬛🟩🟩⬛🟨<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`VE9JTFMK`<br>`V0hJVEUK`<br>`UVVJVEUK` | ⬛⬛⬛⬛🟩<br>🟨⬛🟩⬛⬛<br>⬛⬛🟩🟩🟩<br>🟩🟩🟩🟩🟩 | 🙋🏾‍♀️🎭 |
 | **1125** | `QUlTTEUK`<br>`Q09VUlQK`<br>`TllNUEgK`<br>`TkVSRFkK` | ⬛⬛⬛⬛🟨<br>⬛⬛⬛🟨⬛<br>🟩🟨⬛⬛⬛<br>🟩🟩🟩🟩🟩 | `U09BUkUK`<br>`RElDVFUK`<br>`UFJFRFkK`<br>`TkVSRFkK` | ⬛⬛⬛🟨🟨<br>🟨⬛⬛⬛⬛<br>⬛🟨🟨🟩🟩<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`UklURVMK`<br>`TkVSRFkK` | ⬛🟨⬛🟨🟨<br>🟨⬛⬛🟨⬛<br>🟩🟩🟩🟩🟩 | 🤖 |
 | **1126** | `QUlTTEUK`<br>`Q09VUlQK`<br>`TllNUEgK`<br>`QlJFRUQK`<br>`RkVXRVIK`<br>`UkVGRVIK` | ⬛⬛⬛⬛🟨<br>⬛⬛⬛🟨⬛<br>⬛⬛⬛⬛⬛<br>⬛🟨⬛🟩⬛<br>🟨🟩⬛🟩🟩<br>🟩🟩🟩🟩🟩 | `U09BUkUK`<br>`RElDVFUK`<br>`TFlNUEgK`<br>`S1JFTkcK`<br>`UkVGRVIK` | ⬛⬛⬛🟨🟨<br>⬛⬛⬛⬛⬛<br>⬛⬛⬛⬛⬛<br>⬛🟨🟨⬛⬛<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`QkVURUwK`<br>`RkVXRVIK`<br>`REVGRVIK`<br>`UkVGRVIK` | ⬛🟨⬛⬛🟨<br>⬛🟩⬛🟩⬛<br>🟨🟩⬛🟩🟩<br>⬛🟩🟩🟩🟩<br>🟩🟩🟩🟩🟩 | 🎭🤖 |
-| **1127** | `QUlTTEUK`<br>`Q09VUlQK`<br>`TllNUEgK`<br>`U0hBRlQK` | 🟨⬛🟨⬛⬛<br>⬛⬛⬛⬛🟩<br>⬛⬛⬛⬛🟨<br>🟩🟩🟩🟩🟩 | `U09BUkUK`<br>`TFlNUEgK`<br>`U0hBV04K`<br>`S1JBRlQK`<br>`U0hBRlQK` | 🟩⬛🟩⬛⬛<br>⬛⬛⬛⬛🟨<br🟩🟩🟩⬛⬛<br>⬛⬛🟩🟩🟩<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`U1BJTFQK`<br>`U0hBRlQK` | ⬛⬛🟩⬛⬛<br>🟩⬛⬛⬛🟩<br>🟩🟩🟩🟩🟩 | 🤖 |
+| **1127** | `QUlTTEUK`<br>`Q09VUlQK`<br>`TllNUEgK`<br>`U0hBRlQK` | 🟨⬛🟨⬛⬛<br>⬛⬛⬛⬛🟩<br>⬛⬛⬛⬛🟨<br>🟩🟩🟩🟩🟩 | `U09BUkUK`<br>`TFlNUEgK`<br>`U0hBV04K`<br>`S1JBRlQK`<br>`U0hBRlQK` | 🟩⬛🟩⬛⬛<br>⬛⬛⬛⬛🟨<br>🟩🟩🟩⬛⬛<br>⬛⬛🟩🟩🟩<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`U1BJTFQK`<br>`U0hBRlQK` | ⬛⬛🟩⬛⬛<br>🟩⬛⬛⬛🟩<br>🟩🟩🟩🟩🟩 | 🤖 |
 | **1128** | `QUlTTEUK`<br>`Q09VUlQK`<br>`TllNUEgK`<br>`U1BFQ1MK`<br>`U1BFQ0sK` | ⬛⬛🟨⬛🟨<br>🟨⬛⬛⬛⬛<br>⬛⬛⬛🟨⬛<br>🟩🟩🟩🟩⬛<br>🟩🟩🟩🟩🟩 | `U09BUkUK`<br>`UExJTksK`<br>`U1BFQ0sK` | 🟩⬛⬛⬛🟨<br>🟨⬛⬛⬛🟩<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`UElMT1QK`<br>`U1BFQ0sK` | 🟨⬛⬛⬛🟨<br>🟨⬛⬛⬛⬛<br>🟩🟩🟩🟩🟩 | 🎭🤖 |
 | **1129** | `QUlTTEUK`<br>`Q09VUlQK`<br>`Q0FERVQK` | 🟨⬛⬛⬛🟨<br>🟩⬛⬛⬛🟩<br>🟩🟩🟩🟩🟩 | `U09BUkUK`<br>`Q0hZTkQK`<br>`Q0FERVQK` | ⬛⬛🟨⬛🟨<br>🟩⬛⬛⬛🟨<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`?`<br>`Q0FERVQK` | 🟩⬛🟨⬛🟨<br>⬛🟩⬛🟨⬛<br>🟩🟩🟩🟩🟩 | 🪢 |
 | **1130** | `QUlTTEUK`<br>`Q09VUlQK`<br>`TllNUEgK`<br>`UFJPTkcK` | ⬛⬛⬛⬛⬛<br>⬛🟨⬛🟨⬛<br>🟨⬛⬛🟨⬛<br>🟩🟩🟩🟩🟩 | `U09BUkUK`<br>`VFVOSUMK`<br>`R1JPV04K`<br>`UFJPTkcK` | ⬛🟨⬛🟨⬛<br>⬛⬛🟨⬛⬛<br>🟨🟩🟩⬛🟨<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`QklHT1QK`<br>`V1JPTkcK`<br>`UFJPTkcK` | ⬛🟩⬛🟩⬛<br>⬛⬛🟨🟨⬛<br>⬛🟩🟩🟩🟩<br>🟩🟩🟩🟩🟩 | 🪢 |
@@ -187,5 +192,5 @@
 | **1190** | -> | | `U09BUkUK`<br>`UExJTksK`<br>`U0VWRU4K` | 🟩⬛⬛⬛🟨<br>⬛⬛⬛🟨⬛<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`VE9XRUwK`<br>`SElWRUQK`<br>`U0VWRU4K` | ⬛⬛⬛🟨🟨<br>⬛⬛⬛🟩⬛<br>⬛⬛🟩🟩⬛<br>🟩🟩🟩🟩🟩 | 🙋🏾‍♀️🎭 |
 | **1191** | -> | | `U09BUkUK`<br>`TFlNUEgK`<br>`VEVBQ0gK` | ⬛⬛🟩⬛🟨<br>⬛⬛⬛⬛🟩<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`TEVBUFQK`<br>`VEVBQ0gK` | 🟨⬛🟩⬛🟨<br>⬛🟩🟩⬛🟨<br>🟩🟩🟩🟩🟩 | 🪢 |
 | **1192** | -> | | `U09BUkUK`<br>`TEFORVMK`<br>`U1RFQU0K` | 🟩⬛🟨⬛🟨<br>⬛🟨⬛🟨🟨<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`UEVUQUwK`<br>`U1RFQUsK`<br>`U1RFQU0K` | ⬛⬛🟨⬛🟨<br>⬛🟨🟨🟩⬛<br>🟩🟩🟩🟩⬛<br>🟩🟩🟩🟩🟩 | 🙋🏾‍♀️🎭 |
-| **1193** | -> | | `U09BUkUK`<br>`TElOVFkK`<br>`RkFOQ1kK`<br>`SEFORFkK` | 
-⬛⬛🟨⬛⬛<br>⬛⬛🟩⬛🟩<br>⬛🟩🟩⬛🟩<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`TkFUQUwK`<br>`REVNT1MK`<br>`SEFORFkK` | ⬛⬛🟨🟨⬛<br>🟨🟩⬛⬛⬛<br>🟨⬛⬛⬛⬛<br>🟩🟩🟩🟩🟩 | 🪢 |
+| **1193** | -> | | `U09BUkUK`<br>`TElOVFkK`<br>`RkFOQ1kK`<br>`SEFORFkK` | ⬛⬛🟨⬛⬛<br>⬛⬛🟩⬛🟩<br>⬛🟩🟩⬛🟩<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`TkFUQUwK`<br>`REVNT1MK`<br>`SEFORFkK` | ⬛⬛🟨🟨⬛<br>🟨🟩⬛⬛⬛<br>🟨⬛⬛⬛⬛<br>🟩🟩🟩🟩🟩 | 🪢 |
+| **1194** | -> | | `U09BUkUK`<br>`RElDVFkK`<br>`VE9SQ0gK` | ⬛🟩⬛🟨⬛<br>⬛⬛🟨🟨⬛<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`U09VUFkK`<br>`VE9SQ0gK` | 🟨🟨⬛⬛⬛<br>⬛🟩⬛⬛⬛<br>🟩🟩🟩🟩🟩 | 🪢 |
