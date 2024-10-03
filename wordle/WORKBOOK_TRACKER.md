@@ -19,24 +19,24 @@
 
 ### Summary
 
-| Player | \# of Wins / 185 | Percentage |
+| Player | \# of Wins / 190 | Percentage |
 | ------ | ---------------- | ---------- |
-| 🏆🙋🏾‍♀️ | 8 | 4.32% |
-| 🎭 | 47 | 25.41% |
-| 🤖 | 35 | 18.92% |
+| 🏆🙋🏾‍♀️ | 8 | 4.21% |
+| 🎭 | 52 | 27.37% |
+| 🤖 | 35 | 18.42% |
 ||
-| 🙋🏾‍♀️🎭 | 19 | 10.27% |
-| 🙋🏾‍♀️🤖 | 6 | 3.24% |
-| 🎭🤖 | 20 | 10.81% |
+| 🙋🏾‍♀️🎭 | 19 | 10.00% |
+| 🙋🏾‍♀️🤖 | 6 | 3.16% |
+| 🎭🤖 | 20 | 10.53% |
 ||
-| 🪢 | 50 | 27.03% |
+| 🪢 | 50 | 26.32% |
 ||
 
 
 
 ### Details
 
-| Day | 🙋🏾‍♀️ [MIrrorIMage](https://github.com/rosegaelle) |   | 🎭 [Imladris](https://github.com/rosegaelle/Imladris/tree/main/wordle) |   | 🤖 [NYT WordleBot](https://www.nytimes.com/interactive/2022/upshot/wordle-bot.html) |   | ⭐ |
+| Day | 🙋🏾‍♀️ [MIrrorIMage](https://github.com/rosegaelle) |   | 🎭 [Imladris](https://github.com/rosegaelle/Imladris/tree/main/tmp_solutionle) |   | 🤖 [NYT tmp_solutionleBot](https://www.nytimes.com/interactive/2022/upshot/tmp_solutionle-bot.html) |   | ⭐ |
 | --- | ----------- | - | -------- | - | ------------- | - | -- |
 | **0** | -> | | `U09BUkUK`<br>`TUlMVFkK`<br>`Q0lHQVIK` | ⬛⬛🟨🟨⬛<br>⬛🟩⬛⬛⬛<br>🟩🟩🟩🟩🟩 | | | 🎭 |
 | **1** | -> | | `U09BUkUK`<br>`VU5JVFkK`<br>`UkVDVVQK`<br>`UkVCVVQK` | ⬛⬛⬛🟨🟨<br>🟨⬛⬛🟨⬛<br>🟩🟩⬛🟩🟩<br>🟩🟩🟩🟩🟩 | | | 🎭 |
@@ -64,11 +64,11 @@
 | **23** | -> | | `U09BUkUK`<br>`VU5CSUQK`<br>`UlVUSFMK`<br>`VFJVU1QK`<br>`Q1JVU1QK` | 🟨⬛⬛🟨⬛<br>🟨⬛⬛⬛⬛<br>🟨🟨🟨⬛🟨<br>⬛🟩🟩🟩🟩<br>🟩🟩🟩🟩🟩 | | | 🎭 |
 | **24** | -> | | `U09BUkUK`<br>`VEhVTksK`<br>`U1RPV1AK`<br>`U1RPT0QK`<br>`U1RPT0wK` | 🟩🟨⬛⬛⬛<br>🟨⬛⬛⬛⬛<br>🟩🟩🟩⬛⬛<br>🟩🟩🟩🟩⬛<br>🟩🟩🟩🟩🟩 | | | 🎭 |
 | **25** | -> | | `U09BUkUK`<br>`TElOVFkK`<br>`Q09MT04K` | ⬛🟩⬛⬛⬛<br>🟨⬛🟨⬛⬛<br>🟩🟩🟩🟩🟩 | | | 🎭 |
-| **26** | -> | | `U09BUkUK`<br>`?`<br>`?`<br>`?` | 🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | | | 🏆❓ |
-| **27** | -> | | `U09BUkUK`<br>`?`<br>`?`<br>`?` | 🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | | | 🏆❓ |
-| **28** | -> | | `U09BUkUK`<br>`?`<br>`?`<br>`?` | 🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | | | 🏆❓ |
-| **29** | -> | | `U09BUkUK`<br>`?`<br>`?`<br>`?` | 🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | | | 🏆❓ |
-| **30** | -> | | `U09BUkUK`<br>`?`<br>`?`<br>`?` | 🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | | | 🏆❓ |
+| **26** | -> | | `U09BUkUK`<br>`VVNBR0UK`<br>`UEhBU0UK`<br>`QUJBU0UK` | 🟨⬛🟩⬛🟩<br>⬛🟨🟩⬛🟩<br>⬛⬛🟩🟩🟩<br>🟩🟩🟩🟩🟩 | | | 🎭 |
+| **27** | -> | | `U09BUkUK`<br>`QkxJTlkK`<br>`TUFSUlkK` | ⬛⬛🟨🟩⬛<br>⬛⬛⬛⬛🟩<br>🟩🟩🟩🟩🟩 | | | 🎭 |
+| **28** | -> | | `U09BUkUK`<br>`TUFEUkUK`<br>`UkVBQ1QK` | ⬛⬛🟩🟨🟨<br>⬛🟨⬛🟨🟨<br>🟩🟩🟩🟩🟩 | | | 🎭 |
+| **29** | -> | | `U09BUkUK`<br>`TElOVFkK`<br>`QkFUVFkK` | ⬛⬛🟨⬛⬛<br>⬛⬛⬛🟩🟩<br>🟩🟩🟩🟩🟩 | | | 🎭 |
+| **30** | -> | | `U09BUkUK`<br>`RElDVFUK`<br>`UFJJREUK` | ⬛⬛⬛🟨🟩<br>🟨🟨⬛⬛⬛<br>🟩🟩🟩🟩🟩 | | | 🎭 |
 | **31** | -> | | `U09BUkUK`<br>`?`<br>`?`<br>`?` | 🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | | | 🏆❓ |
 | **32** | -> | | `U09BUkUK`<br>`?`<br>`?`<br>`?` | 🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | | | 🏆❓ |
 | **33** | -> | | `U09BUkUK`<br>`?`<br>`?`<br>`?` | 🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | | | 🏆❓ |
