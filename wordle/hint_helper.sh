@@ -90,7 +90,8 @@ search_anagrams() {
     local letters_to_match=${1:-''}
 
     for (( i=$WORD_LENGTH, j=$(get_file_line_count "$FILEPATH_ANAGRAMS") ; i<((1 + ${#letters_to_match})) && 0==$j ; i++, j=$(get_file_line_count "$FILEPATH_ANAGRAMS"))); do
-        find_anagrams "$FILEPATH_WORKBOOK" "${letters_to_match:0:i}" false
+        find_anagrams "$FILEPATH_WORKBOOK" "${letters_to_match:0:i}" false false
+        #- find_anagrams "$FILEPATH_WORKBOOK" "${letters_to_match:0:i}" false true
     done
 }
 
@@ -197,8 +198,9 @@ else
         show_file_line_count "$FILEPATH_HINT_LIST"
 fi
 
-
-print_message "Runtime: $(get_runtime "$basetime") milliseconds."
+runtime=$(get_runtime "$basetime")
+print_message "Runtime: $runtime milliseconds.\n$(convert_time "$runtime")"
 
 print_message "It is done."
+date -r $(( (($basetime + $runtime)) / 1000))
 alert "C'est fini !"
