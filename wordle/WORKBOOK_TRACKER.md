@@ -36,7 +36,7 @@
 
 ### Details
 
-| Day | 🙋🏾‍♀️ [MIrrorIMage](https://github.com/rosegaelle) |   | 🎭 [Imladris](https://github.com/rosegaelle/Imladris/tree/main/tmp_solutionle) |   | 🤖 [NYT tmp_solutionleBot](https://www.nytimes.com/interactive/2022/upshot/tmp_solutionle-bot.html) |   | ⭐ |
+| Day | 🙋🏾‍♀️ [MIrrorIMage](https://github.com/rosegaelle) |   | 🎭 [Imladris](https://github.com/rosegaelle/Imladris/tree/main/wordle) |   | 🤖 [NYT WordleBot](https://www.nytimes.com/interactive/2022/upshot/wordle-bot.html) |   | ⭐ |
 | --- | ----------- | - | -------- | - | ------------- | - | -- |
 | **0** | -> | | `U09BUkUK`<br>`TUlMVFkK`<br>`Q0lHQVIK` | ⬛⬛🟨🟨⬛<br>⬛🟩⬛⬛⬛<br>🟩🟩🟩🟩🟩 | | | 🎭 |
 | **1** | -> | | `U09BUkUK`<br>`VU5JVFkK`<br>`UkVDVVQK`<br>`UkVCVVQK` | ⬛⬛⬛🟨🟨<br>🟨⬛⬛🟨⬛<br>🟩🟩⬛🟩🟩<br>🟩🟩🟩🟩🟩 | | | 🎭 |
