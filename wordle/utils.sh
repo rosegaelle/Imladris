@@ -358,6 +358,8 @@ transcribe() {
     guess=$(toUpperCase "$guess")
     feedback_received=$(toUpperCase "$feedback_received")
 
+    convert_feedback "$feedback_received"
+
     if [ -z "$guess" ] || [ -z "$feedback_received" ] ; then
         print_message "Invalid input: '$guess' vs. '$feedback_received'!"
         exit 0
