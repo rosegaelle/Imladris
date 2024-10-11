@@ -19,17 +19,17 @@
 
 ### Summary
 
-| Player | \# of Wins / 197 | Percentage |
+| Player | \# of Wins / 198 | Percentage |
 | ------ | ---------------- | ---------- |
-| 🏆🙋🏾‍♀️ | 8 | 4.06% |
-| 🎭 | 52 | 26.40% |
-| 🤖 | 35 | 17.77% |
+| 🏆🙋🏾‍♀️ | 8 | 4.04% |
+| 🎭 | 52 | 26.26% |
+| 🤖 | 35 | 17.68% |
 ||
-| 🙋🏾‍♀️🎭 | 21 | 10.66% |
-| 🙋🏾‍♀️🤖 | 6 | 3.05% |
-| 🎭🤖 | 20 | 10.15% |
+| 🙋🏾‍♀️🎭 | 21 | 10.61% |
+| 🙋🏾‍♀️🤖 | 6 | 3.03% |
+| 🎭🤖 | 20 | 10.10% |
 ||
-| 🪢 | 55 | 27.92% |
+| 🪢 | 56 | 28.28% |
 ||
 
 
@@ -707,3 +707,4 @@
 | **1205** | -> | | `U09BUkUK`<br>`R0xJTlQK`<br>`TEFHRVIK` | ⬛⬛🟨🟨🟨<br>🟨🟨⬛⬛⬛<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`VEFMRVMK`<br>`TEFZRVIK`<br>`TEFHRVIK` | ⬛🟨🟨⬛🟨<br>⬛🟩🟨🟩⬛<br>🟩🟩⬛🟩🟩<br>🟩🟩🟩🟩🟩 | 🙋🏾‍♀️🎭 |
 | **1206** | -> | | `U09BUkUK`<br>`VFVOSUMK`<br>`RkxPVVIK` | ⬛🟨⬛🟨⬛<br>⬛🟨⬛⬛⬛<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`U0hPVVQK`<br>`RkxPVVIK` | ⬛🟨⬛⬛⬛<br>⬛⬛🟩🟩⬛<br>🟩🟩🟩🟩🟩 | 🪢 |
 | **1207** | -> | | `U09BUkUK`<br>`TElOVFkK`<br>`Sk9JTlQK` | ⬛🟩⬛⬛⬛<br>⬛🟨🟨🟨⬛<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`R0xVVFMK`<br>`UE9JTlQK`<br>`Sk9JTlQK` | ⬛⬛⬛🟩⬛<br>⬛⬛⬛🟨⬛<br>⬛🟩🟩🟩🟩<br>🟩🟩🟩🟩🟩 | 🙋🏾‍♀️🎭 |
+| **1208** | -> | | `U09BUkUK`<br>`TElOVFkK`<br>`UE9ER1kK`<br>`TU9NTVkK` | ⬛🟩⬛⬛⬛<br>⬛⬛⬛⬛🟩<br>⬛🟩⬛⬛🟩<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`U0xPVEgK`<br>`R1VNQk8K`<br>`TU9NTVkK` | ⬛⬛⬛⬛⬛<br>⬛⬛🟨⬛⬛<br>⬛⬛🟩⬛🟨<br>🟩🟩🟩🟩🟩 | 🪢 |
