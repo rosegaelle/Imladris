@@ -355,9 +355,10 @@ transcribe() {
     local feedback_received=${2:-''}
     local reset=${3:-false}
 
-    guess=$(toUpperCase "$guess")
-    feedback_received=$(toUpperCase "$feedback_received")
+    guess=$(toUpperCase $(sanitize_input "$guess"))
+    feedback_received=$(toUpperCase $(sanitize_input "$feedback_received"))
 
+    print_message "$guess\t$(encode "$guess")\t$(encode_upperCase "$guess")"
     convert_feedback "$feedback_received"
 
     if [ -z "$guess" ] || [ -z "$feedback_received" ] ; then
