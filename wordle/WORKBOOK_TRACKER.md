@@ -1255,3 +1255,4 @@
 | **1214** | -> | | `U09BUkUK`<br>`Q0hZTkQK`<br>`Q09SRVIK` | ⬛🟩⬛🟨🟨<br>🟩⬛⬛⬛⬛<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`?`<br>`Q09SRVIK` | 🟩🟨⬛⬛🟨<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | 🏆❓ |
 | **1215** | -> | | `U09BUkUK`<br>`R0xJTlQK`<br>`R1JBTlQK` | ⬛⬛🟩🟨⬛<br>🟩⬛⬛🟩🟩<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`?`<br>`R1JBTlQK` | ⬛🟩🟩🟩⬛<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | 🏆❓ |
 | **1216** | -> | | `U09BUkUK`<br>`R0xJTlQK`<br>`RkFCTEUK`<br>`SEFMVkUK` | ⬛⬛🟨⬛🟩<br>⬛🟨⬛⬛⬛<br>⬛🟩⬛🟨🟩<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`?`<br>`?`<br>`SEFMVkUK` | ⬛⬛🟨⬛🟩<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | 🏆❓ |
+| **1217** | -> | | `U09BUkUK`<br>`S0lUVUwK`<br>`U1RJTlQK` | 🟩⬛⬛⬛⬛<br>⬛🟨🟨⬛⬛<br>🟩🟩🟩🟩🟩 | `VFJBQ0UK`<br>`?`<br>`?` | ⬛⬛⬛🟩⬛<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | 🏆❓ |
