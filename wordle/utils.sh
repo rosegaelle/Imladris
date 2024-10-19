@@ -317,7 +317,7 @@ diff() {
 
     #??? local letters_in_common=$(comm -12 <(fold -w1 <<< $solution | sort -u) <(fold -w1 <<< $result | sort -u) | tr -d '\n')
     local letters_in_common=$(echo $solution | sed "s/[$result]//g")
-    letters_in_common=$(get_unique_characters $(echo $solution | sed "s/[$$foo]//g"))
+    letters_in_common=$(get_unique_characters $(echo $solution | sed "s/[$letters_in_common]//g"))
 
     if [ ! -z "$correct_guesses" ] ; then
         letters_in_common=$(echo $letters_in_common| sed "s/[$correct_guesses]//1")
