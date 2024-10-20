@@ -9,8 +9,8 @@ export WORD_LENGTH=5
 export CHARACTERS_MAX=26
 tmp=$(printf "%$(echo $WORD_LENGTH)s") && export FULL_MATCH=$(echo ${tmp// /G}) # printf 'G%.0s' {1..5}
 
-export FILEPATH_DICTIONARY='https://raw.githubusercontent.com/rosegaelle/Imladris/main/wordle/dictionary_full.txt'
-export FILEPATH_PREVIOUS_SOLUTIONS='https://raw.githubusercontent.com/rosegaelle/Imladris/main/wordle/workbook.txt'
+export FILEPATH_DICTIONARY='https://raw.githubusercontent.com/rosegaelle/Imladris/main/wordle/assets/dictionary_full.txt'
+export FILEPATH_PREVIOUS_SOLUTIONS='https://raw.githubusercontent.com/rosegaelle/Imladris/main/wordle/assets/workbook.txt'
 export FILEPATH_ENHANCED_DICTIONARY='dictionary_enhanced.tmp'
 export FILEPATH_HINT_LIST='results.tmp'
 export FILEPATH_ANAGRAMS='anagrams.tmp'
@@ -317,7 +317,7 @@ diff() {
 
     #??? local letters_in_common=$(comm -12 <(fold -w1 <<< $solution | sort -u) <(fold -w1 <<< $result | sort -u) | tr -d '\n')
     local letters_in_common=$(echo $solution | sed "s/[$result]//g")
-    letters_in_common=$(get_unique_characters $(echo $solution | sed "s/[$$foo]//g"))
+    letters_in_common=$(get_unique_characters $(echo $solution | sed "s/[$letters_in_common]//g"))
 
     if [ ! -z "$correct_guesses" ] ; then
         letters_in_common=$(echo $letters_in_common| sed "s/[$correct_guesses]//1")

@@ -3,7 +3,7 @@
 * To execute:
 ```sh
 # execute
-curl -o hint_helper.sh "https://raw.githubusercontent.com/rosegaelle/Imladris/main/wordle/hint_helper.sh"
+curl -o hint_helper.sh "https://raw.githubusercontent.com/rosegaelle/Imladris/main/wordle/scripts/hint_helper.sh"
 
 chmod +x hint_helper.sh
 hint_helper.sh --help
