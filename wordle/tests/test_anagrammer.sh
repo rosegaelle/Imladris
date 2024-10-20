@@ -5,8 +5,8 @@
 #############################################################
 
 
-source $(dirname $0)/utils.sh
-source $(dirname $0)/anagrammer.sh
+source $(dirname $0)/../scripts/utils.sh
+source $(dirname $0)/../scripts/anagrammer.sh
 
 
 FILEPATH_WORKBOOK="$WORKSPACE_DIR/wordle_enhanced_workbook.txt"

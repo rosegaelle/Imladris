@@ -91,7 +91,7 @@ search_anagrams() {
 
     for (( i=$WORD_LENGTH, j=$(get_file_line_count "$FILEPATH_ANAGRAMS") ; i<((1 + ${#letters_to_match})) && 0==$j ; i++, j=$(get_file_line_count "$FILEPATH_ANAGRAMS"))); do
         find_anagrams "$FILEPATH_WORKBOOK" "${letters_to_match:0:i}" false false
-        #- find_anagrams "$FILEPATH_WORKBOOK" "${letters_to_match:0:i}" false true
+        #- find_anagrams "$FILEPATH_WORKBOOK" "${letters_to_match:0:i}" false true #-
     done
 }
 
