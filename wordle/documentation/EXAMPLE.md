@@ -4,13 +4,13 @@
 ```sh
 export WORKSPACE_DIR="~/$WORKSPACE"
 
-export FILEPATH_SCRIPT="$WORKSPACE_DIR/hint_helper.sh"
+export FILEPATH_SCRIPT="$WORKSPACE_DIR/scripts/hint_helper.sh"
 wc -l $FILEPATH_SCRIPT
 ```
 
 * This is an optional step, if you intend to use the `-f` flag.
 ```sh
-export FILEPATH_WORKBOOK="~/$WORKSPACE/$FILEPATH_WORDLE_ENHANCED_WORKBOOK"
+export FILEPATH_WORKBOOK="~/$WORKSPACE/assets/$FILEPATH_WORDLE_ENHANCED_WORKBOOK"
 wc -l $FILEPATH_WORKBOOK
 ```
 
