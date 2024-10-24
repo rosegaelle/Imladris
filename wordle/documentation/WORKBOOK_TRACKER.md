@@ -1259,3 +1259,4 @@
 | **1218** | -> | | `U09BUkUK`<br>`RElDVFUK`<br>`V0lQRVIK`<br>`RklCRVIK` | ⬛⬛⬛🟨🟨<br>⬛🟩⬛⬛⬛<br>⬛🟩⬛🟩🟩<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`QkVURUwK`<br>`U09CRVIK`<br>`RklCRVIK` | ⬛🟨⬛⬛🟨<br>🟨⬛⬛🟩⬛<br>⬛⬛🟩🟩🟩<br>🟩🟩🟩🟩🟩 | 🪢 |
 | **1219** | -> | | `U09BUkUK`<br>`TElORFkK`<br>`RElDRVkK` | ⬛⬛⬛⬛🟨<br>⬛🟩⬛🟨🟩<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`UElMT1QK`<br>`RElDRVkK` | 🟨⬛⬛⬛🟨<br>⬛🟩⬛⬛⬛<br>🟩🟩🟩🟩🟩 | 🪢 |
 | **1220** | -> | | `U09BUkUK`<br>`V0hJUFQK`<br>`Q0xVTksK`<br>`U1BPT04K` | 🟩🟨⬛⬛⬛<br>⬛⬛⬛🟨⬛<br>⬛⬛⬛🟨⬛<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`UElOT1QK`<br>`U1BPT04K` | ⬛⬛⬛🟨⬛<br>🟨⬛🟨🟩⬛<br>🟩🟩🟩🟩🟩 | 🤖 |
+| **1221** | -> | | `U09BUkUK`<br>`V0hJUFQK`<br>`U0hPVVQK` | 🟩🟨⬛⬛⬛<br>⬛🟩⬛⬛🟩<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`?`<br>`U0hPVVQK` | ⬛⬛⬛⬛⬛<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | 🏆❓ |
