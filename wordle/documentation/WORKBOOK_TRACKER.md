@@ -99,15 +99,15 @@
 | **58** | -> | | `U09BUkUK`<br>`TElORFkK`<br>`QkVMTFkK` | ⬛⬛⬛⬛🟨<br>🟨⬛⬛⬛🟩<br>🟩🟩🟩🟩🟩 | | | 🏆 |
 | **59** | -> | | `U09BUkUK`<br>`VElDSFkK`<br>`SVZPUlkK` | ⬛🟨⬛🟩⬛<br>⬛🟨⬛⬛🟩<br>🟩🟩🟩🟩🟩 | | | 🏆 |
 | **60** | -> | | `U09BUkUK`<br>`UExJTksK`<br>`U1RZRUQK`<br>`U0VFRFkK` | 🟩⬛⬛⬛🟨<br>⬛⬛⬛⬛⬛<br>🟩⬛🟨🟨🟨<br>🟩🟩🟩🟩🟩 | | | 🏆 |
-| **61** | -> | | `U09BUkUK`<br>`?`<br>`?`<br>`UFJJTlQK` | ⬛⬛⬛🟨⬛<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | | | 🏆❓ |
-| **62** | -> | | `U09BUkUK`<br>`?`<br>`?`<br>`WUVBUk4K` | ⬛⬛🟩🟩🟨<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | | | 🏆❓ |
-| **63** | -> | | `U09BUkUK`<br>`?`<br>`?`<br>`RFJBSU4K` | ⬛⬛🟩🟨⬛<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | | | 🏆❓ |
-| **64** | -> | | `U09BUkUK`<br>`?`<br>`?`<br>`QlJJQkUK` | ⬛⬛⬛🟨🟩<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | | | 🏆❓ |
-| **65** | -> | | `U09BUkUK`<br>`?`<br>`?`<br>`U1RPVVQK` | 🟩🟨⬛⬛⬛<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | | | 🏆❓ |
-| **66** | -> | | `U09BUkUK`<br>`?`<br>`?`<br>`UEFORUwK` | ⬛⬛🟨⬛🟨<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | | | 🏆❓ |
-| **67** | -> | | `U09BUkUK`<br>`?`<br>`?`<br>`Q1JBU1MK` | 🟨⬛🟩🟨⬛<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | | | 🏆❓ |
-| **68** | -> | | `U09BUkUK`<br>`?`<br>`?`<br>`RkxVTUUK` | ⬛⬛⬛⬛🟩<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | | | 🏆❓ |
-| **69** | -> | | `U09BUkUK`<br>`?`<br>`?`<br>`T0ZGQUwK` | ⬛🟨🟨⬛⬛<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | | | 🏆❓ |
+| **61** | -> | | `U09BUkUK`<br>`VU5JVFkK`<br>`UFJJTlQK` | ⬛⬛⬛🟨⬛<br>⬛🟨🟩🟨⬛<br>🟩🟩🟩🟩🟩 | | | 🏆 |
+| **62** | -> | | `U09BUkUK`<br>`TllNUEgK`<br>`WUVBUk4K` | ⬛⬛🟩🟩🟨<br>🟨🟨⬛⬛⬛<br>🟩🟩🟩🟩🟩 | | | 🏆 |
+| **63** | -> | | `U09BUkUK`<br>`Q0xJTlQK`<br>`REVCQUcK`<br>`RFJBSU4K` | ⬛⬛🟩🟨⬛<br>⬛⬛🟨🟨⬛<br>🟩⬛⬛🟨⬛<br>🟩🟩🟩🟩🟩 | | | 🏆 |
+| **64** | -> | | `U09BUkUK`<br>`RElDVFUK`<br>`R1JJWkUK`<br>`QlJJQkUK` | ⬛⬛⬛🟨🟩<br>⬛🟨⬛⬛⬛<br>⬛🟩🟩⬛🟩<br>🟩🟩🟩🟩🟩 | | | 🏆 |
+| **65** | -> | | `U09BUkUK`<br>`VEhVTksK`<br>`U1RPVVQK` | 🟩🟨⬛⬛⬛<br>🟨⬛🟨⬛⬛<br>🟩🟩🟩🟩🟩 | | | 🏆 |
+| **66** | -> | | `U09BUkUK`<br>`Q0hZTkQK`<br>``<br>`UEFORUwK` | ⬛⬛🟨⬛🟨<br>⬛⬛⬛🟨⬛<br>⬛🟨🟩🟨🟩<br>🟩🟩🟩🟩🟩 | | | 🏆 |
+| **67** | -> | | `U09BUkUK`<br>`RElDVFkK`<br>`Q1JBU0gK`<br>`Q1JBU1MK` | 🟨⬛🟩🟨⬛<br>⬛⬛🟨⬛⬛<br>🟩🟩🟩🟩⬛<br>🟩🟩🟩🟩🟩 | | | 🏆 |
+| **68** | -> | | `U09BUkUK`<br>`VU5USUwK`<br>`R0xVTUUK`<br>`RkxVTVAK`<br>`RkxVTUUK` | ⬛⬛⬛⬛🟩<br>🟨⬛⬛⬛🟨<br>⬛🟩🟩🟩🟩<br>🟩🟩🟩🟩⬛<br>🟩🟩🟩🟩🟩 | | | 🏆 |
+| **69** | -> | | `U09BUkUK`<br>`Q0xJTlQK`<br>`R0FMT1AK`<br>`T0ZGQUwK` | ⬛🟨🟨⬛⬛<br>⬛🟨⬛⬛⬛<br>⬛🟨🟨🟨⬛<br>🟩🟩🟩🟩🟩 | | | 🏆 |
 | **70** | -> | | `U09BUkUK`<br>`?`<br>`?`<br>`QUdSRUUK` | ⬛⬛🟨🟨🟩<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | | | 🏆❓ |
 | **71** | -> | | `U09BUkUK`<br>`?`<br>`?`<br>`RVJST1IK` | ⬛⬛⬛⬛⬛<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | | | 🏆❓ |
 | **72** | -> | | `U09BUkUK`<br>`?`<br>`?`<br>`U1dJUkwK` | 🟩⬛⬛🟩⬛<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | | | 🏆❓ |
@@ -1023,7 +1023,26 @@
 | **982** | -> | | `U09BUkUK`<br>`?`<br>`?`<br>`?` | 🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`?`<br>`?`<br>`?` | 🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | 🏆❓ |
 | **983** | -> | | `U09BUkUK`<br>`?`<br>`?`<br>`?` | 🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`?`<br>`?`<br>`?` | 🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | 🏆❓ |
 | **984** | -> | | `U09BUkUK`<br>`?`<br>`?`<br>`?` | 🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`?`<br>`?`<br>`?` | 🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | 🏆❓ |
-| **985** | -> | | `U09BUkUK`<br>`?`<br>`?`<br>`SU1BR0UK` | ⬛⬛🟩⬛🟩<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`?`<br>`?` | ⬛⬛🟩⬛🟩<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | 🏆❓ |
+
+
+
+
+| **985** | -> | | `U09BUkUK`<br>`?`<br>`?`<br>`SU1BR0UK` | ⬛⬛🟩⬛🟩<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`?`<br>`?`<br>`SU1BR0UK` | ⬛⬛🟩⬛🟩<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | 🏆❓ |
+
+
+
+
+
+word='SU1BR0UK' && export tmp_solution=$(eval $cmd_decode) && echo $tmp_solution
+
+word='U09BUkUK' && tmp_guess=$(eval $cmd_decode) && echo $tmp_guess && && eval $cmd_diff_1
+word='Q1JBTkUK' && tmp_guess=$(eval $cmd_decode) && echo $tmp_guess && && eval $cmd_diff_1
+
+
+
+
+
+
 | **986** | -> | | `U09BUkUK`<br>`?`<br>`?`<br>`?` | 🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`?`<br>`?`<br>`?` | 🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | 🏆❓ |
 | **987** | -> | | `U09BUkUK`<br>`?`<br>`?`<br>`?` | 🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`?`<br>`?`<br>`?` | 🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | 🏆❓ |
 | **988** | -> | | `U09BUkUK`<br>`?`<br>`?`<br>`?` | 🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`?`<br>`?`<br>`?` | 🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | 🏆❓ |
