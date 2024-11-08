@@ -19,17 +19,17 @@
 
 ### Summary
 
-| Player | \# of Wins / 194 | Percentage |
+| Player | \# of Wins / 195 | Percentage |
 | ------ | ---------------- | ---------- |
-| 🏆🙋🏾‍♀️ | 8 | 4.12% |
-| 🎭 | 21 | 10.82% |
-| 🤖 | 41 | 21.13% |
+| 🏆🙋🏾‍♀️ | 8 | 4.10% |
+| 🎭 | 21 | 10.77% |
+| 🤖 | 41 | 21.03% |
 ||
-| 🙋🏾‍♀️🎭 | 28 | 14.43% |
-| 🙋🏾‍♀️🤖 | 6 | 3.09% |
-| 🎭🤖 | 20 | 10.31% |
+| 🙋🏾‍♀️🎭 | 28 | 14.36% |
+| 🙋🏾‍♀️🤖 | 6 | 3.08% |
+| 🎭🤖 | 20 | 10.26% |
 ||
-| 🪢 | 70 | 36.08% |
+| 🪢 | 71 | 36.41% |
 ||
 
 
@@ -116,8 +116,8 @@
 | **75** | -> | | `U09BUkUK`<br>`Q0hZTkQK`<br>`TUlMVFoK`<br>`REVMVEEK` | ⬛⬛🟨⬛🟨<br>⬛⬛⬛⬛🟨<br>⬛⬛🟩🟩⬛<br>🟩🟩🟩🟩🟩 | | | 🏆 |
 | **76** | -> | | `U09BUkUK`<br>`VU5JVFkK`<br>`RklMQ0gK`<br>`RkxJQ0sK` | ⬛⬛⬛⬛⬛<br>⬛⬛🟩⬛⬛<br>🟩🟨🟨🟩⬛<br>🟩🟩🟩🟩🟩 | | | 🏆 |
 | **77** | -> | | `U09BUkUK`<br>`Q0hZTkQK`<br>`UExVTUIK`<br>`VE9URU0K` | ⬛🟩⬛⬛🟨<br>⬛⬛⬛⬛⬛<br>⬛⬛⬛🟨⬛<br>🟩🟩🟩🟩🟩 | | | 🏆 |
-| **78** | -> | | `U09BUkUK`<br>`?`<br>`?`<br>`V09PRVIK` | ⬛🟩⬛🟨🟨<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | | | 🏆❓ |
-| **79** | -> | | `U09BUkUK`<br>`?`<br>`?`<br>`RlJPTlQK` | ⬛🟨⬛🟨⬛<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | | | 🏆❓ |
+| **78** | -> | | `U09BUkUK`<br>`Q0hZTkQK`<br>`Uk9XRUwK`<br>`V09PRVIK` | ⬛🟩⬛🟨🟨<br>⬛⬛⬛⬛⬛<br>🟨🟩🟨🟩⬛<br>🟩🟩🟩🟩🟩 | | | 🏆 |
+| **79** | -> | | `U09BUkUK`<br>`VFVOSUMK`<br>`RlJPTlQK` | ⬛🟨⬛🟨⬛<br>🟨⬛🟨⬛⬛<br>🟩🟩🟩🟩🟩 | | | 🏆 |
 | **80** | -> | | `U09BUkUK`<br>`?`<br>`?`<br>`U0hSVUIK` | 🟩⬛⬛🟨⬛<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | | | 🏆❓ |
 | **81** | -> | | `U09BUkUK`<br>`?`<br>`?`<br>`UEFSUlkK` | ⬛⬛🟨🟩⬛<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | | | 🏆❓ |
 | **82** | -> | | `U09BUkUK`<br>`?`<br>`?`<br>`QklPTUUK` | ⬛🟨⬛⬛🟩<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | | | 🏆❓ |
@@ -1274,3 +1274,4 @@
 | **1233** | -> | | `U09BUkUK`<br>`RFVOQ0gK`<br>`QkxBWkUK` | ⬛⬛🟩⬛🟩<br>⬛⬛⬛⬛⬛<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`U0xPVEgK`<br>`RU1CRUQK`<br>`QkxBWkUK` |⬛⬛🟩⬛🟩<br>⬛🟩⬛⬛⬛<br>🟨⬛🟨⬛⬛<br>🟩🟩🟩🟩🟩 | 🙋🏾‍♀️🎭 |
 | **1234** | -> | | `U09BUkUK`<br>`VU5JVFkK`<br>`VklOWUwK` | ⬛⬛⬛⬛⬛<br>⬛🟨🟨⬛🟨<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`UElOT1QK`<br>`REVTS1MK`<br>`VklOWUwK` | ⬛⬛⬛🟨⬛<br>⬛🟩🟩⬛⬛<br>⬛⬛⬛⬛⬛<br>🟩🟩🟩🟩🟩 | 🙋🏾‍♀️🎭 |
 | **1235** | -> | | `U09BUkUK`<br>`QkxJTkQK`<br>`T0NURVQK` | ⬛🟨⬛⬛🟨<br>⬛⬛⬛⬛⬛<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`UElMT1QK`<br>`T0NURVQK` | 🟨⬛⬛⬛🟨<br>⬛⬛⬛🟨🟩<br>🟩🟩🟩🟩🟩 | 🪢 |
+| **1236** | -> | | `U09BUkUK`<br>`VU5JVFkK`<br>`VFJVTFkK` | ⬛⬛⬛🟨⬛<br>🟨⬛⬛🟨🟩<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`UElMT1QK`<br>`VFJVTFkK` | ⬛🟩⬛⬛⬛<br>⬛⬛🟨⬛🟨<br>🟩🟩🟩🟩🟩 | 🪢 |
