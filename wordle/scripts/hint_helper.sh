@@ -55,7 +55,7 @@ done
 
 
 SKIP_ANAGRAMMER=${SKIP_ANAGRAMMER:-true}
-HINT_THRESHOLD=15
+HINT_THRESHOLD=5
 
 
 filter_by_character_index() {
@@ -90,8 +90,8 @@ search_anagrams() {
     local letters_to_match=${1:-''}
 
     for (( i=$WORD_LENGTH, j=$(get_file_line_count "$FILEPATH_ANAGRAMS") ; i<((1 + ${#letters_to_match})) && 0==$j ; i++, j=$(get_file_line_count "$FILEPATH_ANAGRAMS"))); do
-        find_anagrams "$FILEPATH_WORKBOOK" "${letters_to_match:0:i}" false false
-        #- find_anagrams "$FILEPATH_WORKBOOK" "${letters_to_match:0:i}" false true #-
+        #+ find_anagrams "$FILEPATH_WORKBOOK" "${letters_to_match:0:i}" false false
+        find_anagrams "$FILEPATH_WORKBOOK" "${letters_to_match:0:i}" false true #-
     done
 }
 
@@ -187,14 +187,13 @@ if [[ true == $(is_file_not_empty "$FILEPATH_HINT_LIST") ]] && (( $HINT_THRESHOL
         alert "Eureka !"
         toUpperCase $(cat $FILEPATH_HINT_LIST)
     else
-        sort_by_rank "$FILEPATH_HINT_LIST" "$unique_letters_by_occurence"
-
         print_message "Ranked top $(get_file_line_count "$FILEPATH_HINT_LIST") possibilities:"
     
         sort_by_rank "$FILEPATH_HINT_LIST" "$unique_letters_by_occurence"
         cat $FILEPATH_HINT_LIST
     fi
 else
+        sort_by_rank "$FILEPATH_HINT_LIST" "$unique_letters_by_occurence"
         show_file_line_count "$FILEPATH_HINT_LIST"
 fi
 
