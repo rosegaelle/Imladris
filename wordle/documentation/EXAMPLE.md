@@ -17,6 +17,7 @@ wc -l $FILEPATH_WORKBOOK
 * This is an optional step, if you intend to use the `-s` flag, which defaults to `false`.
 ```sh
 export SKIP_ANAGRAMMER=false
+export ZAP_LETTERS_INCLUDED_FROM_OUTPUT=true
 ```
 
 <b><u>Important Notes</u>:</b><br>
@@ -28,7 +29,7 @@ export SKIP_ANAGRAMMER=false
 ## Main Command
 * Executed in each step below:
 ```sh
-date && $FILEPATH_SCRIPT -x "$GUESS_X" -i "$GUESS_I" -a "$GUESS_A" -b "$GUESS_B" -c "$GUESS_C" -d "$GUESS_D" -e "$GUESS_E" -m "$GUESS_M" -n "$GUESS_N" -o "$GUESS_O" -p "$GUESS_P" -q "$GUESS_Q" -f "$FILEPATH_WORKBOOK" -s "$SKIP_ANAGRAMMER"
+date && $FILEPATH_SCRIPT -x "$GUESS_X" -i "$GUESS_I" -a "$GUESS_A" -b "$GUESS_B" -c "$GUESS_C" -d "$GUESS_D" -e "$GUESS_E" -m "$GUESS_M" -n "$GUESS_N" -o "$GUESS_O" -p "$GUESS_P" -q "$GUESS_Q" -f "$FILEPATH_WORKBOOK" -s "$SKIP_ANAGRAMMER" -z "$ZAP_LETTERS_INCLUDED_FROM_OUTPUT"
 ```
 
 

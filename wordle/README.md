@@ -12,6 +12,7 @@ hint_helper.sh [OPTIONAL] -a|b|c|d|e 'CHARACTER_AT_POSITION_1|2|3|4|5'
                           -f 'LOCAL_WORKBOOK_FILEPATH_IF_ANY'
                           -m|n|o|p|q 'CHARACTERS_NOT_AT_POSITION_1|2|3|4|5'
                           -x 'LETTERS_TO_EXCLUDE'
+                          -z 'ZAP_LETTERS_INCLUDED_FROM_OUTPUT'
 ```
 
 * [Example Usage](documentation/EXAMPLE.md).
