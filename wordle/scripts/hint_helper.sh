@@ -12,7 +12,7 @@ source $(dirname $0)/anagrammer.sh
 help() {
     echo "Hello, Wordle!"
     echo
-    echo "Syntax: hint_helper [-a|b|c|d|e|f|i|m|n|o|p|q|s|x]"
+    echo "Syntax: hint_helper [-a|b|c|d|e|f|i|m|n|o|p|q|s|x|z]"
     echo "options:"
     echo "a     First letter of the word."
     echo "b     Character at the second position."
@@ -28,10 +28,11 @@ help() {
     echo "q     Letters that cannot be at the end of the word."
     echo "s     Whether the anagrammer should be skipped or not."
     echo "x     Letters to exclude."
+    echo "z     Whether to reset the output or not."
     echo
 }
 
-while getopts ":a:b:c:d:e:f:i:m:n:o:p:q:x:s:" flag
+while getopts ":a:b:c:d:e:f:i:m:n:o:p:q:s:x:z:" flag
 do
     case "${flag}" in
         a) LETTER_AT_1=$(sanitize_input ${OPTARG});;
@@ -48,6 +49,7 @@ do
         q) LETTERS_NOT_AT_5=$(sanitize_input ${OPTARG});;
         s) SKIP_ANAGRAMMER=${OPTARG};;
         x) LETTERS_EXCLUDED=$(sanitize_input ${OPTARG});;
+        z) ZAP_LETTERS_INCLUDED_FROM_OUTPUT=$(sanitize_input ${OPTARG:-false});;
         *) help
         exit 1;;
     esac
@@ -66,7 +68,7 @@ filter_by_character_index() {
     file_tmp=$(mktemp)
     cp $FILEPATH_HINT_LIST $file_tmp
 
-if [ ! -z "$character_value" ]; then
+    if [ ! -z "$character_value" ]; then
         if (( "$character_index" < 1 || "$character_index" > "$WORD_LENGTH" )); then
             echo "Error message goes here."
             exit 1
@@ -77,7 +79,7 @@ if [ ! -z "$character_value" ]; then
             awk -v s="$character_value" "index(\$0, s) == $character_index" $FILEPATH_HINT_LIST > $file_tmp
         else
             for (( i=0; i<$(get_word_length "$character_value"); i++ )); do
-                awk -v s=$(get_character_at "$character_value" "$i") "index(\$0, s) != $character_index" $FILEPATH_HINT_LIST > $file_tmp #ToDo: Fix!!!
+                awk -v s=$(get_character_at "$character_value" "$i") "index(\$0, s) != $character_index" $FILEPATH_HINT_LIST > $file_tmp
                 cp $file_tmp $FILEPATH_HINT_LIST
             done
         fi
@@ -91,7 +93,7 @@ search_anagrams() {
 
     for (( i=$WORD_LENGTH, j=$(get_file_line_count "$FILEPATH_ANAGRAMS") ; i<((1 + ${#letters_to_match})) && 0==$j ; i++, j=$(get_file_line_count "$FILEPATH_ANAGRAMS"))); do
         #+ find_anagrams "$FILEPATH_WORKBOOK" "${letters_to_match:0:i}" false false
-        find_anagrams "$FILEPATH_WORKBOOK" "${letters_to_match:0:i}" false true #-
+        find_anagrams "$FILEPATH_WORKBOOK" "${letters_to_match:0:i}" false true
     done
 }
 
@@ -175,12 +177,17 @@ if [ true != $SKIP_ANAGRAMMER ] && (( $HINT_THRESHOLD < $(get_file_line_count "$
     done
 
     empty_or_create_file "$FILEPATH_ANAGRAMS"
-    search_anagrams "$unique_letters_by_occurence_unconfirmed"
-    search_anagrams "$unique_letters_by_occurence"
+
+    if [ true == $ZAP_LETTERS_INCLUDED_FROM_OUTPUT ]; then
+        search_anagrams "$unique_letters_by_occurence_unconfirmed"
+    else
+        search_anagrams "$unique_letters_by_occurence"
+    fi
 fi
 
 
 # Displaying the top possibilities.
+sort_by_rank "$FILEPATH_HINT_LIST" "$unique_letters_by_occurence"
 if [[ true == $(is_file_not_empty "$FILEPATH_HINT_LIST") ]] && (( $HINT_THRESHOLD >= $(get_file_line_count "$FILEPATH_HINT_LIST") )); then
     if (( 1 == $(get_file_line_count "$FILEPATH_HINT_LIST") )); then
         print_message "Eureka!"
@@ -188,12 +195,9 @@ if [[ true == $(is_file_not_empty "$FILEPATH_HINT_LIST") ]] && (( $HINT_THRESHOL
         toUpperCase $(cat $FILEPATH_HINT_LIST)
     else
         print_message "Ranked top $(get_file_line_count "$FILEPATH_HINT_LIST") possibilities:"
-    
-        sort_by_rank "$FILEPATH_HINT_LIST" "$unique_letters_by_occurence"
         cat $FILEPATH_HINT_LIST
     fi
 else
-        sort_by_rank "$FILEPATH_HINT_LIST" "$unique_letters_by_occurence"
         show_file_line_count "$FILEPATH_HINT_LIST"
 fi
 
