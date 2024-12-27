@@ -72,11 +72,10 @@ filter_by_character_index() {
         fi
 
         file_tmp=$(mktemp)
-        # ??? cp $FILEPATH_HINT_LIST $file_tmp
 
         if $is_included; then
             character_value="${character_value:0:1}"
-            awk -v s="$character_value" "index(\$0, s) == $character_index" $FILEPATH_HINT_LIST > $file_tmp
+            awk -v s="$character_value" "index(\$0, s) == $character_index" < <(grep $character_value $FILEPATH_HINT_LIST) > $file_tmp
         else
             for (( i=0; i<$(get_word_length "$character_value"); i++ )); do
                 awk -v s=$(get_character_at "$character_value" "$i") "index(\$0, s) != $character_index" $FILEPATH_HINT_LIST > $file_tmp
