@@ -167,7 +167,7 @@ get_character_occurence_count() {
 get_word_length() {
     local word=${1:-''}
 
-    if [ -z "$word" ] ; then
+    if [ -z "$word" ]; then
         echo 0
     else
         echo "${#word}"
@@ -179,7 +179,7 @@ get_character_at() {
     local word=${1:-''}
     local start_index=${2:-0}
 
-    if [ -z "$word" ] || [[ $start_index -gt $(get_word_length "$word") ]] ; then
+    if [ -z "$word" ] || [[ $start_index -gt $(get_word_length "$word") ]]; then
         echo ''
     else
         echo "${word:$start_index:1}"
@@ -193,22 +193,23 @@ sort_by_rank() {
 
     validate_file_dependency "$filename_full_list"
 
-    declare -A scores
-    while read -r word
-    do
-        score=10
+    if [[ true == $(is_file_not_empty "$filename_full_list") ]]; then
+        declare -A scores
+        while read -r word; do
+            score=10
 
-        for (( i=0; i<${#rank_order} ; i++ )); do
-            if echo "$word" | grep -q $(get_character_at "$rank_order" "$i"); then
-                score=$(( score + 10 * $((${#rank_order} - i )) ))
-            fi
-        done
+            for (( i=0; i<${#rank_order} ; i++ )); do
+                if echo "$word" | grep -q $(get_character_at "$rank_order" "$i"); then
+                    score=$(( score + 10 * $((${#rank_order} - i )) ))
+                fi
+            done
 
-        scores+=([$word]=$score)
-    done < "$filename_full_list"
+            scores+=([$word]=$score)
+        done < "$filename_full_list"
 
-    rankings="$(typeset -p scores)"
-    echo "${rankings##*(}" | sed -e 's/)//g' | sed -e 's/\[/;\n/g' | sed -e 's/\]=/: /g' | sed -e 's/"//g' | awk -F= '!/ 0;?/ {print $0}' | sort -t: -k 2 -r | cut -d" " -f1 | xargs | sed -e 's/;//g' | sed -e 's/:/\n/g' | tr -d ' ' | awk 'NF' > $filename_full_list
+        rankings="$(typeset -p scores)"
+        echo "${rankings##*(}" | sed -e 's/)//g' | sed -e 's/\[/;\n/g' | sed -e 's/\]=/: /g' | sed -e 's/"//g' | awk -F= '!/ 0;?/ {print $0}' | sort -t: -k 2 -r | cut -d" " -f1 | xargs | sed -e 's/;//g' | sed -e 's/:/\n/g' | tr -d ' ' | awk 'NF' > $filename_full_list
+    fi
 }
 
 
@@ -293,11 +294,11 @@ diff() {
     solution=$(toUpperCase $(sanitize_input "$solution"))
     guess=$(toUpperCase $(sanitize_input "$guess"))
 
-    if [ -z "$solution" ] || [ -z "$guess" ] ; then
+    if [ -z "$solution" ] || [ -z "$guess" ]; then
         print_message "Invalid input for the word diff: '$solution' vs. '$guess'!"
         exit 0
     else
-        if [[ "$solution" == "$guess" ]] ; then
+        if [[ "$solution" == "$guess" ]]; then
             echo $FULL_MATCH
             exit 0
         fi
@@ -309,7 +310,7 @@ diff() {
     local letters_in_diff=$(get_unique_characters $(echo $guess | sed "s/[$solution]//g"))
 
     local result=$guess
-    if [ ! -z "$letters_in_diff" ] ; then
+    if [ ! -z "$letters_in_diff" ]; then
         result=$(echo $guess | sed "s/[$letters_in_diff]/0/g")
     fi
 
@@ -323,17 +324,17 @@ diff() {
     local letters_in_common=$(echo $solution | sed "s/[$result]//g")
 
     local fullmatch=$(echo $FULL_MATCH | sed "s/$LETTER_AT/0/g")
-    if [ -z "$letters_in_common" ] && [ "$fullmatch" != "$result" ] ; then
+    if [ -z "$letters_in_common" ] && [ "$fullmatch" != "$result" ]; then
         letters_in_common=$(echo $result | sed "s/[^015]//g")
     fi
 
     letters_in_common=$(echo $solution | sed "s/[$letters_in_common]//g")
 
-    if [ ! -z "$correct_guesses" ] ; then
+    if [ ! -z "$correct_guesses" ]; then
         letters_in_common=$(echo $letters_in_common | sed "s/[$correct_guesses]//1")
     fi
 
-    if [ ! -z "$letters_in_common" ] ; then
+    if [ ! -z "$letters_in_common" ]; then
         while read -r letter_in_common; do
             for (( j=0; j<$(get_character_occurence_count "$solution" "$letter_in_common"); j++ )); do
                 result=$(echo $result | sed "s/$letter_in_common/1/")
@@ -357,6 +358,8 @@ diff_with_feedback() {
     local result=$(diff "$solution" "$guess" "$is_input_encoded")
 
     convert_feedback "$result"
+
+    print_message "/usr/local/bin/bash -c \"source ../scripts/utils.sh; transcribe '$(toUpperCase $guess)' '$result' false\"\n" #- debug
 }
 
 
@@ -371,7 +374,7 @@ transcribe() {
     print_message "$guess\t$(encode "$guess")\t$(encode_upperCase "$guess")"
     convert_feedback "$feedback_received"
 
-    if [ -z "$guess" ] || [ -z "$feedback_received" ] ; then
+    if [ -z "$guess" ] || [ -z "$feedback_received" ]; then
         print_message "Invalid input: '$guess' vs. '$feedback_received'!"
         exit 0
     fi
@@ -485,7 +488,7 @@ transcribe() {
     done
 
     LETTERS_INCLUDED=$(echo $LETTERS_INCLUDED$LETTER_AT_1$LETTER_AT_2$LETTER_AT_3$LETTER_AT_4$LETTER_AT_5$LETTERS_NOT_AT_1$LETTERS_NOT_AT_2$LETTERS_NOT_AT_3$LETTERS_NOT_AT_4$LETTERS_NOT_AT_5 | grep -o . | sort -u | tr -d "\n")
-    if [ ! -z "$LETTERS_INCLUDED" ] ; then
+    if [ ! -z "$LETTERS_INCLUDED" ]; then
         LETTERS_EXCLUDED=$(echo "$LETTERS_EXCLUDED" | sed "s/[$LETTERS_INCLUDED]//g")
     fi
 
@@ -512,7 +515,7 @@ alert() {
     local quasimodo="echo -e '\a\a\a\a\a'"
     eval $quasimodo
 
-    if [ ! -z "$message" ] ; then
+    if [ ! -z "$message" ]; then
         say -v Thomas "$message"
     fi
 
