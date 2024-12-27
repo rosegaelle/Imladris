@@ -7,36 +7,12 @@
 
 source $(dirname $0)/../scripts/utils.sh
 source $(dirname $0)/../scripts/anagrammer.sh
+source $(dirname $0)/../tests/test_utils.sh
 
 
 FILEPATH_WORKBOOK="$WORKSPACE_DIR/wordle_enhanced_workbook.txt"
 declare -a TEST_ANAGRAMS_1 TEST_ANAGRAMS_2 TEST_ANAGRAMS_3 TEST_ANAGRAMS_4 TEST_ANAGRAMS_5
 
-
-get_time() {
-    echo $(date +%s000)
-}
-
-capture_test_result() {
-    local test_name=${1:-''}
-    local test_description=${2:-''}
-    local test_results=${3:-'failed'}
-    local test_duration=${4:--1}
-
-    print_message "[$test_name]"
-    print_message "$test_description"
-    print_message "$test_result"
-    print_message "Runtime: $test_duration milliseconds."
-
-    #ToDo: Save to file --> XML? JSON?
-}
-
-get_test_results() {
-    local expected=${1:-true}
-    local actual=${2:-false}
-
-    echo "Test $([ $expected == $actual ] && echo "passed" || echo "failed")."
-}
 
 get_anagram() {
     local letters_to_match=${1:-''}
