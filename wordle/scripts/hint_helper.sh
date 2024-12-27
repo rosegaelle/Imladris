@@ -75,7 +75,7 @@ filter_by_character_index() {
 
         if $is_included; then
             character_value="${character_value:0:1}"
-            awk -v s="$character_value" "index(\$0, s) == $character_index" < <(grep $character_value $FILEPATH_HINT_LIST) > $file_tmp
+            awk '{print substr($0,'$character_index', '$character_index' - 1) ~ /'$character_value'/, $0}' < <(grep $character_value $FILEPATH_HINT_LIST) | grep 1 | awk '{print $2}' > $file_tmp
         else
             for (( i=0; i<$(get_word_length "$character_value"); i++ )); do
                 awk -v s=$(get_character_at "$character_value" "$i") "index(\$0, s) != $character_index" $FILEPATH_HINT_LIST > $file_tmp
@@ -161,6 +161,8 @@ filter_by_character_index 5 "$LETTERS_NOT_AT_5" false
 
 if [ true != $SKIP_ANAGRAMMER ] && (( $HINT_THRESHOLD < $(get_file_line_count "$FILEPATH_HINT_LIST") )); then
     # Parsing possible solutions and suggesting potential next guess(es).
+    print_message "Deriving anagrams based on the most occuring letters."
+
     unique_letters=$(grep -o . $FILEPATH_HINT_LIST | sort -u | tr -d '\n')
     file_tmp_3=$(mktemp)
     for (( i=0; i<${#unique_letters}; i++ )); do

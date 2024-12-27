@@ -281,7 +281,7 @@ convert_feedback() {
 }
 
 
-diff() {
+generate_diff() {
     local solution=${1:-''}
     local guess=${2:-''}
     local is_input_encoded=${3:-false}
@@ -306,7 +306,7 @@ diff() {
 
     print_message "$solution\t$(encode "$solution")\t$(encode_upperCase "$solution")\n$guess\t$(encode "$guess")\t$(encode_upperCase "$guess")"
 
-    #??? local letters_in_diff=$(diff <(fold -w1 <<< "$solution") <(fold -w1 <<< "$guess") | awk '/[<>]/{printf $2}')
+    #??? local letters_in_diff=$(generate_diff <(fold -w1 <<< "$solution") <(fold -w1 <<< "$guess") | awk '/[<>]/{printf $2}')
     local letters_in_diff=$(get_unique_characters $(echo $guess | sed "s/[$solution]//g"))
 
     local result=$guess
@@ -355,7 +355,7 @@ diff_with_feedback() {
     local guess=${2:-''}
     local is_input_encoded=${3:-false}
 
-    local result=$(diff "$solution" "$guess" "$is_input_encoded")
+    local result=$(generate_diff "$solution" "$guess" "$is_input_encoded")
 
     convert_feedback "$result"
 
