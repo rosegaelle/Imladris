@@ -65,33 +65,33 @@ filter_by_character_index() {
     local character_value=${2:-''}
     local is_included=${3:-true}
 
-    file_tmp=$(mktemp)
-    cp $FILEPATH_HINT_LIST $file_tmp
-
     if [ ! -z "$character_value" ]; then
         if (( "$character_index" < 1 || "$character_index" > "$WORD_LENGTH" )); then
-            echo "Error message goes here."
+            echo "Character index out of bound!"
             exit 1
         fi
 
+        file_tmp=$(mktemp)
+
         if $is_included; then
             character_value="${character_value:0:1}"
-            awk -v s="$character_value" "index(\$0, s) == $character_index" $FILEPATH_HINT_LIST > $file_tmp
+            awk '{print substr($0,'$character_index', '$character_index' - 1) ~ /'$character_value'/, $0}' < <(grep $character_value $FILEPATH_HINT_LIST) | grep 1 | awk '{print $2}' > $file_tmp
         else
             for (( i=0; i<$(get_word_length "$character_value"); i++ )); do
                 awk -v s=$(get_character_at "$character_value" "$i") "index(\$0, s) != $character_index" $FILEPATH_HINT_LIST > $file_tmp
                 cp $file_tmp $FILEPATH_HINT_LIST
             done
         fi
-    fi
 
-    mv $file_tmp $FILEPATH_HINT_LIST
+        mv $file_tmp $FILEPATH_HINT_LIST
+    fi
 }
+
 
 search_anagrams() {
     local letters_to_match=${1:-''}
 
-    for (( i=$WORD_LENGTH, j=$(get_file_line_count "$FILEPATH_ANAGRAMS") ; i<((1 + ${#letters_to_match})) && 0==$j ; i++, j=$(get_file_line_count "$FILEPATH_ANAGRAMS"))); do
+    for (( i=$WORD_LENGTH, j=$(get_file_line_count "$FILEPATH_ANAGRAMS"); i<((1 + ${#letters_to_match})) && 0==$j; i++, j=$(get_file_line_count "$FILEPATH_ANAGRAMS"))); do
         #+ find_anagrams "$FILEPATH_WORKBOOK" "${letters_to_match:0:i}" false false
         find_anagrams "$FILEPATH_WORKBOOK" "${letters_to_match:0:i}" false true
     done
@@ -117,7 +117,7 @@ cp $FILEPATH_ENHANCED_DICTIONARY $file_tmp_1
 
 # Safety check, in case of manual user input errors.
 LETTERS_INCLUDED=$(echo $LETTERS_INCLUDED$LETTER_AT_1$LETTER_AT_2$LETTER_AT_3$LETTER_AT_4$LETTER_AT_5$LETTERS_NOT_AT_1$LETTERS_NOT_AT_2$LETTERS_NOT_AT_3$LETTERS_NOT_AT_4$LETTERS_NOT_AT_5 | grep -o . | sort -u | tr -d "\n")
-if [ ! -z "$LETTERS_INCLUDED" ] ; then
+if [ ! -z "$LETTERS_INCLUDED" ]; then
     LETTERS_EXCLUDED=$(echo "$LETTERS_EXCLUDED" | sed "s/[$LETTERS_INCLUDED]//g")
 fi
 
@@ -161,6 +161,8 @@ filter_by_character_index 5 "$LETTERS_NOT_AT_5" false
 
 if [ true != $SKIP_ANAGRAMMER ] && (( $HINT_THRESHOLD < $(get_file_line_count "$FILEPATH_HINT_LIST") )); then
     # Parsing possible solutions and suggesting potential next guess(es).
+    print_message "Deriving anagrams based on the most occuring letters."
+
     unique_letters=$(grep -o . $FILEPATH_HINT_LIST | sort -u | tr -d '\n')
     file_tmp_3=$(mktemp)
     for (( i=0; i<${#unique_letters}; i++ )); do
