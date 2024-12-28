@@ -12,10 +12,10 @@ test() {
     local unit_test_to_run=${1:-0}
 
     source ../tmp/reset.sh #-
-    export SKIP_ANAGRAMMER=true
+    SKIP_ANAGRAMMER=true
 
     case $unit_test_to_run in
-        1)
+        0)
             test_0
         ;;
 
@@ -37,7 +37,109 @@ test() {
 
 
 test_0() {
-    print_message "[Test # 0] Placeholder."
+    local count=$(get_file_line_count "$FILEPATH_PREVIOUS_SOLUTIONS")
+    print_message "[Test # 0] Placeholder for # $count."
+
+
+    # Guess # 1
+    ZAP_LETTERS_INCLUDED_FROM_OUTPUT=true
+
+    tmp_guess_A1='U09BUkUK'
+    tmp_guess_A1=$(decode "$tmp_guess_A1") && echo $tmp_guess_A1
+
+    tmp_guess_feedback_A1='BBGYB'
+    transcribe "$tmp_guess_A1" "$tmp_guess_feedback_A1" "$ZAP_LETTERS_INCLUDED_FROM_OUTPUT"
+
+    GUESS_X=$(decode 'RU9TCg==') # EOS
+    GUESS_I=$(decode 'QVIK') # AR
+    GUESS_C=$(decode 'QQo=') # A
+    GUESS_P=$(decode 'Ugo=') # R
+
+    SKIP_ANAGRAMMER=true #-
+    eval $cmd_solve
+
+
+    # Guess # 2
+    ZAP_LETTERS_INCLUDED_FROM_OUTPUT=false
+
+    tmp_guess_A2='QkxVTlQK'
+    tmp_guess_A2=$(decode "$tmp_guess_A2") && echo $tmp_guess_A2
+
+    tmp_guess_feedback_A2='BBBYB'
+    transcribe "$tmp_guess_A2" "$tmp_guess_feedback_A2" "$ZAP_LETTERS_INCLUDED_FROM_OUTPUT"
+
+    GUESS_X='BELOSTU'
+    GUESS_I='ANR'
+    GUESS_P='NR'
+
+    GUESS_X=$(decode 'QkVMT1NUVQo=') # BELOSTU
+    GUESS_I=$(decode 'QU5SCg==') # ANR
+    GUESS_P=$(decode 'TlIK') # NR
+
+    SKIP_ANAGRAMMER=true # -
+    eval $cmd_solve
+
+
+    # Guess # 3
+    tmp_guess_A3='UFJBV04K'
+    tmp_guess_A3=$(decode "$tmp_guess_A3") && echo $tmp_guess_A3
+
+    tmp_guess_feedback_A3='BGGBG'
+    transcribe "$tmp_guess_A3" "$tmp_guess_feedback_A3" "$ZAP_LETTERS_INCLUDED_FROM_OUTPUT"
+
+    GUESS_X=$(decode 'QkVMT1BTVFVXCg==') # BELOPSTUW
+    GUESS_B=$(decode 'Ugo=') # R
+    GUESS_E=$(decode 'Tgo=') # N
+
+    SKIP_ANAGRAMMER=true # -
+    eval $cmd_solve
+
+
+    tmp_solution='R1JBSU4K'
+    tmp_solution=$(decode "$tmp_solution") && echo $tmp_solution
+
+    if [ ! -z "$tmp_solution" ]; then
+        tmp_guess_B1='Q1JBTkUK'
+        tmp_guess_B1=$(decode "$tmp_guess_B1") && echo $tmp_guess_B1
+
+
+        # Archive
+        tmp_solution=$(toLowerCase "$tmp_solution")
+        print_message "| **$count** | -> | | \`$(encode_upperCase $tmp_guess_A1)\`<br>\`$(encode_upperCase $tmp_guess_A2)\`<br>\`$(encode_upperCase $tmp_guess_A3)\`<br>\`$(encode_upperCase $tmp_solution)\` | $tmp_guess_feedback_A1.🟧🟧🟧🟧🟧<br>$tmp_guess_feedback_A2.🟧🟧🟧🟧🟧<br>$tmp_guess_feedback_A3.🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | \`$(encode_upperCase $tmp_guess_B1)\`<br>\`?\`<br>\`?\`<br>\`$(encode_upperCase $tmp_solution)\` | $tmp_guess_feedback_B1 🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | 🏆❓🙋🏾‍♀️🎭🤖🪢 |"
+        # ? print_message "$(toUpperCase "$tmp_solution")\t$(encode "$tmp_solution")\t$(encode_upperCase "$tmp_solution")"
+
+        convert_feedback "$tmp_guess_feedback_A1"
+        convert_feedback "$tmp_guess_feedback_A2"
+        convert_feedback "$tmp_guess_feedback_A3"
+
+        diff_with_feedback "$tmp_solution" "$tmp_guess_B1"
+
+
+        # Cleanup
+        filename='wordle_enhanced_workbook.txt'
+        print_message "Updating '$filename': REMOVE."
+        tmp_solution=$(toLowerCase "$tmp_solution")
+        grep -c "$tmp_solution" $filename
+        tmp_file=$(mktemp)
+        # + awk "!/$tmp_solution/" $filename > $tmp_file && mv $tmp_file $filename
+        grep -c "$tmp_solution" "$filename"
+
+        filename='rm_workbook_decoded.tmp'
+        print_message "Updating '$filename': ADD."
+        tmp_solution=$(toLowerCase "$tmp_solution")
+        grep -c "$tmp_solution" $filename
+        # + echo "$tmp_solution" >> "$filename"
+        grep -c "$tmp_solution" $filename
+        sort $filename | uniq -c | sort -nr | grep -v 1 # Checking for potential duplicates
+
+        filename=$FILEPATH_PREVIOUS_SOLUTIONS
+        print_message "Updating '$filename': ADD."
+        tmp_solution=$(encode $tmp_solution)
+        grep -c "$tmp_solution" $filename
+        # + echo "$tmp_solution" >> "$filename"
+        grep -c "$tmp_solution" $filename
+        sort $filename | uniq -c | sort -nr | grep -v 1 # Checking for potential duplicates
+    fi
 }
 
 
@@ -47,7 +149,7 @@ test_102() {
     capture_test_result "${FUNCNAME[0]}" "<0> $test_description" "" $(get_runtime "$test_start_time")
 
 
-    local tmp_solution='QUdBVEUK'
+    tmp_solution='QUdBVEUK'
     tmp_solution=$(decode "$tmp_solution") && echo $tmp_solution
 
     local tmp_file=$(mktemp)
@@ -70,9 +172,9 @@ test_102() {
 
     # Guess 1: 
     test_description='Guess # 1: ⬛⬛🟩⬛🟩.'
-    local ZAP_LETTERS_INCLUDED_FROM_OUTPUT=true
+    ZAP_LETTERS_INCLUDED_FROM_OUTPUT=true
 
-    local tmp_guess='U09BUkUK'
+    tmp_guess='U09BUkUK'
     tmp_guess=$(decode "$tmp_guess") && echo $tmp_guess
 
     diff_with_feedback "$tmp_solution" "$tmp_guess"
