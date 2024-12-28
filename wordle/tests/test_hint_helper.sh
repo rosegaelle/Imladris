@@ -50,10 +50,10 @@ test_0() {
     tmp_guess_feedback_A1='BBGYB'
     transcribe "$tmp_guess_A1" "$tmp_guess_feedback_A1" "$ZAP_LETTERS_INCLUDED_FROM_OUTPUT"
 
-    GUESS_X=$(decode 'RU9TCg==') # EOS
-    GUESS_I=$(decode 'QVIK') # AR
-    GUESS_C=$(decode 'QQo=') # A
-    GUESS_P=$(decode 'Ugo=') # R
+    GUESS_X=$(decode 'RU9TCg==')
+    GUESS_I=$(decode 'QVIK')
+    GUESS_C=$(decode 'QQo=')
+    GUESS_P=$(decode 'Ugo=')
 
     SKIP_ANAGRAMMER=true #-
     eval $cmd_solve
@@ -68,13 +68,9 @@ test_0() {
     tmp_guess_feedback_A2='BBBYB'
     transcribe "$tmp_guess_A2" "$tmp_guess_feedback_A2" "$ZAP_LETTERS_INCLUDED_FROM_OUTPUT"
 
-    GUESS_X='BELOSTU'
-    GUESS_I='ANR'
-    GUESS_P='NR'
-
-    GUESS_X=$(decode 'QkVMT1NUVQo=') # BELOSTU
-    GUESS_I=$(decode 'QU5SCg==') # ANR
-    GUESS_P=$(decode 'TlIK') # NR
+    GUESS_X=$(decode 'QkVMT1NUVQo=')
+    GUESS_I=$(decode 'QU5SCg==')
+    GUESS_P=$(decode 'TlIK')
 
     SKIP_ANAGRAMMER=true # -
     eval $cmd_solve
@@ -87,9 +83,9 @@ test_0() {
     tmp_guess_feedback_A3='BGGBG'
     transcribe "$tmp_guess_A3" "$tmp_guess_feedback_A3" "$ZAP_LETTERS_INCLUDED_FROM_OUTPUT"
 
-    GUESS_X=$(decode 'QkVMT1BTVFVXCg==') # BELOPSTUW
-    GUESS_B=$(decode 'Ugo=') # R
-    GUESS_E=$(decode 'Tgo=') # N
+    GUESS_X=$(decode 'QkVMT1BTVFVXCg==')
+    GUESS_B=$(decode 'Ugo=')
+    GUESS_E=$(decode 'Tgo=')
 
     SKIP_ANAGRAMMER=true # -
     eval $cmd_solve
