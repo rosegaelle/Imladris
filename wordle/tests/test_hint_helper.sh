@@ -104,6 +104,7 @@ test_0() {
     transcribe "$tmp_guess_A3" "$tmp_guess_feedback_A3" "$ZAP_LETTERS_INCLUDED_FROM_OUTPUT"
 
 
+    # Archive
     tmp_solution='Q0lHQVIK'
     tmp_solution=$(decode "$tmp_solution") && echo $tmp_solution
 
@@ -111,39 +112,8 @@ test_0() {
         tmp_guess_B1='Q1JBTkUK'
         tmp_guess_B1=$(decode "$tmp_guess_B1") && echo $tmp_guess_B1
 
-
-        # Archive
         tmp_solution=$(toLowerCase "$tmp_solution")
-
-        filename='../documentation/WORKBOOK_TRACKER.md'
-        echo "| **$count** | -> | | \`$(encode_upperCase $tmp_guess_A1)\`<br>\`$(encode_upperCase $tmp_guess_A2)\`<br>\`$(encode_upperCase $tmp_guess_A3)\` | $(convert_feedback "$tmp_guess_feedback_A1")<br>$(convert_feedback "$tmp_guess_feedback_A2")<br>$(convert_feedback "$tmp_guess_feedback_A3") | \`$(encode_upperCase $tmp_guess_B1)\`<br>\`?\`<br>\`$(encode_upperCase $tmp_solution)\` | $(diff_with_feedback "$tmp_solution" "$tmp_guess_B1")<br>🟧🟧🟧🟧🟧<br>$(convert_feedback "$FULL_MATCH") | 🏆❓🙋🏾‍♀️🎭🤖🪢 |" >> $filename
-
-
-        # Cleanup
-        filename='wordle_enhanced_workbook.txt'
-        print_message "Updating '$filename': REMOVE."
-        tmp_solution=$(toLowerCase "$tmp_solution")
-        grep -c "$tmp_solution" $filename
-        tmp_file=$(mktemp)
-        # + awk "!/$tmp_solution/" $filename > $tmp_file && mv $tmp_file $filename
-        grep -c "$tmp_solution" "$filename"
-
-        filename='rm_workbook_decoded.tmp'
-        print_message "Updating '$filename': ADD."
-        tmp_solution=$(toLowerCase "$tmp_solution")
-        grep -c "$tmp_solution" $filename
-        # + echo "$tmp_solution" >> "$filename"
-        grep -c "$tmp_solution" $filename
-        sort $filename | uniq -c | sort -nr | grep -v 1 # Checking for potential duplicates
-
-        filename=$FILEPATH_PREVIOUS_SOLUTIONS
-        print_message "Updating '$filename': ADD."
-        tmp_solution=$(encode $tmp_solution)
-        grep -c "$tmp_solution" $filename
-        # + echo "$tmp_solution" >> "$filename"
-        grep -c "$tmp_solution" $filename
-        sort $filename | uniq -c | sort -nr | grep -v 1 # Checking for potential duplicates
-    fi
+        echo "| **$count** | -> | | \`$(encode_upperCase $tmp_guess_A1)\`<br>\`$(encode_upperCase $tmp_guess_A2)\`<br>\`$(encode_upperCase $tmp_guess_A3)\` | $(convert_feedback "$tmp_guess_feedback_A1")<br>$(convert_feedback "$tmp_guess_feedback_A2")<br>$(convert_feedback "$tmp_guess_feedback_A3") | \`$(encode_upperCase $tmp_guess_B1)\`<br>\`?\`<br>\`$(encode_upperCase $tmp_solution)\` | $(diff_with_feedback "$tmp_solution" "$tmp_guess_B1")<br>🟧🟧🟧🟧🟧<br>$(convert_feedback "$FULL_MATCH") | 🏆❓🙋🏾‍♀️🎭🤖🪢 |"
 }
 
 
