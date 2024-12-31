@@ -114,6 +114,7 @@ test_0() {
 
         tmp_solution=$(toLowerCase "$tmp_solution")
         echo "| **$count** | -> | | \`$(encode_upperCase $tmp_guess_A1)\`<br>\`$(encode_upperCase $tmp_guess_A2)\`<br>\`$(encode_upperCase $tmp_guess_A3)\` | $(convert_feedback "$tmp_guess_feedback_A1")<br>$(convert_feedback "$tmp_guess_feedback_A2")<br>$(convert_feedback "$tmp_guess_feedback_A3") | \`$(encode_upperCase $tmp_guess_B1)\`<br>\`?\`<br>\`$(encode_upperCase $tmp_solution)\` | $(diff_with_feedback "$tmp_solution" "$tmp_guess_B1")<br>🟧🟧🟧🟧🟧<br>$(convert_feedback "$FULL_MATCH") | 🏆❓🙋🏾‍♀️🎭🤖🪢 |"
+    fi
 }
 
 
