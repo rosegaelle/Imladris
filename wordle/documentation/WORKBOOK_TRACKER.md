@@ -18,18 +18,7 @@
 ## Battle of the Bots 🆚
 
 ### Summary
-| Player | \# of Wins / 291 | Percentage |
-| ------ | ---------------- | ---------- |
-| 🏆🙋🏾‍♀️ | 8 | 2.75% |
-| 🎭 | 21 | 7.22% |
-| 🤖 | 67 | 23.02% |
-||
-| 🙋🏾‍♀️🎭 | 55 | 18.90% |
-| 🙋🏾‍♀️🤖 | 6 | 2.06% |
-| 🎭🤖 | 20 | 6.87% |
-||
-| 🪢 | 114 | 39.18% |
-||
+?
 
 
 
@@ -267,8 +256,8 @@
 | **227** | -> | | `U09BUkUK`<br>`Q1VCSVQK`<br>`VEhPU0UK | 🟨🟨⬛⬛🟩<br>⬛⬛⬛⬛🟨<br>🟩🟩🟩🟩🟩 | `VFJBQ0UK`<br>`?`<br>`?`<br>`VEhPU0UK` | 🟩⬛⬛⬛🟩<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | 🏆❓ |
 | **228** | -> | | `U09BUkUK`<br>`UExVTksK`<br>`VE9NQlMK`<br>`TU9JU1QK` | 🟨🟩⬛⬛⬛<br>⬛⬛⬛⬛⬛<br>🟨🟩🟨⬛🟨<br>🟩🟩🟩🟩🟩 | `VFJBQ0UK`<br>`?`<br>`?`<br>`TU9JU1QK` | 🟨⬛⬛⬛⬛<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | 🏆❓ |
 | **229** | -> | | `U09BUkUK`<br>`TllNUEgK`<br>`U0hBUkQK` | 🟩⬛🟩🟩⬛<br>⬛⬛⬛⬛🟨<br>🟩🟩🟩🟩🟩 | `VFJBQ0UK`<br>`?`<br>`?`<br>`U0hBUkQK` | ⬛🟨🟩⬛⬛<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | 🏆❓ |
-| **230** | -> | | `U09BUkUK`<br>`?`<br>`?`<br>`UExFQVQK` | ⬛⬛🟨⬛🟨<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | `VFJBQ0UK`<br>`?`<br>`?`<br>`UExFQVQK` | 🟨⬛🟨⬛🟨<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | 🏆❓ |
-| **231** | -> | | `U09BUkUK`<br>`?`<br>`?`<br>`QUxPRlQK` | ⬛🟨🟨⬛⬛<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | `VFJBQ0UK`<br>`?`<br>`?`<br>`QUxPRlQK` | 🟨⬛🟨⬛⬛<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | 🏆❓ |
+| **230** | -> | | `U09BUkUK`<br>`Q0hZTkQK`<br>`VEVQQUwK`<br>`UExFQVQK` | ⬛⬛🟨⬛🟨<br>⬛⬛⬛⬛⬛<br>🟨🟨🟨🟩🟨<br>🟩🟩🟩🟩🟩 | `VFJBQ0UK`<br>`?`<br>`?`<br>`UExFQVQK` | 🟨⬛🟨⬛🟨<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | 🏆❓ |
+| **231** | -> | | `U09BUkUK`<br>`Q0xJTlQK`<br>`QkFZT1UK`<br>`RkxPQVQK`<br>`QUxPRlQK` | ⬛🟨🟨⬛⬛<br>⬛🟩⬛⬛🟩<br>⬛🟨⬛🟨⬛<br>🟨🟩🟩🟨🟩<br>🟩🟩🟩🟩🟩 | `VFJBQ0UK`<br>`?`<br>`?`<br>`?`<br>`QUxPRlQK` | 🟨⬛🟨⬛⬛<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | 🏆❓ |
 | **232** | -> | | `U09BUkUK`<br>`?`<br>`?`<br>`U0tJTEwK` | 🟩⬛⬛⬛⬛<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | `VFJBQ0UK`<br>`?`<br>`?`<br>`U0tJTEwK` | ⬛⬛⬛⬛⬛<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | 🏆❓ |
 | **233** | -> | | `U09BUkUK`<br>`?`<br>`?`<br>`RUxERVIK` | ⬛⬛⬛🟨🟨<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | `VFJBQ0UK`<br>`?`<br>`?`<br>`RUxERVIK` | ⬛🟨⬛⬛🟨<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | 🏆❓ |
 | **234** | -> | | `U09BUkUK`<br>`?`<br>`?`<br>`RlJBTUUK` | ⬛⬛🟩🟨🟩<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | `VFJBQ0UK`<br>`?`<br>`?`<br>`RlJBTUUK` | ⬛🟩🟩⬛🟩<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | 🏆❓ |
