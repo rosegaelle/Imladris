@@ -18,17 +18,17 @@
 ## Battle of the Bots 🆚
 
 ### Summary
-| Player | \# of Wins / 290 | Percentage |
+| Player | \# of Wins / 291 | Percentage |
 | ------ | ---------------- | ---------- |
-| 🏆🙋🏾‍♀️ | 8 | 2.76% |
-| 🎭 | 21 | 7.24% |
-| 🤖 | 67 | 23.10% |
+| 🏆🙋🏾‍♀️ | 8 | 2.75% |
+| 🎭 | 21 | 7.22% |
+| 🤖 | 67 | 23.02% |
 ||
-| 🙋🏾‍♀️🎭 | 54 | 18.62% |
-| 🙋🏾‍♀️🤖 | 6 | 2.07% |
-| 🎭🤖 | 20 | 6.90% |
+| 🙋🏾‍♀️🎭 | 55 | 18.90% |
+| 🙋🏾‍♀️🤖 | 6 | 2.06% |
+| 🎭🤖 | 20 | 6.87% |
 ||
-| 🪢 | 114 | 39.31% |
+| 🪢 | 114 | 39.18% |
 ||
 
 
@@ -267,8 +267,8 @@
 | **227** | -> | | `U09BUkUK`<br>`Q1VCSVQK`<br>`VEhPU0UK | 🟨🟨⬛⬛🟩<br>⬛⬛⬛⬛🟨<br>🟩🟩🟩🟩🟩 | `VFJBQ0UK`<br>`?`<br>`?`<br>`VEhPU0UK` | 🟩⬛⬛⬛🟩<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | 🏆❓ |
 | **228** | -> | | `U09BUkUK`<br>`UExVTksK`<br>`VE9NQlMK`<br>`TU9JU1QK` | 🟨🟩⬛⬛⬛<br>⬛⬛⬛⬛⬛<br>🟨🟩🟨⬛🟨<br>🟩🟩🟩🟩🟩 | `VFJBQ0UK`<br>`?`<br>`?`<br>`TU9JU1QK` | 🟨⬛⬛⬛⬛<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | 🏆❓ |
 | **229** | -> | | `U09BUkUK`<br>`TllNUEgK`<br>`U0hBUkQK` | 🟩⬛🟩🟩⬛<br>⬛⬛⬛⬛🟨<br>🟩🟩🟩🟩🟩 | `VFJBQ0UK`<br>`?`<br>`?`<br>`U0hBUkQK` | ⬛🟨🟩⬛⬛<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | 🏆❓ |
-| **230** | -> | | `U09BUkUK`<br>`?`<br>`?`<br>`UExFQVQK` | ⬛⬛🟨⬛🟨<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | `VFJBQ0UK`<br>`?`<br>`?`<br>`UExFQVQK` | 🟨⬛🟨⬛🟨<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | 🏆❓ |
-| **231** | -> | | `U09BUkUK`<br>`?`<br>`?`<br>`QUxPRlQK` | ⬛🟨🟨⬛⬛<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | `VFJBQ0UK`<br>`?`<br>`?`<br>`QUxPRlQK` | 🟨⬛🟨⬛⬛<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | 🏆❓ |
+| **230** | -> | | `U09BUkUK`<br>`Q0hZTkQK`<br>`VEVQQUwK`<br>`UExFQVQK` | ⬛⬛🟨⬛🟨<br>⬛⬛⬛⬛⬛<br>🟨🟨🟨🟩🟨<br>🟩🟩🟩🟩🟩 | `VFJBQ0UK`<br>`?`<br>`?`<br>`UExFQVQK` | 🟨⬛🟨⬛🟨<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | 🏆❓ |
+| **231** | -> | | `U09BUkUK`<br>`Q0xJTlQK`<br>`QkFZT1UK`<br>`RkxPQVQK`<br>`QUxPRlQK` | ⬛🟨🟨⬛⬛<br>⬛🟩⬛⬛🟩<br>⬛🟨⬛🟨⬛<br>🟨🟩🟩🟨🟩<br>🟩🟩🟩🟩🟩 | `VFJBQ0UK`<br>`?`<br>`?`<br>`?`<br>`QUxPRlQK` | 🟨⬛🟨⬛⬛<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | 🏆❓ |
 | **232** | -> | | `U09BUkUK`<br>`?`<br>`?`<br>`U0tJTEwK` | 🟩⬛⬛⬛⬛<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | `VFJBQ0UK`<br>`?`<br>`?`<br>`U0tJTEwK` | ⬛⬛⬛⬛⬛<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | 🏆❓ |
 | **233** | -> | | `U09BUkUK`<br>`?`<br>`?`<br>`RUxERVIK` | ⬛⬛⬛🟨🟨<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | `VFJBQ0UK`<br>`?`<br>`?`<br>`RUxERVIK` | ⬛🟨⬛⬛🟨<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | 🏆❓ |
 | **234** | -> | | `U09BUkUK`<br>`?`<br>`?`<br>`RlJBTUUK` | ⬛⬛🟩🟨🟩<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | `VFJBQ0UK`<br>`?`<br>`?`<br>`RlJBTUUK` | ⬛🟩🟩⬛🟩<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | 🏆❓ |
@@ -1368,3 +1368,4 @@
 | **1328** | -> | | `U09BUkUK`<br>`VU5JVFkK`<br>`UElMVU0K`<br>`UFVQSUwK` | ⬛⬛⬛⬛⬛<br>🟨⬛🟨⬛⬛<br>🟩🟨🟨🟨⬛<br>🟩🟩🟩🟩🟩< | `Q1JBTkUK`<br>`U0xPVEgK`<br>`QklMTFkK`<br>`UFVQSUwK` | ⬛⬛⬛⬛⬛<br>⬛🟨⬛⬛⬛<br>⬛🟨🟨⬛⬛<br>🟩🟩🟩🟩🟩 | 🪢 |
 | **1329** | -> | | `U09BUkUK`<br>`TFlNUEgK`<br>`U1dBVEgK` | 🟩⬛🟩⬛⬛<br>⬛⬛⬛⬛🟩<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`U1BJTFQK`<br>`U1dBVEgK` | ⬛⬛🟩⬛⬛<br>🟩⬛⬛⬛🟨<br>🟩🟩🟩🟩🟩 | 🪢 |
 | **1330** | -> | | `U09BUkUK`<br>`UExJTksK`<br>`U0VUVVAK`<br>`U1RFRVAK` | 🟩⬛⬛⬛🟨<br>🟨⬛⬛⬛⬛<br>🟩🟨🟨⬛🟩<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`U1BMSVQK`<br>`U0VUVVAK`<br>`U1RFRVAK` | ⬛⬛⬛⬛🟨<br>🟩🟨⬛⬛🟨<br>🟩🟨🟨⬛🟩<br>🟩🟩🟩🟩🟩 | 🪢 |
+| **1331** | -> | | `U09BUkUK`<br>`Q0xVTVAK`<br>`Qk9OVVMK` | 🟨🟩⬛⬛⬛<br>⬛⬛🟨⬛⬛<br>🟩🟩🟩🟩🟩 | `Q1JBTkUK`<br>`UElOT1QK`<br>`Qk9OR08K`<br>`Qk9OVVMK` | ⬛⬛⬛🟨⬛<br>⬛⬛🟩🟨⬛<br>🟩🟩🟩⬛⬛<br>🟩🟩🟩🟩🟩 | 🙋🏾‍♀️🎭 |
