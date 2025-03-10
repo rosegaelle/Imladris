@@ -75,7 +75,8 @@ filter_by_character_index() {
 
         if $is_included; then
             character_value="${character_value:0:1}"
-            awk '{print substr($0,'$character_index', '$character_index' - 1) ~ /'$character_value'/, $0}' < <(grep $character_value $FILEPATH_HINT_LIST) | grep 1 | awk '{print $2}' > $file_tmp
+            # awk '{print substr($0,'$character_index', '$character_index' - 1) ~ /'$character_value'/, $0}' < <(grep $character_value $FILEPATH_HINT_LIST) | grep 1 | awk '{print $2}' > $file_tmp
+            awk -v s="$character_value" "index(\$0, s) == $character_index" $FILEPATH_HINT_LIST > $file_tmp
         else
             for (( i=0; i<$(get_word_length "$character_value"); i++ )); do
                 awk -v s=$(get_character_at "$character_value" "$i") "index(\$0, s) != $character_index" $FILEPATH_HINT_LIST > $file_tmp
@@ -92,7 +93,6 @@ search_anagrams() {
     local letters_to_match=${1:-''}
 
     for (( i=$WORD_LENGTH, j=$(get_file_line_count "$FILEPATH_ANAGRAMS"); i<((1 + ${#letters_to_match})) && 0==$j; i++, j=$(get_file_line_count "$FILEPATH_ANAGRAMS"))); do
-        #+ find_anagrams "$FILEPATH_WORKBOOK" "${letters_to_match:0:i}" false false
         find_anagrams "$FILEPATH_WORKBOOK" "${letters_to_match:0:i}" false true
     done
 }
