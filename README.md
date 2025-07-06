@@ -13,19 +13,30 @@ Sample Usage:<br/>
 `cleanup_by_file_ext.sh -d "~/Downloads" -e "TMP"`
 
 
-## Games
-### [Puzzle 1](games/puzzle1.py)
+## Entertainment
+### Puzzles
+#### [Puzzle 1](puzzles/puzzle_1.py)
 <!-- @ToDo: Add description. --> 
 
-### [Puzzle 2](games/puzzle2.py)
+#### [Puzzle 2](puzzles/puzzle_2.py)
 Also see [FreeGames](http://www.grantjenks.com/docs/freegames/)
 <!-- @ToDo: Add description. --> 
 
 
-## Memes
-### [favourite_memes](memes/favourite_memes.md)
+
+### Illustrations
+#### [favourite_memes](illustrations/favourite_memes.md)
+#### [favourite_comics](illustrations/favourite_comics.md)
+
 - Why?<br/>
 - Because I am a proud Millennial. ;-)<br/>
 - Seriously, why???<br/>
 - Okay, fine! Does <i>this</i> satisfy your curiosity?! [#XKCD712](https://xkcd.com/512)<br/><br/>
 ![](https://imgs.xkcd.com/comics/alternate_currency.png)
+
+#### [favourite_comics](illustrations/favourite_comics.md)
+
+
+### Games
+#### Wordle
+* [Instructions](.wordle/README.md)
