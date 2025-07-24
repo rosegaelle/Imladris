@@ -39,7 +39,7 @@ capture_test_result() {
 
     print_message "[$test_name] $test_description"
     print_message "$test_result"
-    print_message "Runtime: $test_duration milliseconds."
+    print_message "Runtime: $test_duration milliseconds $(convert_time "$test_duration")."
 
     #ToDo: Save to file --> XML? JSON?
 }
