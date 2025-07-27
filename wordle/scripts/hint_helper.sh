@@ -204,7 +204,7 @@ else
 fi
 
 runtime=$(get_runtime "$basetime")
-print_message "Runtime: $runtime milliseconds.\n$(convert_time "$runtime")"
+print_message "Runtime: $runtime $(convert_time "$runtime") milliseconds."
 
 print_message "It is done."
 date -r $(( (($basetime + $runtime)) / 1000))
