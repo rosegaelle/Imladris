@@ -18,17 +18,17 @@
 ## Battle of the Bots 🆚
 
 ### Summary
-| Player | \# of Wins / 438 | Percentage |
+| Player | \# of Wins / 439 | Percentage |
 | ------ | ---------------- | ---------- |
 | 🏆🙋🏾‍♀️ | 6 | 1.37% |
-| 🎭 | 12 | 2.74% |
-| 🤖 | 99 | 22.60% |
+| 🎭 | 12 | 2.73% |
+| 🤖 | 99 | 22.55% |
 ||
-| 🙋🏾‍♀️🎭 | 115 | 26.26% |
+| 🙋🏾‍♀️🎭 | 115 | 26.20% |
 | 🙋🏾‍♀️🤖 | 6 | 1.37% |
-| 🎭🤖 | 21 | 4.79% |
+| 🎭🤖 | 21 | 4.78% |
 ||
-| 🪢 | 179 | 40.87% |
+| 🪢 | 180 | 41.00% |
 ||
 
 
@@ -313,11 +313,11 @@
 | **273** | -> | | `U09BUkUK`<br>`Q0xJTlQK`<br>`QUxMT1kK`<br>`QUxMT1cK` | ⬛🟨🟨⬛⬛<br>⬛🟩⬛⬛⬛<br>🟩🟩🟩🟩⬛<br>🟩🟩🟩🟩🟩 | `VFJBQ0UK`<br>`?`<br>`?`<br>`QUxMT1cK` | ⬛⬛🟨⬛⬛<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | 🏆❓ |
 | **274** | -> | | `U09BUkUK`<br>`RElDVFUK`<br>`UFJFTVkK`<br>`UkVORVcK` | ⬛⬛⬛🟨🟨<br>⬛⬛⬛⬛⬛<br>⬛🟨🟨⬛⬛<br>🟩🟩🟩🟩🟩 | `VFJBQ0UK`<br>`?`<br>`?`<br>`UkVORVcK` | ⬛🟨⬛⬛🟨<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | 🏆❓ |
 | **275** | -> | | `U09BUkUK`<br>`RElDVFUK`<br>`VEhFSVIK` | ⬛⬛⬛🟨🟨<br>⬛🟨⬛🟨⬛<br>🟩🟩🟩🟩🟩 | `VFJBQ0UK`<br>`?`<br>`?`<br>`VEhFSVIK` | 🟩🟨⬛⬛🟨<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | 🏆❓ |
-| **276** | -> | | `U09BUkUK`<br>`?`<br>`?`<br>`U0xPU0gK` | 🟩🟨⬛⬛⬛<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | `VFJBQ0UK`<br>`?`<br>`?`<br>`U0xPU0gK` | ⬛⬛⬛⬛⬛<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | 🏆❓ |
-| **277** | -> | | `U09BUkUK`<br>`?`<br>`?`<br>`UFVSR0UK` | ⬛⬛⬛🟨🟩<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | `VFJBQ0UK`<br>`?`<br>`?`<br>`UFVSR0UK` | ⬛🟨⬛⬛🟩<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | 🏆❓ |
-| **278** | -> | | `U09BUkUK`<br>`?`<br>`?`<br>`Q0hFU1QK` | 🟨⬛⬛⬛🟨<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | `VFJBQ0UK`<br>`?`<br>`?`<br>`Q0hFU1QK` | 🟨⬛⬛🟨🟨<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | 🏆❓ |
-| **279** | -> | | `U09BUkUK`<br>`?`<br>`?`<br>`REVQT1QK` | ⬛🟨⬛⬛🟨<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | `VFJBQ0UK`<br>`?`<br>`?`<br>`REVQT1QK` | 🟨⬛⬛⬛🟨<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | 🏆❓ |
-| **280** | -> | | `U09BUkUK`<br>`?`<br>`?`<br>`RVBPWFkK` | ⬛🟨⬛⬛🟨<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | `VFJBQ0UK`<br>`?`<br>`?`<br>`RVBPWFkK` | ⬛⬛⬛⬛🟨<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | 🏆❓ |
+| **276** | -> | | `U09BUkUK`<br>`TElOVFkK`<br>`U1BPT0wK`<br>`U0xPU0gK` | 🟩🟨⬛⬛⬛<br>🟨⬛⬛⬛⬛<br>🟩⬛🟩⬛🟨<br>🟩🟩🟩🟩🟩 | `VFJBQ0UK`<br>`?`<br>`?`<br>`U0xPU0gK` | ⬛⬛⬛⬛⬛<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | 🏆❓ |
+| **277** | -> | | `U09BUkUK`<br>`Q1VCSVQK`<br>`UFVSR0UK` | ⬛⬛⬛🟨🟩<br>⬛🟩⬛⬛⬛<br>🟩🟩🟩🟩🟩 | `VFJBQ0UK`<br>`?`<br>`?`<br>`UFVSR0UK` | ⬛🟨⬛⬛🟩<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | 🏆❓ |
+| **278** | -> | | `U09BUkUK`<br>`VU5MSUQK`<br>`U1lUSEUK`<br>`Q0hFU1QK` | 🟨⬛⬛⬛🟨<br>⬛⬛⬛⬛⬛<br>🟨⬛🟨🟨🟨 | `VFJBQ0UK`<br>`?`<br>`?`<br>`Q0hFU1QK` | 🟨⬛⬛🟨🟨<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | 🏆❓ |
+| **279** | -> | | `U09BUkUK`<br>`QkxJTkQK`<br>`REVQT1QK` | ⬛🟨⬛⬛🟨<br>⬛⬛⬛⬛🟨<br>🟩🟩🟩🟩🟩 | `VFJBQ0UK`<br>`?`<br>`?`<br>`REVQT1QK` | 🟨⬛⬛⬛🟨<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | 🏆❓ |
+| **280** | -> | | `U09BUkUK`<br>`QkxJTkQK`<br>`RVBPWFkK` | ⬛🟨⬛⬛🟨<br>⬛⬛⬛⬛⬛<br>🟩🟩🟩🟩🟩 | `VFJBQ0UK`<br>`?`<br>`?`<br>`RVBPWFkK` | ⬛⬛⬛⬛🟨<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | 🏆❓ |
 | **281** | -> | | `U09BUkUK`<br>`?`<br>`?`<br>`TllNUEgK` | ⬛⬛⬛⬛⬛<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | `VFJBQ0UK`<br>`?`<br>`?`<br>`TllNUEgK` | ⬛⬛⬛⬛⬛<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | 🏆❓ |
 | **282** | -> | | `U09BUkUK`<br>`?`<br>`?`<br>`Rk9VTkQK` | ⬛🟩⬛⬛⬛<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | `VFJBQ0UK`<br>`?`<br>`?`<br>`Rk9VTkQK` | ⬛⬛⬛⬛⬛<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | 🏆❓ |
 | **283** | -> | | `U09BUkUK`<br>`?`<br>`?`<br>`U0hBTEwK` | 🟩⬛🟩⬛⬛<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | `VFJBQ0UK`<br>`?`<br>`?`<br>`U0hBTEwK` | ⬛⬛🟩⬛⬛<br>🟧🟧🟧🟧🟧<br>🟧🟧🟧🟧🟧<br>🟩🟩🟩🟩🟩 | 🏆❓ |
@@ -1536,3 +1536,4 @@
 | **1496** | -> | | `U09BUkUK`<br>`Q0xVTkcK`<br>`UVVBS0UK` | ⬛⬛🟩⬛🟩<br>⬛⬛🟨⬛⬛<br>🟩🟩🟩🟩🟩 | `U0xBVEUK`<br>`UFJJQ0sK`<br>`UVVBS0UK` | ⬛⬛🟩⬛🟩<br>⬛⬛⬛⬛🟨<br>🟩🟩🟩🟩🟩 | 🪢 |
 | **1497** | -> | | `U09BUkUK`<br>`TFlNUEgK`<br>`Uk9URUQK`<br>`Wk9ORVIK`<br>`R09GRVIK` | ⬛🟩⬛🟨🟨<br>⬛⬛⬛⬛⬛<br>🟨🟩⬛🟩⬛<br>⬛🟩⬛🟩🟩<br>🟩🟩🟩🟩🟩 | `U0xBVEUK`<br>`RElORVIK`<br>`V0hPTVAK`<br>`Uk9DS1kK`<br>`Qk9YRVIK`<br>`R09GRVIK` | ⬛⬛⬛⬛🟨<br>⬛⬛⬛🟩🟩<br>⬛⬛🟨⬛⬛<br>🟨🟩⬛⬛⬛<br>⬛🟩⬛🟩🟩<br>🟩🟩🟩🟩🟩 | 🙋🏾‍♀️🎭 |
 | **1498** | -> | | `U09BUkUK`<br>`TElOVFkK`<br>`SEFVTlQK` | ⬛⬛🟨⬛⬛<br>⬛⬛🟨🟨⬛<br>🟩🟩🟩🟩🟩 | `U0xBVEUK`<br>`VEFST1QK`<br>`RE9VR0gK`<br>`SEFVTlQK` | ⬛⬛🟨🟨⬛<br>⬛🟩⬛⬛🟩<br>⬛⬛🟩⬛🟨<br>🟩🟩🟩🟩🟩 | 🙋🏾‍♀️🎭 |
+| **1499** | -> | | `U09BUkUK`<br>`SElQTFkK`<br>`V0hPTEUK` | ⬛🟨⬛⬛🟩<br>🟨⬛⬛🟩⬛<br>🟩🟩🟩🟩🟩 | `U0xBVEUK`<br>`QklOR08K`<br>`V0hPTEUK` | ⬛🟨⬛⬛🟩<br>⬛⬛⬛⬛🟨<br>🟩🟩🟩🟩🟩 | 🪢 |
