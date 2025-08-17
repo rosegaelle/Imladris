@@ -521,3 +521,20 @@ alert() {
 
     eval $quasimodo
 }
+
+
+has_vowel() {
+    local word=${1:-''}
+
+    # Though 'Y' is considered a consonnant when at the start of a word,
+    # Y-starting words in the Wordle dictionary also happen to include other vowels,
+    # Hence why there is no need for additional validation in this case.
+    ## https://www.merriam-webster.com/grammar/why-y-is-sometimes-a-vowel-usage
+    ## https://github.com/rosegaelle/Imladris/blob/main/wordle/assets/dictionary_full.txt
+    if [[ "$word" =~ [AEIOUYaeiouy] ]]; then
+        echo true
+    else 
+        print_message "No vowel found in '$word'."
+        echo false
+    fi
+}
