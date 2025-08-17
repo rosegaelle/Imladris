@@ -93,7 +93,11 @@ search_anagrams() {
     local letters_to_match=${1:-''}
 
     for (( i=$WORD_LENGTH, j=$(get_file_line_count "$FILEPATH_ANAGRAMS"); i<((1 + ${#letters_to_match})) && 0==$j; i++, j=$(get_file_line_count "$FILEPATH_ANAGRAMS"))); do
-        find_anagrams "$FILEPATH_WORKBOOK" "${letters_to_match:0:i}" false true
+        word="${letters_to_match:0:i}"
+
+        if [[ true == $(has_vowel "$word") ]]; then
+            find_anagrams "$FILEPATH_WORKBOOK" "${letters_to_match:0:i}" false true
+        fi
     done
 }
 
@@ -204,7 +208,7 @@ else
 fi
 
 runtime=$(get_runtime "$basetime")
-print_message "Runtime: $runtime $(convert_time "$runtime") milliseconds."
+print_message "Runtime: $runtime milliseconds $(convert_time "$runtime")."
 
 print_message "It is done."
 date -r $(( (($basetime + $runtime)) / 1000))
