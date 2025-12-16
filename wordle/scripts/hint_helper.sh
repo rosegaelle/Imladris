@@ -1,4 +1,3 @@
-
 #!/usr/local/bin/bash
 
 #############################################################
@@ -9,7 +8,27 @@ source "$(dirname "$0")/utils.sh"
 source "$(dirname "$0")/dictionary.sh"
 source "$(dirname "$0")/anagrammer.sh"
 
+
 set -euo pipefail
+
+# Initialize global variables to avoid "unbound variable" errors
+LETTER_AT_1=""
+LETTER_AT_2=""
+LETTER_AT_3=""
+LETTER_AT_4=""
+LETTER_AT_5=""
+FILEPATH_WORKBOOK=""
+LETTERS_INCLUDED=""
+LETTERS_NOT_AT_1=""
+LETTERS_NOT_AT_2=""
+LETTERS_NOT_AT_3=""
+LETTERS_NOT_AT_4=""
+LETTERS_NOT_AT_5=""
+SKIP_ANAGRAMMER=""
+LETTERS_EXCLUDED=""
+ZAP_LETTERS_INCLUDED_FROM_OUTPUT=""
+unique_letters_by_occurence=""
+
 
 help() {
     echo "Hello, Wordle!"
@@ -87,11 +106,11 @@ filter_by_character_index() {
             for (( i=0; i<$(get_word_length "$character_value"); i++ )); do
                 local ch=$(get_character_at "$character_value" "$i")
                 awk -v idx="$character_index" -v s="$ch" 'substr($0, idx, 1) != s { print $0 }' "$work" > "$file_tmp"
-                mv -- "$file_tmp" "$work"
+                move_file "$file_tmp" "$work"
             done
         fi
 
-        mv -- "$file_tmp" "$FILEPATH_HINT_LIST"
+        move_file "$file_tmp" "$FILEPATH_HINT_LIST"
     fi
 }
 
@@ -121,7 +140,7 @@ prepare_dictionary "$FILEPATH_WORKBOOK"
 
 # Making a working copy in the event the original file needs to be reused in subsequent runs.
 file_tmp_1=$(mktemp)
-cp -- "$FILEPATH_ENHANCED_DICTIONARY" "$file_tmp_1"
+copy_file "$FILEPATH_ENHANCED_DICTIONARY" "$file_tmp_1"
 
 
 # Processing hints, if any.
@@ -136,7 +155,7 @@ fi
 file_tmp_2=$(mktemp)
 file_after_exclude=""
 if [ -z "$LETTERS_EXCLUDED" ]; then
-    cp -- "$file_tmp_1" "$file_tmp_2"
+    copy_file "$file_tmp_1" "$file_tmp_2"
     file_after_exclude="$file_tmp_2"
 else
     work="$file_tmp_1"
@@ -155,9 +174,10 @@ cleanup_file "$file_tmp_1"
 
 ## Letters to include.
 if [ -z "$LETTERS_INCLUDED" ]; then
-    cp -- "$file_after_exclude" "$FILEPATH_HINT_LIST"
+    copy_file "$file_after_exclude" "$FILEPATH_HINT_LIST"
 else
     work="$file_after_exclude"
+
     for (( i=0; i<${#LETTERS_INCLUDED}; i++ )); do
         ch=$(get_character_at "$LETTERS_INCLUDED" "$i")
         file_tmp_inc=$(mktemp)
@@ -167,7 +187,8 @@ else
         fi
         work="$file_tmp_inc"
     done
-    mv -- "$work" "$FILEPATH_HINT_LIST"
+
+    move_file "$work" "$FILEPATH_HINT_LIST"
 fi
 cleanup_file "$file_after_exclude"
 

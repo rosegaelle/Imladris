@@ -4,10 +4,9 @@
 # Author: @rosegaelle                                       #
 #############################################################
 
-
-source $(dirname $0)/../scripts/utils.sh
-source $(dirname $0)/../scripts/anagrammer.sh
-source $(dirname $0)/../tests/test_utils.sh
+source $(dirname $0)/../../Imladris/wordle/scripts/utils.sh
+source $(dirname $0)/../../Imladris/wordle/scripts/anagrammer.sh
+source $(dirname $0)/../../Imladris/wordle/tests/test_utils.sh
 
 
 FILEPATH_WORKBOOK="$WORKSPACE_DIR/wordle_enhanced_workbook.txt"

@@ -6,6 +6,7 @@
 
 source "$(dirname "$0")/utils.sh"
 
+
 set -euo pipefail
 
 prepare_dictionary() {
@@ -13,16 +14,16 @@ prepare_dictionary() {
 
     # If a workbook path was provided and is valid, copy it to the enhanced dictionary.
     if [ -n "$filepath_workbook" ] && validate_file_dependency "$filepath_workbook"; then
-        cp -- "$filepath_workbook" "$FILEPATH_ENHANCED_DICTIONARY"
+        copy_file "$filepath_workbook" "$FILEPATH_ENHANCED_DICTIONARY"
         show_file_line_count "$FILEPATH_ENHANCED_DICTIONARY"
         return 0
     fi
 
     # create temporary files and ensure cleanup on exit/interruption
-    local file_dictionary_full
-    local file_previous_solutions
-    local file_tmp_1
-    local file_tmp_2
+    local file_dictionary_full=""
+    local file_previous_solutions=""
+    local file_tmp_1=""
+    local file_tmp_2=""
 
     file_dictionary_full=$(mktemp) || { print_message "Failed to create temp file"; return 1; }
     file_previous_solutions=$(mktemp) || { cleanup_file "$file_dictionary_full"; print_message "Failed to create temp file"; return 1; }

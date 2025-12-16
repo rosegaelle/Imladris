@@ -4,8 +4,8 @@
 # Author: @rosegaelle                                       #
 #############################################################
 
-source $(dirname $0)/../scripts/utils.sh
-source $(dirname $0)/../tests/test_utils.sh
+source $(dirname $0)/../../Imladris/wordle/scripts/utils.sh
+source $(dirname $0)/../../Imladris/wordle/tests/test_utils.sh
 
 
 test() {
@@ -128,11 +128,11 @@ test_102() {
     tmp_solution=$(decode "$tmp_solution") && echo $tmp_solution
 
     local tmp_file=$(mktemp)
-    cp $FILEPATH_ENHANCED_DICTIONARY $tmp_file
+    copy_file "$FILEPATH_ENHANCED_DICTIONARY" "$tmp_file"
     FILEPATH_ENHANCED_DICTIONARY="$tmp_file"
 
     tmp_file=$(mktemp)
-    cp $FILEPATH_PREVIOUS_SOLUTIONS $tmp_file
+    copy_file "$FILEPATH_PREVIOUS_SOLUTIONS" "$tmp_file"
     FILEPATH_PREVIOUS_SOLUTIONS="$tmp_file"
 
     if ((0 == $(grep -ic "$tmp_solution" $FILEPATH_ENHANCED_DICTIONARY))); then
@@ -141,7 +141,7 @@ test_102() {
 
         print_message "Updating '$FILEPATH_PREVIOUS_SOLUTIONS'."
         tmp_file=$(mktemp)
-        awk "!/$(encode "$tmp_solution")/" $FILEPATH_PREVIOUS_SOLUTIONS > $tmp_file && mv $tmp_file $FILEPATH_PREVIOUS_SOLUTIONS
+        awk "!/$(encode "$tmp_solution")/" $FILEPATH_PREVIOUS_SOLUTIONS > $tmp_file && move_file "$tmp_file" "$FILEPATH_PREVIOUS_SOLUTIONS"
     fi
 
 
