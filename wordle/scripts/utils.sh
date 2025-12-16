@@ -71,11 +71,38 @@ decode() {
 validate_file_dependency() {
     local filename=${1:-''}
 
-    if [ ! -f "$filename" ]; then
+    if [ ! -n "$filename" ] || [ ! -f "$filename" ]; then
         printf "File '%s' does not exist.\n" "$filename" >&2
         return 1
     fi
+
     return 0
+}
+
+
+move_file() {
+    local current_filepath=${1:-''}
+    local new_filename=${2:-''}
+
+    if { validate_file_dependency "$current_filepath"; } && [ -n "$new_filename" ]; then
+        mv -- "$current_filepath" "$new_filename" || return 1
+    else
+        printf "Unable to move file '%s' to '%s'.\n" "$current_filepath" "$new_filename" >&2
+        #? return 1
+    fi
+}
+
+
+copy_file() {
+    local current_filepath=${1:-''}
+    local new_filename=${2:-''}
+
+    if { validate_file_dependency "$current_filepath"; } && [ -n "$new_filename" ]; then
+        cp -- "$current_filepath" "$new_filename" || return 1
+    else
+        printf "Unable to copy file '%s' to '%s'.\n" "$current_filepath" "$new_filename" >&2
+        #? return 1
+    fi
 }
 
 

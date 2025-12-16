@@ -6,6 +6,7 @@
 
 source "$(dirname "$0")/utils.sh"
 
+
 set -euo pipefail
 
 find_anagrams() {

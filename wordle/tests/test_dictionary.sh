@@ -4,8 +4,7 @@
 # Author: @rosegaelle                                       #
 #############################################################
 
-source $(dirname $0)/../scripts/utils.sh
-
+source $(dirname $0)/../../Imladris/wordle/scripts/utils.sh
 
 
 # ToDo
