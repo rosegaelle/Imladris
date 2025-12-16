@@ -28,49 +28,54 @@ print_message() {
 
 toLowerCase() {
     local user_input=${1:-''}
-    echo $user_input | tr '[:upper:]' '[:lower:]'
+    printf '%s' "$user_input" | tr '[:upper:]' '[:lower:]'
 }
 
 
 toUpperCase() {
     local user_input=${1:-''}
-    echo $user_input | tr '[:lower:]' '[:upper:]'
+    printf '%s' "$user_input" | tr '[:lower:]' '[:upper:]'
 }
 
 
 sanitize_input() {
     local user_input=${1:-''}
-    echo $(toLowerCase "$user_input") | tr -cd '[:alpha:]'
+    toLowerCase "$user_input" | tr -cd '[:alpha:]'
 }
 
 
 encode() {
     local word=${1:-''}
-    [ ! -z "$word" ] && echo $(toLowerCase $word) | base64
+    if [ -n "$word" ]; then
+        toLowerCase "$word" | base64
+    fi
 }
 
 
 encode_upperCase() {
     local word=${1:-''}
-    [ ! -z "$word" ] && echo $(toUpperCase $word) | base64
+    if [ -n "$word" ]; then
+        toUpperCase "$word" | base64
+    fi
 }
 
 
 decode() {
     local word=${1:-''}
-    [ ! -z "$word" ] && toLowerCase $(echo "$word" | base64 -d)
+    if [ -n "$word" ]; then
+        printf '%s' "$word" | base64 -d 2>/dev/null | tr '[:upper:]' '[:lower:]'
+    fi
 }
 
 
 validate_file_dependency() {
     local filename=${1:-''}
 
-    if [ ! -f $filename ]; then
-        echo "File '$filename' does not exist."
-        exit 1
-    else
-        return 0
+    if [ ! -f "$filename" ]; then
+        printf "File '%s' does not exist.\n" "$filename" >&2
+        return 1
     fi
+    return 0
 }
 
 
@@ -78,7 +83,7 @@ empty_or_create_file() {
     local filename=${1:-''}
 
     if [ -e "$filename" ]; then
-        true > "$filename"
+        : > "$filename"
     else
         touch "$filename"
     fi
@@ -87,16 +92,18 @@ empty_or_create_file() {
 
 cleanup_file() {
     local filename=${1:-''}
-    [ -e "$filename" ] && $(rm "$filename")
+    [ -e "$filename" ] && rm -f -- "$filename"
 }
 
 
 is_file_not_empty() {
     local filename=${1:-''}
 
-    validate_file_dependency "$filename"
+    validate_file_dependency "$filename" || { echo false; return 0; }
 
-    if (( $(wc -l < "$filename") > 0 )); then
+    local lines
+    lines=$(wc -l < "$filename" | tr -d ' ')
+    if (( lines > 0 )); then
         echo true
     else
         echo false
@@ -107,16 +114,18 @@ is_file_not_empty() {
 get_file_line_count() {
     local filename=${1:-''}
 
-    validate_file_dependency "$filename"
-    echo $(wc -l < "$filename")
+    validate_file_dependency "$filename" || return 1
+    wc -l < "$filename" | tr -d ' '
 }
 
 
 show_file_line_count() {
     local filename=${1:-''}
 
-    validate_file_dependency "$filename"
-    echo $(wc -l "$filename")
+    validate_file_dependency "$filename" || return 1
+    local count
+    count=$(wc -l < "$filename" | tr -d ' ')
+    printf "%s %s\n" "$count" "$filename"
 }
 
 
@@ -242,15 +251,15 @@ convert_time() {
     printf "=> "
 
     if [ $d -gt 0 ]; then
-        [ $d = 1 ] && printf "%d day " $d || printf "%d days " $d
+        [ $d = 1 ] && printf "%d day " $d || printf "%d days" $d
     fi
 
     if [ $h -gt 0 ]; then
-        [ $h = 1 ] && printf "%d hour " $h || printf "%d hours " $h
+        [ $h = 1 ] && printf "%d hour " $h || printf "%d hours" $h
     fi
 
     if [ $m -gt 0 ]; then
-        [ $m = 1 ] && printf "%d minute " $m || printf "%d minutes " $m
+        [ $m = 1 ] && printf "%d minute " $m || printf "%d minutes" $m
     fi
 
     if [ $d = 0 ] && [ $h = 0 ] && [ $m = 0 ]; then
