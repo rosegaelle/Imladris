@@ -1,13 +1,15 @@
+
 #!/usr/local/bin/bash
 
 #############################################################
 # Author: @rosegaelle                                       #
 #############################################################
 
-source $(dirname $0)/utils.sh
-source $(dirname $0)/dictionary.sh
-source $(dirname $0)/anagrammer.sh
+source "$(dirname "$0")/utils.sh"
+source "$(dirname "$0")/dictionary.sh"
+source "$(dirname "$0")/anagrammer.sh"
 
+set -euo pipefail
 
 help() {
     echo "Hello, Wordle!"
@@ -35,21 +37,21 @@ help() {
 while getopts ":a:b:c:d:e:f:i:m:n:o:p:q:s:x:z:" flag
 do
     case "${flag}" in
-        a) LETTER_AT_1=$(sanitize_input ${OPTARG});;
-        b) LETTER_AT_2=$(sanitize_input ${OPTARG});;
-        c) LETTER_AT_3=$(sanitize_input ${OPTARG});;
-        d) LETTER_AT_4=$(sanitize_input ${OPTARG});;
-        e) LETTER_AT_5=$(sanitize_input ${OPTARG});;
-        f) FILEPATH_WORKBOOK=${OPTARG};;
-        i) LETTERS_INCLUDED=$(sanitize_input ${OPTARG});;
-        m) LETTERS_NOT_AT_1=$(sanitize_input ${OPTARG});;
-        n) LETTERS_NOT_AT_2=$(sanitize_input ${OPTARG});;
-        o) LETTERS_NOT_AT_3=$(sanitize_input ${OPTARG});;
-        p) LETTERS_NOT_AT_4=$(sanitize_input ${OPTARG});;
-        q) LETTERS_NOT_AT_5=$(sanitize_input ${OPTARG});;
-        s) SKIP_ANAGRAMMER=${OPTARG};;
-        x) LETTERS_EXCLUDED=$(sanitize_input ${OPTARG});;
-        z) ZAP_LETTERS_INCLUDED_FROM_OUTPUT=$(sanitize_input ${OPTARG:-false});;
+        a) LETTER_AT_1=$(sanitize_input "${OPTARG}");;
+        b) LETTER_AT_2=$(sanitize_input "${OPTARG}");;
+        c) LETTER_AT_3=$(sanitize_input "${OPTARG}");;
+        d) LETTER_AT_4=$(sanitize_input "${OPTARG}");;
+        e) LETTER_AT_5=$(sanitize_input "${OPTARG}");;
+        f) FILEPATH_WORKBOOK="${OPTARG}";;
+        i) LETTERS_INCLUDED=$(sanitize_input "${OPTARG}");;
+        m) LETTERS_NOT_AT_1=$(sanitize_input "${OPTARG}");;
+        n) LETTERS_NOT_AT_2=$(sanitize_input "${OPTARG}");;
+        o) LETTERS_NOT_AT_3=$(sanitize_input "${OPTARG}");;
+        p) LETTERS_NOT_AT_4=$(sanitize_input "${OPTARG}");;
+        q) LETTERS_NOT_AT_5=$(sanitize_input "${OPTARG}");;
+        s) SKIP_ANAGRAMMER="${OPTARG}";;
+        x) LETTERS_EXCLUDED=$(sanitize_input "${OPTARG}");;
+        z) ZAP_LETTERS_INCLUDED_FROM_OUTPUT=$(sanitize_input "${OPTARG:-false}");;
         *) help
         exit 1;;
     esac
@@ -65,26 +67,31 @@ filter_by_character_index() {
     local character_value=${2:-''}
     local is_included=${3:-true}
 
-    if [ ! -z "$character_value" ]; then
-        if (( "$character_index" < 1 || "$character_index" > "$WORD_LENGTH" )); then
-            echo "Character index out of bound!"
-            exit 1
+    if [ -n "$character_value" ]; then
+        if (( character_index < 1 || character_index > WORD_LENGTH )); then
+            print_message "Character index out of bound!"
+            return 1
         fi
 
-        file_tmp=$(mktemp)
+        local file_tmp=$(mktemp) || return 1
 
-        if $is_included; then
-            character_value="${character_value:0:1}"
-            # awk '{print substr($0,'$character_index', '$character_index' - 1) ~ /'$character_value'/, $0}' < <(grep $character_value $FILEPATH_HINT_LIST) | grep 1 | awk '{print $2}' > $file_tmp
-            awk -v s="$character_value" "index(\$0, s) == $character_index" $FILEPATH_HINT_LIST > $file_tmp
+        if [[ "$is_included" == true ]]; then
+            #- awk '{print substr($0,'$character_index', '$character_index' - 1) ~ /'$character_value'/, $0}' < <(grep $character_value $FILEPATH_HINT_LIST) | grep 1 | awk '{print $2}' > $file_tmp #-
+            #+ awk -v s="$character_value" "index(\$0, s) == $character_index" $FILEPATH_HINT_LIST > $file_tmp #+
+
+            local ch=${character_value:0:1}
+            ##+ awk -v s="$character_value" "index(\$0, s) == $character_index" $FILEPATH_HINT_LIST > $file_tmp #+
+            awk -v idx="$character_index" -v s="$ch" 'substr($0, idx, 1) == s { print $0 }' "$FILEPATH_HINT_LIST" > "$file_tmp" ###+
         else
+            local work="$FILEPATH_HINT_LIST"
             for (( i=0; i<$(get_word_length "$character_value"); i++ )); do
-                awk -v s=$(get_character_at "$character_value" "$i") "index(\$0, s) != $character_index" $FILEPATH_HINT_LIST > $file_tmp
-                cp $file_tmp $FILEPATH_HINT_LIST
+                local ch=$(get_character_at "$character_value" "$i")
+                awk -v idx="$character_index" -v s="$ch" 'substr($0, idx, 1) != s { print $0 }' "$work" > "$file_tmp"
+                mv -- "$file_tmp" "$work"
             done
         fi
 
-        mv $file_tmp $FILEPATH_HINT_LIST
+        mv -- "$file_tmp" "$FILEPATH_HINT_LIST"
     fi
 }
 
@@ -114,39 +121,55 @@ prepare_dictionary "$FILEPATH_WORKBOOK"
 
 # Making a working copy in the event the original file needs to be reused in subsequent runs.
 file_tmp_1=$(mktemp)
-cp $FILEPATH_ENHANCED_DICTIONARY $file_tmp_1
+cp -- "$FILEPATH_ENHANCED_DICTIONARY" "$file_tmp_1"
 
 
 # Processing hints, if any.
 
 # Safety check, in case of manual user input errors.
-LETTERS_INCLUDED=$(echo $LETTERS_INCLUDED$LETTER_AT_1$LETTER_AT_2$LETTER_AT_3$LETTER_AT_4$LETTER_AT_5$LETTERS_NOT_AT_1$LETTERS_NOT_AT_2$LETTERS_NOT_AT_3$LETTERS_NOT_AT_4$LETTERS_NOT_AT_5 | grep -o . | sort -u | tr -d "\n")
+LETTERS_INCLUDED=$(echo "$LETTERS_INCLUDED$LETTER_AT_1$LETTER_AT_2$LETTER_AT_3$LETTER_AT_4$LETTER_AT_5$LETTERS_NOT_AT_1$LETTERS_NOT_AT_2$LETTERS_NOT_AT_3$LETTERS_NOT_AT_4$LETTERS_NOT_AT_5" | grep -o . | sort -u | tr -d "\n")
 if [ ! -z "$LETTERS_INCLUDED" ]; then
     LETTERS_EXCLUDED=$(echo "$LETTERS_EXCLUDED" | sed "s/[$LETTERS_INCLUDED]//g")
 fi
 
 ## Letters to exclude.
 file_tmp_2=$(mktemp)
+file_after_exclude=""
 if [ -z "$LETTERS_EXCLUDED" ]; then
-    cp $file_tmp_1 $file_tmp_2
+    cp -- "$file_tmp_1" "$file_tmp_2"
+    file_after_exclude="$file_tmp_2"
 else
+    work="$file_tmp_1"
     for (( i=0; i<${#LETTERS_EXCLUDED}; i++ )); do
-        grep -iv $(get_character_at "$LETTERS_EXCLUDED" "$i") $file_tmp_1 > $file_tmp_2
-        cp $file_tmp_2 $file_tmp_1
+        ch=$(get_character_at "$LETTERS_EXCLUDED" "$i")
+        file_tmp_2=$(mktemp)
+        grep -ivF -- "$ch" "$work" > "$file_tmp_2" || true
+        if [ "$work" != "$file_tmp_1" ]; then
+            cleanup_file "$work"
+        fi
+        work="$file_tmp_2"
     done
+    file_after_exclude="$work"
 fi
 cleanup_file "$file_tmp_1"
 
 ## Letters to include.
 if [ -z "$LETTERS_INCLUDED" ]; then
-    cp $file_tmp_2 $FILEPATH_HINT_LIST
+    cp -- "$file_after_exclude" "$FILEPATH_HINT_LIST"
 else
+    work="$file_after_exclude"
     for (( i=0; i<${#LETTERS_INCLUDED}; i++ )); do
-        grep -i $(get_character_at "$LETTERS_INCLUDED" "$i") $file_tmp_2 > $FILEPATH_HINT_LIST
-        cp $FILEPATH_HINT_LIST $file_tmp_2
+        ch=$(get_character_at "$LETTERS_INCLUDED" "$i")
+        file_tmp_inc=$(mktemp)
+        grep -iF -- "$ch" "$work" > "$file_tmp_inc" || true
+        if [ "$work" != "$file_after_exclude" ]; then
+            cleanup_file "$work"
+        fi
+        work="$file_tmp_inc"
     done
+    mv -- "$work" "$FILEPATH_HINT_LIST"
 fi
-cleanup_file "$file_tmp_2"
+cleanup_file "$file_after_exclude"
 
 ## Letters at specific positions.
 filter_by_character_index 1 "$LETTER_AT_1"
@@ -163,17 +186,18 @@ filter_by_character_index 4 "$LETTERS_NOT_AT_4" false
 filter_by_character_index 5 "$LETTERS_NOT_AT_5" false
 
 
-if [ true != $SKIP_ANAGRAMMER ] && (( $HINT_THRESHOLD < $(get_file_line_count "$FILEPATH_HINT_LIST") )); then
+if [[ "${SKIP_ANAGRAMMER:-true}" != "true" ]] && (( HINT_THRESHOLD < $(get_file_line_count "$FILEPATH_HINT_LIST") )); then
     # Parsing possible solutions and suggesting potential next guess(es).
     print_message "Deriving anagrams based on the most occuring letters."
 
-    unique_letters=$(grep -o . $FILEPATH_HINT_LIST | sort -u | tr -d '\n')
+    unique_letters=$(grep -o . "$FILEPATH_HINT_LIST" | sort -u | tr -d '\n')
     file_tmp_3=$(mktemp)
     for (( i=0; i<${#unique_letters}; i++ )); do
-        grep -o $FILEPATH_HINT_LIST -e $(get_character_at "$unique_letters" "$i") | sort | uniq -c >> $file_tmp_3
+        ch=$(get_character_at "$unique_letters" "$i")
+        grep -o -i -e "$ch" "$FILEPATH_HINT_LIST" | sort | uniq -c >> "$file_tmp_3" || true
     done
 
-    unique_letters_by_occurence=$(cat $file_tmp_3 | sort -rk4 | uniq -c | awk '{ print $3}' | tr -d '\n')
+    unique_letters_by_occurence=$(sort -rk1 "$file_tmp_3" | awk '{ print $2 }' | tr -d '\n' || true)
     print_message "Unique letters by occurence: '$unique_letters_by_occurence'."
     cleanup_file "$file_tmp_3"
 
@@ -184,7 +208,7 @@ if [ true != $SKIP_ANAGRAMMER ] && (( $HINT_THRESHOLD < $(get_file_line_count "$
 
     empty_or_create_file "$FILEPATH_ANAGRAMS"
 
-    if [ true == $ZAP_LETTERS_INCLUDED_FROM_OUTPUT ]; then
+    if [[ "${ZAP_LETTERS_INCLUDED_FROM_OUTPUT:-false}" == "true" ]]; then
         search_anagrams "$unique_letters_by_occurence_unconfirmed"
     else
         search_anagrams "$unique_letters_by_occurence"
@@ -194,17 +218,17 @@ fi
 
 # Displaying the top possibilities.
 sort_by_rank "$FILEPATH_HINT_LIST" "$unique_letters_by_occurence"
-if [[ true == $(is_file_not_empty "$FILEPATH_HINT_LIST") ]] && (( $HINT_THRESHOLD >= $(get_file_line_count "$FILEPATH_HINT_LIST") )); then
+if [[ "$(is_file_not_empty "$FILEPATH_HINT_LIST")" == "true" ]] && (( HINT_THRESHOLD >= $(get_file_line_count "$FILEPATH_HINT_LIST") )); then
     if (( 1 == $(get_file_line_count "$FILEPATH_HINT_LIST") )); then
         print_message "Eureka!"
         alert "Eureka !"
-        toUpperCase $(cat $FILEPATH_HINT_LIST)
+        toUpperCase "$(cat "$FILEPATH_HINT_LIST")"
     else
         print_message "Ranked top $(get_file_line_count "$FILEPATH_HINT_LIST") possibilities:"
-        cat $FILEPATH_HINT_LIST
+        cat "$FILEPATH_HINT_LIST"
     fi
 else
-        show_file_line_count "$FILEPATH_HINT_LIST"
+    show_file_line_count "$FILEPATH_HINT_LIST"
 fi
 
 runtime=$(get_runtime "$basetime")
