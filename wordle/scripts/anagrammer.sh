@@ -15,12 +15,12 @@ find_anagrams() {
     local must_fully_match=${3:-true}
     local skip_duplicate_characters=${4:-false}
 
-    local unique_letters_to_match_count
-    local unique_letters_matched_count
-    local common_letters
-    local is_match
-    local candidate
-    local uniq_count_candidate
+    local unique_letters_to_match_count=""
+    local unique_letters_matched_count=""
+    local common_letters=""
+    local is_match=""
+    local candidate=""
+    local uniq_count_candidate=""
 
     # Reset the output file.
     empty_or_create_file "$FILEPATH_ANAGRAMS"
