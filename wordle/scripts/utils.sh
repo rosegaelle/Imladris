@@ -12,6 +12,7 @@ export LETTER_EXCLUDED='B'
 export LETTER_NOT_AT='Y'
 export LETTER_AT='G'
 tmp=$(printf "%$(echo $WORD_LENGTH)s") && export FULL_MATCH=$(echo ${tmp// /$LETTER_AT}) # printf "$LETTER_AT%.0s" {1..$WORD_LENGTH}
+tmp=$(printf "%$(echo $WORD_LENGTH)s") && export FULL_MISS=$(echo ${tmp// /$LETTER_EXCLUDED}) # printf "$LETTER_EXCLUDED%.0s" {1..$WORD_LENGTH}
 
 export FILEPATH_DICTIONARY='https://raw.githubusercontent.com/rosegaelle/Imladris/main/wordle/assets/dictionary_full.txt'
 export FILEPATH_PREVIOUS_SOLUTIONS='https://raw.githubusercontent.com/rosegaelle/Imladris/main/wordle/assets/workbook.txt'
