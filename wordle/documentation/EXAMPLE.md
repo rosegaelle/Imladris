@@ -2,7 +2,7 @@
 
 ## Prep
 ```sh
-export WORKSPACE_DIR="~/$WORKSPACE"
+export WORKSPACE_DIR="~/$WORKSPACE_FOLDER_PATH"
 
 export FILEPATH_SCRIPT="$WORKSPACE_DIR/scripts/hint_helper.sh"
 wc -l $FILEPATH_SCRIPT
@@ -10,7 +10,7 @@ wc -l $FILEPATH_SCRIPT
 
 * This is an optional step, if you intend to use the `-f` flag.
 ```sh
-export FILEPATH_WORKBOOK="~/$WORKSPACE/assets/$FILEPATH_WORDLE_ENHANCED_WORKBOOK"
+export FILEPATH_WORKBOOK="~/$WORKSPACE_FOLDER_PATH/assets/$FILEPATH_WORDLE_ENHANCED_WORKBOOK"
 wc -l $FILEPATH_WORKBOOK
 ```
 
