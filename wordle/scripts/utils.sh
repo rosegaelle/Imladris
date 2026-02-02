@@ -48,7 +48,7 @@ sanitize_input() {
 encode() {
     local word=${1:-''}
     if [ -n "$word" ]; then
-        toLowerCase "$word" | base64
+        printf "$(sanitize_input "$word")\n" | base64
     fi
 }
 
@@ -56,7 +56,7 @@ encode() {
 encode_upperCase() {
     local word=${1:-''}
     if [ -n "$word" ]; then
-        toUpperCase "$word" | base64
+        printf "$(toUpperCase $(sanitize_input "$word"))\n" | base64
     fi
 }
 
