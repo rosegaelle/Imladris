@@ -4,11 +4,12 @@
 # Author: @rosegaelle                                       #
 #############################################################
 
-source $(dirname $0)/../../Imladris/wordle/scripts/utils.sh
-source $(dirname $0)/../../Imladris/wordle/scripts/anagrammer.sh
-source $(dirname $0)/../../Imladris/wordle/tests/test_utils.sh
+source "$(dirname "$0")/test_utils.sh"
+source "$(dirname "$0")/../scripts/utils.sh"
+source "$(dirname "$0")/../scripts/anagrammer.sh"
 
 
+export WORKSPACE_DIR="$WORKSPACE_FOLDER_PATH" # ToDo: Adjust $WORKSPACE_FOLDER_PATH as needed.
 FILEPATH_WORKBOOK="$WORKSPACE_DIR/wordle_enhanced_workbook.txt"
 declare -a TEST_ANAGRAMS_1 TEST_ANAGRAMS_2 TEST_ANAGRAMS_3 TEST_ANAGRAMS_4 TEST_ANAGRAMS_5
 

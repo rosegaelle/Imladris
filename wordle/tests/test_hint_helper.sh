@@ -4,8 +4,8 @@
 # Author: @rosegaelle                                       #
 #############################################################
 
-source $(dirname $0)/../../Imladris/wordle/scripts/utils.sh
-source $(dirname $0)/../../Imladris/wordle/tests/test_utils.sh
+source "$(dirname "$0")/test_utils.sh"
+source "$(dirname "$0")/../scripts/utils.sh"
 
 
 test() {
