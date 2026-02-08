@@ -542,7 +542,7 @@ transcribe() {
     LETTERS_NOT_AT_5=$(remove_duplicate_characters "$LETTERS_NOT_AT_5")
     LETTERS_EXCLUDED=$(remove_duplicate_characters "$LETTERS_EXCLUDED")
 
-    print_message "export GUESS_X='$LETTERS_EXCLUDED'\nexport GUESS_I='$LETTERS_INCLUDED'\nexport GUESS_A='$LETTER_AT_1'\nexport GUESS_B='$LETTER_AT_2'\nexport GUESS_C='$LETTER_AT_3'\nexport GUESS_D='$LETTER_AT_4'\nexport GUESS_E='$LETTER_AT_5'\nexport GUESS_M='$LETTERS_NOT_AT_1'\nexport GUESS_N='$LETTERS_NOT_AT_2'\nexport GUESS_O='$LETTERS_NOT_AT_3'\nexport GUESS_P='$LETTERS_NOT_AT_4'\nexport GUESS_Q='$LETTERS_NOT_AT_5'"
+    print_message "export GUESS_X='$LETTERS_EXCLUDED'\nexport GUESS_I='$LETTERS_INCLUDED'\nexport GUESS_A='$LETTER_AT_1'\nexport GUESS_B='$LETTER_AT_2'\nexport GUESS_C='$LETTER_AT_3'\nexport GUESS_D='$LETTER_AT_4'\nexport GUESS_E='$LETTER_AT_5'\nexport GUESS_M='$LETTERS_NOT_AT_1'\nexport GUESS_N='$LETTERS_NOT_AT_2'\nexport GUESS_O='$LETTERS_NOT_AT_3'\nexport GUESS_P='$LETTERS_NOT_AT_4'\nexport GUESS_Q='$LETTERS_NOT_AT_5'\n"
 }
 
 
