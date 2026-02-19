@@ -18,17 +18,17 @@
 ## Battle of the Bots 🆚
 
 ### Summary
-| Player | \# of Wins / 644 | Percentage |
+| Player | \# of Wins / 645 | Percentage |
 | ------ | ---------------- | ---------- |
 | 🏆🙋🏾‍♀️ | 6 | 0.93% |
 | 🎭 | 12 | 1.86% |
-| 🤖 | 142 | 22.05% |
+| 🤖 | 142 | 22.02% |
 ||
-| 🙋🏾‍♀️🎭 | 190 | 29.50% |
+| 🙋🏾‍♀️🎭 | 191 | 29.61% |
 | 🙋🏾‍♀️🤖 | 6 | 0.93% |
 | 🎭🤖 | 21 | 3.26% |
 ||
-| 🪢 | 267 | 41.46% |
+| 🪢 | 267 | 41.40% |
 ||
 
 
@@ -1742,3 +1742,4 @@
 | **1702** | -> | | `U09BUkUK`<br>`S0lUVUwK`<br>`U0tVTEwK` | 🟩⬛⬛⬛⬛<br>🟨⬛⬛🟨🟩<br>🟩🟩🟩🟩🟩 | `U0xBVEUK`<br>`Q0hJTEwK`<br>`U0tVTEwK` | 🟩🟨⬛⬛⬛<br>⬛⬛⬛🟩🟩<br>🟩🟩🟩🟩🟩 | 🪢 |
 | **1703** | -> | | `U09BUkUK`<br>`VFVNSUQK`<br>`Uk9PU1QK` | 🟨🟩⬛🟨⬛<br>🟨⬛⬛⬛⬛<br>🟩🟩🟩🟩🟩 | `U0xBVEUK`<br>`VFJPVVQK`<br>`Uk9PU1QK` | 🟨⬛⬛🟨⬛<br>⬛🟨🟩⬛🟩<br>🟩🟩🟩🟩🟩 | 🪢 |
 | **1704** | -> | | `U09BUkUK`<br>`VVBMSVQK`<br>`U1FVQUQK` 🔁 | 🟩⬛🟨⬛⬛<br>🟨⬛⬛⬛⬛<br>🟩🟩🟩🟩🟩 | `U0xBVEUK`<br>`Q1VSVlkK`<br>`U1FVQUQK` 🔁 | 🟩⬛🟨⬛⬛<br>⬛🟨⬛⬛⬛<br>🟩🟩🟩🟩🟩 | 🪢 |
+| **1705** | -> | | `U09BUkUK`<br>`TElOVFkK`<br>`TU9HVUwK` | ⬛🟩⬛⬛⬛<br>🟨⬛⬛⬛⬛<br>🟩🟩🟩🟩🟩 | `U0xBVEUK`<br>`RElMTFkK`<br>`UFJPV0wK`<br>`TU9HVUwK` | ⬛🟨⬛⬛⬛<br>⬛⬛🟨⬛⬛<br>⬛⬛🟨⬛🟩<br>🟩🟩🟩🟩🟩 | 🙋🏾‍♀️🎭 |
