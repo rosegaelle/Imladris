@@ -20,7 +20,8 @@
 | ----- | ---------- | ---------- | ------------- |
 | **1** | `Y2lnYXIK` | `Q0lHQVIK` | `0`, `1689`   |
 | **2** | `c3F1YWQK` | `U1FVQUQK` | `296`, `1704` |
-| **3** | `YXdha2UK` | `QVdBS0UK` | `5`, `1708`   |
+| **3** | `YXdha2UK` | `QVdBS0UK` | `4`, `1708`   |
+| **4** | `bGluZW4K` | `TElORU4K` | `51`, `1718`  |
 ||
 
 
@@ -28,17 +29,17 @@
 ## Battle of the Bots 🆚
 
 ### Summary
-| Player | \# of Wins / 660 | Percentage |
+| Player | \# of Wins / 661 | Percentage |
 | ------ | ---------------- | ---------- |
 | 🏆🙋🏾‍♀️ | 6 | 0.91% |
 | 🎭 | 12 | 1.82% |
-| 🤖 | 143 | 21.67% |
+| 🤖 | 143 | 21.63% |
 ||
-| 🙋🏾‍♀️🎭 | 197 | 29.85% |
+| 🙋🏾‍♀️🎭 | 197 | 29.80% |
 | 🙋🏾‍♀️🤖 | 6 | 0.91% |
 | 🎭🤖 | 21 | 3.18% |
 ||
-| 🪢 | 275 | 41.67% |
+| 🪢 | 276 | 41.75% |
 ||
 
 
@@ -1764,7 +1765,8 @@
 | **1715** | -> | | `U09BUkUK`<br>`VU5CSUQK`<br>`VU5CSUQK` | ⬛⬛🟨🟩⬛<br>⬛⬛⬛⬛🟨<br>🟩🟩🟩🟩🟩 | `U0xBVEUK`<br>`Q09STlkK`<br>`SFlEUkEK` | ⬛⬛🟨⬛⬛<br>⬛⬛🟨⬛🟨<br>🟩🟩🟩🟩🟩 | 🪢 |
 | **1716** | -> | | `U09BUkUK`<br>`TFVOR0kK`<br>`RkxVS0UK` | ⬛⬛⬛⬛🟩<br>🟨🟨⬛⬛⬛<br>🟩🟩🟩🟩🟩 | `U0xBVEUK`<br>`QklQT0QK`<br>`RkxVS0UK` | ⬛🟩⬛⬛🟩<br>⬛⬛⬛⬛⬛<br>🟩🟩🟩🟩🟩 | 🪢 |
 | **1717** | -> | | `U09BUkUK`<br>`VVBMSVQK`<br>`U0xJTUUK` | 🟩⬛⬛⬛🟩<br>⬛⬛🟨🟨⬛<br>🟩🟩🟩🟩🟩 | `U0xBVEUK`<br>`U0xJQ0UK`<br>`U0xJREUK`<br>`U0xJTUUK` | 🟩🟩⬛⬛🟩<br>🟩🟩🟩⬛🟩<br>🟩🟩🟩⬛🟩<br>🟩🟩🟩🟩🟩 | 🙋🏾‍♀️🎭 |
-| **1718** | -> | | `U09BUkUK`<br>`TElORFkK`<br>`TElORU4K` | ⬛⬛⬛⬛🟨<br>🟩🟩🟩⬛⬛<br>🟩🟩🟩🟩🟩 | `U0xBVEUK`<br>`UklWRU4K`<br>`TElLRU4K`<br>`TElORU4K` | ⬛🟨⬛⬛🟨<br>⬛🟩⬛🟩🟩<br>🟩🟩⬛🟩🟩<br>🟩🟩🟩🟩🟩 | 🙋🏾‍♀️🎭 |
+| **1718** 🔁 | -> | | `U09BUkUK`<br>`TElORFkK`<br>`TElORU4K` | ⬛⬛⬛⬛🟨<br>🟩🟩🟩⬛⬛<br>🟩🟩🟩🟩🟩 | `U0xBVEUK`<br>`UklWRU4K`<br>`TElLRU4K`<br>`TElORU4K` | ⬛🟨⬛⬛🟨<br>⬛🟩⬛🟩🟩<br>🟩🟩⬛🟩🟩<br>🟩🟩🟩🟩🟩 | 🙋🏾‍♀️🎭 |
 | **1719** | -> | | `U09BUkUK`<br>`TElORFkK`<br>`VEVVQ0gK`<br>`VEhFRlQK` | ⬛⬛⬛⬛🟨<br>⬛⬛⬛⬛⬛<br>🟩🟨⬛⬛🟨<br>🟩🟩🟩🟩🟩 | `U0xBVEUK`<br>`VElURVIK`<br>`VEVNUFQK`<br>`VEhFRlQK` | ⬛⬛⬛🟨🟨<br>🟩⬛🟨🟨⬛<br>🟩🟨⬛⬛🟩<br>🟩🟩🟩🟩🟩 | 🪢 |
 | **1720** | -> | | `U09BUkUK`<br>`UExJTksK`<br>`U0hFRVAK` | 🟩⬛⬛⬛🟨<br>🟨⬛⬛⬛⬛<br>🟩🟩🟩🟩🟩 | `U0xBVEUK`<br>`SElSRUQK`<br>`U0hFRU4K`<br>`U0hFRVAK` | 🟩⬛⬛⬛🟨<br>🟨⬛⬛🟩⬛<br>🟩🟩🟩🟩⬛<br>🟩🟩🟩🟩🟩 | 🙋🏾‍♀️🎭 |
+| **1721** | -> | | `U09BUkUK`<br>`TElOVFkK`<br>`SlVOS1kK`<br>`R1VOS1kK` | ⬛⬛⬛⬛⬛<br>⬛⬛🟩⬛🟩<br>⬛🟩🟩🟩🟩<br>🟩🟩🟩🟩🟩 | `U0xBVEUK`<br>`Q1JPTlkK`<br>`UFVER1kK`<br>`R1VOS1kK` | ⬛⬛⬛⬛⬛<br>⬛⬛⬛🟨🟩<br>⬛🟩⬛🟨🟩<br>🟩🟩🟩🟩🟩 | 🪢 |
 ||
