@@ -22,6 +22,7 @@
 | **2** | `c3F1YWQK` | `U1FVQUQK` | `296`, `1704` |
 | **3** | `YXdha2UK` | `QVdBS0UK` | `4`, `1708`   |
 | **4** | `bGluZW4K` | `TElORU4K` | `51`, `1718`  |
+| **5** | `Z3JhZGUK` | `R1JBREUK` | `15`, `1730`  |
 ||
 
 
@@ -29,17 +30,17 @@
 ## Battle of the Bots 🆚
 
 ### Summary
-| Player | \# of Wins / 670 | Percentage |
+| Player | \# of Wins / 671 | Percentage |
 | ------ | ---------------- | ---------- |
-| 🏆🙋🏾‍♀️ | 6 | 0.90% |
+| 🏆🙋🏾‍♀️ | 6 | 0.89% |
 | 🎭 | 12 | 1.79% |
-| 🤖 | 145 | 21.64% |
+| 🤖 | 145 | 21.61% |
 ||
-| 🙋🏾‍♀️🎭 | 199 | 29.70% |
-| 🙋🏾‍♀️🤖 | 6 | 0.90% |
+| 🙋🏾‍♀️🎭 | 199 | 29.66% |
+| 🙋🏾‍♀️🤖 | 6 | 0.89% |
 | 🎭🤖 | 21 | 3.13% |
 ||
-| 🪢 | 281 | 41.94% |
+| 🪢 | 282 | 42.03% |
 ||
 
 
@@ -1777,5 +1778,6 @@
 | **1727** | -> | | `U09BUkUK`<br>`UExJTksK`<br>`U01FTEwK` | 🟩⬛⬛⬛🟨<br>⬛🟨⬛⬛⬛<br>🟩🟩🟩🟩🟩 | `U0xBVEUK`<br>`SU1QRUwK`<br>`U01FTEwK` | 🟩🟨⬛⬛🟨<br>⬛🟩⬛🟨🟩<br>🟩🟩🟩🟩🟩 | 🪢 |
 | **1728** | -> | | `U09BUkUK`<br>`Q0hZTkQK`<br>`QVBORUEK`<br>`RUFURU4K` | ⬛⬛🟨⬛🟨<br>⬛⬛⬛🟨⬛<br>🟨⬛🟨🟩⬛<br>🟩🟩🟩🟩🟩 | `U0xBVEUK`<br>`VFJFRUQK`<br>`RUFURU4K` | ⬛⬛🟨🟨🟨<br>🟨⬛🟨🟩⬛<br>🟩🟩🟩🟩🟩 | 🤖 |
 | **1729** | -> | | `U09BUkUK`<br>`Q0xJTlQK`<br>`QU5LTEUK` | ⬛⬛🟨⬛🟩<br>⬛🟨⬛🟨⬛<br>🟩🟩🟩🟩🟩 | `U0xBVEUK`<br>`QkFOR1MK`<br>`QU5LTEUK` | ⬛🟨🟨⬛🟩<br>⬛🟨🟨⬛⬛<br>🟩🟩🟩🟩🟩 | 🪢 |
-| **1730** | -> | | `U09BUkUK`<br>`R1JBWkUK`<br>`R1JBREUK` | ⬛⬛🟩🟨🟩<br>🟩🟩🟩⬛🟩<br>🟩🟩🟩🟩🟩 | `U0xBVEUK`<br>`UFJJQ0sK`<br>`R1JBVkUK`<br>`R1JBREUK` | ⬛⬛🟩⬛🟩<br>⬛🟩⬛⬛⬛<br>🟩🟩🟩⬛🟩<br>🟩🟩🟩🟩🟩 | 🙋🏾‍♀️🎭 |
+| **1730** 🔁 | -> | | `U09BUkUK`<br>`R1JBWkUK`<br>`R1JBREUK` | ⬛⬛🟩🟨🟩<br>🟩🟩🟩⬛🟩<br>🟩🟩🟩🟩🟩 | `U0xBVEUK`<br>`UFJJQ0sK`<br>`R1JBVkUK`<br>`R1JBREUK` | ⬛⬛🟩⬛🟩<br>⬛🟩⬛⬛⬛<br>🟩🟩🟩⬛🟩<br>🟩🟩🟩🟩🟩 | 🙋🏾‍♀️🎭 |
+| **1731** | -> | | `U09BUkUK`<br>`Q0xJTlQK`<br>`RlJBVUQK`<br>`RFJBTUEK` | ⬛⬛🟩🟨⬛<br>⬛⬛⬛⬛⬛<br>⬛🟩🟩⬛🟨<br>🟩🟩🟩🟩🟩 | `U0xBVEUK`<br>`Q0hVUk4K`<br>`QlJBVk8K`<br>`RFJBTUEK` | ⬛⬛🟩⬛⬛<br>⬛⬛⬛🟨⬛<br>⬛🟩🟩⬛⬛<br>🟩🟩🟩🟩🟩 | 🪢 |
 ||
