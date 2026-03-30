@@ -207,6 +207,13 @@ filter_by_character_index 4 "$LETTERS_NOT_AT_4" false
 filter_by_character_index 5 "$LETTERS_NOT_AT_5" false
 
 
+
+# print_message '>>> DELETE ME???' && print_message ">>> $(grep -ic $tmp_solution "$FILEPATH_HINT_LIST")" #- !!!!!
+# print_message "Adding '$tmp_solution' to '$FILEPATH_HINT_LIST'" && echo "$tmp_solution" >> "$FILEPATH_HINT_LIST" #- !!!!!
+# print_message '>>> DELETE ME???' && print_message ">>> $(grep -ic $tmp_solution "$FILEPATH_HINT_LIST")" #- !!!!!
+
+
+
 if [[ "${SKIP_ANAGRAMMER:-true}" != "true" ]] && (( HINT_THRESHOLD < $(get_file_line_count "$FILEPATH_HINT_LIST") )); then
     # Parsing possible solutions and suggesting potential next guess(es).
     print_message "Deriving anagrams based on the most occuring letters."
@@ -221,6 +228,13 @@ if [[ "${SKIP_ANAGRAMMER:-true}" != "true" ]] && (( HINT_THRESHOLD < $(get_file_
     unique_letters_by_occurence=$(sort -rk1 "$file_tmp_3" | awk '{ print $2 }' | tr -d '\n' || true)
     print_message "Unique letters by occurence: '$unique_letters_by_occurence'."
     cleanup_file "$file_tmp_3"
+
+
+
+# unique_letters_by_occurence_unconfirmed='' #- 
+# unique_letters_by_occurence=$unique_letters_by_occurence_unconfirmed #-
+
+
 
     unique_letters_by_occurence_unconfirmed=$unique_letters_by_occurence
     for (( i=0; i<${#LETTERS_INCLUDED}; i++ )); do
