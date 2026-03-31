@@ -31,15 +31,6 @@
 ## Battle of the Bots 🆚
 
 ### Summary
-<<<<<<< Updated upstream
-| Player | \# of Wins / 682 | Percentage |
-| ------ | ---------------- | ---------- |
-| 🏆🙋🏾‍♀️ | 6 | 0.88% |
-| 🎭 | 12 | 1.76% |
-| 🤖 | 148 | 21.70% |
-||
-| 🙋🏾‍♀️🎭 | 200 | 29.33% |
-=======
 | Player | \# of Wins / 684 | Percentage |
 | ------ | ---------------- | ---------- |
 | 🏆🙋🏾‍♀️ | 6 | 0.88% |
@@ -47,15 +38,10 @@
 | 🤖 | 148 | 21.64% |
 ||
 | 🙋🏾‍♀️🎭 | 201 | 29.39% |
->>>>>>> Stashed changes
 | 🙋🏾‍♀️🤖 | 6 | 0.88% |
-| 🎭🤖 | 21 | 3.08% |
+| 🎭🤖 | 21 | 3.07% |
 ||
-<<<<<<< Updated upstream
-| 🪢 | 289 | 42.38% |
-=======
 | 🪢 | 290 | 42.40% |
->>>>>>> Stashed changes
 ||
 
 
@@ -1806,9 +1792,6 @@
 | **1740** | -> | | `U09BUkUK`<br>`UFVUSUQK`<br>`UklTRVIK`<br>`V0lTRVIK` | 🟨⬛⬛🟨🟨<br>⬛⬛⬛🟨⬛<br>⬛🟩🟩🟩🟩<br>🟩🟩🟩🟩🟩 | `U0xBVEUK`<br>`Uk9TRVMK`<br>`V0lTRVIK` | 🟨⬛⬛⬛🟨<br>🟨⬛🟩🟩⬛<br>🟩🟩🟩🟩🟩 | 🤖 |
 | **1741** | -> | | `U09BUkUK`<br>`TElORFkK`<br>`UEVUSVQK`<br>`QkVGSVQK` | ⬛⬛⬛⬛🟨<br>⬛🟨⬛⬛⬛<br>⬛🟩⬛🟩🟩<br>🟩🟩🟩🟩🟩 | `U0xBVEUK`<br>`VElURVIK`<br>`RURJQ1QK`<br>`SU5FUFQK`<br>`QkVGSVQK` | ⬛⬛⬛🟨🟨<br>🟨🟨⬛🟨⬛<br>🟨⬛🟨⬛🟩<br>🟨⬛🟨⬛🟩<br>🟩🟩🟩🟩🟩 | 🙋🏾‍♀️🎭 |
 | **1742** 🔁 | -> | | `U09BUkUK`<br>`SFlEUk8K`<br>`SVZPUlkK` | ⬛🟨⬛🟩⬛<br>⬛🟨⬛🟩🟨<br>🟩🟩🟩🟩🟩 | `U0xBVEUK`<br>`Q1JPTlkK`<br>`SVZPUlkK` | ⬛⬛⬛⬛⬛<br>⬛🟨🟩⬛🟩<br>🟩🟩🟩🟩🟩 | 🪢 |
-<<<<<<< Updated upstream
-=======
 | **1743** | -> | | `U09BUkUK`<br>`Q0xJTlQK`<br>`QUZPT1QK` | ⬛🟨🟨⬛⬛<br>⬛⬛⬛⬛🟩<br>🟩🟩🟩🟩🟩 | `U0xBVEUK`<br>`VEFST1QK`<br>`QUZPT1QK` | ⬛⬛🟨🟨⬛<br>⬛🟨⬛🟩🟩<br>🟩🟩🟩🟩🟩 | 🪢 |
 | **1744** | -> | | `U09BUkUK`<br>`TElOVFkK`<br>`Q0hVTVAK` | ⬛⬛⬛⬛⬛<br>⬛⬛⬛⬛⬛<br>🟩🟩🟩🟩🟩 | `U0xBVEUK`<br>`Q1JPTlkK`<br>`Q1VCSUMK`<br>`Q0hVTVAK` | ⬛⬛⬛⬛⬛<br>🟩⬛⬛⬛⬛<br>🟩🟨⬛⬛⬛<br>🟩🟩🟩🟩🟩 | 🙋🏾‍♀️🎭 |
->>>>>>> Stashed changes
 ||
