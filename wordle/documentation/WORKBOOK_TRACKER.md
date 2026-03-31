@@ -24,7 +24,6 @@
 | **4** | `bGluZW4K` | `TElORU4K` | `51`, `1718`  |
 | **5** | `Z3JhZGUK` | `R1JBREUK` | `15`, `1730`  |
 | **6** | `aXZvcnkK` | `SVZPUlkK` | `59`, `1742`  |
-| **7** | `Y29tZXQK` | `Q09NRVQK` | `122`, `1745`  |
 ||
 
 
@@ -32,31 +31,17 @@
 ## Battle of the Bots 🆚
 
 ### Summary
-<<<<<<< Updated upstream
-| Player | \# of Wins / 683 | Percentage |
-| ------ | ---------------- | ---------- |
-| 🏆🙋🏾‍♀️ | 6 | 0.88% |
-| 🎭 | 12 | 1.76% |
-| 🤖 | 148 | 21.67% |
-||
-| 🙋🏾‍♀️🎭 | 200 | 29.28% |
-| 🙋🏾‍♀️🤖 | 6 | 0.88% |
-| 🎭🤖 | 21 | 3.07% |
-||
-| 🪢 | 290 | 42.46% |
-=======
-| Player | \# of Wins / 685 | Percentage |
+| Player | \# of Wins / 684 | Percentage |
 | ------ | ---------------- | ---------- |
 | 🏆🙋🏾‍♀️ | 6 | 0.88% |
 | 🎭 | 12 | 1.75% |
-| 🤖 | 148 | 21.61% |
+| 🤖 | 148 | 21.64% |
 ||
-| 🙋🏾‍♀️🎭 | 201 | 29.34% |
+| 🙋🏾‍♀️🎭 | 201 | 29.39% |
 | 🙋🏾‍♀️🤖 | 6 | 0.88% |
 | 🎭🤖 | 21 | 3.07% |
 ||
-| 🪢 | 291 | 42.48% |
->>>>>>> Stashed changes
+| 🪢 | 290 | 42.40% |
 ||
 
 
@@ -1808,9 +1793,5 @@
 | **1741** | -> | | `U09BUkUK`<br>`TElORFkK`<br>`UEVUSVQK`<br>`QkVGSVQK` | ⬛⬛⬛⬛🟨<br>⬛🟨⬛⬛⬛<br>⬛🟩⬛🟩🟩<br>🟩🟩🟩🟩🟩 | `U0xBVEUK`<br>`VElURVIK`<br>`RURJQ1QK`<br>`SU5FUFQK`<br>`QkVGSVQK` | ⬛⬛⬛🟨🟨<br>🟨🟨⬛🟨⬛<br>🟨⬛🟨⬛🟩<br>🟨⬛🟨⬛🟩<br>🟩🟩🟩🟩🟩 | 🙋🏾‍♀️🎭 |
 | **1742** 🔁 | -> | | `U09BUkUK`<br>`SFlEUk8K`<br>`SVZPUlkK` | ⬛🟨⬛🟩⬛<br>⬛🟨⬛🟩🟨<br>🟩🟩🟩🟩🟩 | `U0xBVEUK`<br>`Q1JPTlkK`<br>`SVZPUlkK` | ⬛⬛⬛⬛⬛<br>⬛🟨🟩⬛🟩<br>🟩🟩🟩🟩🟩 | 🪢 |
 | **1743** | -> | | `U09BUkUK`<br>`Q0xJTlQK`<br>`QUZPT1QK` | ⬛🟨🟨⬛⬛<br>⬛⬛⬛⬛🟩<br>🟩🟩🟩🟩🟩 | `U0xBVEUK`<br>`VEFST1QK`<br>`QUZPT1QK` | ⬛⬛🟨🟨⬛<br>⬛🟨⬛🟩🟩<br>🟩🟩🟩🟩🟩 | 🪢 |
-<<<<<<< Updated upstream
-=======
 | **1744** | -> | | `U09BUkUK`<br>`TElOVFkK`<br>`Q0hVTVAK` | ⬛⬛⬛⬛⬛<br>⬛⬛⬛⬛⬛<br>🟩🟩🟩🟩🟩 | `U0xBVEUK`<br>`Q1JPTlkK`<br>`Q1VCSUMK`<br>`Q0hVTVAK` | ⬛⬛⬛⬛⬛<br>🟩⬛⬛⬛⬛<br>🟩🟨⬛⬛⬛<br>🟩🟩🟩🟩🟩 | 🙋🏾‍♀️🎭 |
-| **1745** 🔁 | -> | | `U09BUkUK`<br>`TFlOQ0gK`<br>`Q09NRVQK` | ⬛🟩⬛⬛🟨<br>⬛⬛⬛🟨⬛<br>🟩🟩🟩🟩🟩 | `U0xBVEUK`<br>`VElURVIK`<br>`Q09NRVQK` | ⬛⬛⬛🟨🟨<br>🟨⬛⬛🟩⬛<br>🟩🟩🟩🟩🟩 | 🪢 |
->>>>>>> Stashed changes
 ||
