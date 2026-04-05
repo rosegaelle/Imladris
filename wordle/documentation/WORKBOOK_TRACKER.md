@@ -1,6 +1,5 @@
 # Workbook Tracker
 
-
 ## Score Feedback
 | Guess \# | Feedback |
 | -------- | -------- |
@@ -13,9 +12,23 @@
 ||
 
 
+## Battle of the Bots 🆚
 
-## Groundhog Day 🔁
+### Summary
+| Player | \# of Wins / 690 | Percentage |
+| ------ | ---------------- | ---------- |
+| 🏆🙋🏾‍♀️ | 6 | 0.87% |
+| 🎭 | 12 | 1.74% |
+| 🤖 | 151 | 21.88% |
+||
+| 🙋🏾‍♀️🎭 | 202 | 29.28% |
+| 🙋🏾‍♀️🤖 | 6 | 0.87% |
+| 🎭🤖 | 21 | 3.04% |
+||
+| 🪢 | 292 | 42.32% |
+||
 
+### Groundhog Day 🔁
 | \#    | toLower    | toUpper    | Recurrences   |
 | ----- | ---------- | ---------- | ------------- |
 | **1** | `Y2lnYXIK` | `Q0lHQVIK` | `0`, `1689`   |
@@ -25,27 +38,8 @@
 | **5** | `Z3JhZGUK` | `R1JBREUK` | `15`, `1730`  |
 | **6** | `aXZvcnkK` | `SVZPUlkK` | `59`, `1742`  |
 | **7** | `Y29tZXQK` | `Q09NRVQK` | `122`, `1745`  |
+| **8** | `c2FuZHkK` | `U0FORFkK` | `1226`, `1750`  |
 ||
-
-
-
-## Battle of the Bots 🆚
-
-### Summary
-| Player | \# of Wins / 689 | Percentage |
-| ------ | ---------------- | ---------- |
-| 🏆🙋🏾‍♀️ | 6 | 0.87% |
-| 🎭 | 12 | 1.74% |
-| 🤖 | 150 | 21.77% |
-||
-| 🙋🏾‍♀️🎭 | 202 | 29.32% |
-| 🙋🏾‍♀️🤖 | 6 | 0.87% |
-| 🎭🤖 | 21 | 3.05% |
-||
-| 🪢 | 292 | 42.38% |
-||
-
-
 
 ### Details
 | Day | 🙋🏾‍♀️ [MIrrorIMage](https://github.com/rosegaelle) |   | 🎭 [Imladris](https://github.com/rosegaelle/Imladris/tree/main/wordle) |   | 🤖 [NYT WordleBot](https://www.nytimes.com/interactive/2022/upshot/wordle-bot.html) |   | ⭐ |
@@ -1800,4 +1794,5 @@
 | **1747** | -> | | `U09BUkUK`<br>`TElOVFkK`<br>`Q0FER0UK`<br>`RlJVTVAK`<br>`RklaWlkK` | ⬛⬛⬛⬛⬛<br>⬛🟩⬛⬛🟩<br>⬛⬛⬛⬛⬛<br>🟩⬛⬛⬛⬛<br>🟩🟩🟩🟩🟩 | `U0xBVEUK`<br>`Q1JPTlkK`<br>`RFVNUFkK`<br>`RklaWlkK` | ⬛⬛⬛⬛⬛<br>⬛⬛⬛⬛🟩<br>⬛⬛⬛⬛🟩<br>🟩🟩🟩🟩🟩 | 🤖 |
 | **1748** | -> | | `U09BUkUK`<br>`U09CRVIK` | 🟩🟩⬛🟨🟨<br>🟩🟩🟩🟩🟩 | `U0xBVEUK`<br>`SElSRUQK`<br>`U0VXRVIK`<br>`U09CRVIK` | 🟩⬛⬛⬛🟨<br>⬛⬛🟨🟩⬛<br>🟩⬛⬛🟩🟩<br>🟩🟩🟩🟩🟩 | 🙋🏾‍♀️🎭 |
 | **1749** | -> | | `U09BUkUK`<br>`VVBMSVQK`<br>`U0lFVkUK`<br>`U0lOR0UK` | 🟩⬛⬛⬛🟩<br>⬛⬛⬛🟨⬛<br>🟩🟩⬛⬛🟩<br>🟩🟩🟩🟩🟩 | `U0xBVEUK`<br>`Q0hJUlAK`<br>`U0lFR0UK`<br>`U0lOR0UK` | 🟩⬛⬛⬛🟩<br>⬛⬛🟨⬛⬛<br>🟩🟩⬛🟩🟩<br>🟩🟩🟩🟩🟩 | 🪢 |
+| **1750** 🔁 | -> | | `U09BUkUK`<br>`VVBMSVQK`<br>`U0FNQkEK`<br>`Q0FORFkK`<br>`U0FORFkK` | 🟩⬛🟨⬛⬛<br>⬛⬛⬛⬛⬛<br>🟩🟩⬛⬛⬛<br>⬛🟩🟩🟩🟩<br>🟩🟩🟩🟩🟩 | `U0xBVEUK`<br>`Q1VSVlkK`<br>`R1JBU1AK`<br>`U0FORFkK` | 🟩⬛🟨⬛⬛<br>⬛⬛⬛⬛🟩<br>⬛⬛🟨🟨⬛<br>🟩🟩🟩🟩🟩 | 🤖 |
 ||
