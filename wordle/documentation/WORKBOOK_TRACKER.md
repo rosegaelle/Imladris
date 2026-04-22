@@ -15,31 +15,31 @@
 ## Battle of the Bots 🆚
 
 ### Summary
-| Player | \# of Wins / 706 | Percentage |
+| Player | \# of Wins / 707 | Percentage |
 | ------ | ---------------- | ---------- |
 | 🏆🙋🏾‍♀️ | 6 | 0.85% |
 | 🎭 | 12 | 1.70% |
-| 🤖 | 155 | 21.95% |
+| 🤖 | 155 | 21.92% |
 ||
-| 🙋🏾‍♀️🎭 | 206 | 29.18% |
+| 🙋🏾‍♀️🎭 | 206 | 29.14% |
 | 🙋🏾‍♀️🤖 | 6 | 0.85% |
 | 🎭🤖 | 21 | 2.97% |
 ||
-| 🪢 | 300 | 42.49% |
+| 🪢 | 301 | 42.57% |
 ||
 
 ### Groundhog Day 🔁
-| \#    | toLower    | toUpper    | Recurrences   |
-| ----- | ---------- | ---------- | ------------- |
-| **1** | `Y2lnYXIK` | `Q0lHQVIK` | `0`, `1689`   |
-| **2** | `c3F1YWQK` | `U1FVQUQK` | `296`, `1704` |
-| **3** | `YXdha2UK` | `QVdBS0UK` | `4`, `1708`   |
-| **4** | `bGluZW4K` | `TElORU4K` | `51`, `1718`  |
-| **5** | `Z3JhZGUK` | `R1JBREUK` | `15`, `1730`  |
-| **6** | `aXZvcnkK` | `SVZPUlkK` | `59`, `1742`  |
+| \#    | toLower    | toUpper    | Recurrences    |
+| ----- | ---------- | ---------- | -------------- |
+| **1** | `Y2lnYXIK` | `Q0lHQVIK` | `0`, `1689`    |
+| **2** | `c3F1YWQK` | `U1FVQUQK` | `296`, `1704`  |
+| **3** | `YXdha2UK` | `QVdBS0UK` | `4`, `1708`    |
+| **4** | `bGluZW4K` | `TElORU4K` | `51`, `1718`   |
+| **5** | `Z3JhZGUK` | `R1JBREUK` | `15`, `1730`   |
+| **6** | `aXZvcnkK` | `SVZPUlkK` | `59`, `1742`   |
 | **7** | `Y29tZXQK` | `Q09NRVQK` | `122`, `1745`  |
-| **8** | `c2FuZHkK` | `U0FORFkK` | `1226`, `1750`  |
-| **9** | `c3RhbmQK` | `U1RBTkQK` | `57`, `1765`  |
+| **8** | `c2FuZHkK` | `U0FORFkK` | `1226`, `1750` |
+| **9** | `c3RhbmQK` | `U1RBTkQK` | `57`, `1765`   |
 ||
 
 ### Details
@@ -1812,4 +1812,5 @@
 | **1764** | -> | | `U09BUkUK`<br>`UE9BQ0gK`<br>`V0VER1kK`<br>`VE9BRFkK` | ⬛🟩🟩⬛⬛<br>⬛🟩🟩⬛⬛<br>⬛⬛🟨⬛🟩<br>🟩🟩🟩🟩🟩 | `U0xBVEUK`<br>`UFJJTlQK`<br>`VE9BRFkK` | ⬛⬛🟩🟨⬛<br>⬛⬛⬛⬛🟨<br>🟩🟩🟩🟩🟩 | 🤖 |
 | **1765** 🔁 | -> | | `U09BUkUK`<br>`TFlOQ0gK`<br>`U1BBV04K`<br>`U1RBTkQK` | 🟩⬛🟩⬛⬛<br>⬛⬛🟨⬛⬛<br>🟩⬛🟩⬛🟨<br>🟩🟩🟩🟩🟩 | `U0xBVEUK`<br>`UFJJTlQK`<br>`U1RBTkQK` | 🟩⬛🟩🟨⬛<br>⬛⬛⬛🟩🟨<br>🟩🟩🟩🟩🟩 | 🤖 |
 | **1766** | -> | | `U09BUkUK`<br>`TVVMQ1QK`<br>`V0VBVkUK` | ⬛⬛🟩⬛🟩<br>⬛⬛⬛⬛⬛<br>🟩🟩🟩🟩🟩 | `U0xBVEUK`<br>`UFJJQ0sK`<br>`QURBR0UK`<br>`SEVBVkUK`<br>`V0VBVkUK` | ⬛⬛🟩⬛🟩<br>⬛⬛⬛⬛⬛<br>⬛⬛🟩⬛🟩<br>⬛🟩🟩🟩🟩<br>🟩🟩🟩🟩🟩 | 🙋🏾‍♀️🎭 |
+| **1767** | -> | | `U09BUkUK`<br>`TElORFkK`<br>`Q0xVTVAK` | ⬛⬛⬛⬛⬛<br>🟨⬛⬛⬛⬛<br>🟩🟩🟩🟩🟩 | `U0xBVEUK`<br>`QklQT0QK`<br>`Q0xVTVAK` | ⬛🟩⬛⬛⬛<br>⬛⬛🟨⬛⬛<br>🟩🟩🟩🟩🟩 | 🪢 |
 ||
