@@ -15,31 +15,32 @@
 ## Battle of the Bots 🆚
 
 ### Summary
-| Player | \# of Wins / 727 | Percentage |
+| Player | \# of Wins / 728 | Percentage |
 | ------ | ---------------- | ---------- |
-| 🏆🙋🏾‍♀️ | 6 | 0.83% |
+| 🏆🙋🏾‍♀️ | 6 | 0.82% |
 | 🎭 | 12 | 1.65% |
-| 🤖 | 158 | 21.73% |
+| 🤖 | 158 | 21.70% |
 ||
-| 🙋🏾‍♀️🎭 | 212 | 29.16% |
-| 🙋🏾‍♀️🤖 | 6 | 0.83% |
-| 🎭🤖 | 21 | 2.89% |
+| 🙋🏾‍♀️🎭 | 212 | 29.12% |
+| 🙋🏾‍♀️🤖 | 6 | 0.82% |
+| 🎭🤖 | 21 | 2.88% |
 ||
-| 🪢 | 312 | 42.92% |
+| 🪢 | 313 | 42.99% |
 ||
 
 ### Groundhog Day 🔁
-| \#    | toLower    | toUpper    | Recurrences    |
-| ----- | ---------- | ---------- | -------------- |
-| **1** | `Y2lnYXIK` | `Q0lHQVIK` | `0`, `1689`    |
-| **2** | `c3F1YWQK` | `U1FVQUQK` | `296`, `1704`  |
-| **3** | `YXdha2UK` | `QVdBS0UK` | `4`, `1708`    |
-| **4** | `bGluZW4K` | `TElORU4K` | `51`, `1718`   |
-| **5** | `Z3JhZGUK` | `R1JBREUK` | `15`, `1730`   |
-| **6** | `aXZvcnkK` | `SVZPUlkK` | `59`, `1742`   |
-| **7** | `Y29tZXQK` | `Q09NRVQK` | `122`, `1745`  |
-| **8** | `c2FuZHkK` | `U0FORFkK` | `1226`, `1750` |
-| **9** | `c3RhbmQK` | `U1RBTkQK` | `57`, `1765`   |
+| \#     | toLower    | toUpper    | Recurrences    |
+| ------ | ---------- | ---------- | -------------- |
+| **1**  | `Y2lnYXIK` | `Q0lHQVIK` | `0`, `1689`    |
+| **2**  | `c3F1YWQK` | `U1FVQUQK` | `296`, `1704`  |
+| **3**  | `YXdha2UK` | `QVdBS0UK` | `4`, `1708`    |
+| **4**  | `bGluZW4K` | `TElORU4K` | `51`, `1718`   |
+| **5**  | `Z3JhZGUK` | `R1JBREUK` | `15`, `1730`   |
+| **6**  | `aXZvcnkK` | `SVZPUlkK` | `59`, `1742`   |
+| **7**  | `Y29tZXQK` | `Q09NRVQK` | `122`, `1745`  |
+| **8**  | `c2FuZHkK` | `U0FORFkK` | `1226`, `1750` |
+| **9**  | `c3RhbmQK` | `U1RBTkQK` | `57`, `1765`   |
+| **10** | `Y2xvY2sK` | `Q0xPQ0sK` | `160`, `1788`  |
 ||
 
 ### Details
@@ -1833,4 +1834,5 @@
 | **1785** | -> | | `U09BUkUK`<br>`VVBMSVQK`<br>`U0FUSU4K` | 🟩⬛🟨⬛⬛<br>⬛⬛⬛🟩🟨<br>🟩🟩🟩🟩🟩 | `U0xBVEUK`<br>`UFJJVlkK`<br>`U0FUSU4K` | 🟩⬛🟨🟨⬛<br>⬛⬛🟨⬛⬛<br>🟩🟩🟩🟩🟩 | 🪢 |
 | **1786** | -> | | `U09BUkUK`<br>`TUlMVFkK`<br>`R1JVTkQK`<br>`UEFSS0EK` | ⬛⬛🟨🟨⬛<br>⬛⬛⬛⬛⬛<br>⬛🟨⬛⬛⬛<br>🟩🟩🟩🟩🟩 | `U0xBVEUK`<br>`Q09STlkK`<br>`UEFSS0EK` | ⬛⬛🟨⬛⬛<br>⬛⬛🟩⬛⬛<br>🟩🟩🟩🟩🟩 | 🤖 |
 | **1787** | -> | | `U09BUkUK`<br>`TElORFkK`<br>`TkVXTFkK` | ⬛⬛⬛⬛🟨<br>🟨⬛🟨⬛🟩<br>🟩🟩🟩🟩🟩 | `U0xBVEUK`<br>`UklWRU4K`<br>`TkVXTFkK` | ⬛🟨⬛⬛🟨<br>⬛⬛⬛🟨🟨<br>🟩🟩🟩🟩🟩 | 🪢 |
+| **1788** 🔁 | -> | | `U09BUkUK`<br>`Q1VUSU4K`<br>`Q0hPS1kK`<br>`Q0xPQ0sK` | ⬛🟨⬛⬛⬛<br>🟩⬛⬛⬛⬛<br>🟩⬛🟩🟨⬛<br>🟩🟩🟩🟩🟩 | `U0xBVEUK`<br>`QklQT0QK`<br>`RlJBTkMK`<br>`Q0xPQ0sK` | ⬛🟩⬛⬛⬛<br>⬛⬛⬛🟨⬛<br>⬛⬛⬛⬛🟨<br>🟩🟩🟩🟩🟩 | 🪢 |
 ||
