@@ -15,17 +15,17 @@
 ## Battle of the Bots 🆚
 
 ### Summary
-| Player | \# of Wins / 766 | Percentage |
+| Player | \# of Wins / 767 | Percentage |
 | ------ | ---------------- | ---------- |
 | 🏆🙋🏾‍♀️ | 6 | 0.78% |
-| 🎭 | 13 | 1.70% |
-| 🤖 | 169 | 22.06% |
+| 🎭 | 13 | 1.69% |
+| 🤖 | 169 | 22.03% |
 ||
-| 🙋🏾‍♀️🎭 | 223 | 29.11% |
+| 🙋🏾‍♀️🎭 | 224 | 29.20% |
 | 🙋🏾‍♀️🤖 | 6 | 0.78% |
 | 🎭🤖 | 22 | 2.87% |
 ||
-| 🪢 | 327 | 42.69% |
+| 🪢 | 327 | 42.63% |
 ||
 
 ### Groundhog Day 🔁
@@ -1877,4 +1877,5 @@
 | **1824** | -> | | `U09BUkUK`<br>`Q0hZTkQK`<br>`VE9LRU4K` | ⬛🟩⬛⬛🟨<br>⬛⬛⬛🟨⬛<br>🟩🟩🟩🟩🟩 | `U0xBVEUK`<br>`VElURVIK`<br>`VE9LRU4K` | ⬛⬛⬛🟨🟨<br>🟩⬛⬛🟩⬛<br>🟩🟩🟩🟩🟩 | 🪢 |
 | **1825** | -> | | `U09BUkUK`<br>`VU5JVFkK`<br>`RU5UUlkK` | ⬛⬛⬛🟩🟨<br>⬛🟩⬛🟨🟩<br>🟩🟩🟩🟩🟩 | `U0xBVEUK`<br>`VElURVIK`<br>`TUVUUk8K`<br>`RU5UUlkK` | ⬛⬛⬛🟨🟨<br>⬛⬛🟩🟨🟨<br>⬛🟨🟩🟩⬛<br>🟩🟩🟩🟩🟩 | 🙋🏾‍♀️🎭 |
 | **1826** | -> | | `U09BUkUK`<br>`QkxJTkQK`<br>`RU1PSkkK` | ⬛🟨⬛⬛🟨<br>⬛⬛🟨⬛⬛<br>🟩🟩🟩🟩🟩 | `U0xBVEUK`<br>`RElORVIK`<br>`RVFVSVAK`<br>`RU1PSkkK` | ⬛⬛⬛⬛🟨<br>⬛🟨⬛🟨⬛<br>🟩⬛⬛🟨⬛<br>🟩🟩🟩🟩🟩 | 🙋🏾‍♀️🎭 |
+| **1827** | -> | | `U09BUkUK`<br>`QlVORFQK`<br>`RFJBS0UK` | ⬛⬛🟩🟨🟩<br>⬛⬛⬛🟨⬛<br>🟩🟩🟩🟩🟩 | `U0xBVEUK`<br>`UFJJQ0sK`<br>`QlJBS0UK`<br>`RFJBS0UK` | ⬛⬛🟩⬛🟩<br>⬛🟩⬛⬛🟨<br>⬛🟩🟩🟩🟩<br>🟩🟩🟩🟩🟩 | 🙋🏾‍♀️🎭 |
 ||
