@@ -21,16 +21,22 @@ prepare_dictionary() {
 
     # create temporary files and ensure cleanup on exit/interruption
     local file_dictionary_full=""
+    local file_dictionary_invalid_wordle=""
     local file_previous_solutions=""
     local file_tmp_1=""
     local file_tmp_2=""
+    local file_tmp_3=""
+    local file_tmp_4=""
 
     file_dictionary_full=$(mktemp) || { print_message "Failed to create temp file"; return 1; }
-    file_previous_solutions=$(mktemp) || { cleanup_file "$file_dictionary_full"; print_message "Failed to create temp file"; return 1; }
-    file_tmp_1=$(mktemp) || { cleanup_file "$file_dictionary_full" "$file_previous_solutions"; print_message "Failed to create temp file"; return 1; }
-    file_tmp_2=$(mktemp) || { cleanup_file "$file_dictionary_full" "$file_previous_solutions" "$file_tmp_1"; print_message "Failed to create temp file"; return 1; }
+    file_dictionary_invalid_wordle=$(mktemp) || { cleanup_file "$file_dictionary_full"; print_message "Failed to create temp file"; return 1; }
+    file_previous_solutions=$(mktemp) || { cleanup_file "$file_dictionary_full" "$file_dictionary_invalid_wordle"; print_message "Failed to create temp file"; return 1; }
+    file_tmp_1=$(mktemp) || { cleanup_file "$file_dictionary_full" "$file_dictionary_invalid_wordle" "$file_previous_solutions"; print_message "Failed to create temp file"; return 1; }
+    file_tmp_2=$(mktemp) || { cleanup_file "$file_dictionary_full" "$file_dictionary_invalid_wordle" "$file_previous_solutions" "$file_tmp_1"; print_message "Failed to create temp file"; return 1; }
+    file_tmp_3=$(mktemp) || { cleanup_file "$file_dictionary_full" "$file_dictionary_invalid_wordle" "$file_previous_solutions" "$file_tmp_1" "$file_tmp_2"; print_message "Failed to create temp file"; return 1; }
+    file_tmp_4=$(mktemp) || { cleanup_file "$file_dictionary_full" "$file_dictionary_invalid_wordle" "$file_previous_solutions" "$file_tmp_1" "$file_tmp_2" "$file_tmp_3"; print_message "Failed to create temp file"; return 1; }
 
-    trap 'cleanup_file "$file_dictionary_full"; cleanup_file "$file_previous_solutions"; cleanup_file "$file_tmp_1"; cleanup_file "$file_tmp_2"; trap - EXIT' EXIT
+    trap 'cleanup_file "$file_dictionary_full"; cleanup_file "$file_dictionary_invalid_wordle"; cleanup_file "$file_previous_solutions"; cleanup_file "$file_tmp_1"; cleanup_file "$file_tmp_2"; cleanup_file "$file_tmp_3"; cleanup_file "$file_tmp_4"; trap - EXIT' EXIT
 
     # Download dictionary and previous solutions (fail if curl fails)
     if ! curl -fS -o "$file_dictionary_full" "$FILEPATH_DICTIONARY"; then
@@ -38,6 +44,12 @@ prepare_dictionary() {
         return 1
     fi
     validate_file_dependency "$file_dictionary_full" || return 1
+
+    if ! curl -fS -o "$file_dictionary_invalid_wordle" "$FILEPATH_DICTIONARY_INVALID_WORDLE"; then
+        print_message "Failed to download dictionary from $FILEPATH_DICTIONARY_INVALID_WORDLE"
+        return 1
+    fi
+    validate_file_dependency "$file_dictionary_invalid_wordle" || return 1
 
     if ! curl -fS -o "$file_previous_solutions" "$FILEPATH_PREVIOUS_SOLUTIONS"; then
         print_message "Failed to download previous solutions from $FILEPATH_PREVIOUS_SOLUTIONS"
@@ -50,14 +62,26 @@ prepare_dictionary() {
         decode "$line" >> "$file_tmp_1"
     done < "$file_dictionary_full"
 
-    # Decode workbook (encoded to prevent spoilers)
+    # Decode the list of words determined NOT to be in the Wordle dictionary.
     while IFS= read -r line; do
         decode "$line" >> "$file_tmp_2"
+    done < "$file_dictionary_invalid_wordle"
+
+    # Decode workbook (encoded to prevent spoilers)
+    while IFS= read -r line; do
+        decode "$line" >> "$file_tmp_3"
     done < "$file_previous_solutions"
 
     # Remove previous solutions from the working dictionary.
-    # Use grep -Fvx -f to remove exact matches from file_tmp_2 in file_tmp_1
-    if ! grep -Fvx -f "$file_tmp_2" "$file_tmp_1" > "$FILEPATH_ENHANCED_DICTIONARY"; then
+    # Use grep -Fvx -f to remove exact matches from file_tmp_3 in file_tmp_1.
+    if ! grep -Fvx -f "$file_tmp_3" "$file_tmp_1" > "$file_tmp_4"; then
+        print_message "No entries written to $file_tmp_4"
+        return 1
+    fi
+
+    # Remove entries determined to be invalid for Wordle from the working dictionary.
+    # Use grep -Fvx -f to remove exact matches from file_tmp_2 in file_tmp_4.
+    if ! grep -Fvx -f "$file_tmp_2" "$file_tmp_4" > "$FILEPATH_ENHANCED_DICTIONARY"; then
         print_message "No entries written to $FILEPATH_ENHANCED_DICTIONARY"
         return 1
     fi
