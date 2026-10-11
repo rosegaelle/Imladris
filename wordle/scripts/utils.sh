@@ -15,6 +15,7 @@ tmp=$(printf "%$(echo $WORD_LENGTH)s") && export FULL_MATCH=$(echo ${tmp// /$LET
 tmp=$(printf "%$(echo $WORD_LENGTH)s") && export FULL_MISS=$(echo ${tmp// /$LETTER_EXCLUDED}) # printf "$LETTER_EXCLUDED%.0s" {1..$WORD_LENGTH}
 
 export FILEPATH_DICTIONARY='https://raw.githubusercontent.com/rosegaelle/Imladris/main/wordle/assets/dictionary_full.txt'
+export FILEPATH_DICTIONARY_INVALID_WORDLE='https://raw.githubusercontent.com/rosegaelle/Imladris/main/wordle/assets/dictionary_invalid_wordle.txt'
 export FILEPATH_PREVIOUS_SOLUTIONS='https://raw.githubusercontent.com/rosegaelle/Imladris/main/wordle/assets/workbook.txt'
 export FILEPATH_ENHANCED_DICTIONARY='dictionary_enhanced.tmp'
 export FILEPATH_HINT_LIST='results.tmp'
